@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-User=REPLACE_WITH_LINUX_USER
+User=mina
 EnvironmentFile=/etc/mina-validator-performance.env
 WorkingDirectory=/opt/validator-performance-dashboard
 ExecStart=/opt/validator-performance-dashboard/scripts/publish.sh
