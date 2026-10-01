@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-REPO_DIR="${REPO_DIR:-/opt/mina-validator-performance}"
+REPO_DIR="${REPO_DIR:-/opt/validator-performance-dashboard}"
 PYTHON="${PYTHON:-$REPO_DIR/.venv/bin/python}"
 OUTPUT="$REPO_DIR/docs/data/validators.json"
 QUERY="$REPO_DIR/exporter/query.sql"
