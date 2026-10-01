@@ -1,0 +1,14 @@
+[Unit]
+Description=Export Mina validator performance and publish to GitHub
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=REPLACE_WITH_LINUX_USER
+EnvironmentFile=/etc/mina-validator-performance.env
+WorkingDirectory=/opt/mina-validator-performance
+ExecStart=/opt/mina-validator-performance/scripts/publish.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6

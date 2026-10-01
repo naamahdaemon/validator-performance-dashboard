@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Mina Validator Performance</title>
+  <meta name="description" content="Live Mina validator stake and block-production snapshot from a Mina archive node.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">MINA MAINNET</div>
+        <h1>Validator Performance</h1>
+        <p class="subtitle">Stake, delegators and block-production history from a Mina archive node.</p>
+      </div>
+      <div class="status-card">
+        <div><span class="muted">Snapshot</span><strong id="generatedAt">—</strong></div>
+        <div><span class="muted">Archive height</span><strong id="archiveHeight">—</strong></div>
+        <div><span class="muted">Validators</span><strong id="validatorCount">—</strong></div>
+      </div>
+    </header>
+
+    <section class="filters" aria-label="Filters">
+      <label class="wide">
+        <span>Search</span>
+        <input id="search" type="search" placeholder="Validator name or B62 wallet…">
+      </label>
+
+      <label>
+        <span>Last block era</span>
+        <select id="era">
+          <option value="">All</option>
+          <option value="mesa">Mesa</option>
+          <option value="pre">Pre-Mesa</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Last block epoch</span>
+        <select id="epoch">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Last block after</span>
+        <input id="dateAfter" type="date">
+      </label>
+
+      <label>
+        <span>Last block before</span>
+        <input id="dateBefore" type="date">
+      </label>
+
+      <label>
+        <span>Stake min</span>
+        <input id="stakeMin" type="number" min="0" step="1" placeholder="MINA">
+      </label>
+
+      <label>
+        <span>Stake max</span>
+        <input id="stakeMax" type="number" min="0" step="1" placeholder="MINA">
+      </label>
+
+      <label>
+        <span>Delegators min</span>
+        <input id="delegatorsMin" type="number" min="0" step="1">
+      </label>
+
+      <label>
+        <span>Delegators max</span>
+        <input id="delegatorsMax" type="number" min="0" step="1">
+      </label>
+
+      <label>
+        <span>Blocks since last min</span>
+        <input id="blocksSinceMin" type="number" min="0" step="1">
+      </label>
+
+      <label>
+        <span>Blocks since last max</span>
+        <input id="blocksSinceMax" type="number" min="0" step="1">
+      </label>
+
+      <button id="resetFilters" type="button">Reset filters</button>
+    </section>
+
+    <section class="table-card">
+      <div class="table-toolbar">
+        <div><strong id="filteredCount">0</strong> matching validators</div>
+        <div class="muted">20 results / page</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="validator_name">Validator</th>
+              <th data-sort="wallet_address">Wallet</th>
+              <th class="num" data-sort="current_stake">Stake</th>
+              <th class="num" data-sort="delegated_stake_pct">Stake %</th>
+              <th class="num" data-sort="delegator_count">Delegators</th>
+              <th class="num" data-sort="total_blocks_all_epochs">Blocks</th>
+              <th class="num" data-sort="blocks_since_last_produced">Blocks since last</th>
+              <th data-sort="last_block_date">Last block</th>
+              <th data-sort="last_block_era">Era</th>
+              <th class="num" data-sort="last_block_epoch">Epoch</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+
+      <nav class="pagination" aria-label="Pagination">
+        <button id="firstPage" type="button">«</button>
+        <button id="prevPage" type="button">‹</button>
+        <span id="pageLabel">Page 1 / 1</span>
+        <button id="nextPage" type="button">›</button>
+        <button id="lastPage" type="button">»</button>
+      </nav>
+    </section>
+
+    <footer>
+      Data is generated from a Mina archive PostgreSQL database and published as a static JSON snapshot.
+    </footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
