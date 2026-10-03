@@ -26,15 +26,48 @@ $("pageSize").addEventListener("change",()=>{
  render();
 });
 const f={search:$("search"),era:$("era"),epoch:$("epoch"),dateAfter:$("dateAfter"),dateBefore:$("dateBefore"),stakeMin:$("stakeMin"),stakeMax:$("stakeMax"),delegatorsMin:$("delegatorsMin"),delegatorsMax:$("delegatorsMax"),blocksSinceMin:$("blocksSinceMin"),blocksSinceMax:$("blocksSinceMax")};
+const VIEW_STORAGE_KEY="validator-view-v1";
+let dataLoaded=false;
+function saveView(){
+ if(!dataLoaded)return;
+ try {
+  localStorage.setItem(VIEW_STORAGE_KEY,JSON.stringify({
+   filters:Object.fromEntries(Object.entries(f).map(([key,el])=>[key,el.value])),
+   sortKey:state.sortKey,sortDir:state.sortDir,page:state.page,
+  }));
+ } catch (_) {}
+}
+function restoreView(){
+ try {
+  const saved=JSON.parse(localStorage.getItem(VIEW_STORAGE_KEY));
+  if(!saved||typeof saved!=="object"||Array.isArray(saved))return;
+  const sortKeys=[...document.querySelectorAll("th[data-sort]")].map(th=>th.dataset.sort);
+  if(sortKeys.includes(saved.sortKey))state.sortKey=saved.sortKey;
+  if(["asc","desc"].includes(saved.sortDir))state.sortDir=saved.sortDir;
+  if(Number.isSafeInteger(saved.page)&&saved.page>0)state.page=saved.page;
+  for(const [key,el] of Object.entries(f)){
+   const value=saved.filters?.[key];
+   if(typeof value!=="string")continue;
+   if(key==="epoch"){
+    if(!/^-?\d+$/.test(value))continue;
+    const option=document.createElement("option");option.value=value;option.textContent=value;el.append(option);
+   }
+   el.value=value;
+  }
+ } catch (_) {}
+}
+restoreView();
 const num=v=>Number.isFinite(Number(v))?Number(v):0;
 const nullable=v=>(v===""||v==null)?null:num(v);
 const fmt=(v,d=0)=>new Intl.NumberFormat(undefined,{maximumFractionDigits:d}).format(num(v));
 const parseDate=v=>{if(!v)return null;const d=new Date(String(v).replace(" ","T")+"Z");return isNaN(d)?null:d};
 const boundary=(v,end=false)=>v?new Date(`${v}T${end?"23:59:59.999":"00:00:00"}Z`):null;
 
-function populateEpochs(){
+function populateEpochs(keepSelected=false){
  const selected=f.epoch.value,era=f.era.value;
  const vals=[...new Set(state.all.filter(v=>!era||v.last_block_era===era).map(v=>v.last_block_epoch).filter(v=>v!=null).map(Number))].sort((a,b)=>b-a);
+ // Preserve a saved epoch even if a newer snapshot has no matching validators.
+ if(keepSelected&&selected!==""&&!vals.includes(Number(selected)))vals.push(Number(selected));
  f.epoch.innerHTML='<option value="">All</option>'+vals.map(v=>`<option value="${v}">${v}</option>`).join("");
  if([...f.epoch.options].some(o=>o.value===selected))f.epoch.value=selected;
 }
@@ -51,7 +84,7 @@ function sortRows(){
  });
 }
 
-function apply(){
+function apply({resetPage=true}={}){
  const q=f.search.value.trim().toLowerCase(),after=boundary(f.dateAfter.value),before=boundary(f.dateBefore.value,true);
  const smin=nullable(f.stakeMin.value),smax=nullable(f.stakeMax.value),dmin=nullable(f.delegatorsMin.value),dmax=nullable(f.delegatorsMax.value),bmin=nullable(f.blocksSinceMin.value),bmax=nullable(f.blocksSinceMax.value);
  state.filtered=state.all.filter(v=>{
@@ -64,7 +97,7 @@ function apply(){
   const bs=num(v.blocks_since_last_produced);if(bmin!=null&&bs<bmin)return false;if(bmax!=null&&bs>bmax)return false;
   return true;
  });
- sortRows();state.page=1;render();
+ sortRows();if(resetPage)state.page=1;render();
 }
 function cell(t,c=""){const x=document.createElement("td");x.textContent=t;if(c)x.className=c;return x}
 function bar(v,max,d=0){if(v==null)return cell("—","num");const x=cell("", "bar-cell num"),b=document.createElement("div"),s=document.createElement("span");b.className="bar";b.style.width=`${max?Math.min(100,num(v)/max*100):0}%`;s.className="value";s.textContent=fmt(v,d);x.append(b,s);return x}
@@ -94,6 +127,7 @@ function render(){
  }
  $("pageLabel").textContent=`Page ${state.page} / ${pages}`;$("firstPage").disabled=$("prevPage").disabled=state.page<=1;$("nextPage").disabled=$("lastPage").disabled=state.page>=pages;
  document.querySelectorAll("th[data-sort]").forEach(th=>{th.removeAttribute("data-dir");if(th.dataset.sort===state.sortKey)th.dataset.dir=state.sortDir});
+ saveView();
 }
 Object.values(f).forEach(el=>{["input","change"].forEach(ev=>el.addEventListener(ev,()=>{if(el===f.era)populateEpochs();apply()}))});
 $("resetFilters").onclick=()=>{Object.values(f).forEach(el=>el.value="");populateEpochs();apply()};
@@ -113,5 +147,5 @@ fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!
   $("currentBlocksHeader").textContent=`Blocks ${epochRow.network_epoch_label} (partial)`;
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;
  }
- $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";populateEpochs();apply();
+ $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});
 }).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT}" class="empty-state">Unable to load data.</td></tr>`});

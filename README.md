@@ -41,6 +41,8 @@ The static interface includes:
 
 - selectable pagination: **20, 50, 100, 200 or 500 validators per page**, remembered locally
 - dark/light mode, initially following the system preference and remembered locally
+- all filters, sort column/direction and current page restored after refresh;
+  Reset filters also clears saved filters (theme, page size and sort are kept)
 - current epoch stake as a percentage of the full staking ledger and of active stake
 - previous/current epoch block counts and their signed difference
 - clickable MinaScan wallet links
