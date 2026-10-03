@@ -186,7 +186,8 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "total_stake_current_epoch": float(total_stake),
         "active_stake_current_epoch": float(active_stake),
         "active_validator_count": len(active_wallets),
-        "active_definition": "Produced at least one archived block in the previous or current epoch (all statuses)",
+        "block_count_basis": "canonical",
+        "active_definition": "Produced at least one canonical block in the previous or current epoch",
     }
 
 
@@ -232,7 +233,7 @@ def main() -> int:
         key=lambda r: (
             -(float(r.get("stake_live_estimate") or 0)),
             -(float(r.get("delegated_stake_pct") or 0)),
-            -(int(r.get("total_blocks_all_epochs") or 0)),
+            -(int(r.get("canonical_blocks_all_epochs") or 0)),
             str(r.get("wallet_address") or ""),
         )
     )

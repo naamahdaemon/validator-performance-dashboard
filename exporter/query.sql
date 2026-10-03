@@ -98,6 +98,7 @@ recent_epoch_counts AS MATERIALIZED (
     FROM blocks b CROSS JOIN epoch_windows ew
     WHERE b.global_slot_since_genesis >= ew.previous_start_slot
       AND b.global_slot_since_genesis <= ew.tip_slot
+      AND b.chain_status::text = 'canonical'
     GROUP BY b.creator_id
 ),
 

@@ -63,17 +63,22 @@ displayed producer list). It replaces the former live/archive-based Stake % colu
 The original `delegated_stake_pct` remains available in the JSON.
 
 `stake_active_pct` uses the same numerator but only includes validators that
-produced at least one archived block in the previous or current epoch in its
+produced at least one canonical block in the previous or current epoch in its
 denominator. Inactive validators display a dash. This is an observed activity
 definition, not a protocol guarantee of online status. Both denominators are
 computed on the full export, independently of browser filters and pagination;
 their amounts are published in `ledger_meta`.
 
-The two epoch counters include all archived block statuses, like the all-time
-Blocks column. Epochs are derived from the archive tip and the existing pre-Mesa /
+The two epoch counters and the all-time Blocks column include only blocks with
+`chain_status = 'canonical'`. Pending blocks (including those on the selected tip
+branch) and orphaned blocks are excluded. The all-time column uses the existing
+`canonical_blocks_all_epochs` field; `total_blocks_all_epochs` remains the raw
+all-status archive count in JSON for compatibility. Epochs are derived from the archive tip and the existing pre-Mesa /
 Mesa slot constants, not from each validator's most recent block. The previous
 window handles the Mesa transition. The signed delta is current-epoch production
 so far minus the complete previous epoch, not a normalized performance forecast.
+Snapshots declare `ledger_meta.block_count_basis = "canonical"`; until a new
+export is available, the UI hides old all-status epoch counts and active shares.
 
 After deploying the sources, run `sudo systemctl start mina-validator-performance.service`
 to regenerate the snapshot. Missing metrics in older snapshots display a dash.

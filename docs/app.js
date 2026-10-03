@@ -79,13 +79,13 @@ function render(){
  if(!state.filtered.length){const tr=document.createElement("tr"),c=cell("No validators match the current filters.","empty-state");c.colSpan=COLUMN_COUNT;tr.append(c);rows.append(tr)}
  else{
   const slice=state.filtered.slice((state.page-1)*state.pageSize,state.page*state.pageSize);
-  const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.total_blocks_all_epochs)),0);
+  const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.canonical_blocks_all_epochs)),0);
   for(const v of slice){
    const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");vc.title=v.validator_name||"";tr.append(vc);
    const wc=document.createElement("td"),a=document.createElement("a");a.className="wallet";a.href=MINASCAN+encodeURIComponent(v.wallet_address||"");a.target="_blank";a.rel="noopener noreferrer";a.textContent=v.wallet_address||"—";a.title=v.wallet_address||"";wc.append(a);tr.append(wc);
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
-   tr.append(bar(v.delegator_count,maxD),bar(v.total_blocks_all_epochs,maxB));
+   tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
    tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"),blockDelta(v.blocks_epoch_delta));
    const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
    tr.append(cell(v.last_block_date||"—"));
@@ -102,8 +102,13 @@ $("firstPage").onclick=()=>{state.page=1;render()};$("prevPage").onclick=()=>{st
 
 fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(p=>{
  state.all=Array.isArray(p.validators)?p.validators.map(v=>({...v,stake_live_estimate:v.stake_live_estimate??v.current_stake})):[];$("validatorCount").textContent=fmt(p.validator_count??state.all.length);$("archiveHeight").textContent=p.archive_height==null?"—":fmt(p.archive_height);
+ // Older snapshots counted every status. Do not label those metrics as canonical.
+ if(p.ledger_meta?.block_count_basis!=="canonical"){
+  state.all=state.all.map(v=>({...v,blocks_previous_epoch:null,blocks_current_epoch:null,blocks_epoch_delta:null,stake_active_pct:null}));
+  $("epochSummary").textContent="Canonical epoch counts and active stake await the next export.";
+ }
  const epochRow=state.all.find(v=>v.network_epoch_label&&v.previous_epoch_label);
- if(epochRow){
+ if(epochRow && p.ledger_meta?.block_count_basis==="canonical"){
   $("previousBlocksHeader").textContent=`Blocks ${epochRow.previous_epoch_label}`;
   $("currentBlocksHeader").textContent=`Blocks ${epochRow.network_epoch_label} (partial)`;
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;

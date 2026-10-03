@@ -33,9 +33,9 @@
   </section>
 
   <section class="legend" aria-label="Metric definitions">
-    <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing in the previous or current epoch.</span>
+    <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing canonical blocks in the previous or current epoch.</span>
     <span id="epochSummary">Epoch block counts await the next export.</span>
-    <span>Block counts include all statuses. Δ blocks = current (partial) − previous (complete).</span>
+    <span>Block counts include canonical blocks only (pending and orphaned excluded). Δ blocks = current (partial) − previous (complete).</span>
   </section>
 
   <section class="filters">
@@ -77,7 +77,7 @@
           <th class="num" data-sort="stake_next_delta_pct">Δ N→N+1</th>
           <th class="num" data-sort="stake_live_delta_pct">Δ N+1→Live</th>
           <th class="num" data-sort="delegator_count">Delegators</th>
-          <th class="num" data-sort="total_blocks_all_epochs">Blocks</th>
+          <th class="num" data-sort="canonical_blocks_all_epochs" title="All-time canonical blocks only">Blocks</th>
           <th class="num" data-sort="blocks_previous_epoch" id="previousBlocksHeader">Blocks N−1</th>
           <th class="num" data-sort="blocks_current_epoch" id="currentBlocksHeader">Blocks N</th>
           <th class="num" data-sort="blocks_epoch_delta" title="Current epoch so far minus the complete previous epoch">Δ blocks</th>
