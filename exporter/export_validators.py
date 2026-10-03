@@ -145,6 +145,14 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
     stake_n, delegators_n = aggregate_ledger(staking_accounts)
     stake_n1, delegators_n1 = aggregate_ledger(next_accounts)
 
+    total_stake = sum(stake_n.values(), Decimal("0"))
+    active_wallets = {
+        str(row["wallet_address"]) for row in rows
+        if (row.get("blocks_previous_epoch") or 0) > 0
+        or (row.get("blocks_current_epoch") or 0) > 0
+    }
+    active_stake = sum((stake_n.get(wallet, Decimal("0")) for wallet in active_wallets), Decimal("0"))
+
     for row in rows:
         wallet = str(row.get("wallet_address") or "")
 
@@ -153,6 +161,11 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         live = Decimal(str(row.get("current_stake") or 0))
 
         row["stake_current_epoch"] = float(current)
+        row["stake_current_pct"] = float(current / total_stake * 100) if total_stake else None
+        row["is_active_validator"] = wallet in active_wallets
+        row["stake_active_pct"] = (
+            float(current / active_stake * 100) if wallet in active_wallets and active_stake else None
+        )
         row["stake_next_epoch"] = float(nxt)
         row["stake_live_estimate"] = float(live)
 
@@ -170,6 +183,10 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "next_ledger_accounts": len(next_accounts),
         "staking_validators": len(stake_n),
         "next_validators": len(stake_n1),
+        "total_stake_current_epoch": float(total_stake),
+        "active_stake_current_epoch": float(active_stake),
+        "active_validator_count": len(active_wallets),
+        "active_definition": "Produced at least one archived block in the previous or current epoch (all statuses)",
     }
 
 
@@ -223,7 +240,7 @@ def main() -> int:
     archive_height = archive_height_from_rows(rows)
 
     previous = load_previous(output_path)
-    if previous and previous.get("validators") == rows:
+    if previous and previous.get("validators") == rows and previous.get("ledger_meta") == ledger_meta:
         print(
             f"No validator data change: {len(rows)} rows, "
             f"archive height {archive_height}."

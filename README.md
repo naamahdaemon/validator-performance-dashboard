@@ -39,7 +39,10 @@ The snapshot includes the existing all-epoch metrics, current stake/delegators, 
 
 The static interface includes:
 
-- fixed pagination: **20 validators per page**
+- selectable pagination: **20, 50, 100, 200 or 500 validators per page**, remembered locally
+- dark/light mode, initially following the system preference and remembered locally
+- current epoch stake as a percentage of the full staking ledger and of active stake
+- previous/current epoch block counts and their signed difference
 - clickable MinaScan wallet links
 - sorting on every displayed column
 - validator/wallet search
@@ -51,6 +54,30 @@ The static interface includes:
 - minimum/maximum blocks since last produced
 - Grafana-like data bars
 - current snapshot timestamp and archive height
+
+### Stake shares and epoch production
+
+`stake_current_pct` divides the validator's stake in the current staking ledger N
+by the total MINA stake in that same ledger (including recipients outside the
+displayed producer list). It replaces the former live/archive-based Stake % column.
+The original `delegated_stake_pct` remains available in the JSON.
+
+`stake_active_pct` uses the same numerator but only includes validators that
+produced at least one archived block in the previous or current epoch in its
+denominator. Inactive validators display a dash. This is an observed activity
+definition, not a protocol guarantee of online status. Both denominators are
+computed on the full export, independently of browser filters and pagination;
+their amounts are published in `ledger_meta`.
+
+The two epoch counters include all archived block statuses, like the all-time
+Blocks column. Epochs are derived from the archive tip and the existing pre-Mesa /
+Mesa slot constants, not from each validator's most recent block. The previous
+window handles the Mesa transition. The signed delta is current-epoch production
+so far minus the complete previous epoch, not a normalized performance forecast.
+
+After deploying the sources, run `sudo systemctl start mina-validator-performance.service`
+to regenerate the snapshot. Missing metrics in older snapshots display a dash.
+No new environment variables or dependencies are required for these UI and metric additions.
 
 ## 1. Create the GitHub repository
 

@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="dark light">
+  <script src="./theme.js"></script>
   <title>Mina Validator Performance</title>
   <meta name="description" content="Live Mina validator stake and block-production snapshot from a Mina archive node.">
   <link rel="stylesheet" href="./style.css">
@@ -16,6 +17,7 @@
       <h1>Validator Performance</h1>
       <p class="subtitle">Consensus stake, live delegations and block-production history.</p>
     </div>
+    <button id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light mode">Light mode</button>
     <div class="status-card">
       <div><span class="muted">Snapshot</span><strong id="generatedAt">—</strong></div>
       <div><span class="muted">Archive height</span><strong id="archiveHeight">—</strong></div>
@@ -28,6 +30,12 @@
     <span><b>N</b> = current staking epoch ledger</span>
     <span><b>N+1</b> = next epoch ledger</span>
     <span><b>Live</b> = current archive-state delegation estimate</span>
+  </section>
+
+  <section class="legend" aria-label="Metric definitions">
+    <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing in the previous or current epoch.</span>
+    <span id="epochSummary">Epoch block counts await the next export.</span>
+    <span>Block counts include all statuses. Δ blocks = current (partial) − previous (complete).</span>
   </section>
 
   <section class="filters">
@@ -48,7 +56,13 @@
   <section class="table-card">
     <div class="table-toolbar">
       <div><strong id="filteredCount">0</strong> matching validators</div>
-      <div class="muted">20 results / page</div>
+      <label class="muted" for="pageSize">Rows per page
+        <select id="pageSize">
+          <option value="20">20</option><option value="50">50</option>
+          <option value="100">100</option><option value="200">200</option>
+          <option value="500">500</option>
+        </select>
+      </label>
     </div>
     <div class="table-wrap">
       <table>
@@ -56,12 +70,17 @@
           <th data-sort="validator_name">Validator</th>
           <th data-sort="wallet_address">Wallet</th>
           <th class="num" data-sort="stake_current_epoch">Stake N</th>
+          <th class="num" data-sort="stake_current_pct" title="Stake N / total MINA stake in ledger N">Stake % total</th>
+          <th class="num" data-sort="stake_active_pct" title="Stake N / stake N of active validators. Inactive validators show —.">Stake % active</th>
           <th class="num" data-sort="stake_next_epoch">Stake N+1</th>
           <th class="num" data-sort="stake_live_estimate">Live stake</th>
           <th class="num" data-sort="stake_next_delta_pct">Δ N→N+1</th>
           <th class="num" data-sort="stake_live_delta_pct">Δ N+1→Live</th>
           <th class="num" data-sort="delegator_count">Delegators</th>
           <th class="num" data-sort="total_blocks_all_epochs">Blocks</th>
+          <th class="num" data-sort="blocks_previous_epoch" id="previousBlocksHeader">Blocks N−1</th>
+          <th class="num" data-sort="blocks_current_epoch" id="currentBlocksHeader">Blocks N</th>
+          <th class="num" data-sort="blocks_epoch_delta" title="Current epoch so far minus the complete previous epoch">Δ blocks</th>
           <th class="num" data-sort="blocks_since_last_produced">Blocks since last</th>
           <th data-sort="last_block_date">Last block</th>
           <th data-sort="last_block_era">Era</th>

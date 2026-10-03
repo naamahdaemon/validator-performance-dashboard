@@ -25,7 +25,8 @@ current_tip AS (
     SELECT
         b.id,
         b.height,
-        b.parent_id
+        b.parent_id,
+        b.global_slot_since_genesis
     FROM blocks b
     ORDER BY
         b.height DESC,
@@ -60,6 +61,44 @@ tip_ancestors AS (
 selected_branch_blocks AS MATERIALIZED (
     SELECT id
     FROM tip_ancestors
+),
+
+/* Network epochs, independent of each producer's last block. */
+epoch_reference AS (
+    SELECT b.global_slot_since_genesis AS tip_slot,
+        CASE WHEN b.global_slot_since_genesis >= p.mesa_epoch0_global_slot
+            THEN p.mesa_epoch0_global_slot ELSE p.pre_epoch0_global_slot END AS era_start,
+        CASE WHEN b.global_slot_since_genesis >= p.mesa_epoch0_global_slot
+            THEN 'mesa' ELSE 'pre' END AS era
+    FROM current_tip b CROSS JOIN params p
+),
+current_epoch AS (
+    SELECT er.*,
+        floor((tip_slot - era_start)::numeric / p.slots_per_epoch)::int AS epoch,
+        era_start + floor((tip_slot - era_start)::numeric / p.slots_per_epoch)::bigint
+            * p.slots_per_epoch AS start_slot
+    FROM epoch_reference er CROSS JOIN params p
+),
+epoch_windows AS (
+    SELECT ce.*,
+        CASE WHEN ce.start_slot - 1 >= p.mesa_epoch0_global_slot THEN 'mesa' ELSE 'pre' END AS previous_era,
+        floor((ce.start_slot - 1 - previous.start)::numeric / p.slots_per_epoch)::int AS previous_epoch,
+        previous.start + floor((ce.start_slot - 1 - previous.start)::numeric / p.slots_per_epoch)::bigint
+            * p.slots_per_epoch AS previous_start_slot
+    FROM current_epoch ce CROSS JOIN params p
+    CROSS JOIN LATERAL (
+        SELECT CASE WHEN ce.start_slot - 1 >= p.mesa_epoch0_global_slot
+            THEN p.mesa_epoch0_global_slot ELSE p.pre_epoch0_global_slot END AS start
+    ) previous
+),
+recent_epoch_counts AS MATERIALIZED (
+    SELECT b.creator_id AS public_key_id,
+        COUNT(*) FILTER (WHERE b.global_slot_since_genesis < ew.start_slot)::bigint AS blocks_previous_epoch,
+        COUNT(*) FILTER (WHERE b.global_slot_since_genesis >= ew.start_slot)::bigint AS blocks_current_epoch
+    FROM blocks b CROSS JOIN epoch_windows ew
+    WHERE b.global_slot_since_genesis >= ew.previous_start_slot
+      AND b.global_slot_since_genesis <= ew.tip_slot
+    GROUP BY b.creator_id
 ),
 
 /* Coinbase amount for every archived block, across all epochs. */
@@ -305,6 +344,11 @@ total_delegated_stake AS (
 SELECT
     tp.wallet_address,
     vn.name AS validator_name,
+    ew.era || ':' || ew.epoch::text AS network_epoch_label,
+    ew.previous_era || ':' || ew.previous_epoch::text AS previous_epoch_label,
+    COALESCE(rec.blocks_previous_epoch, 0) AS blocks_previous_epoch,
+    COALESCE(rec.blocks_current_epoch, 0) AS blocks_current_epoch,
+    COALESCE(rec.blocks_current_epoch, 0) - COALESCE(rec.blocks_previous_epoch, 0) AS blocks_epoch_delta,
 
     COALESCE(ds.delegated_stake_mina, 0) AS current_stake,
 
@@ -381,6 +425,7 @@ SELECT
     END AS last_block_epoch_label
 
 FROM target_producers tp
+LEFT JOIN recent_epoch_counts rec ON rec.public_key_id = tp.public_key_id
 LEFT JOIN public.validator_names vn
   ON vn.public_key = tp.wallet_address
 LEFT JOIN latest_account_states latest_state
@@ -388,6 +433,7 @@ LEFT JOIN latest_account_states latest_state
 LEFT JOIN delegated_stake_estimate ds
   ON ds.public_key_id = tp.public_key_id
 CROSS JOIN params p
+CROSS JOIN epoch_windows ew
 CROSS JOIN archive_bounds ab
 CROSS JOIN total_delegated_stake tds
 
