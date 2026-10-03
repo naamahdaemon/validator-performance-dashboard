@@ -100,7 +100,7 @@ $("columnPicker").addEventListener("keydown",event=>{if(event.key==="Escape"){$(
 updateColumnVisibility();
 const num=v=>Number.isFinite(Number(v))?Number(v):0;
 const nullable=v=>(v===""||v==null)?null:num(v);
-const fmt=(v,d=0)=>new Intl.NumberFormat(undefined,{maximumFractionDigits:d}).format(num(v));
+const fmt=(v,d=0)=>new Intl.NumberFormat(undefined,{minimumFractionDigits:d,maximumFractionDigits:d}).format(num(v));
 const parseDate=v=>{if(!v)return null;const d=new Date(String(v).replace(" ","T")+"Z");return isNaN(d)?null:d};
 const boundary=(v,end=false)=>v?new Date(`${v}T${end?"23:59:59.999":"00:00:00"}Z`):null;
 
