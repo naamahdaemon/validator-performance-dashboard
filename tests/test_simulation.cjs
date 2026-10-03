@@ -1,0 +1,34 @@
+const assert=require('node:assert/strict');
+const {calculate,parseOverrides}=require('../docs/simulation.js');
+const totals=require('../docs/totals.js');
+const row={wallet_address:'B62test',commission_pct:5,previous_epoch_label:'mesa:3',stake_current_epoch:2000,stake_live_estimate:2500,blocks_previous_epoch:10};
+const source={stake_history:{'mesa:3':{B62test:1000}}};
+let result=calculate(row,1000,source);
+assert.equal(result.simulation_gross,1800); // Added stake belongs in denominator.
+assert.equal(result.simulation_net,1710);
+assert.equal(result.simulation_approximate,false);
+assert.equal(result.stake_current_live_delta,500);
+assert.equal(result.stake_current_live_delta_pct,25);
+assert.equal(calculate(row,1000,source,{B62test:100}).simulation_net,0);
+assert.equal(calculate(row,1000,source,{B62test:0}).simulation_net,1800);
+assert.equal(calculate({...row,commission_pct:null},1000,{commissions:{B62test:5}}).simulation_net,null); // No static fallback.
+assert.equal(calculate(row,1000,{}).simulation_gross,1200);
+assert.equal(calculate(row,1000,{}).simulation_approximate,true);
+assert.equal(calculate(row,null,source).simulation_gross,null);
+assert.equal(calculate(row,-10,source).simulation_gross,null);
+assert.equal(calculate(row,0,source).simulation_gross,0);
+assert.equal(calculate({...row,blocks_previous_epoch:0},1000,source).simulation_gross,0);
+assert.equal(calculate({...row,blocks_previous_epoch:null},1000,source).simulation_gross,null);
+assert.equal(calculate({...row,previous_epoch_label:'pre:55'},1000,source).simulation_gross,null);
+assert.equal(calculate({...row,stake_previous_epoch:3000,stake_previous_epoch_label:'mesa:3'},1000,source).simulation_gross,900);
+assert.equal(calculate({...row,stake_previous_epoch:3000,stake_previous_epoch_label:'mesa:2'},1000,source).simulation_gross,1800);
+assert.equal(calculate({...row,commission_pct:8},1000,source).commission_pct,8);
+assert.deepEqual(parseOverrides('{"B62test":0,"B62bad":101,"__proto__":5}'),{B62test:0});
+assert.deepEqual(parseOverrides('bad json'),{});
+assert.equal(calculate(row,1000,source,parseOverrides(JSON.stringify({B62test:7}))).commission_pct,7);
+assert.equal(calculate(row,null,source,{}).commission_pct,5); // Reset defaults.
+assert.equal(calculate(row,null,source,{}).simulation_net,null);
+assert.equal(totals.calculate([row]).stake_current_live_delta,500);
+assert.equal(totals.calculate([row]).stake_current_live_delta_pct,25);
+assert.equal(Object.hasOwn(totals.calculate([result]),'simulation_net'),false);
+console.log('Simulation: added stake, history, fallbacks, fees, reset and totals OK');

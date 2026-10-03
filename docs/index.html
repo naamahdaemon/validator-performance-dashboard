@@ -57,6 +57,7 @@
     <label><span>Blocks since last min</span><input id="blocksSinceMin" type="number" min="0" step="1"></label>
     <label><span>Blocks since last max</span><input id="blocksSinceMax" type="number" min="0" step="1"></label>
     <button id="resetFilters" type="button">Reset filters</button>
+    <label><span>Stake to simulate (MINA)</span><input id="simulationStake" type="number" min="0" step="any" placeholder="Enter an additional stake" aria-describedby="simulationNote"></label>
     <label class="checkbox-filter"><input id="hideAnonymous" type="checkbox"><span>Hide anonymous validators</span></label>
     <details class="column-picker" id="columnPicker">
       <summary>Columns <span id="columnCount"></span></summary>
@@ -68,6 +69,7 @@
   </section>
 
   <section class="table-card">
+    <p id="simulationNote" class="simulation-note muted">Simulation: canonical blocks from the previous full Mesa epoch × 360 MINA × added stake / (validator stake + added stake). No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback when historical stake is missing. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
     <div class="table-toolbar">
       <div><strong id="filteredCount">0</strong> matching validators <span class="muted">· Totals cover all matching validators, across all pages</span></div>
       <label class="muted" for="pageSize">Rows per page
@@ -90,6 +92,10 @@
           <th class="num" data-sort="stake_live_estimate">Live stake</th>
           <th class="num" data-sort="stake_next_delta_pct">Δ N→N+1</th>
           <th class="num" data-sort="stake_live_delta_pct">Δ N+1→Live</th>
+          <th class="num" data-sort="stake_current_live_delta_pct">Δ N→Live</th>
+          <th class="num" data-sort="commission_pct" title="Editable locally, 0–100%. Clear the input to restore the source rate.">Commission (%)</th>
+          <th class="num" data-sort="simulation_gross" title="Hypothetical gross reward from previous-epoch canonical blocks, in MINA.">Sim. gross N−1 (MINA)</th>
+          <th class="num" data-sort="simulation_net" title="Simulated gross reward after the selected commission. Missing commission gives no net estimate.">Sim. net N−1 (MINA)</th>
           <th class="num" data-sort="delegator_count">Delegators</th>
           <th class="num" data-sort="canonical_blocks_all_epochs" title="All-time canonical blocks only">Blocks</th>
           <th class="num" data-sort="blocks_previous_epoch" id="previousBlocksHeader">Blocks N−1</th>
@@ -126,6 +132,7 @@
 </main>
 <script src="./totals.js"></script>
 <script src="./estimates.js"></script>
+<script src="./simulation.js"></script>
 <script src="./app.js"></script>
 </body>
 </html>

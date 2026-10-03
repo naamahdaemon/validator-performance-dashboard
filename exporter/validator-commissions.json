@@ -1,0 +1,1560 @@
+{
+  "source": "MinaScan user-supplied export, imported 2026-10-04",
+  "validators": [
+    {
+      "public_key": "B62qqV16g8s744GHM6Dph1uhW4fggYwyvtDnVSoRUyYqNvTir3Rqqzx",
+      "name": "Minascan Pool | Staketab",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qoiM41U5gBnjujQRgeewfkK9VmgVT8ifrRRwAsqBUM6pdxi9ywk2",
+      "name": "Kraken",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qq3TQ8AP7MFYPVtMx5tZGF3kWLJukfwG1A1RGvaBW1jfTPTkDBW6",
+      "name": "Auro Wallet",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpge4uMq4Vv5Rvc8Gw9qSquUYd6xoW1pz7HQkMSHm6h1o7pvLPAN",
+      "name": "MinaExplorer",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qq6ZYPG5JsjZnGJ3pADmRn6hU6qy13EhraTSymjSgyEDwoDR9Gd6",
+      "name": "Carbonara \ud83c\udf5d- WeStake.club\u26a1\ufe0f",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qrQiw9JhUumq457sMxicgQ94Z1WD9JChzJu19kBE8Szb5T8tcUAC",
+      "name": "Piconbello",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qpsikYYhTaAXw8XdgGhQtLsnecHF89LZdW2bGTa4aj4mePWPHxPe",
+      "name": "6block",
+      "commission_pct": 0.1
+    },
+    {
+      "public_key": "B62qopHVr6nGCsQgrvsBsoxDm1E5CEdMkDSN3jneRnxKpR5iiXnTbas",
+      "name": "InfStones",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qnSjFGjZ39C8iDGMErbFSX5NvKVyvjvHxvf7U1oDmyeU6ynxXZZF",
+      "name": "PhDSOON",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qmFf6UZn2sg3j8bYLGmMinzS2FHX6hDM71nFxAfMhvh4hnGBtkBD",
+      "name": "Sunsetting, please re-delegate",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qpsyB3gCndt8sNz4GRwusBtg9U72TNiL4mxmcQfWKZ5noa9fFnWr",
+      "name": "Naamah Stake FR",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qs2P91UjdhngetBJ57C56HQ8t5V7ECAYWBvpkaC45ovXNgnzqfG6",
+      "name": "TheNOP.io",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qqD9f8CGy5QeFj1h3nsit3Zp2GDBntjEoVCdfj4SPQuubRW1CYXp",
+      "name": "TowerStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjSytpSK7aEauBprjXDSZwc9ai4YMv9tpmXLQK14Vy941YV36rMz",
+      "name": "SleziSatoshi",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrae3PEBj66KV2obWnzVxMjDCMuFWnyzxEzvLkQutaKPmWtfUPm3",
+      "name": "atomi",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpYmDbDJAyADVkJzydoz7QeZy1ZTiWeH1LSuyMxXezvu5mAQi53U",
+      "name": "Everstake - DO NOT STAKE",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qnR6HKx34NCyDkSeRcJ44KATjUCs4xmQYDbwTXPJPQ4J6ebfeQe4",
+      "name": "Syd - Mina FR Staking Community",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qim7EVe62u3wDsGzAZEMGMaEuwSXYWTCH1WsNvWFgfvz7ysggDxf",
+      "name": "Vnode",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qjCuPisQjLW7YkB22BR9KieSmUZTyApftqxsAuB3U21r3vj1YnaG",
+      "name": "Figment",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qjhiEXP45KEk8Fch4FnYJQ7UMMfiR3hq9ZeMUZ8ia3MbfEteSYDg",
+      "name": "c29r3(Redelegate your funds)",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qnbehH2RBTrJmRApx1rGrJGkrjTRYqJiCRgtwp8S6J7D9VqNP9Po",
+      "name": "GinArea",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qkBqSkXgkirtU3n8HJ9YgwHh3vUD6kGJ5ZRkQYGNPeL5xYL2tL1L",
+      "name": "jrwashburn | The Mina Pool",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrnPdz8HpsDJfGHirDLpVrN2VeyeitdaTKBaccWtHpeVW9Hgwi75",
+      "name": "POSTHUMAN | web34ever",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qs2Lw5WZNSjd8eHBUZXFYyRjV8oKtrZMFDn1S1Ye62G71xCQJMYM",
+      "name": "P2P.ORG",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qpXqPzauUXLnsAQFnYHMCiV9pRqG2wqbJ4pL936SVANHa66zkkQj",
+      "name": "LowFeeValidation",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qopzjbycAJDzvhc1tEuYSmJYfRQQbfS9nvkKtUzBS1fmLCyTz4dJ",
+      "name": "Republic Crypto",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmM9KDeqvu3TVpQStGJARgg7KppxE8UF3xMdtKV9TDc33kSUGug5",
+      "name": "p2pstaking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qj28AitWwLTU3HAhtoW34nJ6LkyHU7XKm5wC84q1RtF4ho1yEgGn",
+      "name": "HashKey Cloud",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qmqprUwxHxG6uGDQe48Xys9diJhunEqQNRuFC5a1KBUNsDaNADgj",
+      "name": "B62Node",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qmBBEPcCpWqvMhParohskEjDttye1A7iSxwmMncXXgKkgjQ9PA7y",
+      "name": "IceStaking",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qoTASPAqsxJb1kmDZtYhxRAuuegWG1WhzkxqmZVD3BmKLenPa3hx",
+      "name": "bakarapara",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qksN97EtNvQGzH2RAgnDR8zLAawhPNE1QzWCgPRcknyL6NJ3CCgJ",
+      "name": "D-stake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrHzjcZbYSsrcXVgGko7go1DzSEBfdQGPon5X4LEGExtNJZA4ECj",
+      "name": "ZKV",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qp6qMf3Do4q4aKqEsLxVpVuXJaRCijtyhsjZBvDSEFUBGXg8Z9cs",
+      "name": "Yuriy78",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qik2auL1VbkX6fijdzwT6fGgjpi8caKUH6vbov573DbdT2UbQkDp",
+      "name": "0base.vc",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkd4tZQGe9mo5tK3wQi5PUoMdtUGtLWps6Se9o1qWdwNwuUtdWdr",
+      "name": "SGTstake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoazqR1ag2hDwjkSSm6qV3eJtkiPvVPKhfVyeea7TehBAWu4dWJ5",
+      "name": "StakeYourMina - Dheeraj",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qqJXzVcb63kE6zFEXJn2GsQ4DTjygTE3ymjYSsyHRt61qVoUBZyr",
+      "name": "FIERYDEV-MCLB",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqe4vXu5XrF3jUKcBpD7rGo1TsuybeXQfHMK8QuejfqmFB7K3Y93",
+      "name": "BlockNth",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qkAjdrnm7ifJ2BLZRkNzkoYLR1XvKQcY4cWgRMiYg1ehpyuAdGww",
+      "name": "Martview",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qqch9XkiTS8BLUDSM1sayfXNAtnYnQFChktYG1bfCJkDMUqs98Xr",
+      "name": "BitNordic",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qooQD2NzgGaiHHmbdo4C1c8YcQi5uf3ns75p9xfKp2L9FagTiFcP",
+      "name": "Infinite Lux",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qphpEdBwSycpN67XFjcXSEY9j18chmttFTXYerhTPMX4JkXubWkd",
+      "name": "StakerRash",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkxMXa9JorkHdS1iinLn5WwMV4dgn3HT63osBoFgQHYoah1MdzKw",
+      "name": "Mina Maker",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmTYWQUM5V1r9HT5wVPVYgWpotezECEgciGAXJFFGJKzNZpzH3Fz",
+      "name": "BugMina",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqYgjPA3VwKEnmWy7Cwp9fVPsZskTXQTKQdmw8qqKgznzarSEfXM",
+      "name": "Lex_Prime | Darksiders Staking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoVopcNoQPFydweGWUBnJJbrokkebVDiWGmAzYoaLysrFfzNCbya",
+      "name": "pathrocknetwork",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrCz3ehCqi8Pn8y3vWC9zYEB9RKsidauv15DeZxhzkxL3bKeba5h",
+      "name": "w3m",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qid146JcZD6eSrDt2p9iqrQC6eTxRxYB5HUyg5XpTezsqP73WWRR",
+      "name": "philalmaian",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qnFYf8Vxt1H6uvRWJFNg5WFprMq7pooZ9bxSXvMka5L7MTqcHXN2",
+      "name": "Strata One",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkHM9NT3nDefqUvSMe8qnfEfeXipqkzZrvoBXpfaC9m2BdYjWVJA",
+      "name": "vasrox",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpLeuZDL7PxNsCqsJwWFPAmnixi5ay8Kz9NcNGBQU8jK19VpJQaY",
+      "name": "melea.xyz",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qmXMMTUuKDEwY4THkgX6fvDtujGNP3FMdiaWwSHkMsMM9NzwPXZ1",
+      "name": "noda.run",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qicXxuEer88smMkN4gPx7WdsUf4dNGh3QjfprXtB1dPs9ZARY1ba",
+      "name": "Sushi Validator",
+      "commission_pct": 4.5
+    },
+    {
+      "public_key": "B62qmdsqUB7b3GYTWmCTGSioxMKeSesj4JrcRQRmmPRqwTtTo6xdYDz",
+      "name": "Sparkpool",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnEeb4KAp9WxdMxddHVtJ8gwfyJURG5BZZ6e4LsRjQKHNWqmgSWt",
+      "name": "Zot",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjaE41RVyhm1mcLNUwdpBJPSSYAr6MvfnWKCrmEfPz5BPRDj4GSQ",
+      "name": "Tata",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjiSiF5M7ohYUiMBhVuAma65Y8bARMrKG8GPHAKwHq8DsNUm1kXo",
+      "name": "Gu2nava",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrJ6V72vUoqTnJUsXwBFbCU2cCk42To4mmRRY19NiGMZqJuYLLJP",
+      "name": "FreshSTAKING",
+      "commission_pct": 7.9
+    },
+    {
+      "public_key": "B62qm2eYCip2jy5FFvUuygSCpiPg79ZhWT5S2mr6bCBfGZ4kXtBYUxd",
+      "name": "Qubelabs",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qp17siioFbT7ugFCJwtfcSn9SHFsBNAkUAxKjaFtorKqQ2Z46L1G",
+      "name": "DK-Stake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qp8Vq6n4VHq1LUm9Wd5QKjpKb7umoZ2oU9gpJYuHNUc7t2HGhGUA",
+      "name": "DSRV",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qrr4HsyQDc8BHf875XHizovkMqfXYKFxqxdcLPNahHnz1GZqCmXL",
+      "name": "MAHOF",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qrB4hLHkwUz3UXwx6jLx6XrvbRae4d8t6pMVaGhjt2c1XoqJZTUb",
+      "name": "mina-bitManna",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qphjuHHaPY37THFRMYRQsVCf1JgEE6k512cV3S4RmkmdutMhzZmr",
+      "name": "NiagaraLink",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qijDC2gCTtcqYGnUAc9YgH2Uw4fzr8xEKKL4faZmWyAypgEe3oWC",
+      "name": "Bit Cat\ud83d\udc31",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkkjmwsCMeX42PjL9DNPssKAupBojQT6Wd2ZZYeBq1EF7PTwKV6x",
+      "name": "WinterGod",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qj3Gzxgb4G4M8CwZRXZPtmVwGJtGfVXVbpMrACNDSqQLoXzSQ9HW",
+      "name": "x0d group",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qn2Ne2JGRdbHXdfD8wkA6PTWuBjaxUDQ6QuPAmggrcYjTP3HwWkF",
+      "name": "Mina_Staking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrkPTrY79TGSUV3E69gMTpfPjztPzTC6TZxwEy9P5d4nU5EVgxQs",
+      "name": "Force Network",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qorXXHv971Kvnq91TkvWsRAvMCB8yszCX6yUhpyZseKcibSZSDSF",
+      "name": "Afrobit",
+      "commission_pct": 2.5
+    },
+    {
+      "public_key": "B62qieF1JqvUzNj7pGQgNesGrGo4zJJBtqyTppcc1BwD6NV4Hn5jgFk",
+      "name": "Bluefish",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrui6wB5ZUxBQwkWMG8cmtpMuK6sPRn1hLstKLi25CecdfcistdE",
+      "name": "zkok validator",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmq89pjESe3YChrmcHxEZdbBGpo1hpSEMu1MgdMhSoNb4Ssne9WT",
+      "name": "Rootster Labs",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qoq5Eis3tAaGRta5SZ7M7CYD1nNdkNWh9CJa3QuZ1An8Dxeue2dP",
+      "name": "QAPP",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qptf4MGw8h6tJyd7b1Bbqysfk3UVyRBEukCZEHuNSJEretDBDWYs",
+      "name": "Blockscope",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qirtWdQYyj4uH2mqsNTjkURCcNjWgmrjxMVM6axc2G6LrKvbTLLR",
+      "name": "SerGo",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qp4jr1PgwK42Ah4HG2qNHigTw5riKFr6RprguAX6ms8ArDcdGv7a",
+      "name": "Andrew38",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qix9vooX5NqJYo8nT6xWqCeQu5AJoS1ng6FRnUpVAra6PAZZ1CU4",
+      "name": "BloClick Staking | 100% CO2 free \ud83c\udf43",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkCBzfCu5ma93fapuvEP1kB8io2i88zijQftn5YrBzSqWHJjtiX4",
+      "name": "5ElementsNodes",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qqhZioGPLYePnwCFUqQd7WoHu3TTmZVAvwoh61xnC6VcWNqLMsCp",
+      "name": "JOHNEE",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrE1TgV5jegA2rn32gi7FkHbFSvo2xRxKwhYykAiAsLy7ib7Uwnc",
+      "name": "Mina Node",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qif7HxYzQCb8v2FN3KgZkS8oevDG2zqYqzkdjSV1Smf6jbEcPVEc",
+      "name": "Supercharged pool",
+      "commission_pct": 2.5
+    },
+    {
+      "public_key": "B62qmLRLxC5Fx3cRmHDwKGq6psCbmXAYE1UsS4Z1foqrXCTtJuvTbbL",
+      "name": "Staker Space",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqSDsgPh4c6E4DQw1Rbo1dCtZJMivQtXTDJcL58m95pydVupDDRE",
+      "name": "WellDoneStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qq3tqfdj19hqaVCozJFM2q9gT2WezQMaJMKD6wxyvK3fMpHiP9va",
+      "name": "ByteVariety",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qnAyuWpFyRqpDA94SMbkUmhKoMLuoykj5DYWf8eeskprLKS6nLdC",
+      "name": "\ud83d\udc7eParadoxx\ud83d\udc7e",
+      "commission_pct": 6.0
+    },
+    {
+      "public_key": "B62qn3aPKv9vuoU1oJdT785bYLbbU1TTrNAXyEfycA17Kx7Miao4whM",
+      "name": "Winter validator",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qpH9udXinXbRpyvGLeTFcSeJdrwTrbRQcMYU6ufPKUepRrHddgms",
+      "name": "Lumila",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qn8JN3sLVja6GLETxWdnma3hXuUP2WfUARkcLfs8jWqW4FbuGuCU",
+      "name": "Manadu",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qk8bcoWGkmLvgSekJfKnTZh618eUCAzJFu77bhUAq9Vci4nvgb4z",
+      "name": "CertHum",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qp4Xg1zuAkTc1cyG8N2xQrujJaZ9uesm26Jy9sr2w65XUnNaGEEQ",
+      "name": "CyberAlex",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qk7nUB7DFReStpCTxHsW9Qm6go42vvLK6shgQcUrAAz6K66HsNtc",
+      "name": "Chainbase Staking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qobvkvofH1P6fmu9pjb91tx6dJ6YR5nFtgitxhkpFYsF6WZJn4yi",
+      "name": "Paparai",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrwriCceuC9YB7w5nbVMuKfDYi5T325aGtxyBp7LqVehPAJtEuj6",
+      "name": "GPvalidator",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmNP1Ki9cRqL9MivqFbmKi9XDASsQMEs2teiy8RwrJiDANB9w2UA",
+      "name": "staMINA.systems",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qq6ceNHCu9mSBvczmHS5JzHC4zw5U9KLALuwZPemeksx82AEfQSr",
+      "name": "goto5k",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qre3erTHfzQckNuibViWQGyyKwZseztqrjPZBv6SQF384Rg6ESAy",
+      "name": "stakefish",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qkDkpWabpwmJnn1Nx6tLrzusdYp1eAT89JzfYJfq95h9vzSdL9CK",
+      "name": "STAKINATOR9000",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qjQ3k78nzaePyXhg298UEVnwbCeqQUcNwZRSR4VK1gVJ6mer6M8V",
+      "name": "Natalia",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qn7HrKKt5ia1dvGYHuvuFGLdwNSXUSAERQgvS2yZbZvVaK5biQef",
+      "name": "Nodeasy",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoB94nRGJFTf9qzXVUDnLC88zt7fBcxdfTsr2FmByJqKNHFy6GH5",
+      "name": "PeachStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqur7vFH2Yk8ozux6Bt4N9teFpqF5oBvt5gAC4naUWJZZnAx9uZV",
+      "name": "OceanBlock",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjok2BD2jB6TArVM1oGDSo16xk1SYGzTwZSjx63WbtZy4BuzPBDj",
+      "name": "Stakin",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnR2AHmcnyb7v3cVvuZWriEnArx7yMkXBcnzpFQXCmGxAAv4nJSV",
+      "name": "Humanize Finance",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qov9yv8TayLteD6SDXvxyYtmn3KkUoozAbs47fVo9JZSpcynbzTz",
+      "name": "Extropy.io",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qrvETVZ7hobVY1Pym6hwiWc57Ccz22iv264j6NK7EL3FvGHQBhND",
+      "name": "BlockNth",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qnAZCj1kbyDHpxo6Lm9yM2FqMj4ffJTQzJeiPhgkzpEw1S33caCZ",
+      "name": "Stardust (100% fee) - Private",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qpwXadr3bwPsV5M7NSTZUGRaED3FPy4Ju517PqTZWWfjS8h2dy9K",
+      "name": "1ce",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qjWmFMiYUiWGvisVof9mbiKi2sB1FhZdwiDyXi8nMCoLDJuFaRYY",
+      "name": "Encapsulate (fka KingSuper)",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoo7juS8X4i59TJ2iV4p7ogHqBwwuMC9VfsQFSNjZgZpNmGw58dJ",
+      "name": "Snark House",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjmUyv9D4GQ35RFSDrXjMqgFYW4VtDkuv1q8TnxosPqxSJcbdvzG",
+      "name": "Stake Mina",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qj2tZS6SxPMfzFAvVxR6ZMfryVotdhMUwPx1C3EAhgqFEJAAqUXX",
+      "name": "MIDL.dev",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrcFgyk8u1NPaTvw9zZE1RVYGAeURojHds8WMjEpzHakU7BefkMf",
+      "name": "GreenStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrfRjSn7Wz1JAyM66rd46Zcf37sWa9tobyXh9wfZubHEfozW3SAf",
+      "name": "Redbooker",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqoBaTeqq6K5kpPEBh22HHq2BJ3ukegb4csDDoyoaFzdpgKLidYS",
+      "name": "Ushakov",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmwvcwk2vFwAA4DUtRE5QtPDnhJgNQUwxiZmidiqm6QK63v82vKP",
+      "name": "Kraymerica | Mina_Pool_01",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qoA5XwfEVnXbcrzphGH1TVuqxeJ5bhX7vTS3hcxpQFHnStG3MQk9",
+      "name": "Finoa Consensus Services",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qrexVgJhu7Bn9JPfffu6Na6AYUUrphtZVd723VY6o9HED1b952aH",
+      "name": "01staking",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qkDxbJZ1g7iER3Pv4Gid19m63wp5DKs7Jz7ELxVerWqWeBwrr2dT",
+      "name": "Passive Income",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjqtLRExnb2fyMiBpv6nC1ckGuBrCY9mXtTTcf5x7GD3CG6sU3Ad",
+      "name": "Wetez",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnvKLdq3j46nuQML7govR1gNqfBjHtv86FzmfrAU9NPGd9BSzooh",
+      "name": "DACM",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qjodMvEfFUfs2ciXUekPF3f4ePhH3uRfwoRssh5hWF1Mr8xHjeEF",
+      "name": "LordAeron",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qjWchpjVwmbEazciy3VSBZhJNVF28RcDQirLFpH2rvfmDrtXL382",
+      "name": "ImStaked",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qpZTtpZL7QobzPX97h1f2CNFchXoXc4NJUZL1xdvNqTdwR5NCbkZ",
+      "name": "UniqLabs",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqF2kUvSDw9r4XdukwST3qtqXE1S5oVfMidV4JBr3BFHpGQ3Pd4d",
+      "name": "AnyStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmnouVrbSqDevkjai8WsetJZSC1kR52vmz94WDRj724KyqYJ7MBJ",
+      "name": "ContributionDAO",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkj3CCj2V3pBPPufCuWSkoP2RwjAZkgPZfLKFUae3hPoBEhRtmyo",
+      "name": "BiXinKeLePool",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qjmReWEeTVAM9btVNBvzs4XPod6SkCAw73t1pJnLddrUg1cP6FaP",
+      "name": "MND",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmBNz8jAeKVm3Avkdqs9V796r7cXSLQ37RMi4ECswgqERwn5P7Uo",
+      "name": "nordcourt - walhalla",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qkGkioKGxZ31aMZQ7bWJ3vapw17qAaaUHsDPxv2BcxrF7tJsi8CE",
+      "name": "Arigato StakePool",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qnYBehkVZzgJBCC5yhFyF2L7mMRPsVnKW2xpcWFVuQYRVgoqwDCS",
+      "name": "CryptoHolicVN",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qptxgjmuegvWsWgtjsWGyADwm3xx4sSydnV3iVNJHqtoYnWfr429",
+      "name": "CS_Skipkun",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qkL3ENYSZLc4gnyXjXosk2nxdkn1ee1YJoud6Efoin21bo26LpLe",
+      "name": "Rourkela Staking Club",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qkmV7FquSExWQikW61F5FY5hF2kwkdMqx1x6er1zdjQ7VQKHBPpb",
+      "name": "Mav3rick|BeeHive",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkmrLj9odLjkpWGw67iypLPqX7yZpXmfitA5T7Fy7BYR5pA8eVyQ",
+      "name": "PlebPool",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qkd9DEVB4G5AxN2siEXVCgs6VFigNCecmU4gTizTber4hHexwid1",
+      "name": "kazant!p",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qiqUqeVw73vCyjP4zJtQvrRecYiete7uDkHEMTpzTr9A3cRpRu6X",
+      "name": "CalabiYau",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpzWppkJex4Hx7Y6rSq8yH9JMaGc8R1b3nkSjH3mk3aYKNyX6DKW",
+      "name": "FairStaking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmMkbajiY3bdVRjv5bx3yxjp5sBHHQuu8M11sDdjtBy5VdgWdgTr",
+      "name": "blackpaopao",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmWbgvGV1MwxS6rJEG3BSbT2T8b5DP2Theb2CaBduBXGJz6qfCqb",
+      "name": "asv",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrAWZFqvgJbfU95t1owLAMKtsDTAGgSZzsBJYUzeQZ7dQNMmG5vw",
+      "name": "MinaStake.com",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qn9vwCUbefEmPsj6g29df18TmAQ2bSthrRFGvWG1jKDEbi2wJT15",
+      "name": "REWWAER",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpFJeY8uiLwzhrmwFGthQS7yjZonyUACq32G4ULkZcRB9W3WVFgE",
+      "name": "CS_Axial",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qod2HAiPPwPr2hQCNuY8E1M3W7GFGTVmCiHMZR8VPKDcbhoJF14o",
+      "name": "Chaos Lab",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjKEDnYnmjCoACzuyD4bSYtsVSjhVyHNfpdwsthuWNGVkB3bMf5t",
+      "name": "Piggy Trust",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qmNPqex9mR17H1fpTN9gVtxXwQ2uu6XFuiqQwSWVBR7ibNd4XJSj",
+      "name": "Makalfo",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqvDf19E357mwCfM6fHRhuBTaNcwnKCJbaNE3waGnQ8uNZZPU66g",
+      "name": "Shmagr",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qj8KB2fk59NkV4VuoTkVXHjw8VJzC3ybKrWo7zuDC9xTiWXPygEe",
+      "name": "1staking.io",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqpujuZ5W9uGtEwJv9R9yP8475hjFd93D4fVXoVPi9tmAMsQZBhn",
+      "name": "ProWeb",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qqc3eKfNYpdRByoN4V3BTjoPRgacLrqtx4WkBQgnVcQ1MHSWTyWL",
+      "name": "pasha",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqx9cufbZEn5hDgfftjURCX3sTZYMuRLXVQYCPWL9P9hwXbrju1f",
+      "name": "Polychain",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qm5ESJuFWe5JypXPQMyuw2BzkVXGHFgNBgeuvBnfiLKRaqYRW6rX",
+      "name": "node75",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qp3PqVZ9pLdwaGvaRCc8NnqRk1TfpJGbsCZp6JxE3PhdajFVDvNH",
+      "name": "Metrol",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qs15dFX37JvKbJ6QAwnDhUEJ7sFp9YKZyECX2Ke8bu3S764txEzw",
+      "name": "Bianca Staking",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qipQErFuTh8pLBxJQsATUivbiBeKeE6vygDcegEJEUkBUSAayorp",
+      "name": "NeoNumis",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qriA1rqpkBS338FEgr3Gd8jL1tqxj6d1Vgtr5WH9n4YRBLrstE9D",
+      "name": "LimonMINA",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qnPSvJBatxfv3nkA8spTbRDoRyhzE3LmUeqXBtKZSJeUKMxQZpZ2",
+      "name": "Fego",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoWWs3NfAPtVKRnZF96gEF3MWbptg9bzC254AQNswpk9WwTFkjS4",
+      "name": "Cryptoved",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjE7tc4GfnxT8y7xdexpgmX6CYcRwPLUjgi6K7HpWTMRA2CBuLeH",
+      "name": "Tomatin",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qmwqDQ3s44vRvHKkY52bmkLVjt419M5MkmfPyH8XSq1sQMPyY46z",
+      "name": "Republic",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrd9rWJtyr1gVCtVcdn8eTmPs9RvGVBJYid1SsPzjVE2UhPDNUx1",
+      "name": "Time4Girls2DoCrypto",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpdKVxef96UTWaEPEbGQ7FruwCSbEckDHDGtpAQqxUfDmHR725AV",
+      "name": "EvA",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qoXQhp63oNsLSN9Dy7wcF3PzLmdBnnin2rTnNWLbpgF7diABciU6",
+      "name": "MINA-Stake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnjpQq2uPKSsRJU4ivYYvECnY2RbkSDVsoKJn9nFkq2YPu7XazHg",
+      "name": "Gersia",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qqjvE7v6Qrf1h7xtn4U57eMq8m7CPpkgwS3aCY8w9jQgnzAoPoUp",
+      "name": "Nepser",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqgGAQfpFhX8G1iF253C37CMsj6ypn77C9fr3Y17iU6B5Ft4XjPo",
+      "name": "Stake Strong",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qm4QbSnmQWM3x7SUiQeWAjb6iiooWNd8iaxtDvsne7YP4nC8Nh7f",
+      "name": "Summer",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qniy6hb6KhCAhHAJNToBJEVpFbh4tWroMUtmm1s3xSdr1egbwFF1",
+      "name": "Gamzi",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoA8zWuP3qK1ibaeCcETtvG2R79tv2Ea71Djc2fHrCJpw2pSQSJh",
+      "name": "qstake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpkF1Yrd1uQNLpun7d8k12ggHEXjXHknLCKh6Hom7Q3Ba3oZg3nb",
+      "name": "karabanStakeprolimited",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpKtaRsUHaYGSfNgG6eb3emgHBS1Gn5SYCSAuabgfUSXcas4GtbA",
+      "name": "tanyaber",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrgm18MXb1SrUEtX749F7otngnQthQuz9pCcvHA2ZfgNcYTQBxqF",
+      "name": "SoftHouse",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmo7V7vxx2UdVgnmznQDCkqAnxNQ2kkxfuRgqvRrCEMBgJT1jB1G",
+      "name": "Fible1#2782",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrx22PmRx6jXfvrS4amPCGR22KX6SB7NXvFLTuw9eDZYgVtymid2",
+      "name": "b1f1 staking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qickv7Kcpc4CWq61yAwP6heQpKdFN1WRHSoen2hyhSGBfh9CXR69",
+      "name": "The Only node that matters!",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qoRwuKz4JzoJwZGfSnmmvebuppheQQoTqP7TaCQRG8RVYSwXX8bP",
+      "name": "mina.farm",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoWcd3dUzbjMHTdpjf5Us88x1otEoJmhSVRX7FXf1Dx1zT5Hp3ZC",
+      "name": "whisperit",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnnd36aL8srry5XJXz6SHihF3ggLpC7rSaJiMHqQ1Q6RLAWjYwxb",
+      "name": "Feel staking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkLG5q3cfaR8XmoBWqHoBn2q1tni9EEmXXJDJJSxizSbpRKzeMCE",
+      "name": "Staking Hub",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qqAUCcdxhMqxCEUbuPy6kTQf1LNHknZE9twxUWRc9cbX2ABoBCEX",
+      "name": "private subtlelight",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qr41Mf7gCaRXN2dn8yBCe5D5bedQ82gyG2ELtkx5Vcd3HNcnVhxE",
+      "name": "CB Validator",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qqz9rLVxZZ68wuqYVHp178sPqSSjivTCuQVYpU1bxGxYHyspCP3f",
+      "name": "MinaPreacher",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qny4snW5cBovDvVFLSipUMaDiu7xwYMrfbTscDLDne7enKJyGkbh",
+      "name": "FomavGroup",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoKmDAtpy9k7Huq8TA1Pf5vnQhwtkQMV1CppRR4zQUWmKoGMcwuK",
+      "name": "Noda DAF",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qjr255iHNeSVByAk4cAopeqdzehUGTd7N6V9nfYAdXS7KkwjGPD2",
+      "name": "GoodTeam",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qpN2atcDDfXQB8YttP8hSE1T7bKGuUECEAPMprsaGP1te5XRSiFS",
+      "name": "Whale",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qq2PGvsoNC4u3uxthhs2ztXzuXRzqoWX9pWUDo5xdC3vdG7DQkjU",
+      "name": "little wolf",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qs24kU2yV7Q4rFmAf8jga1kFCHU8zmMd58cfZsbYe6YSeSmHoP8q",
+      "name": "taposwork",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnV4M4HKnDGn4g5RxN5DgC2jCRemZy94C59Mo8yqPfkxq4Tnao7J",
+      "name": "ChainUP",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qmXi6YMzGmKhw7CK1M8VAybRyErq7VytkXULkjTjiB1FjTdoYxX1",
+      "name": "Z10N-labs",
+      "commission_pct": 4.2
+    },
+    {
+      "public_key": "B62qmvFsNdKFEtrWCxw7KecayrcwvgQPhvGBd26Sd2GxFXyL3Q8c1T3",
+      "name": "Mash",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qp7J9DJWb4y9BsXiixdRQLGvouFmrpyiv1fmF2vPSV1tXhWuTiyD",
+      "name": "Comr8_nga",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qiqjSnNCruUzMHv2EFshoeKRUbebbFe6rxjBtcrPR86r9ProWr1Q",
+      "name": "BCStake",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qjbFqXLhj8bKnL827jXpv8fjn6aDEB6uyGebiqmMmjEz1ZnjQBZM",
+      "name": "PrimeCore-validator",
+      "commission_pct": 0.01
+    },
+    {
+      "public_key": "B62qqqxSi2A1XWZ1qmZWjidraTSH5wDNWcDG7THCZbKfQgm4zsvn75N",
+      "name": "noisybp",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqcWqT5kjF2UxKsPZ2MWHm4NjQGXou5dYyR1P6m6JFa8LQjbbsMj",
+      "name": "NodeONE",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qo66CKPS6vFBxYqdPbFxARisQ9ZvXarrav37mohjdWj7ACjJKGju",
+      "name": "iStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnXy1f75qq8c6HS2Am88Gk6UyvTHK3iSYh4Hb3nD6DS2eS6wZ4or",
+      "name": "DexHeim",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoAavhzkoKEh5d8fwMmFT2N2BKys1GEXZME5cJRkZkfQyDXzCJrT",
+      "name": "patrikokokon",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrYveCMCW2tr5J8gu9T1rh817zsq7j8cjc9mHEecQS2tRMnoNTsy",
+      "name": "blxpro",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmqUZKjbxhNDAGRpymU7KJBP55xP7QjmqcjHr2XjcrTzLJo7bUCp",
+      "name": "Ztake.org",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qmpHMDeuGL1KAkneV1RTKMez2ZNcDUJKNAEZgweJna62xuJQ6Mqm",
+      "name": "satojiu",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrLf5xV1fdE2RikXzzogaJYhPmWMf75GGSpJSG2yLiE3nM24C2Nd",
+      "name": "Stake free",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qpZQ7xcNpv6zcY75D2y1V4K1DHXVpkbCJAYpPNHgutXAb6o5QSZE",
+      "name": "Sol Invictus",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qry8iJF3X2icdxsCzFz2qEXPUiu9HkR1wBde93bqgjvFzcRcFnti",
+      "name": "stakingcare",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qnWPnneWPobbir3JncBDVnj9dGvT1RA713xYVxJ9sBYgYHiu68Xh",
+      "name": "Lenox | NodeRunners.com",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qmtmWHKLu3NaV9EfygMmkvVedCUiRF6xcSMemmkbEcFok13WVe7C",
+      "name": "PerroCrypto",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qocWjfM3qAxskcdmcUfFPPShwmupTf1vhgciWuLDdqupPrUBys3t",
+      "name": "Coinpayu",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkhfgERAi7TUjujZ8gdwSbA9TnJxvErjwfZTeftKmpdjJxWxGHGT",
+      "name": "KarabakhAzerbaijan",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrr1gkgYvVfRb9JjstCcjDTKYYXFM61dD7oqFaEjc5VkFvL8zWgr",
+      "name": "Lock4Rich",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qowm5zNjGsDzC67eTc4zvjXwdkPRUKHFzeSDRjm6FBojzqmNfNhH",
+      "name": "Speedonic",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnd1rPUp4aBpjVjCJ3XLXk64WxuM9ff3UkfZoRCkBF8vcyFnXNTs",
+      "name": "STAKE_DELEGATION",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnXhuoWPcUeBrqWPxPJAZ4khgd3bPdBoY1614jTzu9o9R2wJRWRo",
+      "name": "PiggyBank",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qr3AadmjVon1MmocrwPHbspp6bgMwpQwFVQG7NjeAp35V4tb533H",
+      "name": "minafruit",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoeKm4p9J6Q3hYWzb82Yo5uP163MqooBX4ZWjp8FpX3N6Y81QgFc",
+      "name": "JanIvanov",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qno46y6XVMCANMW6YtHdqAzLapeSxwX6jGoKUx5htpnrXkcz1EYR",
+      "name": "ColinkaMalinka",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qojoEQTmqECCgywgyWBy4dm2bMwJjxzHJMNbpYeZtvJfyGUkVrh8",
+      "name": "GoodTeam",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qmHktvgpH1Kbkato9MCWmH4TPKtHWc8DC4FhQCJ5TpuZ8CXazczB",
+      "name": "eraiserak",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjw2PdqLJYNTr6cNDXEmnc9FLNoaqVMHMqiTX7sqLYJRpd3mshFA",
+      "name": "Wistar",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrASGGbtuVb676neJvNySJdPUaupZJxHBNUjBAcDd6bvptyjcXpf",
+      "name": "Stake2you",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qm8gXiEozEg8LggpTedU7qpreyZoMaciiqLGVXECnuWsDfoF3UDg",
+      "name": "Crypto Ghidorah",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qj4b3yw7bqZd2AKqYFedyL6sx4fF6GgCkzG7QWz394nPMN4EKLv1",
+      "name": "Stake University",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjBpH4zeWgy4d4p59qUXDA3DtYeCyBrRM286sdXZFw4A8SiswfBh",
+      "name": "Appload",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoJuLTSJt6fqkk2N2yntcPKSEb45C8HWKr24Wi7atzCzgeXjg5oN",
+      "name": "Gabbex",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qp4NDHszuB9evzNrJpHuYqVqi7PhZVSHK8ui8GHHRwAz9GFPAFFg",
+      "name": "BC_Stake",
+      "commission_pct": 6.0
+    },
+    {
+      "public_key": "B62qm6LvKxET3xCAW5JdNWAekCjyJJFxJdYYNcpGNwvhe15yyddYife",
+      "name": "Perstake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qp8PCgNSzawdhooGXPQhULtZ4yhNzMb4UVSd3sTLz5tR8Btdtqn5",
+      "name": "Melanin Ventures",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoa1oVv1uEUUPyPHDc4NHxSb3Lw3XEV7GPcwwuYd3vVSmVV9Jo9P",
+      "name": "gLAd",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqEM1V9W5WPjFvBmZpD1ZpYs7qvAFFvhsAYVGvkvGAqjqGeEPedb",
+      "name": "CryptoStacking",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qojwv1eTALvivD73eRsbGV3Fb949FU3Y2hG8VMh7aL7KQ7KKnXn4",
+      "name": "Marakaya",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qqBuAcCGwEuyHYa4dY3dbEX2yDEAkbybtANGC3uAvhaxbhLNCEv1",
+      "name": "CryptoNodes",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qp1ekNDHr37RMgGyeVXcuDtTAgmcjkeS2SCsvme2SiJjS3S9xjm2",
+      "name": "TSK",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qr2QLJsjFqXNVJiwvXQ33kzCgFFLZtkDFzWdtizzMJNpPUfV4mgQ",
+      "name": "OS_take",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qjCJvXuEqobD8xMG7zrKMtzHiDaAN3pY8t4GKiFBdZaHn3e66xsp",
+      "name": "Road",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qkneVMyQMprAr88jZJqpE5Tcpo9vUYM8eHtnoqgSNW3SNYPev4zY",
+      "name": "Ebunker",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qoQSDyCDsosnQfgHg4U2ppieTe7MnsXH1Y6qv4HcSKojuPbAk3Co",
+      "name": "HeadlessHorsemen",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qidz67vVjRUWi4QWBhE6i6JAs5i55YP1CuRsSNB8CjM4nttrRS4q",
+      "name": "kikmag",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qrUXUnrc1tR1XN44eVaYVyw64MYD7p841LHsxzuMy6yERkbkzS87",
+      "name": "SuperPool",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qiWcbScnq9W9bhk4oLi53fyH5TL8WxzDG5cqMhbz4SUhz66v7izL",
+      "name": "Lex_Prime",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpsMTL1mTaQUQUTQzVM1qvyGTCLVAhr8whJc7tUfmnPEuZnanzUe",
+      "name": "STAKR.space",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qrXHRtZk15fN3f5rZuaqxgZUMNAxhv7EaNbnsWoGGSgG6Sj4CRvG",
+      "name": "MinaSt",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qjGf3JBKaXJEJDCGMp5xg2RsyvvVdgBt9aGx1vo4fnTBZ3xTr6Pu",
+      "name": "AppNet Solutions",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qj9roGQPFYF6jQfx4TW1Z6PYjZ4Ke55ARyEqrgCURmyASmaGdHWJ",
+      "name": "DAF Mina",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpNznnerU8Dkd3qEcCSNpako1ko33N42HRPQGUgjdZuDAoju2zdp",
+      "name": "chuchubaka",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrKWjxYaZERAGXrHrth4wP2eqjrEBZMNzw7d2LWgMnW2Gnt91B2x",
+      "name": "silent",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qpEMj7NwUbeWyyPrPUHtJDqJb1RkPxJtm6JxHrXUKDFMgJYp1zzT",
+      "name": "GxPool",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qizDizMYmXDS7LUkocoYNnrryPCxyrJM2v8eNJzaj31aU9bUfDAM",
+      "name": "Polkachu",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjFfENgQq2nRqBy5Maok6DAL4J499x3FUn2uJAVn1ngy2pCAj5sz",
+      "name": "NGC StakeX",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoaUNAJGMSArhgKQenJSe9DwouNZjVAk4EymFuNhhfdojNzCD2ui",
+      "name": "Brotherhood of Crypto",
+      "commission_pct": 2.5
+    },
+    {
+      "public_key": "B62qoERu6rA6UUxk6yNYN9CfrvXwNB7tBF94TQucZNRkabQNiDJoMiR",
+      "name": "morgan4140",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qqgLQoPgy9YzsVKwB1KBuyB62TiQJYawDubnhf5gewKJo9qrKdnG",
+      "name": "BeagleMINAtor",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qjrVKkVHRLBf6i8oPVqeJev3pRnacBWnAXuS7wYVyLBxpgRd8fi3",
+      "name": "rich",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qrhogjpZy7ufKrG19G8EDMmn2f2RFgN7EfMKb8yKCpCPXjBKVBGs",
+      "name": "MinaStake2022",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qmghW1vYg5ReP6uwQoSb6Azgupe6ENLfC7Uhq47tseHSoWphXYLR",
+      "name": "Awesome Mina 5%",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmMGz5dWhmrx7JgKtnmb4mqu87tqXsMr6wcRmnGzHrd3Y43iwhG9",
+      "name": "The Passive Trust",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qoiEyq2QHR8m3sw9eLdJxZzA5ttZ8C4EYfRs8uyE4Gc7Bi5rY1iA",
+      "name": "Daath_VoiD",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qmPb2YVWP7vKXzpxgSNZRrRU8mrouzcLUG6v7EDNAVBbw7AiHodq",
+      "name": "Nodeplus",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qoDCpSv1cmWiXgYvDud8L4dk5oTwC9JkyXyz9b13j5uFKiEFjv9D",
+      "name": "Fengshan",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qr379zCS1AxEPZbovr7kcGsURqAKqEfpfgF275NNi5WHozWUMFRG",
+      "name": "HasherMina",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qqzuwDk78ePpqDT8AUPkpBEjPHB9EaPc6A4a1WehFSURcxnd6j8k",
+      "name": "MinaIndia",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qraDPh5jcwxqnAEi5S1xN6Lkc7MgZQtx5ZftkKpS5EzQoiKkESPV",
+      "name": "Moonlight",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmbFAECu7faKPV8stYbMav2QvKLq24Cu9eNEoXaVGNRnh7qWsjXn",
+      "name": "iSkullbox",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qpy8BMXe3tYsFeaTPRNW6yoG8jqaZfqreBXsaDGJ67Cxptn44dSh",
+      "name": "MinaLifePool",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qroYMFfTSfRXDkHmcbgXQXEoLeGPWGAfzEcve7TK4ikjcEKc6TdM",
+      "name": "mina",
+      "commission_pct": 58.0
+    },
+    {
+      "public_key": "B62qovoydiqs8rD63Hg3ST3WTKBoUG15nDcXozpnNsDRrcg7MAWHgmP",
+      "name": "Nzuga",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpGd5NJe6oLytAypn6gWD5rxeB4TCatLdDfD4k8KQN8NAD1huzMp",
+      "name": "\ud83d\ude80 Voltere Capital Management",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qj5Mv8tyQ7BSmAEeoHcTR1dwYpwxVy2GXSoajgSfyM3uUDUAiR6R",
+      "name": "MDLOG",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjgMVvo1JTaG6u1pBFNzvPGivGTUeq6TtbauypeVybojD5JdWjvW",
+      "name": "Stake+",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qoG7mge74phWmvLdgMTrewb3Znpkvt3LYbtiKgvhN3v4kjVx1RPc",
+      "name": "Kinbas",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrh6VesZPmQqeHx4NAG8CY7XHUbMfz3tLhQfqF9psUeJE3EPReCm",
+      "name": "GrayStake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoEMS3PDoAzLMyffJ4LTZx3uuqxWFYYLxpX9vBQcZQr1KNXeb5qk",
+      "name": "Dakata Mina Stake",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoyY9XUTNz7niXVthqGKgnxCwYZ3yftu3nqBr2CGW6rxb6a8CyR3",
+      "name": "Zeman",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qjGr1H6MMzW2sbicwAVKKCZi66TFKrx4UFXdFBA6f6NGmJxXE1B8",
+      "name": "42 Reasons to Validate",
+      "commission_pct": 4.0
+    },
+    {
+      "public_key": "B62qrBRnUXvdMr8eGLBsmdpvFnndinDZMowqoMUYRJnmGKpdJv7TMRj",
+      "name": "Alaya",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qkYgYYksN8vrPXFLeHPP2cZpiMk9ZJKeJ5wmLQnhqhLrhLw191Lb",
+      "name": "Sleazy Stacks",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qoib6YPmZTquGf9mMnkmmGqEQ7DJ61fP56wDXrXGmo972MgjQh4b",
+      "name": "Funhaus",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpSUqSGgNaouFt1NwKm62nQ8HfzL5RXf6C2urhFke2rACJMTG8PU",
+      "name": "Lem",
+      "commission_pct": 0.05
+    },
+    {
+      "public_key": "B62qpGJQ6F9z3egMNU8cE3EGqaLgDzwxFNLEH8aTMkWGnJRykBarCqx",
+      "name": "plaza",
+      "commission_pct": 1.0
+    },
+    {
+      "public_key": "B62qrzXvJZ1x9YSoo2VvwN8v7cjRVYcDWaJvK3uFnmheDVVhJnyPihn",
+      "name": "NotACat",
+      "commission_pct": 6.0
+    },
+    {
+      "public_key": "B62qoqHT6ACfnKatX6unpve2AvwQnD2GZS3SaDHTjWsSh3nXasDs1uP",
+      "name": "PlatypusEnterprises",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrdXhSnquSdanvimFNDJqCK9HuN8hsHdapqPWaGqa2a9C3oG5XJq",
+      "name": "StakeSeeker by BTCS",
+      "commission_pct": 100.0
+    },
+    {
+      "public_key": "B62qnr5wwBn5dTuYTRgKobVujZYWLNBYA9marvg3y1e3yfukRmwqZv2",
+      "name": "Goodies Node",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qnucUMHz7Dw2ReNgWhmR5XCvPeQjJWPReuQ8GwPyY4qj1otGBiKr",
+      "name": "StakeThat",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qmPxwf3FTtb62toALY6k6q4HiCWJCUGP8xyxpDFsgwhFCnHBEQvp",
+      "name": "Shlif",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qnTahyoiqVSW9qbqiTBczA7n1wim9d7PYwGxWZP2s6mgwMn9AoGg",
+      "name": "ANJU-MCLB",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnFs1Hb4TQdDFMrm3LaS6e6dxfXPTXH3WpjyiQQxuRvVtBiZ2fx8",
+      "name": "Gingkgo League",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmgmWNyKRJz6m1h5EnEPSZqiUf4HNHWaPsH8XEUVs9whBo4okwyQ",
+      "name": "EntropyGraph",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qnUwCFGxywYr6rxq9Zgktbm3Jc5hdTChnwbjM2goJ4XLctZXWwp9",
+      "name": "BlockNgine Validators",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qoSTXoK57i8UQ8RecMv592EkTjNQcSWpyVvJ6Ck6xgpBzvUFc6CG",
+      "name": "Q",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qne38nSn1gwHkAn9vPN5SZntgXg3cM5pfuad1zQxFRuvAQmKkGTi",
+      "name": "inextremo",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjrwcG6cbvartJ63wJQQxYx1aY9N1gh8fhYkG8AwDmwQY42XfG6Y",
+      "name": "Lebon",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qnZz9WWq4d8LA2hsT9PZBAsc8zLXPq2ejA5q6zUMpweMVaMxspdL",
+      "name": "Stake Top",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmrsFZNeW2ReoHpTafy9hy1oNw12UuR1UdGJEUqTuFZ3LPVccDTA",
+      "name": "StakeTarget",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qmQ4pFXU4tyNwdzMY7uCdrALptYp8SnthWJMqPPA3FgmxebY3H2P",
+      "name": "WolfEdge Capital",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjceYTwKGRigmhy9A1sPZYsvgAxSYmVfkgqC1jUkbpLCsoGWHeXX",
+      "name": "StakeKey",
+      "commission_pct": 6.0
+    },
+    {
+      "public_key": "B62qnytg4us7jD5xha2mozxZ55EQkZoTwAPgqc4Juti49VaVEx43Fai",
+      "name": "OSPStaking",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qpBriw4N47gSKgKKb584bsRwLpZYTqpmTzdCEWb6ogHxiJCyJ51w",
+      "name": "MinaChangesWorld",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qrcQDeAfg2qSnZhdF8wQ78G9QmKNDqpESVt2SL43F97kF3Cyv32a",
+      "name": "MINA.CROWBAR.SYSTEMS",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qjp6bK1jLdWVUXvnrhKmfuAuvLSMtCyysKEKVxewrL315BSPeMP7",
+      "name": "YieldWallet.io",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrRVMpryecmWaStfobX2dxRLuWxsbd54jfjZm9DAdBycDic8Ef3h",
+      "name": "LongZ",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qjUhxNNfU9NGo6atficHEDYHTijTxKyp7KnqSc3gFN8EL4R9fzxS",
+      "name": "Clorophilla",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qrC14RL5ASE2Ep6sWmP7mb3dfTWy3AyFJYAduxDnjYYVFiPME7wk",
+      "name": "staker.id",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qmGqivW5t7jsKRooqzAroKYSA8vxmsreEeMgxMWzzjdjUtWY1LYx",
+      "name": "EasyStake",
+      "commission_pct": 7.0
+    },
+    {
+      "public_key": "B62qrJreRSCNusj6uYVanrFESuaaBu13Ri44djV6k7HkYNcarKEJBKu",
+      "name": "5211_DevelopmentNode",
+      "commission_pct": 10.0
+    },
+    {
+      "public_key": "B62qjc1wDyirZMLXHNSEDAR7Ytjf7FzV7PxXesDjawBS5VzHNWRtTBy",
+      "name": "mofbar",
+      "commission_pct": 8.0
+    },
+    {
+      "public_key": "B62qqGD7wT9HhMNPpSjjZCgMi3s3DR4CPzUQTEBsPkxwZpCoVFU8V4r",
+      "name": "ichiro",
+      "commission_pct": 2.0
+    },
+    {
+      "public_key": "B62qp2zfnZcEH5wMdvtgwUB6uuKJon9LkLzYV7ZFCbWJHppxNrGB8hy",
+      "name": "HoldChance",
+      "commission_pct": 0.0
+    },
+    {
+      "public_key": "B62qpM6uZJgwBf6ahjkYNMD5aJEt3LBHe3wRkNHD5LoxR5EHPKV9zwN",
+      "name": "Mina Booster",
+      "commission_pct": 3.0
+    },
+    {
+      "public_key": "B62qpbGEpgy4oK84fLbPvWw1svinMq3MP1Qkr2UPMKZGEe7poz4DmoW",
+      "name": "StaMina",
+      "commission_pct": 5.0
+    },
+    {
+      "public_key": "B62qrdxS8ZEu6LW6bACrCn6aXsZRxhQJfSNY9BJc8kKLxqA1Wqx7VZb",
+      "name": "FortyInvestor",
+      "commission_pct": 5.0
+    }
+  ]
+}

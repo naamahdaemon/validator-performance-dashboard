@@ -355,6 +355,8 @@ total_delegated_stake AS (
 SELECT
     tp.wallet_address,
     vn.name AS validator_name,
+    /* Missing column before migration safely yields NULL. */
+    (to_jsonb(vn)->>'commission_pct')::numeric AS commission_pct,
     ew.era || ':' || ew.epoch::text AS network_epoch_label,
     ew.tip_slot - ew.start_slot AS network_slot_in_epoch,
     p.slots_per_epoch AS network_slots_per_epoch,

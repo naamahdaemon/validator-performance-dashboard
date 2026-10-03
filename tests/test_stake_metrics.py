@@ -18,6 +18,17 @@ def account(wallet, balance, token=None):
 
 
 class StakeMetricsTests(unittest.TestCase):
+    def test_previous_stake_rollover_and_epoch_matching(self):
+        rows = [{"wallet_address": "A", "previous_epoch_label": "mesa:3"}]
+        previous = {"validators": [{"wallet_address": "A", "network_epoch_label": "mesa:3", "stake_current_epoch": 123}]}
+        exporter.preserve_previous_stake(rows, previous)
+        self.assertEqual(rows[0]["stake_previous_epoch"], 123)
+        exporter.preserve_previous_stake(rows, {"validators": [dict(rows[0])]})
+        self.assertEqual(rows[0]["stake_previous_epoch"], 123)
+        rows[0]["previous_epoch_label"] = "mesa:5"
+        exporter.preserve_previous_stake(rows, previous)
+        self.assertIsNone(rows[0]["stake_previous_epoch"])
+
     def test_missing_next_ledger_keeps_other_metrics_and_recovers(self):
         rows = [{"wallet_address": "A", "current_stake": 90, "blocks_current_epoch": 3}]
         for error in (RuntimeError("export failed"), RuntimeError("timed out"), OSError("docker unavailable")):

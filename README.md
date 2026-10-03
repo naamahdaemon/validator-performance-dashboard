@@ -72,6 +72,56 @@ and Reset filters preserves the selected columns.
 
 ### Stake shares and epoch production
 
+The `Δ N→Live` column compares live stake directly with current ledger stake,
+even when N+1 is unavailable. Its total is calculated from aggregate stakes.
+
+### Local delegation simulation
+
+Enter additional MINA in **Stake to simulate** to compare alternative validators.
+Gross reward uses `canonical blocks N-1 * 360 * added stake / (stake N-1 + added stake)`;
+net reward applies the editable commission. No additional blocks are assumed.
+This is a hypothetical share of historical rewards, not an entitlement or forecast.
+Only previous Mesa epochs are supported; pre-Mesa transition epochs show dashes.
+Zero/missing validator stake, missing block counts or an empty input also show dashes.
+Unknown commission leaves gross available but net unavailable. Simulations and
+commissions are not summed, because each row places the same stake elsewhere.
+
+`public.validator_names.commission_pct` is the source of commission percentages.
+The SQL export reads it via `to_jsonb(vn)` so snapshots still work before the
+column is installed (rates will be unknown). `exporter/import_commissions.py`
+adds the column and imports 311 rates from the user-supplied MinaScan export
+in `exporter/validator-commissions.json`. It preserves existing names, inserts
+missing validators and updates supplied rates in one transaction. Re-running
+reapplies those rates; rows absent from the file are untouched. This is not an
+automatic MinaScan feed or a historical commission record.
+Browser edits override the published database rate, are stored only in
+`validator-commissions-v1` localStorage and never sent to the exporter. Clear a
+commission to restore its source. **Reset filters** restores all database rates
+from the loaded snapshot and empties the persisted simulation stake.
+
+`docs/data/simulation-sources.json` contains Mesa 3 staking balances from repository snapshot
+`0b67823`. The exporter carries labelled N-1 stake across subsequent epoch
+rollovers using the previous published snapshot. If epochs are skipped or a
+validator is absent from history, the browser uses current stake and prefixes
+the result with **≈**. Tooltips identify the stake basis and epoch; commissions
+remain current/source or local, never presumed historical. Results have two
+decimal places and distinct theme-aware backgrounds (gross blue, net green).
+
+After deploying the files, run this once on the server using a database role
+allowed to alter/update `public.validator_names`. It reads the same PostgreSQL
+settings as the exporter; no password is printed:
+
+```bash
+sudo bash -c 'set -a; source /etc/mina-validator-performance.env; set +a; exec /opt/validator-performance-dashboard/.venv/bin/python /opt/validator-performance-dashboard/exporter/import_commissions.py'
+sudo systemctl start mina-validator-performance.service
+```
+
+The database migration/import has to be executed explicitly; the periodic export
+does not mutate reference data. If the configured PGUSER lacks DDL privileges,
+run the import with the table owner's database credentials instead.
+
+### Network summary and production estimates
+
 The snapshot summary shows the network epoch, the latest archived block's
 zero-based slot within that epoch, current-epoch confirmed plus provisional blocks,
 and slot fill rate (`100 * blocks / (slot + 1)`). The denominator includes the

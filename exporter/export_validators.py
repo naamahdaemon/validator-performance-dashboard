@@ -199,6 +199,21 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def preserve_previous_stake(rows: list[dict[str, Any]], previous: dict[str, Any] | None) -> None:
+    """Carry epoch-labelled stakes across snapshots, never assume an old row is N-1."""
+    old_rows = {r["wallet_address"]: r for r in (previous or {}).get("validators", [])}
+    for row in rows:
+        old = old_rows.get(row["wallet_address"], {})
+        target = row.get("previous_epoch_label")
+        value = None
+        if target and old.get("network_epoch_label") == target:
+            value = old.get("stake_current_epoch")
+        elif target and old.get("stake_previous_epoch_label") == target:
+            value = old.get("stake_previous_epoch")
+        row["stake_previous_epoch"] = value
+        row["stake_previous_epoch_label"] = target if value is not None else None
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -249,6 +264,7 @@ def main() -> int:
     archive_height = archive_height_from_rows(rows)
 
     previous = load_previous(output_path)
+    preserve_previous_stake(rows, previous)
     if previous and previous.get("validators") == rows and previous.get("ledger_meta") == ledger_meta:
         print(
             f"No validator data change: {len(rows)} rows, "
