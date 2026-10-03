@@ -18,6 +18,33 @@ def account(wallet, balance, token=None):
 
 
 class StakeMetricsTests(unittest.TestCase):
+    def test_missing_next_ledger_keeps_other_metrics_and_recovers(self):
+        rows = [{"wallet_address": "A", "current_stake": 90, "blocks_current_epoch": 3}]
+        for error in (RuntimeError("export failed"), RuntimeError("timed out"), OSError("docker unavailable")):
+            with self.subTest(error=str(error)):
+                with patch.object(exporter, "export_ledger", side_effect=[[account("A", 100)], error]):
+                    with patch("sys.stderr"):
+                        meta = exporter.enrich_with_consensus_ledgers(rows)
+                self.assertFalse(meta["next_ledger_available"])
+                self.assertIsNone(meta["next_ledger_accounts"])
+                self.assertEqual(rows[0]["stake_current_epoch"], 100)
+                self.assertEqual(rows[0]["stake_live_estimate"], 90)
+                self.assertEqual(rows[0]["blocks_current_epoch"], 3)
+                self.assertEqual(rows[0]["stake_active_pct"], 100)
+                for key in ("stake_next_epoch", "stake_next_delta", "stake_next_delta_pct",
+                            "stake_live_delta", "stake_live_delta_pct", "delegators_next_epoch"):
+                    self.assertIsNone(rows[0][key])
+        with patch.object(exporter, "export_ledger", side_effect=[[account("A", 100)], [account("A", 120)]]):
+            meta = exporter.enrich_with_consensus_ledgers(rows)
+        self.assertTrue(meta["next_ledger_available"])
+        self.assertEqual(rows[0]["stake_next_delta"], 20)
+        self.assertEqual(rows[0]["stake_live_delta"], -30)
+
+    def test_current_ledger_failure_still_stops_export(self):
+        with patch.object(exporter, "export_ledger", side_effect=RuntimeError("staking failed")):
+            with self.assertRaisesRegex(RuntimeError, "staking failed"):
+                exporter.enrich_with_consensus_ledgers([])
+
     def test_total_includes_unlisted_stake_and_activity_uses_both_epochs(self):
         ledger = [account("A", 100), account("B", 300), account("C", 200),
                   account("unlisted", 400), account("other-token", 9999, "OTHER")]

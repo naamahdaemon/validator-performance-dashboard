@@ -99,6 +99,15 @@ After deploying the sources, run `sudo systemctl start mina-validator-performanc
 to regenerate the snapshot. Missing metrics in older snapshots display a dash.
 No new environment variables or dependencies are required for these UI and metric additions.
 
+The next-epoch ledger is optional during export. If its command fails, times out,
+or returns invalid JSON (including during transition-frontier recovery), the
+snapshot still updates current stake, live stake and block metrics. N+1 stake,
+N+1 delegators and both dependent stake deltas are `null`, displayed as a dash;
+old ledger values are never reused. `ledger_meta.next_ledger_available` records
+availability, and a warning with diagnostic details is written to the service
+logs. The next scheduled run retries automatically. Failures fetching the current
+staking ledger or querying the archive still stop publication.
+
 ## 1. Create the GitHub repository
 
 Create a repository, for example:

@@ -87,7 +87,8 @@ def export_ledger(kind: str) -> list[dict[str, Any]]:
         raise RuntimeError(f"{kind} export timed out") from exc
     except subprocess.CalledProcessError as exc:
         raise RuntimeError(
-            f"{kind} export failed: {(exc.stderr or '').strip()}"
+            f"{kind} export failed (exit {exc.returncode}): "
+            f"{(exc.stderr or exc.stdout or 'no diagnostic output').strip()[:2000]}"
         ) from exc
 
     try:
@@ -140,10 +141,16 @@ def pct_change(new: Decimal, old: Decimal) -> float | None:
 
 def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
     staking_accounts = export_ledger("staking-epoch-ledger")
-    next_accounts = export_ledger("next-epoch-ledger")
+    # N+1 can be unavailable during transition-frontier recovery. Never reuse
+    # an old ledger: it could belong to a different epoch.
+    try:
+        next_accounts = export_ledger("next-epoch-ledger")
+    except (RuntimeError, OSError) as exc:
+        print(f"WARNING: N+1 ledger unavailable; publishing other metrics. {exc}", file=sys.stderr)
+        next_accounts = None
 
     stake_n, delegators_n = aggregate_ledger(staking_accounts)
-    stake_n1, delegators_n1 = aggregate_ledger(next_accounts)
+    stake_n1, delegators_n1 = aggregate_ledger(next_accounts or [])
 
     total_stake = sum(stake_n.values(), Decimal("0"))
     active_wallets = {
@@ -157,7 +164,7 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         wallet = str(row.get("wallet_address") or "")
 
         current = stake_n.get(wallet, Decimal("0"))
-        nxt = stake_n1.get(wallet, Decimal("0"))
+        nxt = stake_n1.get(wallet, Decimal("0")) if next_accounts is not None else None
         live = Decimal(str(row.get("current_stake") or 0))
 
         row["stake_current_epoch"] = float(current)
@@ -166,23 +173,24 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         row["stake_active_pct"] = (
             float(current / active_stake * 100) if wallet in active_wallets and active_stake else None
         )
-        row["stake_next_epoch"] = float(nxt)
+        row["stake_next_epoch"] = float(nxt) if nxt is not None else None
         row["stake_live_estimate"] = float(live)
 
-        row["stake_next_delta"] = float(nxt - current)
-        row["stake_next_delta_pct"] = pct_change(nxt, current)
+        row["stake_next_delta"] = float(nxt - current) if nxt is not None else None
+        row["stake_next_delta_pct"] = pct_change(nxt, current) if nxt is not None else None
 
-        row["stake_live_delta"] = float(live - nxt)
-        row["stake_live_delta_pct"] = pct_change(live, nxt)
+        row["stake_live_delta"] = float(live - nxt) if nxt is not None else None
+        row["stake_live_delta_pct"] = pct_change(live, nxt) if nxt is not None else None
 
         row["delegators_current_epoch"] = delegators_n.get(wallet, 0)
-        row["delegators_next_epoch"] = delegators_n1.get(wallet, 0)
+        row["delegators_next_epoch"] = delegators_n1.get(wallet, 0) if nxt is not None else None
 
     return {
         "staking_ledger_accounts": len(staking_accounts),
-        "next_ledger_accounts": len(next_accounts),
+        "next_ledger_available": next_accounts is not None,
+        "next_ledger_accounts": len(next_accounts) if next_accounts is not None else None,
         "staking_validators": len(stake_n),
-        "next_validators": len(stake_n1),
+        "next_validators": len(stake_n1) if next_accounts is not None else None,
         "total_stake_current_epoch": float(total_stake),
         "active_stake_current_epoch": float(active_stake),
         "active_validator_count": len(active_wallets),
