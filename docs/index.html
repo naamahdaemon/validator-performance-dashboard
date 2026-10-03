@@ -36,6 +36,7 @@
   <section class="legend" aria-label="Metric definitions">
     <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing canonical blocks in the previous or current epoch.</span>
     <span id="epochSummary">Epoch block counts await the next export.</span>
+    <span>Estimates cover a full Mesa epoch: 7,140 slots × 75% theoretical fill rate × Stake N / total ledger stake. Gross coinbase = estimated blocks × 360 MINA, before costs and delegation payouts. Approximation, not guaranteed rewards or a performance score for the partial epoch.</span>
     <span>Block counts include canonical blocks only (pending and orphaned excluded). Δ blocks = current (partial) − previous (complete).</span>
   </section>
 
@@ -89,6 +90,8 @@
           <th class="num" data-sort="canonical_blocks_all_epochs" title="All-time canonical blocks only">Blocks</th>
           <th class="num" data-sort="blocks_previous_epoch" id="previousBlocksHeader">Blocks N−1</th>
           <th class="num" data-sort="blocks_current_epoch" id="currentBlocksHeader">Blocks N</th>
+          <th class="num" data-sort="expected_blocks_epoch" title="Full Mesa epoch estimate: 7140 × 0.75 × Stake N / total stake in ledger N. Not a prediction of VRF wins or actual canonical blocks.">Est. blocks / epoch</th>
+          <th class="num" data-sort="expected_coinbase_epoch" title="Full epoch estimated blocks × 360 MINA. Gross coinbase, excluding transaction fees, costs and delegation payouts.">Est. gross coinbase (MINA)</th>
           <th class="num" data-sort="blocks_epoch_delta" title="Current epoch so far minus the complete previous epoch">Δ blocks</th>
           <th class="num" data-sort="blocks_since_last_produced">Blocks since last</th>
           <th data-sort="last_block_date">Last block</th>
@@ -118,6 +121,7 @@
   </footer>
 </main>
 <script src="./totals.js"></script>
+<script src="./estimates.js"></script>
 <script src="./app.js"></script>
 </body>
 </html>

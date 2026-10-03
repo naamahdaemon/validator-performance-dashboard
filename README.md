@@ -72,6 +72,21 @@ and Reset filters preserves the selected columns.
 
 ### Stake shares and epoch production
 
+The browser also calculates two sortable, hideable full-Mesa-epoch estimates:
+`expected_blocks_epoch = 7140 * 0.75 * stake_current_epoch / total_stake_current_epoch`
+and `expected_coinbase_epoch = expected_blocks_epoch * 360` MINA. These use the
+whole current staking ledger, never the filtered table or the active-stake share.
+Filtered totals sum unrounded estimates. Missing stakes or an invalid denominator
+display a dash. N+1 availability does not affect these estimates.
+
+This is a proportional approximation of canonical production using the theoretical
+75% slot fill rate, not the exact VRF slot-winning probability. Offline stake,
+missed slots and competing blocks affect actual production. Estimates cover a full
+epoch and must not be treated as a performance score against partial Blocks N.
+Coinbase is gross, excluding transaction fees, costs and delegation payouts.
+References: [MinaExplorer production methodology](https://docs.minaexplorer.com/staking-pool/performance-history)
+and [Mesa slot/coinbase change](https://forums.minaprotocol.com/t/reduce-slot-time-to-90s/6865).
+
 `stake_current_pct` divides the validator's stake in the current staking ledger N
 by the total MINA stake in that same ledger (including recipients outside the
 displayed producer list). It replaces the former live/archive-based Stake % column.

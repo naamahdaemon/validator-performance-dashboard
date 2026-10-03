@@ -159,7 +159,7 @@ function renderTotals(){
   else if(key==="stake_live_delta_pct")c=delta(t[key],t.stake_live_delta);
   else if(key==="stake_current_pct"||key==="stake_active_pct")c=percentCell(t[key]);
   else if(key==="blocks_epoch_delta")c=blockDelta(t[key]);
-  else if(Object.hasOwn(t,key))c=cell(t[key]==null?"—":fmt(t[key],key.startsWith("stake_")?2:0),"num");
+  else if(Object.hasOwn(t,key))c=cell(t[key]==null?"—":fmt(t[key],key.startsWith("stake_")||key.startsWith("expected_")?2:0),"num");
   else c=cell("—");
   c.title=c.title||"Total for all matching validators, across all pages";
   tr.append(c);
@@ -181,7 +181,9 @@ function render(){
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
-   tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"),blockDelta(v.blocks_epoch_delta));
+   tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"));
+   for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])tr.append(cell(v[key]==null?"—":fmt(v[key],2),"num"));
+   tr.append(blockDelta(v.blocks_epoch_delta));
    const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
    tr.append(cell(v.last_block_date||"—","numeric-text"));
    const ec=document.createElement("td"),badge=document.createElement("span");badge.className=`badge ${v.last_block_era||""}`;badge.textContent=v.last_block_era||"—";ec.append(badge);tr.append(ec,cell(v.last_block_epoch??"—","num"));rows.append(tr);
@@ -198,7 +200,7 @@ document.querySelectorAll("th[data-sort]").forEach(th=>th.onclick=()=>{const k=t
 $("firstPage").onclick=()=>{state.page=1;render()};$("prevPage").onclick=()=>{state.page--;render()};$("nextPage").onclick=()=>{state.page++;render()};$("lastPage").onclick=()=>{state.page=Math.max(1,Math.ceil(state.filtered.length/state.pageSize));render()};
 
 fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(p=>{
- state.all=Array.isArray(p.validators)?p.validators.map(v=>({...v,stake_live_estimate:v.stake_live_estimate??v.current_stake})):[];$("validatorCount").textContent=fmt(p.validator_count??state.all.length);$("archiveHeight").textContent=p.archive_height==null?"—":fmt(p.archive_height);
+ state.all=Array.isArray(p.validators)?p.validators.map(v=>({...v,stake_live_estimate:v.stake_live_estimate??v.current_stake,...ValidatorEstimates.calculate(v.stake_current_epoch,p.ledger_meta?.total_stake_current_epoch)})):[];$("validatorCount").textContent=fmt(p.validator_count??state.all.length);$("archiveHeight").textContent=p.archive_height==null?"—":fmt(p.archive_height);
  // Older snapshots counted every status. Do not label those metrics as canonical.
  if(p.ledger_meta?.block_count_basis!=="canonical"){
   state.all=state.all.map(v=>({...v,blocks_previous_epoch:null,blocks_current_epoch:null,blocks_epoch_delta:null,stake_active_pct:null,is_active_validator:null}));
