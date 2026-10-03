@@ -172,8 +172,10 @@ function commissionCell(v){
  c.append(input);return c;
 }
 function simulationCell(v,key){
- const c=cell(v[key]==null?"—":`${v.simulation_approximate?"≈ ":""}${fmt(v[key],2)}`,"num"+(v[key]==null?"":key==="simulation_net"?" simulation-result simulation-net":" simulation-result"));
+ const current=key.startsWith("simulation_current_");
+ const c=cell(v[key]==null?"—":`${!current&&v.simulation_approximate?"≈ ":""}${fmt(v[key],2)}`,"num"+(v[key]==null?"":key.endsWith("_net")?" simulation-result simulation-net":" simulation-result"));
  c.title=`Epoch ${v.previous_epoch_label||"unknown"}; ${v.simulation_approximate?"approximation using current stake":"historical stake"}: ${v.simulation_stake==null?"unknown":fmt(v.simulation_stake,2)} MINA. Source/current or local commission, not historical. Excludes transaction fees and additional blocks.`;
+ if(current)c.title=`Epoch ${v.network_epoch_label||"unknown"} so far, in MINA. Confirmed + provisional archive-selected branch blocks; may be reorganized. Uses Stake N + added stake, excludes transaction fees and additional blocks.`;
  return c;
 }
 function renderTotals(){
@@ -213,8 +215,10 @@ function render(){
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
    tr.append(delta(v.stake_current_live_delta_pct,v.stake_current_live_delta),commissionCell(v),simulationCell(v,"simulation_gross"),simulationCell(v,"simulation_net"));
+   tr.append(simulationCell(v,"simulation_current_gross"),simulationCell(v,"simulation_current_net"));
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
    tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"));
+   tr.append(cell(v.blocks_current_epoch_inclusive==null?"—":fmt(v.blocks_current_epoch_inclusive),"num"));
    for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])tr.append(cell(v[key]==null?"—":fmt(v[key],2),"num"));
    tr.append(blockDelta(v.blocks_epoch_delta));
    const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
@@ -261,6 +265,7 @@ Promise.all([
  if(epochRow && p.ledger_meta?.block_count_basis==="canonical"){
   $("previousBlocksHeader").textContent=`Blocks ${epochRow.previous_epoch_label}`;
   $("currentBlocksHeader").textContent=`Blocks ${epochRow.network_epoch_label} (partial)`;
+  $("inclusiveBlocksHeader").textContent=`Blocks ${epochRow.network_epoch_label} + frontier`;
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;
  }
  $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});

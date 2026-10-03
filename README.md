@@ -77,6 +77,17 @@ even when N+1 is unavailable. Its total is calculated from aggregate stakes.
 
 ### Local delegation simulation
 
+The current-epoch pair **Sim. gross/net N (partial)** uses
+`blocks_current_epoch_inclusive * 360 * added stake / (stake_current_epoch + added stake)`.
+Its production count includes confirmed canonical blocks plus pending ancestors
+of the archive-selected tip within the frontier. The new **Blocks N + frontier**
+column appears next to the existing canonical-only current-epoch column and is
+summed in filtered totals. The same stake input, local commissions, reset,
+visibility preferences and theme highlights apply to both simulation pairs.
+Current results are not extrapolated to a full epoch and may change with reorgs.
+No value is shown until the updated SQL has produced a snapshot with the new
+count. This is an inferred archive branch, not a daemon best-chain verification.
+
 Enter additional MINA in **Stake to simulate** to compare alternative validators.
 Gross reward uses `canonical blocks N-1 * 360 * added stake / (stake N-1 + added stake)`;
 net reward applies the editable commission. No additional blocks are assumed.

@@ -17,9 +17,13 @@
    ?blocks*360*(amount/(real+amount)):null;
   const change=stake(row.stake_current_epoch)&&stake(row.stake_live_estimate)
    ?row.stake_live_estimate-row.stake_current_epoch:null;
+  const currentBlocks=row.blocks_current_epoch_inclusive,currentStake=row.stake_current_epoch;
+  const currentGross=/^mesa:\d+$/.test(row.network_epoch_label||"")&&stake(amount)&&stake(currentStake)&&currentStake>0&&Number.isInteger(currentBlocks)&&currentBlocks>=0
+   ?currentBlocks*360*(amount/(currentStake+amount)):null;
   return {
    commission_pct:fee,commission_local:local,commission_source_pct:validFee(base)?base:null,
    simulation_gross:gross,simulation_net:gross!==null&&fee!==null?gross*(1-fee/100):null,
+   simulation_current_gross:currentGross,simulation_current_net:currentGross!==null&&fee!==null?currentGross*(1-fee/100):null,
    simulation_approximate:!hasHistory,simulation_stake:stake(real)?real:null,
    stake_current_live_delta:change,
    stake_current_live_delta_pct:change!==null&&row.stake_current_epoch>0?change/row.stake_current_epoch*100:null,

@@ -158,6 +158,13 @@ all_classified_blocks AS MATERIALIZED (
 ),
 
 /* All-time block statistics per producer. */
+current_branch_counts AS MATERIALIZED (
+    SELECT b.creator_id AS public_key_id, COUNT(*)::bigint AS blocks_current_epoch_inclusive
+    FROM all_classified_blocks b CROSS JOIN current_epoch ce
+    WHERE b.global_slot_since_genesis BETWEEN ce.start_slot AND ce.tip_slot
+      AND b.inferred_chain_status IN ('canonical', 'pending_on_selected_tip_branch')
+    GROUP BY b.creator_id
+),
 network_summary AS MATERIALIZED (
     SELECT
         COUNT(*) FILTER (WHERE b.inferred_chain_status = 'canonical') AS confirmed,
@@ -362,6 +369,7 @@ SELECT
     ew.previous_era || ':' || ew.previous_epoch::text AS previous_epoch_label,
     COALESCE(rec.blocks_previous_epoch, 0) AS blocks_previous_epoch,
     COALESCE(rec.blocks_current_epoch, 0) AS blocks_current_epoch,
+    COALESCE(cbc.blocks_current_epoch_inclusive, 0) AS blocks_current_epoch_inclusive,
     COALESCE(rec.blocks_current_epoch, 0) - COALESCE(rec.blocks_previous_epoch, 0) AS blocks_epoch_delta,
 
     COALESCE(ds.delegated_stake_mina, 0) AS current_stake,
@@ -440,6 +448,7 @@ SELECT
 
 FROM target_producers tp
 LEFT JOIN recent_epoch_counts rec ON rec.public_key_id = tp.public_key_id
+LEFT JOIN current_branch_counts cbc ON cbc.public_key_id = tp.public_key_id
 LEFT JOIN public.validator_names vn
   ON vn.public_key = tp.wallet_address
 LEFT JOIN latest_account_states latest_state

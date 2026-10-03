@@ -41,7 +41,7 @@
     <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing canonical blocks in the previous or current epoch.</span>
     <span id="epochSummary">Epoch block counts await the next export.</span>
     <span>Estimates cover a full Mesa epoch: 7,140 slots × 75% theoretical fill rate × Stake N / total ledger stake. Gross coinbase = estimated blocks × 360 MINA, before costs and delegation payouts. Approximation, not guaranteed rewards or a performance score for the partial epoch.</span>
-    <span>Block counts include canonical blocks only (pending and orphaned excluded). Δ blocks = current (partial) − previous (complete).</span>
+    <span>Standard block counts include confirmed canonical blocks only. “+ frontier” also includes pending blocks on the archive-selected branch (provisional). Δ blocks = current confirmed (partial) − previous confirmed (complete).</span>
   </section>
 
   <section class="filters">
@@ -69,7 +69,7 @@
   </section>
 
   <section class="table-card">
-    <p id="simulationNote" class="simulation-note muted">Simulation: canonical blocks from the previous full Mesa epoch × 360 MINA × added stake / (validator stake + added stake). No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback when historical stake is missing. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
+    <p id="simulationNote" class="simulation-note muted">Simulation (MINA): blocks × 360 × added stake / (validator stake + added stake). N−1 uses the previous full Mesa epoch’s confirmed blocks; N uses current confirmed + provisional branch blocks so far and Stake N. N is partial and may change with reorganizations. No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback for N−1. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
     <div class="table-toolbar">
       <div><strong id="filteredCount">0</strong> matching validators <span class="muted">· Totals cover all matching validators, across all pages</span></div>
       <label class="muted" for="pageSize">Rows per page
@@ -96,10 +96,13 @@
           <th class="num" data-sort="commission_pct" title="Editable locally, 0–100%. Clear the input to restore the source rate.">Commission (%)</th>
           <th class="num" data-sort="simulation_gross" title="Hypothetical gross reward from previous-epoch canonical blocks, in MINA.">Sim. gross N−1 (MINA)</th>
           <th class="num" data-sort="simulation_net" title="Simulated gross reward after the selected commission. Missing commission gives no net estimate.">Sim. net N−1 (MINA)</th>
+          <th class="num" data-sort="simulation_current_gross" title="Epoch N so far: confirmed plus provisional archive-selected branch blocks × 360 × added stake / (Stake N + added stake). May change with reorganizations.">Sim. gross N (partial)</th>
+          <th class="num" data-sort="simulation_current_net" title="Current partial-epoch gross simulation after commission, in MINA. Includes provisional blocks.">Sim. net N (partial)</th>
           <th class="num" data-sort="delegator_count">Delegators</th>
           <th class="num" data-sort="canonical_blocks_all_epochs" title="All-time canonical blocks only">Blocks</th>
           <th class="num" data-sort="blocks_previous_epoch" id="previousBlocksHeader">Blocks N−1</th>
           <th class="num" data-sort="blocks_current_epoch" id="currentBlocksHeader">Blocks N</th>
+          <th class="num" data-sort="blocks_current_epoch_inclusive" id="inclusiveBlocksHeader" title="Confirmed canonical plus pending blocks on the archive-selected branch. Inferred best chain, not daemon-verified; may be reorganized.">Blocks N + frontier</th>
           <th class="num" data-sort="expected_blocks_epoch" title="Full Mesa epoch estimate: 7140 × 0.75 × Stake N / total stake in ledger N. Not a prediction of VRF wins or actual canonical blocks.">Est. blocks / epoch</th>
           <th class="num" data-sort="expected_coinbase_epoch" title="Full epoch estimated blocks × 360 MINA. Gross coinbase, excluding transaction fees, costs and delegation payouts.">Est. gross coinbase (MINA)</th>
           <th class="num" data-sort="blocks_epoch_delta" title="Current epoch so far minus the complete previous epoch">Δ blocks</th>

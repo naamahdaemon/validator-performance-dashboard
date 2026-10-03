@@ -15,6 +15,7 @@
    totals[key]=sum(rows,key);
   }
   totals.stake_active_pct=sum(rows,"stake_active_pct",{inactiveIsZero:true});
+  totals.blocks_current_epoch_inclusive=sum(rows,"blocks_current_epoch_inclusive");
   for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])totals[key]=sum(rows,key);
   for(const [prefix,oldKey,newKey] of [["stake_next","stake_current_epoch","stake_next_epoch"],["stake_live","stake_next_epoch","stake_live_estimate"],["stake_current_live","stake_current_epoch","stake_live_estimate"]]){
    const oldValue=totals[oldKey],newValue=totals[newKey];
