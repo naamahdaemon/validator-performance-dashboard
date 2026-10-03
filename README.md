@@ -72,6 +72,17 @@ and Reset filters preserves the selected columns.
 
 ### Stake shares and epoch production
 
+The snapshot summary shows the network epoch, the latest archived block's
+zero-based slot within that epoch, current-epoch confirmed plus provisional blocks,
+and slot fill rate (`100 * blocks / (slot + 1)`). The denominator includes the
+tip slot; it is not the full epoch length or a live wall-clock slot. These metrics
+are calculated across the archive independently of dashboard filters.
+Provisional blocks are pending ancestors on the archive-selected tip branch
+within the configured frontier depth. This is an archive inference, not a daemon
+best-chain confirmation; forks may revise it. Hover over the block count for the
+confirmed/provisional breakdown. Table production metrics remain canonical-only.
+New summary values require a regenerated snapshot; older snapshots show dashes.
+
 The browser also calculates two sortable, hideable full-Mesa-epoch estimates:
 `expected_blocks_epoch = 7140 * 0.75 * stake_current_epoch / total_stake_current_epoch`
 and `expected_coinbase_epoch = expected_blocks_epoch * 360` MINA. These use the

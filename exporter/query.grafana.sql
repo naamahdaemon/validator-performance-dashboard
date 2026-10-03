@@ -161,6 +161,13 @@ all_classified_blocks AS MATERIALIZED (
 ),
 
 /* All-time block statistics per producer. */
+network_summary AS MATERIALIZED (
+    SELECT
+        COUNT(*) FILTER (WHERE b.inferred_chain_status = 'canonical') AS confirmed,
+        COUNT(*) FILTER (WHERE b.inferred_chain_status = 'pending_on_selected_tip_branch') AS provisional
+    FROM all_classified_blocks b CROSS JOIN current_epoch ce
+    WHERE b.global_slot_since_genesis BETWEEN ce.start_slot AND ce.tip_slot
+),
 all_epoch_block_counts AS MATERIALIZED (
     SELECT
         b.creator_id AS public_key_id,
@@ -349,6 +356,10 @@ SELECT
     tp.wallet_address,
     vn.name AS validator_name,
     ew.era || ':' || ew.epoch::text AS network_epoch_label,
+    ew.tip_slot - ew.start_slot AS network_slot_in_epoch,
+    p.slots_per_epoch AS network_slots_per_epoch,
+    (SELECT confirmed FROM network_summary) AS network_confirmed_blocks,
+    (SELECT provisional FROM network_summary) AS network_provisional_blocks,
     ew.previous_era || ':' || ew.previous_epoch::text AS previous_epoch_label,
     COALESCE(rec.blocks_previous_epoch, 0) AS blocks_previous_epoch,
     COALESCE(rec.blocks_current_epoch, 0) AS blocks_current_epoch,

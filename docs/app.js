@@ -207,6 +207,19 @@ fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!
   $("epochSummary").textContent="Canonical epoch counts and active stake await the next export.";
  }
  const epochRow=state.all.find(v=>v.network_epoch_label&&v.previous_epoch_label);
+ if(epochRow){
+  $("networkEpoch").textContent=epochRow.network_epoch_label;
+  const slot=epochRow.network_slot_in_epoch,slots=epochRow.network_slots_per_epoch;
+  const confirmed=epochRow.network_confirmed_blocks,provisional=epochRow.network_provisional_blocks;
+  if(Number.isInteger(slot)&&slot>=0&&Number.isInteger(slots)&&slot<slots){
+   $("networkSlot").textContent=`${fmt(slot)} / ${fmt(slots-1)}`;
+   if(Number.isInteger(confirmed)&&confirmed>=0&&Number.isInteger(provisional)&&provisional>=0){
+    $("networkBlocks").textContent=fmt(confirmed+provisional);
+    $("networkBlocks").title=`${fmt(confirmed)} confirmed + ${fmt(provisional)} provisional (archive-selected branch)`;
+    $("networkFill").textContent=`${fmt(100*(confirmed+provisional)/(slot+1),2)}%`;
+   }
+  }
+ }
  if(epochRow && p.ledger_meta?.block_count_basis==="canonical"){
   $("previousBlocksHeader").textContent=`Blocks ${epochRow.previous_epoch_label}`;
   $("currentBlocksHeader").textContent=`Blocks ${epochRow.network_epoch_label} (partial)`;
