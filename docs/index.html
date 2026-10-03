@@ -51,14 +51,22 @@
     <label><span>Blocks since last min</span><input id="blocksSinceMin" type="number" min="0" step="1"></label>
     <label><span>Blocks since last max</span><input id="blocksSinceMax" type="number" min="0" step="1"></label>
     <button id="resetFilters" type="button">Reset filters</button>
+    <label class="checkbox-filter"><input id="hideAnonymous" type="checkbox"><span>Hide anonymous validators</span></label>
+    <details class="column-picker" id="columnPicker">
+      <summary>Columns <span id="columnCount"></span></summary>
+      <div class="column-menu">
+        <button id="showAllColumns" type="button">Show all columns</button>
+        <div id="columnOptions" role="group" aria-label="Visible columns"></div>
+      </div>
+    </details>
   </section>
 
   <section class="table-card">
     <div class="table-toolbar">
-      <div><strong id="filteredCount">0</strong> matching validators</div>
+      <div><strong id="filteredCount">0</strong> matching validators <span class="muted">· Totals cover all matching validators, across all pages</span></div>
       <label class="muted" for="pageSize">Rows per page
         <select id="pageSize">
-          <option value="20">20</option><option value="50">50</option>
+          <option value="20">20</option><option value="30">30</option><option value="50">50</option>
           <option value="100">100</option><option value="200">200</option>
           <option value="500">500</option>
         </select>
@@ -87,6 +95,7 @@
           <th class="num" data-sort="last_block_epoch">Epoch</th>
         </tr></thead>
         <tbody id="rows"></tbody>
+        <tfoot id="totals" aria-label="Totals for all matching validators"></tfoot>
       </table>
     </div>
     <nav class="pagination">
@@ -95,7 +104,19 @@
       <button id="nextPage">›</button><button id="lastPage">»</button>
     </nav>
   </section>
+  <footer class="site-footer">
+    <div class="footer-copy">
+      <p>© <span id="copyrightYear">2026</span> naamahdaemon. All rights reserved.</p>
+      <p class="muted">Support Naamah Stake by delegating your MINA.</p>
+      <a class="delegation-address" href="https://minascan.io/mainnet/account/B62qpsyB3gCndt8sNz4GRwusBtg9U72TNiL4mxmcQfWKZ5noa9fFnWr" target="_blank" rel="noopener noreferrer">B62qpsyB3gCndt8sNz4GRwusBtg9U72TNiL4mxmcQfWKZ5noa9fFnWr</a>
+    </div>
+    <figure class="delegation-qr">
+      <img src="./naamah-stake-qr.svg" width="164" height="164" alt="QR code containing the Naamah Stake validator address for delegation">
+      <figcaption>Scan the address to delegate in your wallet</figcaption>
+    </figure>
+  </footer>
 </main>
+<script src="./totals.js"></script>
 <script src="./app.js"></script>
 </body>
 </html>

@@ -34,4 +34,27 @@ th,td{padding-inline:clamp(4px,.3vw,10px)}
 th{white-space:normal;max-width:140px}
 .wallet{max-width:clamp(130px,8vw,260px)}
 .validator{max-width:clamp(140px,9vw,280px)}
+.column-picker{position:relative;align-self:end}
+.column-picker summary{cursor:pointer;padding:8px 10px;min-height:36px;border:1px solid var(--border);border-radius:5px;background:var(--input)}
+.column-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:10;width:280px;max-width:calc(100vw - 48px);max-height:65vh;overflow:auto;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);box-shadow:0 8px 24px #0003}
+.column-menu button{width:100%;margin-bottom:8px;cursor:pointer}
+.filters .column-menu label{display:flex;align-items:center;gap:9px;padding:6px 0;cursor:pointer}
+.column-menu input{min-height:0;width:16px;height:16px;margin:0;accent-color:var(--accent)}
+.filters .column-menu label span{color:var(--text)}
+.filters .checkbox-filter{display:flex;align-items:center;gap:8px}
+.filters label{min-width:0}
+.filters input:not([type="checkbox"]),.filters select{min-width:0;width:100%}
+.checkbox-filter input{min-height:0;width:16px;height:16px;margin:0;accent-color:var(--accent)}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+tfoot td{font-weight:700;background:var(--surface2);border-top:2px solid var(--accent)}
+[hidden]{display:none!important}
+.site-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:24px;padding:20px 0;border-top:1px solid var(--border)}
+.footer-copy{min-width:0;flex:1 1 300px}
+.footer-copy p{margin:0 0 10px}
+.delegation-address{color:var(--link);font-family:ui-monospace,monospace;overflow-wrap:anywhere}
+.delegation-qr{margin:0;max-width:240px;text-align:center}
+.delegation-qr img{display:block;width:164px;height:164px;margin:auto;background:#fff;border-radius:4px}
+.delegation-qr figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+tbody tr:hover>td,tfoot tr:hover>td{background-color:#202e43}
+:root[data-theme="light"] tbody tr:hover>td,:root[data-theme="light"] tfoot tr:hover>td{background-color:#dce9fa}
 @media(max-width:600px){.page{padding-block:12px}.status-card{grid-template-columns:1fr;gap:8px}.filters{grid-template-columns:1fr}.filters .wide{grid-column:span 1}.table-toolbar{gap:12px;flex-wrap:wrap}}

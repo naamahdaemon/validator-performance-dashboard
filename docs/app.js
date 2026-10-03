@@ -1,10 +1,14 @@
 const MINASCAN="https://minascan.io/mainnet/account/";
-const PAGE_SIZES=[20,50,100,200,500];
+const PAGE_SIZES=[20,30,50,100,200,500];
 let savedPageSize=20;
 try { const value=Number(localStorage.getItem("validator-page-size")); if(PAGE_SIZES.includes(value))savedPageSize=value; } catch (_) {}
 const state={all:[],filtered:[],page:1,pageSize:savedPageSize,sortKey:"stake_live_estimate",sortDir:"desc"};
 const $=id=>document.getElementById(id);
-const COLUMN_COUNT = document.querySelectorAll("th[data-sort]").length;
+$("copyrightYear").textContent=String(new Date().getFullYear());
+const COLUMN_HEADERS=[...document.querySelectorAll("th[data-sort]")];
+const COLUMN_KEYS=COLUMN_HEADERS.map(th=>th.dataset.sort);
+const COLUMN_COUNT=COLUMN_KEYS.length;
+const hiddenColumns=new Set();
 function updateThemeSwitch() {
  const light = document.documentElement.dataset.theme === "light";
  $("themeToggle").setAttribute("aria-checked", String(light));
@@ -26,14 +30,16 @@ $("pageSize").addEventListener("change",()=>{
  render();
 });
 const f={search:$("search"),era:$("era"),epoch:$("epoch"),dateAfter:$("dateAfter"),dateBefore:$("dateBefore"),stakeMin:$("stakeMin"),stakeMax:$("stakeMax"),delegatorsMin:$("delegatorsMin"),delegatorsMax:$("delegatorsMax"),blocksSinceMin:$("blocksSinceMin"),blocksSinceMax:$("blocksSinceMax")};
+f.hideAnonymous=$("hideAnonymous");
 const VIEW_STORAGE_KEY="validator-view-v1";
 let dataLoaded=false;
 function saveView(){
  if(!dataLoaded)return;
  try {
   localStorage.setItem(VIEW_STORAGE_KEY,JSON.stringify({
-   filters:Object.fromEntries(Object.entries(f).map(([key,el])=>[key,el.value])),
+   filters:Object.fromEntries(Object.entries(f).map(([key,el])=>[key,el.type==="checkbox"?el.checked:el.value])),
    sortKey:state.sortKey,sortDir:state.sortDir,page:state.page,
+   hiddenColumns:[...hiddenColumns],
   }));
  } catch (_) {}
 }
@@ -45,8 +51,13 @@ function restoreView(){
   if(sortKeys.includes(saved.sortKey))state.sortKey=saved.sortKey;
   if(["asc","desc"].includes(saved.sortDir))state.sortDir=saved.sortDir;
   if(Number.isSafeInteger(saved.page)&&saved.page>0)state.page=saved.page;
+  if(Array.isArray(saved.hiddenColumns)){
+   for(const key of saved.hiddenColumns)if(COLUMN_KEYS.includes(key))hiddenColumns.add(key);
+   if(hiddenColumns.size===COLUMN_COUNT)hiddenColumns.delete("validator_name");
+  }
   for(const [key,el] of Object.entries(f)){
    const value=saved.filters?.[key];
+   if(el.type==="checkbox"){el.checked=value===true;continue;}
    if(typeof value!=="string")continue;
    if(key==="epoch"){
     if(!/^-?\d+$/.test(value))continue;
@@ -57,6 +68,36 @@ function restoreView(){
  } catch (_) {}
 }
 restoreView();
+function updateColumnVisibility(){
+ const count=COLUMN_COUNT-hiddenColumns.size;
+ COLUMN_HEADERS.forEach((th,i)=>{
+  const hidden=hiddenColumns.has(COLUMN_KEYS[i]);th.hidden=hidden;
+  for(const row of [...$("rows").rows,...$("totals").rows]){
+   if(row.cells.length===COLUMN_COUNT)row.cells[i].hidden=hidden;
+   else if(row.cells.length===1)row.cells[0].colSpan=count;
+  }
+ });
+ $("columnCount").textContent=`(${count}/${COLUMN_COUNT})`;
+ for(const input of $("columnOptions").querySelectorAll("input")){
+  input.checked=!hiddenColumns.has(input.value);
+  input.disabled=count===1&&input.checked;
+ }
+}
+for(const th of COLUMN_HEADERS){
+ const label=document.createElement("label"),input=document.createElement("input"),text=document.createElement("span");
+ input.type="checkbox";input.value=th.dataset.sort;input.checked=!hiddenColumns.has(input.value);
+ text.textContent=th.textContent;
+ input.addEventListener("change",()=>{
+  if(input.checked)hiddenColumns.delete(input.value);
+  else if(hiddenColumns.size<COLUMN_COUNT-1)hiddenColumns.add(input.value);
+  if(dataLoaded)renderTotals();updateColumnVisibility();saveView();
+ });
+ label.append(input,text);$("columnOptions").append(label);
+}
+$("showAllColumns").onclick=()=>{hiddenColumns.clear();if(dataLoaded)renderTotals();updateColumnVisibility();saveView()};
+document.addEventListener("click",event=>{if(!$("columnPicker").contains(event.target))$("columnPicker").open=false});
+$("columnPicker").addEventListener("keydown",event=>{if(event.key==="Escape"){$("columnPicker").open=false;$("columnPicker").querySelector("summary").focus()}});
+updateColumnVisibility();
 const num=v=>Number.isFinite(Number(v))?Number(v):0;
 const nullable=v=>(v===""||v==null)?null:num(v);
 const fmt=(v,d=0)=>new Intl.NumberFormat(undefined,{maximumFractionDigits:d}).format(num(v));
@@ -88,6 +129,7 @@ function apply({resetPage=true}={}){
  const q=f.search.value.trim().toLowerCase(),after=boundary(f.dateAfter.value),before=boundary(f.dateBefore.value,true);
  const smin=nullable(f.stakeMin.value),smax=nullable(f.stakeMax.value),dmin=nullable(f.delegatorsMin.value),dmax=nullable(f.delegatorsMax.value),bmin=nullable(f.blocksSinceMin.value),bmax=nullable(f.blocksSinceMax.value);
  state.filtered=state.all.filter(v=>{
+  if(f.hideAnonymous.checked&&!String(v.validator_name??"").trim())return false;
   if(q&&!`${v.validator_name??""} ${v.wallet_address??""}`.toLowerCase().includes(q))return false;
   if(f.era.value&&v.last_block_era!==f.era.value)return false;
   if(f.epoch.value!==""&&num(v.last_block_epoch)!==num(f.epoch.value))return false;
@@ -104,6 +146,23 @@ function bar(v,max,d=0){if(v==null)return cell("—","num");const x=cell("", "ba
 function percentCell(v){return cell(v==null?"—":`${fmt(v,2)}%`,"num")}
 function blockDelta(v){const x=cell(v==null?"—":`${v>0?"+":""}${fmt(v)}`,"num");if(v>0)x.classList.add("delta-up");if(v<0)x.classList.add("delta-down");return x}
 function delta(pct,mina){const x=cell(pct==null?"—":`${num(pct)>=0?"+":""}${fmt(pct,2)}%`,"num");if(pct!=null)x.classList.add(num(pct)>=0?"delta-up":"delta-down");x.title=mina==null?"Awaiting ledger export":`${fmt(mina,2)} MINA`;return x}
+function renderTotals(){
+ const t=ValidatorTotals.calculate(state.filtered),tr=document.createElement("tr");
+ for(const key of COLUMN_KEYS){
+  let c;
+  if(key==="validator_name")c=cell(`Total (${fmt(state.filtered.length)})`);
+  else if(key==="wallet_address")c=cell(hiddenColumns.has("validator_name")?"Total":"—");
+  else if(key==="stake_next_delta_pct")c=delta(t[key],t.stake_next_delta);
+  else if(key==="stake_live_delta_pct")c=delta(t[key],t.stake_live_delta);
+  else if(key==="stake_current_pct"||key==="stake_active_pct")c=percentCell(t[key]);
+  else if(key==="blocks_epoch_delta")c=blockDelta(t[key]);
+  else if(Object.hasOwn(t,key))c=cell(t[key]==null?"—":fmt(t[key],key.startsWith("stake_")?2:0),"num");
+  else c=cell("—");
+  c.title=c.title||"Total for all matching validators, across all pages";
+  tr.append(c);
+ }
+ $("totals").replaceChildren(tr);
+}
 
 function render(){
  $("filteredCount").textContent=fmt(state.filtered.length);
@@ -127,10 +186,11 @@ function render(){
  }
  $("pageLabel").textContent=`Page ${state.page} / ${pages}`;$("firstPage").disabled=$("prevPage").disabled=state.page<=1;$("nextPage").disabled=$("lastPage").disabled=state.page>=pages;
  document.querySelectorAll("th[data-sort]").forEach(th=>{th.removeAttribute("data-dir");if(th.dataset.sort===state.sortKey)th.dataset.dir=state.sortDir});
+ renderTotals();updateColumnVisibility();
  saveView();
 }
 Object.values(f).forEach(el=>{["input","change"].forEach(ev=>el.addEventListener(ev,()=>{if(el===f.era)populateEpochs();apply()}))});
-$("resetFilters").onclick=()=>{Object.values(f).forEach(el=>el.value="");populateEpochs();apply()};
+$("resetFilters").onclick=()=>{Object.values(f).forEach(el=>{if(el.type==="checkbox")el.checked=false;else el.value=""});populateEpochs();apply()};
 document.querySelectorAll("th[data-sort]").forEach(th=>th.onclick=()=>{const k=th.dataset.sort;if(state.sortKey===k)state.sortDir=state.sortDir==="asc"?"desc":"asc";else{state.sortKey=k;state.sortDir=["validator_name","wallet_address","last_block_era"].includes(k)?"asc":"desc"}sortRows();state.page=1;render()});
 $("firstPage").onclick=()=>{state.page=1;render()};$("prevPage").onclick=()=>{state.page--;render()};$("nextPage").onclick=()=>{state.page++;render()};$("lastPage").onclick=()=>{state.page=Math.max(1,Math.ceil(state.filtered.length/state.pageSize));render()};
 
@@ -138,7 +198,7 @@ fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!
  state.all=Array.isArray(p.validators)?p.validators.map(v=>({...v,stake_live_estimate:v.stake_live_estimate??v.current_stake})):[];$("validatorCount").textContent=fmt(p.validator_count??state.all.length);$("archiveHeight").textContent=p.archive_height==null?"—":fmt(p.archive_height);
  // Older snapshots counted every status. Do not label those metrics as canonical.
  if(p.ledger_meta?.block_count_basis!=="canonical"){
-  state.all=state.all.map(v=>({...v,blocks_previous_epoch:null,blocks_current_epoch:null,blocks_epoch_delta:null,stake_active_pct:null}));
+  state.all=state.all.map(v=>({...v,blocks_previous_epoch:null,blocks_current_epoch:null,blocks_epoch_delta:null,stake_active_pct:null,is_active_validator:null}));
   $("epochSummary").textContent="Canonical epoch counts and active stake await the next export.";
  }
  const epochRow=state.all.find(v=>v.network_epoch_label&&v.previous_epoch_label);
@@ -148,4 +208,4 @@ fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;
  }
  $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});
-}).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT}" class="empty-state">Unable to load data.</td></tr>`});
+}).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("totals").replaceChildren();$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT-hiddenColumns.size}" class="empty-state">Unable to load data.</td></tr>`});

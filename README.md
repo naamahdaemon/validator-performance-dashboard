@@ -39,10 +39,15 @@ The snapshot includes the existing all-epoch metrics, current stake/delegators, 
 
 The static interface includes:
 
-- selectable pagination: **20, 50, 100, 200 or 500 validators per page**, remembered locally
+- selectable pagination: **20, 30, 50, 100, 200 or 500 validators per page**, remembered locally
+- persistent checkbox menu to show/hide columns (at least one stays visible)
+- persistent filter to hide validators whose name is missing or blank
+- totals across all filtered validators, not just the displayed page
+- naamahdaemon copyright footer and a locally generated Naamah Stake delegation-address QR code
 - dark/light mode, initially following the system preference and remembered locally
 - all filters, sort column/direction and current page restored after refresh;
   Reset filters also clears saved filters (theme, page size and sort are kept)
+
 - current epoch stake as a percentage of the full staking ledger and of active stake
 - previous/current epoch block counts and their signed difference
 - clickable MinaScan wallet links
@@ -56,6 +61,14 @@ The static interface includes:
 - minimum/maximum blocks since last produced
 - Grafana-like data bars
 - current snapshot timestamp and archive height
+
+Totals sum stakes, stake shares, delegators, canonical block counts and block
+deltas. Stake variation percentages are recalculated from aggregated amounts,
+not added together; absolute MINA deltas remain available in tooltips. Dates,
+epochs and blocks-since-last are not summed. Missing values show a dash rather
+than a partial total; inactive validators contribute zero to the active share.
+Column visibility does not change the population used for totals or filtering,
+and Reset filters preserves the selected columns.
 
 ### Stake shares and epoch production
 
