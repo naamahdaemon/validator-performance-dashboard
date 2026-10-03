@@ -44,3 +44,11 @@ assert.equal(calculate(current,1000,source,{B62test:100}).simulation_current_net
 assert.equal(totals.calculate([current,current]).blocks_current_epoch_inclusive,10);
 assert.equal(Object.hasOwn(totals.calculate([now]),'simulation_current_net'),false);
 console.log('Current simulation: provisional blocks, commission, missing data and totals OK');
+for(const amount of [200000.01,1000000,100000000,Infinity]){
+ const capped=calculate(current,amount,source);
+ assert.equal(capped.simulation_gross,null);
+ assert.equal(capped.simulation_current_gross,null);
+}
+assert.ok(calculate(current,200000,source).simulation_gross>0);
+assert.ok(calculate(current,200000,source).simulation_current_gross>0);
+console.log('Simulation stake cap: 200,000 accepted; larger amounts rejected');

@@ -2,7 +2,9 @@
  const finite=v=>typeof v==="number"&&Number.isFinite(v);
  const stake=v=>finite(v)&&v>=0;
  const validFee=v=>finite(v)&&v>=0&&v<=100;
+ const MAX_SIMULATED_STAKE=200000;
  function calculate(row,amount,sources={},overrides={}){
+  if(!stake(amount)||amount>MAX_SIMULATED_STAKE)amount=null;
   const wallet=row.wallet_address;
   const base=row.commission_pct;
   const local=Object.hasOwn(overrides,wallet)&&validFee(overrides[wallet]);
@@ -36,7 +38,7 @@
   }catch(_){}
   return result;
  }
- const api={calculate,validFee,parseOverrides};
+ const api={calculate,validFee,parseOverrides,MAX_SIMULATED_STAKE};
  root.ValidatorSimulation=api;
  if(typeof module!=="undefined"&&module.exports)module.exports=api;
 })(globalThis);

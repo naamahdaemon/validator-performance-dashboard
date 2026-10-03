@@ -89,6 +89,10 @@ No value is shown until the updated SQL has produced a snapshot with the new
 count. This is an inferred archive branch, not a daemon best-chain verification.
 
 Enter additional MINA in **Stake to simulate** to compare alternative validators.
+The input is capped at 200,000 MINA, including pasted and previously saved values.
+This is a UI/model limit, not a statistical threshold for winning another block;
+even below the cap the calculation keeps observed production fixed. The calculation
+module also rejects amounts exceeding this cap.
 Gross reward uses `canonical blocks N-1 * 360 * added stake / (stake N-1 + added stake)`;
 net reward applies the editable commission. No additional blocks are assumed.
 This is a hypothetical share of historical rewards, not an entitlement or forecast.

@@ -57,7 +57,7 @@
     <label><span>Blocks since last min</span><input id="blocksSinceMin" type="number" min="0" step="1"></label>
     <label><span>Blocks since last max</span><input id="blocksSinceMax" type="number" min="0" step="1"></label>
     <button id="resetFilters" type="button">Reset filters</button>
-    <label><span>Stake to simulate (MINA)</span><input id="simulationStake" type="number" min="0" step="any" placeholder="Enter an additional stake" aria-describedby="simulationNote"></label>
+    <label><span>Stake to simulate (MINA, max 200,000)</span><input id="simulationStake" type="number" min="0" max="200000" step="any" placeholder="0–200,000 MINA" aria-describedby="simulationLimit simulationNote"><span id="simulationLimit">Amounts above 200,000 are capped. Fixed observed blocks; this cap is not a statistical threshold.</span></label>
     <label class="checkbox-filter"><input id="hideAnonymous" type="checkbox"><span>Hide anonymous validators</span></label>
     <details class="column-picker" id="columnPicker">
       <summary>Columns <span id="columnCount"></span></summary>

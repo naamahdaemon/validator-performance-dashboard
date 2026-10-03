@@ -37,6 +37,7 @@ let commissionOverrides={},simulationSources={};
 try{commissionOverrides=ValidatorSimulation.parseOverrides(localStorage.getItem(COMMISSION_STORAGE_KEY));}catch(_){}
 function saveCommissions(){try{localStorage.setItem(COMMISSION_STORAGE_KEY,JSON.stringify(commissionOverrides));}catch(_){}}
 function refreshSimulation(){
+ if(Number(f.simulationStake.value)>ValidatorSimulation.MAX_SIMULATED_STAKE)f.simulationStake.value=String(ValidatorSimulation.MAX_SIMULATED_STAKE);
  const amount=f.simulationStake.value!==""&&f.simulationStake.validity.valid?Number(f.simulationStake.value):null;
  for(const row of state.all)Object.assign(row,ValidatorSimulation.calculate({...row,commission_pct:row.source_commission_pct},amount,simulationSources,commissionOverrides));
 }
