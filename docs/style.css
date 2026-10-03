@@ -64,4 +64,12 @@ td.num,.numeric-text,input[type="number"],input[type="date"],#epoch,#pageSize,
 }
 tbody tr:hover>td,tfoot tr:hover>td{background-color:#202e43}
 :root[data-theme="light"] tbody tr:hover>td,:root[data-theme="light"] tfoot tr:hover>td{background-color:#dce9fa}
-@media(max-width:600px){.page{padding-block:12px}.status-card{grid-template-columns:1fr;gap:8px}.filters{grid-template-columns:1fr}.filters .wide{grid-column:span 1}.table-toolbar{gap:12px;flex-wrap:wrap}}
+@media(max-width:600px){
+  .page{padding-block:12px}
+  .status-card{grid-template-columns:1fr;gap:8px}
+  .filters{grid-template-columns:1fr}
+  .filters .wide{grid-column:span 1}
+  .table-toolbar{gap:10px;flex-wrap:wrap;padding-block:12px}
+  .table-toolbar label[for="pageSize"]{display:flex;align-items:center;gap:10px}
+  #pageSize{height:32px;min-height:32px;padding:4px 8px}
+}
