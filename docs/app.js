@@ -150,7 +150,10 @@ function renderTotals(){
  const t=ValidatorTotals.calculate(state.filtered),tr=document.createElement("tr");
  for(const key of COLUMN_KEYS){
   let c;
-  if(key==="validator_name")c=cell(`Total (${fmt(state.filtered.length)})`);
+  if(key==="validator_name"){
+   c=cell("Total ");const count=document.createElement("span");
+   count.className="numeric-text";count.textContent=`(${fmt(state.filtered.length)})`;c.append(count);
+  }
   else if(key==="wallet_address")c=cell(hiddenColumns.has("validator_name")?"Total":"—");
   else if(key==="stake_next_delta_pct")c=delta(t[key],t.stake_next_delta);
   else if(key==="stake_live_delta_pct")c=delta(t[key],t.stake_live_delta);
@@ -180,7 +183,7 @@ function render(){
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
    tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"),blockDelta(v.blocks_epoch_delta));
    const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
-   tr.append(cell(v.last_block_date||"—"));
+   tr.append(cell(v.last_block_date||"—","numeric-text"));
    const ec=document.createElement("td"),badge=document.createElement("span");badge.className=`badge ${v.last_block_era||""}`;badge.textContent=v.last_block_era||"—";ec.append(badge);tr.append(ec,cell(v.last_block_epoch??"—","num"));rows.append(tr);
   }
  }
