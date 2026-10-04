@@ -191,6 +191,27 @@ function favoriteCell(v){
 }
 function bar(v,max,d=0){if(v==null)return cell("—","num");const x=cell("", "bar-cell num"),b=document.createElement("div"),s=document.createElement("span");b.className="bar";b.style.width=`${max?Math.min(100,num(v)/max*100):0}%`;s.className="value";s.textContent=fmt(v,d);x.append(b,s);return x}
 function percentCell(v){return cell(v==null?"—":`${fmt(v,2)}%`,"num")}
+function productionCell(v,current){
+ const blocks=current?v.blocks_current_epoch:v.blocks_previous_epoch;
+ const c=cell(blocks==null?"—":fmt(blocks),"num");
+ let expected=v.expected_blocks_epoch;
+ const era=current?v.network_epoch_label:v.previous_epoch_label;
+ if(blocks==null||!Number.isFinite(expected)||expected<=0||!String(era||"").startsWith("mesa:"))return c;
+ if(current){
+  const slot=v.network_slot_in_epoch,slots=v.network_slots_per_epoch;
+  if(!Number.isFinite(slot)||!Number.isFinite(slots)||slots<=0||slot<0||slot>=slots)return c;
+  expected*=(slot+1)/slots;
+ }
+ const direction=blocks>=expected*3?"high":blocks<=expected/3?"low":"normal";
+ const indicator=document.createElement("span");
+ indicator.className=`production-indicator production-${direction}`;
+ indicator.textContent={high:"↑",low:"↓",normal:"→"}[direction];
+ indicator.setAttribute("role","img");
+ indicator.setAttribute("aria-label",{high:"At least three times expected",low:"At most one third of expected",normal:"Within comparison thresholds"}[direction]);
+ c.prepend(indicator);
+ c.title=`Expected: ${fmt(expected,2)} blocks. ↑ ≥ 3×; ↓ ≤ ⅓; → between thresholds. ${current?"Prorated through the latest archived slot; confirmed blocks only, frontier excluded.":"Approximation using current Stake N and current total ledger stake, not historical N−1 stake."} Heuristic thresholds, not a statistical significance test.`;
+ return c;
+}
 function blockDelta(v){const x=cell(v==null?"—":`${v>0?"+":""}${fmt(v)}`,"num");if(v>0)x.classList.add("delta-up");if(v<0)x.classList.add("delta-down");return x}
 function delta(pct,mina){const x=cell(pct==null?"—":`${num(pct)>=0?"+":""}${fmt(pct,2)}%`,"num");if(pct!=null)x.classList.add(num(pct)>=0?"delta-up":"delta-down");x.title=mina==null?"Awaiting ledger export":`${fmt(mina,2)} MINA`;return x}
 function commissionCell(v){
@@ -261,7 +282,7 @@ function render(){
    tr.append(delta(v.stake_current_live_delta_pct,v.stake_current_live_delta),commissionCell(v),simulationCell(v,"simulation_gross",simulationMax.simulation_gross),simulationCell(v,"simulation_net",simulationMax.simulation_net));
    tr.append(simulationCell(v,"simulation_current_gross",simulationMax.simulation_current_gross),simulationCell(v,"simulation_current_net",simulationMax.simulation_current_net));
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
-   tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"));
+   tr.append(productionCell(v,false),productionCell(v,true));
    tr.append(cell(v.blocks_current_epoch_inclusive==null?"—":fmt(v.blocks_current_epoch_inclusive),"num"));
    for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])tr.append(cell(v[key]==null?"—":fmt(v[key],2),"num"));
    tr.append(blockDelta(v.blocks_epoch_delta));
