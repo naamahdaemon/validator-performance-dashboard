@@ -6,6 +6,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .hero-intro{min-width:0;padding-top:12px}
 .hero-intro .subtitle{margin:12px 0 16px}
 .simulation-note{padding:10px 14px;margin:0;border-bottom:1px solid var(--border);font-size:12px}
+.simulation-caution{margin:0;padding:8px 14px;border-bottom:1px solid var(--border);background:var(--accentSoft);color:var(--text);font-size:12px}
 .commission-input{width:82px;min-height:30px;padding:4px 6px;text-align:right}
 .commission-input.local-override{border-color:var(--accent);background:var(--accentSoft)}
 .eyebrow{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.16em}h1{margin:5px 0 4px}.subtitle,.muted{color:var(--muted)}

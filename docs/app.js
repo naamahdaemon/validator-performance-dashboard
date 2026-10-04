@@ -4,6 +4,8 @@ let savedPageSize=20;
 try { const value=Number(localStorage.getItem("validator-page-size")); if(PAGE_SIZES.includes(value))savedPageSize=value; } catch (_) {}
 const state={all:[],filtered:[],page:1,pageSize:savedPageSize,sortKey:"stake_live_estimate",sortDir:"desc"};
 const $=id=>document.getElementById(id);
+const SIMULATION_CAUTION="Simulation based on observed blocks, not a forecast. Exceptional production can inflate results, especially for small validators. A high simulated reward does not imply a better future return.";
+document.querySelectorAll('th[data-sort^="simulation_"]').forEach(th=>{th.title=SIMULATION_CAUTION+" "+th.title;th.setAttribute("aria-describedby","simulationCaution");});
 const favorites=new Set();
 try{
  const saved=JSON.parse(localStorage.getItem("validator-favorites-v1"));
@@ -243,6 +245,8 @@ function simulationCell(v,key,max){
  }
  c.title=`Epoch ${v.previous_epoch_label||"unknown"}; ${v.simulation_approximate?"approximation using current stake":"historical stake"}: ${v.simulation_stake==null?"unknown":fmt(v.simulation_stake,2)} MINA. Source/current or local commission, not historical. Excludes transaction fees and additional blocks.`;
  if(current)c.title=`Epoch ${v.network_epoch_label||"unknown"} so far, in MINA. Confirmed + provisional archive-selected branch blocks; may be reorganized. Uses Stake N + added stake, excludes transaction fees and additional blocks.`;
+ c.title=SIMULATION_CAUTION+" "+c.title;
+ c.setAttribute("aria-describedby","simulationCaution");
  return c;
 }
 function renderTotals(){
@@ -270,6 +274,7 @@ function renderTotals(){
 }
 
 function render(){
+ $("simulationCaution").hidden=!(Number(f.simulationStake.value)>0);
  $("filteredCount").textContent=fmt(state.filtered.length);
  const pages=Math.max(1,Math.ceil(state.filtered.length/state.pageSize));state.page=Math.min(Math.max(1,state.page),pages);
  const rows=$("rows");rows.replaceChildren();
