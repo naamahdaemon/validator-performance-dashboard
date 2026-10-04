@@ -29,7 +29,8 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .favorite-toggle{padding:0;width:28px;min-height:28px;border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
 .favorite-toggle[aria-pressed="true"]{color:var(--warning)}
 .favorite-toggle:hover{background:var(--accentSoft)}
-.production-indicator{display:inline-block;margin-right:6px;font-weight:800}
+.production-cell{position:relative;padding-left:22px}
+.production-indicator{position:absolute;left:5px;top:50%;transform:translateY(-50%);font-weight:800}
 .production-high{color:var(--good)}
 .production-low{color:var(--bad)}
 .production-normal{color:var(--accent)}

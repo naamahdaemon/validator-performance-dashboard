@@ -191,8 +191,8 @@ function favoriteCell(v){
 }
 function bar(v,max,d=0){if(v==null)return cell("—","num");const x=cell("", "bar-cell num"),b=document.createElement("div"),s=document.createElement("span");b.className="bar";b.style.width=`${max?Math.min(100,num(v)/max*100):0}%`;s.className="value";s.textContent=fmt(v,d);x.append(b,s);return x}
 function percentCell(v){return cell(v==null?"—":`${fmt(v,2)}%`,"num")}
-function productionCell(v,current){
- const blocks=current?v.blocks_current_epoch:v.blocks_previous_epoch;
+function productionCell(v,current,includeFrontier=false){
+ const blocks=current?(includeFrontier?v.blocks_current_epoch_inclusive:v.blocks_current_epoch):v.blocks_previous_epoch;
  const c=cell(blocks==null?"—":fmt(blocks),"num");
  let expected=v.expected_blocks_epoch;
  const era=current?v.network_epoch_label:v.previous_epoch_label;
@@ -208,8 +208,12 @@ function productionCell(v,current){
  indicator.textContent={high:"↑",low:"↓",normal:"→"}[direction];
  indicator.setAttribute("role","img");
  indicator.setAttribute("aria-label",{high:"At least three times expected",low:"At most one third of expected",normal:"Within comparison thresholds"}[direction]);
+ c.classList.add("production-cell");
  c.prepend(indicator);
- c.title=`Expected: ${fmt(expected,2)} blocks. ↑ ≥ 3×; ↓ ≤ ⅓; → between thresholds. ${current?"Prorated through the latest archived slot; confirmed blocks only, frontier excluded.":"Approximation using current Stake N and current total ledger stake, not historical N−1 stake."} Heuristic thresholds, not a statistical significance test.`;
+ const basis=current
+  ?`Prorated through the latest archived slot; ${includeFrontier?"confirmed plus provisional archive-selected branch blocks, subject to reorganizations":"confirmed blocks only, frontier excluded"}.`
+  :"Approximation using current Stake N and current total ledger stake, not historical N−1 stake.";
+ c.title=`Expected: ${fmt(expected,2)} blocks. ↑ ≥ 3×; ↓ ≤ ⅓; → between thresholds. ${basis} Heuristic thresholds, not a statistical significance test.`;
  return c;
 }
 function blockDelta(v){const x=cell(v==null?"—":`${v>0?"+":""}${fmt(v)}`,"num");if(v>0)x.classList.add("delta-up");if(v<0)x.classList.add("delta-down");return x}
@@ -283,7 +287,7 @@ function render(){
    tr.append(simulationCell(v,"simulation_current_gross",simulationMax.simulation_current_gross),simulationCell(v,"simulation_current_net",simulationMax.simulation_current_net));
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
    tr.append(productionCell(v,false),productionCell(v,true));
-   tr.append(cell(v.blocks_current_epoch_inclusive==null?"—":fmt(v.blocks_current_epoch_inclusive),"num"));
+   tr.append(productionCell(v,true,true));
    for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])tr.append(cell(v[key]==null?"—":fmt(v[key],2),"num"));
    tr.append(blockDelta(v.blocks_epoch_delta));
    const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
