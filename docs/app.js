@@ -4,6 +4,11 @@ let savedPageSize=20;
 try { const value=Number(localStorage.getItem("validator-page-size")); if(PAGE_SIZES.includes(value))savedPageSize=value; } catch (_) {}
 const state={all:[],filtered:[],page:1,pageSize:savedPageSize,sortKey:"stake_live_estimate",sortDir:"desc"};
 const $=id=>document.getElementById(id);
+const favorites=new Set();
+try{
+ const saved=JSON.parse(localStorage.getItem("validator-favorites-v1"));
+ if(Array.isArray(saved))for(const wallet of saved)if(typeof wallet==="string"&&wallet)favorites.add(wallet);
+}catch(_){}
 let filtersOpen=false;
 try{filtersOpen=localStorage.getItem("validator-filters-open")==="true";}catch(_){}
 function updateFiltersPanel(){
@@ -44,6 +49,7 @@ $("pageSize").addEventListener("change",()=>{
 });
 const f={search:$("search"),era:$("era"),epoch:$("epoch"),dateAfter:$("dateAfter"),dateBefore:$("dateBefore"),stakeMin:$("stakeMin"),stakeMax:$("stakeMax"),delegatorsMin:$("delegatorsMin"),delegatorsMax:$("delegatorsMax"),blocksSinceMin:$("blocksSinceMin"),blocksSinceMax:$("blocksSinceMax")};
 f.hideAnonymous=$("hideAnonymous");
+f.favoritesOnly=$("favoritesOnly");
 f.simulationStake=$("simulationStake");
 const COMMISSION_STORAGE_KEY="validator-commissions-v1";
 let commissionOverrides={},simulationSources={};
@@ -96,8 +102,8 @@ function updateColumnVisibility(){
  COLUMN_HEADERS.forEach((th,i)=>{
   const hidden=hiddenColumns.has(COLUMN_KEYS[i]);th.hidden=hidden;
   for(const row of [...$("rows").rows,...$("totals").rows]){
-   if(row.cells.length===COLUMN_COUNT)row.cells[i].hidden=hidden;
-   else if(row.cells.length===1)row.cells[0].colSpan=count;
+   if(row.cells.length===COLUMN_COUNT+1)row.cells[i+1].hidden=hidden;
+   else if(row.cells.length===1)row.cells[0].colSpan=count+1;
   }
  });
  $("columnCount").textContent=`(${count}/${COLUMN_COUNT})`;
@@ -154,6 +160,7 @@ function apply({resetPage=true}={}){
  const smin=nullable(f.stakeMin.value),smax=nullable(f.stakeMax.value),dmin=nullable(f.delegatorsMin.value),dmax=nullable(f.delegatorsMax.value),bmin=nullable(f.blocksSinceMin.value),bmax=nullable(f.blocksSinceMax.value);
  state.filtered=state.all.filter(v=>{
   if(f.hideAnonymous.checked&&!String(v.validator_name??"").trim())return false;
+  if(f.favoritesOnly.checked&&!favorites.has(v.wallet_address))return false;
   if(q&&!`${v.validator_name??""} ${v.wallet_address??""}`.toLowerCase().includes(q))return false;
   if(f.era.value&&v.last_block_era!==f.era.value)return false;
   if(f.epoch.value!==""&&num(v.last_block_epoch)!==num(f.epoch.value))return false;
@@ -166,6 +173,22 @@ function apply({resetPage=true}={}){
  sortRows();if(resetPage)state.page=1;render();
 }
 function cell(t,c=""){const x=document.createElement("td");x.textContent=t;if(c)x.className=c;return x}
+function favoriteCell(v){
+ const c=cell("","favorite-cell"),button=document.createElement("button");
+ const selected=favorites.has(v.wallet_address);
+ button.type="button";button.className="favorite-toggle";button.textContent=selected?"★":"☆";
+ button.setAttribute("aria-pressed",String(selected));
+ button.setAttribute("aria-label",`Favorite: ${v.validator_name||v.wallet_address}`);
+ button.title=selected?"Remove from favorites":"Add to favorites";
+ button.disabled=!v.wallet_address;
+ button.addEventListener("click",()=>{
+  if(favorites.has(v.wallet_address))favorites.delete(v.wallet_address);else favorites.add(v.wallet_address);
+  try{localStorage.setItem("validator-favorites-v1",JSON.stringify([...favorites]));}catch(_){}
+  if(f.favoritesOnly.checked)apply({resetPage:false});
+  else c.replaceWith(favoriteCell(v));
+ });
+ c.append(button);return c;
+}
 function bar(v,max,d=0){if(v==null)return cell("—","num");const x=cell("", "bar-cell num"),b=document.createElement("div"),s=document.createElement("span");b.className="bar";b.style.width=`${max?Math.min(100,num(v)/max*100):0}%`;s.className="value";s.textContent=fmt(v,d);x.append(b,s);return x}
 function percentCell(v){return cell(v==null?"—":`${fmt(v,2)}%`,"num")}
 function blockDelta(v){const x=cell(v==null?"—":`${v>0?"+":""}${fmt(v)}`,"num");if(v>0)x.classList.add("delta-up");if(v<0)x.classList.add("delta-down");return x}
@@ -199,6 +222,7 @@ function simulationCell(v,key,max){
 }
 function renderTotals(){
  const t=ValidatorTotals.calculate(state.filtered),tr=document.createElement("tr");
+ tr.append(cell("","favorite-cell"));
  for(const key of COLUMN_KEYS){
   let c;
   if(key==="validator_name"){
@@ -224,13 +248,13 @@ function render(){
  $("filteredCount").textContent=fmt(state.filtered.length);
  const pages=Math.max(1,Math.ceil(state.filtered.length/state.pageSize));state.page=Math.min(Math.max(1,state.page),pages);
  const rows=$("rows");rows.replaceChildren();
- if(!state.filtered.length){const tr=document.createElement("tr"),c=cell("No validators match the current filters.","empty-state");c.colSpan=COLUMN_COUNT;tr.append(c);rows.append(tr)}
+ if(!state.filtered.length){const tr=document.createElement("tr"),c=cell("No validators match the current filters.","empty-state");c.colSpan=COLUMN_COUNT+1;tr.append(c);rows.append(tr)}
  else{
   const slice=state.filtered.slice((state.page-1)*state.pageSize,state.page*state.pageSize);
   const simulationMax=Object.fromEntries(["simulation_gross","simulation_net","simulation_current_gross","simulation_current_net"].map(key=>[key,Math.max(0,...state.filtered.map(v=>num(v[key])))]));
   const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.canonical_blocks_all_epochs)),0);
   for(const v of slice){
-   const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");vc.title=v.validator_name||"";tr.append(vc);
+   const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");vc.title=v.validator_name||"";tr.append(favoriteCell(v),vc);
    const wc=document.createElement("td"),a=document.createElement("a");a.className="wallet";a.href=MINASCAN+encodeURIComponent(v.wallet_address||"");a.target="_blank";a.rel="noopener noreferrer";a.textContent=v.wallet_address||"—";a.title=v.wallet_address||"";wc.append(a);tr.append(wc);
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
@@ -289,4 +313,4 @@ Promise.all([
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;
  }
  $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});
-}).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("totals").replaceChildren();$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT-hiddenColumns.size}" class="empty-state">Unable to load data.</td></tr>`});
+}).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("totals").replaceChildren();$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT-hiddenColumns.size+1}" class="empty-state">Unable to load data.</td></tr>`});

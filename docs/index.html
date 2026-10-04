@@ -46,6 +46,7 @@
     <div class="filter-actions">
     <label><span>Stake to simulate (MINA, max 200,000)</span><input id="simulationStake" type="number" min="0" max="200000" step="any" placeholder="0–200,000 MINA" aria-describedby="simulationLimit simulationNote"></label>
     <label class="checkbox-filter"><input id="hideAnonymous" type="checkbox"><span>Hide anonymous validators</span></label>
+    <label class="checkbox-filter"><input id="favoritesOnly" type="checkbox"><span>Favorites only</span></label>
     <button id="resetFilters" type="button">Reset filters</button>
     </div>
   </section>
@@ -73,6 +74,7 @@
     <div class="table-wrap">
       <table>
         <thead><tr>
+          <th class="favorite-heading" scope="col" aria-label="Favorites" title="Favorites saved in this browser">★</th>
           <th data-sort="validator_name">Validator</th>
           <th data-sort="wallet_address">Wallet</th>
           <th class="num" data-sort="stake_current_epoch">Stake N</th>
