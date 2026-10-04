@@ -12,6 +12,11 @@ function updateFiltersPanel(){
 }
 $("filtersToggle").onclick=()=>{filtersOpen=!filtersOpen;updateFiltersPanel();try{localStorage.setItem("validator-filters-open",String(filtersOpen));}catch(_){}};
 updateFiltersPanel();
+const informationPanel=$("informationPanel");
+try{informationPanel.open=localStorage.getItem("validator-information-open")==="true";}catch(_){}
+informationPanel.addEventListener("toggle",()=>{
+ try{localStorage.setItem("validator-information-open",String(informationPanel.open));}catch(_){}
+});
 $("copyrightYear").textContent=String(new Date().getFullYear());
 const COLUMN_HEADERS=[...document.querySelectorAll("th[data-sort]")];
 const COLUMN_KEYS=COLUMN_HEADERS.map(th=>th.dataset.sort);

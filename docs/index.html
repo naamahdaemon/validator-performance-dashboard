@@ -111,8 +111,8 @@
       <button id="nextPage">›</button><button id="lastPage">»</button>
     </nav>
   </section>
-  <section class="information" aria-labelledby="informationTitle">
-    <h2 id="informationTitle">Information &amp; methodology</h2>
+  <details class="information" id="informationPanel" aria-labelledby="informationTitle">
+    <summary id="informationTitle">Information &amp; methodology</summary>
   <section class="legend">
     <strong>Stake timeline:</strong>
     <span><b>N</b> = current staking epoch ledger</span>
@@ -129,7 +129,7 @@
 
     <p id="simulationNote" class="simulation-note muted">Simulation (MINA): blocks × 360 × added stake / (validator stake + added stake). N−1 uses the previous full Mesa epoch’s confirmed blocks; N uses current confirmed + provisional branch blocks so far and Stake N. N is partial and may change with reorganizations. No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback for N−1. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
     <p id="simulationLimit" class="muted">Amounts above 200,000 are capped. Fixed observed blocks; this cap is not a statistical threshold.</p>
-  </section>
+  </details>
   <footer class="site-footer">
     <div class="footer-copy">
       <p>© <span id="copyrightYear">2026</span> naamahdaemon. All rights reserved.</p>
