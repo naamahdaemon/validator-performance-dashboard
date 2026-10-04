@@ -172,9 +172,14 @@ function commissionCell(v){
  });
  c.append(input);return c;
 }
-function simulationCell(v,key){
+function simulationCell(v,key,max){
  const current=key.startsWith("simulation_current_");
- const c=cell(v[key]==null?"—":`${!current&&v.simulation_approximate?"≈ ":""}${fmt(v[key],2)}`,"num"+(v[key]==null?"":key.endsWith("_net")?" simulation-result simulation-net":" simulation-result"));
+ const c=bar(v[key],max,2);
+ if(v[key]!=null){
+  c.classList.add("simulation-result");
+  if(key.endsWith("_net"))c.classList.add("simulation-net");
+  if(!current&&v.simulation_approximate)c.querySelector(".value").prepend("≈ ");
+ }
  c.title=`Epoch ${v.previous_epoch_label||"unknown"}; ${v.simulation_approximate?"approximation using current stake":"historical stake"}: ${v.simulation_stake==null?"unknown":fmt(v.simulation_stake,2)} MINA. Source/current or local commission, not historical. Excludes transaction fees and additional blocks.`;
  if(current)c.title=`Epoch ${v.network_epoch_label||"unknown"} so far, in MINA. Confirmed + provisional archive-selected branch blocks; may be reorganized. Uses Stake N + added stake, excludes transaction fees and additional blocks.`;
  return c;
@@ -209,14 +214,15 @@ function render(){
  if(!state.filtered.length){const tr=document.createElement("tr"),c=cell("No validators match the current filters.","empty-state");c.colSpan=COLUMN_COUNT;tr.append(c);rows.append(tr)}
  else{
   const slice=state.filtered.slice((state.page-1)*state.pageSize,state.page*state.pageSize);
+  const simulationMax=Object.fromEntries(["simulation_gross","simulation_net","simulation_current_gross","simulation_current_net"].map(key=>[key,Math.max(0,...state.filtered.map(v=>num(v[key])))]));
   const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.canonical_blocks_all_epochs)),0);
   for(const v of slice){
    const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");vc.title=v.validator_name||"";tr.append(vc);
    const wc=document.createElement("td"),a=document.createElement("a");a.className="wallet";a.href=MINASCAN+encodeURIComponent(v.wallet_address||"");a.target="_blank";a.rel="noopener noreferrer";a.textContent=v.wallet_address||"—";a.title=v.wallet_address||"";wc.append(a);tr.append(wc);
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
-   tr.append(delta(v.stake_current_live_delta_pct,v.stake_current_live_delta),commissionCell(v),simulationCell(v,"simulation_gross"),simulationCell(v,"simulation_net"));
-   tr.append(simulationCell(v,"simulation_current_gross"),simulationCell(v,"simulation_current_net"));
+   tr.append(delta(v.stake_current_live_delta_pct,v.stake_current_live_delta),commissionCell(v),simulationCell(v,"simulation_gross",simulationMax.simulation_gross),simulationCell(v,"simulation_net",simulationMax.simulation_net));
+   tr.append(simulationCell(v,"simulation_current_gross",simulationMax.simulation_current_gross),simulationCell(v,"simulation_current_net",simulationMax.simulation_current_net));
    tr.append(bar(v.delegator_count,maxD),bar(v.canonical_blocks_all_epochs,maxB));
    tr.append(cell(v.blocks_previous_epoch==null?"—":fmt(v.blocks_previous_epoch),"num"),cell(v.blocks_current_epoch==null?"—":fmt(v.blocks_current_epoch),"num"));
    tr.append(cell(v.blocks_current_epoch_inclusive==null?"—":fmt(v.blocks_current_epoch_inclusive),"num"));

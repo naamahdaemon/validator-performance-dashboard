@@ -71,6 +71,10 @@ tbody tr:hover>td,tfoot tr:hover>td{background-color:#202e43}
 :root[data-theme="light"] tbody tr:hover>td,:root[data-theme="light"] tfoot tr:hover>td{background-color:#dce9fa}
 tbody td.simulation-result{background:#16333d;color:#a5edf5;font-weight:600}
 tbody td.simulation-net{background:#173d36;color:#a7f3d0;font-weight:700}
+.simulation-result .bar{background:rgba(56,189,248,.24)}
+.simulation-net .bar{background:rgba(52,211,153,.27)}
+:root[data-theme="light"] .simulation-result .bar{background:rgba(2,132,199,.18)}
+:root[data-theme="light"] .simulation-net .bar{background:rgba(5,150,105,.22)}
 tbody tr:hover>td.simulation-result{background:#214a56}
 tbody tr:hover>td.simulation-net{background:#245347}
 :root[data-theme="light"] tbody td.simulation-result{background:#e0f2fe;color:#075985}
