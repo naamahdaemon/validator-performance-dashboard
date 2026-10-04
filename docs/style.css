@@ -67,6 +67,8 @@ button:disabled{opacity:.45;cursor:default}
 /* Use the full viewport; let content determine when horizontal scrolling is needed. */
 table{min-width:0;font-size:clamp(12px,.65vw,14px)}
 th,td{padding-inline:clamp(4px,.3vw,10px)}
+/* Separate adjacent columns, including full-width reward bars. */
+th:not(:first-child),td:not(:first-child){border-left:2px solid var(--border)}
 th{white-space:normal;max-width:140px}
 .wallet{max-width:clamp(130px,8vw,260px)}
 .validator{max-width:clamp(140px,9vw,280px)}
