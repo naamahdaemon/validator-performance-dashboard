@@ -207,7 +207,13 @@ function productionCell(v,current,includeFrontier=false){
  const direction=blocks>=expected*3?"high":blocks<=expected/3?"low":"normal";
  const indicator=document.createElement("span");
  indicator.className=`production-indicator production-${direction}`;
- indicator.textContent={high:"↑",low:"↓",normal:"→"}[direction];
+ const arrow=document.createElementNS("http://www.w3.org/2000/svg","svg");
+ arrow.setAttribute("viewBox","0 0 16 16");
+ arrow.setAttribute("aria-hidden","true");
+ arrow.setAttribute("focusable","false");
+ const path=document.createElementNS("http://www.w3.org/2000/svg","path");
+ path.setAttribute("d",{high:"M8 14V2M3 7L8 2L13 7",low:"M8 2V14M3 9L8 14L13 9",normal:"M2 8H14M9 3L14 8L9 13"}[direction]);
+ arrow.append(path);indicator.append(arrow);
  indicator.setAttribute("role","img");
  indicator.setAttribute("aria-label",{high:"At least three times expected",low:"At most one third of expected",normal:"Within comparison thresholds"}[direction]);
  c.classList.add("production-cell");

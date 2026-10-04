@@ -31,7 +31,8 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .favorite-toggle[aria-pressed="true"]{color:var(--warning)}
 .favorite-toggle:hover{background:var(--accentSoft)}
 .production-cell{position:relative;padding-left:22px}
-.production-indicator{position:absolute;left:5px;top:50%;transform:translateY(-50%);font-weight:800}
+.production-indicator{position:absolute;left:5px;top:50%;transform:translateY(-50%);width:14px;height:14px}
+.production-indicator svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .production-high{color:var(--good)}
 .production-low{color:var(--bad)}
 .production-normal{color:var(--accent)}
