@@ -30,34 +30,22 @@
     </div>
   </header>
 
-  <section class="legend">
-    <strong>Stake timeline:</strong>
-    <span><b>N</b> = current staking epoch ledger</span>
-    <span><b>N+1</b> = next epoch ledger</span>
-    <span><b>Live</b> = current archive-state delegation estimate</span>
-  </section>
-
-  <section class="legend" aria-label="Metric definitions">
-    <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing canonical blocks in the previous or current epoch.</span>
-    <span id="epochSummary">Epoch block counts await the next export.</span>
-    <span>Estimates cover a full Mesa epoch: 7,140 slots × 75% theoretical fill rate × Stake N / total ledger stake. Gross coinbase = estimated blocks × 360 MINA, before costs and delegation payouts. Approximation, not guaranteed rewards or a performance score for the partial epoch.</span>
-    <span>Standard block counts include confirmed canonical blocks only. “+ frontier” also includes pending blocks on the archive-selected branch (provisional). Δ blocks = current confirmed (partial) − previous confirmed (complete).</span>
-  </section>
-
-  <section class="filters">
+  <button id="filtersToggle" class="filters-toggle" type="button" aria-expanded="false" aria-controls="filtersPanel">Filters &amp; simulation</button>
+  <section class="filters" id="filtersPanel">
     <label class="wide"><span>Search</span><input id="search" type="search" placeholder="Validator name or B62 wallet…"></label>
-    <label><span>Last block era</span><select id="era"><option value="">All</option><option value="mesa">Mesa</option><option value="pre">Pre-Mesa</option></select></label>
-    <label><span>Last block epoch</span><select id="epoch"><option value="">All</option></select></label>
-    <label><span>Last block after</span><input id="dateAfter" type="date"></label>
-    <label><span>Last block before</span><input id="dateBefore" type="date"></label>
+    <label title="Last block era"><span>Era</span><select id="era"><option value="">All</option><option value="mesa">Mesa</option><option value="pre">Pre-Mesa</option></select></label>
+    <label title="Last block epoch"><span>Epoch</span><select id="epoch"><option value="">All</option></select></label>
+    <label title="Last block after"><span>After</span><input id="dateAfter" type="date"></label>
+    <label title="Last block before"><span>Before</span><input id="dateBefore" type="date"></label>
     <label><span>Live stake min</span><input id="stakeMin" type="number" min="0" step="1"></label>
     <label><span>Live stake max</span><input id="stakeMax" type="number" min="0" step="1"></label>
     <label><span>Delegators min</span><input id="delegatorsMin" type="number" min="0" step="1"></label>
     <label><span>Delegators max</span><input id="delegatorsMax" type="number" min="0" step="1"></label>
-    <label><span>Blocks since last min</span><input id="blocksSinceMin" type="number" min="0" step="1"></label>
-    <label><span>Blocks since last max</span><input id="blocksSinceMax" type="number" min="0" step="1"></label>
+    <label title="Minimum blocks since last produced"><span>Since last min</span><input id="blocksSinceMin" type="number" min="0" step="1"></label>
+    <label title="Maximum blocks since last produced"><span>Since last max</span><input id="blocksSinceMax" type="number" min="0" step="1"></label>
+    <div class="filter-actions">
     <button id="resetFilters" type="button">Reset filters</button>
-    <label><span>Stake to simulate (MINA, max 200,000)</span><input id="simulationStake" type="number" min="0" max="200000" step="any" placeholder="0–200,000 MINA" aria-describedby="simulationLimit simulationNote"><span id="simulationLimit">Amounts above 200,000 are capped. Fixed observed blocks; this cap is not a statistical threshold.</span></label>
+    <label><span>Stake to simulate (MINA, max 200,000)</span><input id="simulationStake" type="number" min="0" max="200000" step="any" placeholder="0–200,000 MINA" aria-describedby="simulationLimit simulationNote"></label>
     <label class="checkbox-filter"><input id="hideAnonymous" type="checkbox"><span>Hide anonymous validators</span></label>
     <details class="column-picker" id="columnPicker">
       <summary>Columns <span id="columnCount"></span></summary>
@@ -66,10 +54,10 @@
         <div id="columnOptions" role="group" aria-label="Visible columns"></div>
       </div>
     </details>
+    </div>
   </section>
 
   <section class="table-card">
-    <p id="simulationNote" class="simulation-note muted">Simulation (MINA): blocks × 360 × added stake / (validator stake + added stake). N−1 uses the previous full Mesa epoch’s confirmed blocks; N uses current confirmed + provisional branch blocks so far and Stake N. N is partial and may change with reorganizations. No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback for N−1. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
     <div class="table-toolbar">
       <div><strong id="filteredCount">0</strong> matching validators <span class="muted">· Totals cover all matching validators, across all pages</span></div>
       <label class="muted" for="pageSize">Rows per page
@@ -120,6 +108,25 @@
       <span id="pageLabel">Page 1 / 1</span>
       <button id="nextPage">›</button><button id="lastPage">»</button>
     </nav>
+  </section>
+  <section class="information" aria-labelledby="informationTitle">
+    <h2 id="informationTitle">Information &amp; methodology</h2>
+  <section class="legend">
+    <strong>Stake timeline:</strong>
+    <span><b>N</b> = current staking epoch ledger</span>
+    <span><b>N+1</b> = next epoch ledger</span>
+    <span><b>Live</b> = current archive-state delegation estimate</span>
+  </section>
+
+  <section class="legend" aria-label="Metric definitions">
+    <span><b>Stake %</b> uses the current staking ledger N; active stake includes validators producing canonical blocks in the previous or current epoch.</span>
+    <span id="epochSummary">Epoch block counts await the next export.</span>
+    <span>Estimates cover a full Mesa epoch: 7,140 slots × 75% theoretical fill rate × Stake N / total ledger stake. Gross coinbase = estimated blocks × 360 MINA, before costs and delegation payouts. Approximation, not guaranteed rewards or a performance score for the partial epoch.</span>
+    <span>Standard block counts include confirmed canonical blocks only. “+ frontier” also includes pending blocks on the archive-selected branch (provisional). Δ blocks = current confirmed (partial) − previous confirmed (complete).</span>
+  </section>
+
+    <p id="simulationNote" class="simulation-note muted">Simulation (MINA): blocks × 360 × added stake / (validator stake + added stake). N−1 uses the previous full Mesa epoch’s confirmed blocks; N uses current confirmed + provisional branch blocks so far and Stake N. N is partial and may change with reorganizations. No extra blocks assumed. Commission is the source rate or your local override, not a historical rate. ≈ marks current-stake fallback for N−1. Alternatives are not summed. Reset filters clears the simulation and restores source commissions.</p>
+    <p id="simulationLimit" class="muted">Amounts above 200,000 are capped. Fixed observed blocks; this cap is not a statistical threshold.</p>
   </section>
   <footer class="site-footer">
     <div class="footer-copy">

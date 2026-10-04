@@ -4,6 +4,14 @@ let savedPageSize=20;
 try { const value=Number(localStorage.getItem("validator-page-size")); if(PAGE_SIZES.includes(value))savedPageSize=value; } catch (_) {}
 const state={all:[],filtered:[],page:1,pageSize:savedPageSize,sortKey:"stake_live_estimate",sortDir:"desc"};
 const $=id=>document.getElementById(id);
+let filtersOpen=false;
+try{filtersOpen=localStorage.getItem("validator-filters-open")==="true";}catch(_){}
+function updateFiltersPanel(){
+ $("filtersPanel").classList.toggle("mobile-open",filtersOpen);
+ $("filtersToggle").setAttribute("aria-expanded",String(filtersOpen));
+}
+$("filtersToggle").onclick=()=>{filtersOpen=!filtersOpen;updateFiltersPanel();try{localStorage.setItem("validator-filters-open",String(filtersOpen));}catch(_){}};
+updateFiltersPanel();
 $("copyrightYear").textContent=String(new Date().getFullYear());
 const COLUMN_HEADERS=[...document.querySelectorAll("th[data-sort]")];
 const COLUMN_KEYS=COLUMN_HEADERS.map(th=>th.dataset.sort);

@@ -12,7 +12,21 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .status-card{display:grid;grid-template-columns:repeat(3,auto);gap:22px;padding:12px 16px;border:1px solid var(--border);background:var(--surface);border-radius:8px}
 .status-card div{display:grid;gap:2px}.legend{display:flex;gap:18px;flex-wrap:wrap;padding:10px 14px;margin-bottom:12px;border:1px solid var(--border);background:var(--surface);border-radius:8px;color:var(--muted)}
 .legend strong,.legend b{color:var(--text)}
-.filters{display:grid;grid-template-columns:2fr repeat(5,minmax(120px,1fr));gap:10px;margin-bottom:14px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.filters{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px;margin-bottom:14px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.filters .wide{grid-column:span 2}
+.filters>label span{white-space:nowrap;font-size:clamp(10px,.7vw,12px)}
+.filters>label input,.filters>label select{padding:6px 4px}
+.filters>label input[type="date"]{font-size:11px}
+@media(min-width:1101px){.filters{grid-template-columns:minmax(120px,1.6fr) repeat(2,minmax(55px,.65fr)) repeat(2,minmax(112px,1.1fr)) repeat(6,minmax(65px,1fr))}.filters>label.wide{grid-column:span 1}}
+.filter-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:10px;align-items:end}
+.filter-actions>button,.filter-actions>.checkbox-filter{min-height:36px}
+.filter-actions .checkbox-filter{align-self:end;white-space:nowrap}
+.filter-actions>label>span{white-space:nowrap}
+.filters-toggle{display:none}
+.information{margin-top:20px;padding:14px;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+.information h2{font-size:16px;margin:0 0 12px}
+.information .legend{border:0;padding:0;background:none}
+.information .simulation-note{padding:0;border:0}
 .filters label{display:grid;gap:5px}.filters label span{color:var(--muted);font-size:12px}.filters .wide{grid-column:span 2}
 input,select,button{color:var(--text);background:#0e131c;border:1px solid var(--border);border-radius:5px;padding:8px 10px;min-height:36px}
 .table-card{border:1px solid var(--border);background:var(--surface);border-radius:8px;overflow:hidden}.table-toolbar{min-height:46px;display:flex;justify-content:space-between;align-items:center;padding:0 14px;border-bottom:1px solid var(--border)}
@@ -89,4 +103,15 @@ tbody tr:hover>td.simulation-net{background:#245347}
   .table-toolbar{gap:10px;flex-wrap:wrap;padding-block:12px}
   .table-toolbar label[for="pageSize"]{display:flex;align-items:center;gap:10px}
   #pageSize{height:32px;min-height:32px;padding:4px 8px}
+}
+@media(max-width:1100px){
+ .filter-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .filters-toggle{display:block;width:100%;text-align:left;margin-bottom:10px;cursor:pointer}
+ .filters-toggle::before{content:"▸ ";color:var(--accent)}
+ .filters-toggle[aria-expanded="true"]::before{content:"▾ "}
+ .filters:not(.mobile-open){display:none}
+ .filter-actions{grid-template-columns:minmax(0,1fr)}
+ .filters>label span{font-size:12px}
 }
