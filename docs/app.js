@@ -290,7 +290,7 @@ function render(){
   const simulationMax=Object.fromEntries(["simulation_gross","simulation_net","simulation_current_gross","simulation_current_net"].map(key=>[key,Math.max(0,...state.filtered.map(v=>num(v[key])))]));
   const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.canonical_blocks_all_epochs)),0);
   for(const v of slice){
-   const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");vc.title=v.validator_name||"";tr.append(favoriteCell(v),vc);
+   const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");tr.dataset.wallet=v.wallet_address;vc.title=v.validator_name||"";tr.append(favoriteCell(v),vc);
    const wc=document.createElement("td"),a=document.createElement("a");a.className="wallet";a.href=MINASCAN+encodeURIComponent(v.wallet_address||"");a.target="_blank";a.rel="noopener noreferrer";a.textContent=v.wallet_address||"—";a.title=v.wallet_address||"";wc.append(a);tr.append(wc);
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
@@ -316,11 +316,8 @@ $("resetFilters").onclick=()=>{Object.values(f).forEach(el=>{if(el.type==="check
 document.querySelectorAll("th[data-sort]").forEach(th=>th.onclick=()=>{const k=th.dataset.sort;if(state.sortKey===k)state.sortDir=state.sortDir==="asc"?"desc":"asc";else{state.sortKey=k;state.sortDir=["validator_name","wallet_address","last_block_era"].includes(k)?"asc":"desc"}sortRows();state.page=1;render()});
 $("firstPage").onclick=()=>{state.page=1;render()};$("prevPage").onclick=()=>{state.page--;render()};$("nextPage").onclick=()=>{state.page++;render()};$("lastPage").onclick=()=>{state.page=Math.max(1,Math.ceil(state.filtered.length/state.pageSize));render()};
 
-Promise.all([
- fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}),
- fetch('./data/simulation-sources.json',{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).catch(e=>{console.error(e);$("simulationNote").append(" Historical stakes could not be loaded.");return {};})
-]).then(([p,sources])=>{
- simulationSources=sources;
+function installSnapshot(p){
+ for(const id of ["networkEpoch","networkSlot","networkBlocks","networkFill"]){$(id).textContent="—";$(id).removeAttribute("title");}
  state.all=Array.isArray(p.validators)?p.validators.map(v=>({...v,stake_live_estimate:v.stake_live_estimate??v.current_stake,...ValidatorEstimates.calculate(v.stake_current_epoch,p.ledger_meta?.total_stake_current_epoch)})):[];$("validatorCount").textContent=fmt(p.validator_count??state.all.length);$("archiveHeight").textContent=p.archive_height==null?"—":fmt(p.archive_height);
  // Older snapshots counted every status. Do not label those metrics as canonical.
  for(const row of state.all)row.source_commission_pct=row.commission_pct;
@@ -349,4 +346,61 @@ Promise.all([
   $("epochSummary").textContent=`Previous: ${epochRow.previous_epoch_label} · Current: ${epochRow.network_epoch_label} (in progress)`;
  }
  $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});
-}).catch(e=>{console.error(e);$("generatedAt").textContent="Load error";$("totals").replaceChildren();$("rows").innerHTML=`<tr><td colspan="${COLUMN_COUNT-hiddenColumns.size+1}" class="empty-state">Unable to load data.</td></tr>`});
+}
+
+function displayedCells(){
+ const result=new Map();
+ for(const row of [...$("rows").rows,...$("totals").rows]){
+  if(row.cells.length!==COLUMN_COUNT+1)continue;
+  [...row.cells].forEach((c,i)=>result.set(`${row.dataset.wallet||"totals"}:${i}`,{
+   cell:c,value:JSON.stringify([c.textContent,c.querySelector("input")?.value,c.querySelector(".production-indicator")?.getAttribute("aria-label")])
+  }));
+ }
+ return result;
+}
+function highlightUpdates(before){
+ const bounds=document.querySelector(".table-wrap").getBoundingClientRect();
+ for(const [key,{cell,value}] of displayedCells()){
+  if(!before.has(key)||before.get(key).value===value||cell.hidden)continue;
+  const rect=cell.getBoundingClientRect();
+  if(rect.width&&rect.height&&rect.bottom>0&&rect.top<innerHeight&&rect.right>Math.max(0,bounds.left)&&rect.left<Math.min(innerWidth,bounds.right)){
+   cell.classList.add("data-updated");
+   cell.addEventListener("animationend",()=>cell.classList.remove("data-updated"),{once:true});
+  }
+ }
+}
+let refreshBusy=false,lastSnapshot="";
+function editingControl(){return document.activeElement?.matches("input,select,textarea");}
+async function refreshData(){
+ if(refreshBusy||document.hidden||(dataLoaded&&editingControl()))return;
+ refreshBusy=true;
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
+ try{
+  const response=await fetch(`./data/validators.json?t=${Date.now()}`,{cache:"no-store",signal:controller.signal});
+  if(!response.ok)throw Error(response.status);
+  const p=await response.json();
+  if(!Array.isArray(p.validators)||p.validators.some(v=>!v||typeof v.wallet_address!=="string"))throw Error("Invalid snapshot");
+  const signature=JSON.stringify(p);
+  if(document.hidden||(dataLoaded&&editingControl()))return;
+  if(signature!==lastSnapshot){
+   const before=displayedCells(),wasLoaded=dataLoaded;
+   installSnapshot(p);lastSnapshot=signature;
+   if(wasLoaded)highlightUpdates(before);
+  }
+  $("refreshStatus").textContent="Auto-refresh · every minute";
+ }catch(e){
+  console.error(e);
+  $("refreshStatus").textContent=dataLoaded?"Refresh unavailable · showing last snapshot; retrying automatically":"Unable to load data · retrying automatically";
+ }finally{clearTimeout(timeout);refreshBusy=false;}
+}
+async function startRefresh(){
+ try{
+  const response=await fetch('./data/simulation-sources.json',{cache:"no-cache",signal:AbortSignal.timeout(20000)});
+  if(!response.ok)throw Error(response.status);
+  simulationSources=await response.json();
+ }catch(e){console.error(e);$("simulationNote").append(" Historical stakes could not be loaded.");}
+ await refreshData();
+ setInterval(refreshData,60000);
+ document.addEventListener("visibilitychange",()=>{if(!document.hidden)refreshData();});
+}
+startRefresh();
