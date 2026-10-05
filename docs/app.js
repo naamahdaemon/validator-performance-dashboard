@@ -308,8 +308,11 @@ function render(){
  }
  $("pageLabel").textContent=`Page ${state.page} / ${pages}`;$("firstPage").disabled=$("prevPage").disabled=state.page<=1;$("nextPage").disabled=$("lastPage").disabled=state.page>=pages;
  document.querySelectorAll("th[data-sort]").forEach(th=>{th.removeAttribute("data-dir");if(th.dataset.sort===state.sortKey)th.dataset.dir=state.sortDir});
- renderTotals();updateColumnVisibility();
- saveView();
+ 
+renderTotals();
+updateColumnVisibility();
+applyActiveHighlights();
+saveView();
 }
 Object.values(f).forEach(el=>{["input","change"].forEach(ev=>el.addEventListener(ev,()=>{if(el===f.era)populateEpochs();apply()}))});
 $("resetFilters").onclick=()=>{Object.values(f).forEach(el=>{if(el.type==="checkbox")el.checked=false;else el.value=""});commissionOverrides={};saveCommissions();populateEpochs();apply()};
@@ -348,27 +351,85 @@ function installSnapshot(p){
  $("generatedAt").textContent=p.generated_at?new Date(p.generated_at).toLocaleString():"No snapshot yet";dataLoaded=true;populateEpochs(true);apply({resetPage:false});
 }
 
+const HIGHLIGHT_DURATION = 180000; // 180 seconds
+const highlightedCells = new Map();
+
 function displayedCells(){
  const result=new Map();
  for(const row of [...$("rows").rows,...$("totals").rows]){
   if(row.cells.length!==COLUMN_COUNT+1)continue;
   [...row.cells].forEach((c,i)=>result.set(`${row.dataset.wallet||"totals"}:${i}`,{
-   cell:c,value:JSON.stringify([c.textContent,c.querySelector("input")?.value,c.querySelector(".production-indicator")?.getAttribute("aria-label")])
+   cell:c,
+   value:JSON.stringify([
+    c.textContent,
+    c.querySelector("input")?.value,
+    c.querySelector(".production-indicator")?.getAttribute("aria-label")
+   ])
   }));
  }
  return result;
 }
+
+function applyActiveHighlights(){
+ const now=Date.now();
+
+ for(const [key,{cell}] of displayedCells()){
+  const expiresAt=highlightedCells.get(key);
+
+  if(!expiresAt)continue;
+
+  if(expiresAt<=now){
+   highlightedCells.delete(key);
+   continue;
+  }
+
+  cell.classList.add("data-updated");
+
+  const remaining=expiresAt-now;
+
+  setTimeout(()=>{
+   // Only remove it if this highlight has really expired.
+   if((highlightedCells.get(key)??0)<=Date.now()){
+    highlightedCells.delete(key);
+    cell.classList.remove("data-updated");
+   }
+  },remaining);
+ }
+}
+
 function highlightUpdates(before){
  const bounds=document.querySelector(".table-wrap").getBoundingClientRect();
+ const now=Date.now();
+
  for(const [key,{cell,value}] of displayedCells()){
   if(!before.has(key)||before.get(key).value===value||cell.hidden)continue;
+
   const rect=cell.getBoundingClientRect();
-  if(rect.width&&rect.height&&rect.bottom>0&&rect.top<innerHeight&&rect.right>Math.max(0,bounds.left)&&rect.left<Math.min(innerWidth,bounds.right)){
+
+  if(
+   rect.width&&
+   rect.height&&
+   rect.bottom>0&&
+   rect.top<innerHeight&&
+   rect.right>Math.max(0,bounds.left)&&
+   rect.left<Math.min(innerWidth,bounds.right)
+  ){
+   const expiresAt=now+HIGHLIGHT_DURATION;
+
+   highlightedCells.set(key,expiresAt);
    cell.classList.add("data-updated");
-   cell.addEventListener("animationend",()=>cell.classList.remove("data-updated"),{once:true});
+
+   setTimeout(()=>{
+    if((highlightedCells.get(key)??0)<=Date.now()){
+     highlightedCells.delete(key);
+     cell.classList.remove("data-updated");
+    }
+   },HIGHLIGHT_DURATION);
   }
  }
 }
+
+
 let refreshBusy=false,lastSnapshot="";
 function editingControl(){return document.activeElement?.matches("input,select,textarea");}
 async function refreshData(){

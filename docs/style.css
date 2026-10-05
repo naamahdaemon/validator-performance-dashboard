@@ -38,7 +38,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .production-normal{color:var(--accent)}
 .refresh-status{margin:0;padding:5px 14px;font-size:11px;border-bottom:1px solid var(--border)}
 .data-updated{
-  animation:data-update-highlight 1s ease-in-out 180;
+  animation:data-update-highlight 3s ease-in-out infinite;
 }
 
 @keyframes data-update-highlight{
@@ -65,23 +65,13 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 
 @media(prefers-reduced-motion:reduce){
   .data-updated{
-    animation:data-update-still 30s linear 1;
-  }
-
-  @keyframes data-update-still{
-    from,to{
-      box-shadow:inset 0 0 0 9999px rgba(87,148,242,.18);
-    }
+    animation:none;
+    box-shadow:inset 0 0 0 9999px rgba(87,148,242,.18);
   }
 
   :root[data-theme="light"] .data-updated{
-    animation-name:data-update-still-light;
-  }
-
-  @keyframes data-update-still-light{
-    from,to{
-      box-shadow:inset 0 0 0 9999px rgba(36,91,181,.12);
-    }
+    animation:none;
+    box-shadow:inset 0 0 0 9999px rgba(36,91,181,.12);
   }
 }
 #resetFilters{background:var(--accentSoft);border-color:var(--accent);cursor:pointer}
