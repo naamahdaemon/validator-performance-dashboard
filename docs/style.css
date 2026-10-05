@@ -65,7 +65,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 
 @media(prefers-reduced-motion:reduce){
   .data-updated{
-    animation:data-update-still 30s linear 1;
+    animation:data-update-still 180s linear 1;
   }
 
   @keyframes data-update-still{
