@@ -38,7 +38,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .production-normal{color:var(--accent)}
 .refresh-status{margin:0;padding:5px 14px;font-size:11px;border-bottom:1px solid var(--border)}
 .data-updated{
-  animation:data-update-highlight 1s ease-in-out 10;
+  animation:data-update-highlight 1s ease-in-out 180;
 }
 
 @keyframes data-update-highlight{
@@ -65,7 +65,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 
 @media(prefers-reduced-motion:reduce){
   .data-updated{
-    animation:data-update-still 180s linear 1;
+    animation:data-update-still 30s linear 1;
   }
 
   @keyframes data-update-still{
