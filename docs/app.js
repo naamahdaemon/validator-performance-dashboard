@@ -49,6 +49,16 @@ $("pageSize").addEventListener("change",()=>{
  try {localStorage.setItem("validator-page-size",String(value));} catch (_) {}
  render();
 });
+
+const lastUpdateButton=document.createElement("button");
+lastUpdateButton.type="button";
+lastUpdateButton.id="lastUpdate";
+lastUpdateButton.textContent="Last update";
+lastUpdateButton.title="Replay the highlight for the most recent detected data changes";
+lastUpdateButton.disabled=true;
+const pageSizeLabel=$("pageSize").closest("label");
+if(pageSizeLabel)pageSizeLabel.after(lastUpdateButton);
+else $("pageSize").after(lastUpdateButton);
 const f={search:$("search"),era:$("era"),epoch:$("epoch"),dateAfter:$("dateAfter"),dateBefore:$("dateBefore"),stakeMin:$("stakeMin"),stakeMax:$("stakeMax"),delegatorsMin:$("delegatorsMin"),delegatorsMax:$("delegatorsMax"),blocksSinceMin:$("blocksSinceMin"),blocksSinceMax:$("blocksSinceMax")};
 f.hideAnonymous=$("hideAnonymous");
 f.favoritesOnly=$("favoritesOnly");
@@ -353,6 +363,12 @@ function installSnapshot(p){
 
 const HIGHLIGHT_DURATION = 180000; // 180 seconds
 const highlightedCells = new Map();
+const lastUpdateCells = new Map();
+
+function displayedValue(cell){
+ const input=cell.querySelector("input");
+ return String(input?.value??cell.textContent??"").trim();
+}
 
 function displayedCells(){
  const result=new Map();
@@ -360,6 +376,7 @@ function displayedCells(){
   if(row.cells.length!==COLUMN_COUNT+1)continue;
   [...row.cells].forEach((c,i)=>result.set(`${row.dataset.wallet||"totals"}:${i}`,{
    cell:c,
+   display:displayedValue(c),
    value:JSON.stringify([
     c.textContent,
     c.querySelector("input")?.value,
@@ -370,38 +387,50 @@ function displayedCells(){
  return result;
 }
 
-function applyActiveHighlights(){
+function scheduleHighlightRemoval(key,cell,expiresAt){
+ const remaining=Math.max(0,expiresAt-Date.now());
+ setTimeout(()=>{
+  const info=highlightedCells.get(key);
+  if(info&&info.expiresAt<=Date.now()){
+   highlightedCells.delete(key);
+   cell.classList.remove("data-updated");
+  }
+ },remaining);
+}
+
+function applyActiveHighlights({restart=false}={}){
  const now=Date.now();
 
  for(const [key,{cell}] of displayedCells()){
-  const expiresAt=highlightedCells.get(key);
+  const info=highlightedCells.get(key);
+  if(!info)continue;
 
-  if(!expiresAt)continue;
-
-  if(expiresAt<=now){
+  if(info.expiresAt<=now){
    highlightedCells.delete(key);
    continue;
   }
 
+  if(restart&&cell.classList.contains("data-updated")){
+   cell.classList.remove("data-updated");
+   void cell.offsetWidth;
+  }
   cell.classList.add("data-updated");
-
-  const remaining=expiresAt-now;
-
-  setTimeout(()=>{
-   // Only remove it if this highlight has really expired.
-   if((highlightedCells.get(key)??0)<=Date.now()){
-    highlightedCells.delete(key);
-    cell.classList.remove("data-updated");
-   }
-  },remaining);
+  scheduleHighlightRemoval(key,cell,info.expiresAt);
  }
+}
+
+function rememberLastUpdate(key,previous,current){
+ lastUpdateCells.set(key,{previous,current});
+ lastUpdateButton.disabled=false;
+ lastUpdateButton.title=`Replay highlight for the last update (${lastUpdateCells.size} changed cell${lastUpdateCells.size===1?"":"s"})`;
 }
 
 function highlightUpdates(before){
  const bounds=document.querySelector(".table-wrap").getBoundingClientRect();
  const now=Date.now();
+ const changedThisUpdate=[];
 
- for(const [key,{cell,value}] of displayedCells()){
+ for(const [key,{cell,value,display}] of displayedCells()){
   if(!before.has(key)||before.get(key).value===value||cell.hidden)continue;
 
   const rect=cell.getBoundingClientRect();
@@ -414,20 +443,138 @@ function highlightUpdates(before){
    rect.right>Math.max(0,bounds.left)&&
    rect.left<Math.min(innerWidth,bounds.right)
   ){
+   const previous=before.get(key).display;
    const expiresAt=now+HIGHLIGHT_DURATION;
+   const info={expiresAt,previous,current:display};
 
-   highlightedCells.set(key,expiresAt);
+   highlightedCells.set(key,info);
+   changedThisUpdate.push([key,{previous,current:display}]);
    cell.classList.add("data-updated");
-
-   setTimeout(()=>{
-    if((highlightedCells.get(key)??0)<=Date.now()){
-     highlightedCells.delete(key);
-     cell.classList.remove("data-updated");
-    }
-   },HIGHLIGHT_DURATION);
+   scheduleHighlightRemoval(key,cell,expiresAt);
   }
  }
+
+ if(changedThisUpdate.length){
+  lastUpdateCells.clear();
+  for(const [key,{previous,current}] of changedThisUpdate)rememberLastUpdate(key,previous,current);
+ }
 }
+
+lastUpdateButton.addEventListener("click",()=>{
+ if(!lastUpdateCells.size)return;
+ const expiresAt=Date.now()+HIGHLIGHT_DURATION;
+
+ for(const [key,{previous,current}] of lastUpdateCells){
+  highlightedCells.set(key,{expiresAt,previous,current});
+ }
+
+ applyActiveHighlights({restart:true});
+});
+
+function parseDisplayedNumber(value){
+ let text=String(value??"").trim();
+ if(!text||text==="—")return null;
+
+ const parts=new Intl.NumberFormat().formatToParts(12345.6);
+ const group=parts.find(p=>p.type==="group")?.value??",";
+ const decimal=parts.find(p=>p.type==="decimal")?.value??".";
+
+ text=text.replace(/[≈+%]/g,"").replace(/[\u00A0\u202F\s]/g,"");
+ if(group)text=text.split(group).join("");
+ if(decimal!==".")text=text.split(decimal).join(".");
+
+ if(!/^-?\d+(?:\.\d+)?$/.test(text))return null;
+ const number=Number(text);
+ return Number.isFinite(number)?number:null;
+}
+
+function decimalPlaces(value){
+ const text=String(value??"").replace(/[\u00A0\u202F\s%≈+]/g,"");
+ const decimal=new Intl.NumberFormat().formatToParts(1.1).find(p=>p.type==="decimal")?.value??".";
+ const index=text.lastIndexOf(decimal);
+ return index<0?0:Math.min(8,text.length-index-1);
+}
+
+function changeLabel(previous,current){
+ const oldNumber=parseDisplayedNumber(previous);
+ const newNumber=parseDisplayedNumber(current);
+
+ if(oldNumber!=null&&newNumber!=null){
+  const difference=newNumber-oldNumber;
+  const decimals=Math.max(decimalPlaces(previous),decimalPlaces(current));
+  const absolute=new Intl.NumberFormat(undefined,{
+   minimumFractionDigits:decimals,
+   maximumFractionDigits:decimals
+  }).format(Math.abs(difference));
+  const sign=difference>0?"+":difference<0?"−":"±";
+  const suffix=String(current).includes("%")?"%":"";
+  return `${sign}${absolute}${suffix}`;
+ }
+
+ return `Previous: ${previous||"—"}`;
+}
+
+let updateDetailPopup=null;
+function hideUpdateDetail(){
+ if(updateDetailPopup){
+  updateDetailPopup.remove();
+  updateDetailPopup=null;
+ }
+}
+
+function showUpdateDetail(cell,text){
+ hideUpdateDetail();
+
+ const popup=document.createElement("div");
+ updateDetailPopup=popup;
+ popup.textContent=text;
+ popup.setAttribute("role","status");
+ popup.style.position="fixed";
+ popup.style.zIndex="1000";
+ popup.style.padding="6px 9px";
+ popup.style.border="1px solid var(--border)";
+ popup.style.borderRadius="6px";
+ popup.style.background="var(--surface2)";
+ popup.style.color="var(--text)";
+ popup.style.boxShadow="0 6px 18px #0005";
+ popup.style.font="600 12px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace";
+ popup.style.pointerEvents="none";
+ popup.style.whiteSpace="nowrap";
+
+ document.body.append(popup);
+
+ const rect=cell.getBoundingClientRect();
+ const popupRect=popup.getBoundingClientRect();
+ const left=Math.min(
+  Math.max(8,rect.left+(rect.width-popupRect.width)/2),
+  innerWidth-popupRect.width-8
+ );
+ const top=rect.top-popupRect.height-7>=8
+  ?rect.top-popupRect.height-7
+  :Math.min(innerHeight-popupRect.height-8,rect.bottom+7);
+
+ popup.style.left=`${left}px`;
+ popup.style.top=`${top}px`;
+
+ setTimeout(()=>{
+  if(updateDetailPopup===popup)hideUpdateDetail();
+ },5000);
+}
+
+document.addEventListener("click",event=>{
+ const cell=event.target.closest?.("td.data-updated");
+ if(!cell)return;
+ if(event.target.closest("a,button,input,select,textarea"))return;
+
+ const row=cell.parentElement;
+ const key=`${row?.dataset.wallet||"totals"}:${cell.cellIndex}`;
+ const info=highlightedCells.get(key);
+ if(!info||info.expiresAt<=Date.now())return;
+
+ showUpdateDetail(cell,changeLabel(info.previous,info.current));
+});
+
+document.addEventListener("keydown",event=>{if(event.key==="Escape")hideUpdateDetail();});
 
 
 let refreshBusy=false,lastSnapshot="";
