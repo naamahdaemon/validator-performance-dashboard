@@ -362,8 +362,38 @@ function installSnapshot(p){
 }
 
 const HIGHLIGHT_DURATION = 180000; // 180 seconds
+const LAST_UPDATE_STORAGE_KEY = "validator-last-update-v1";
 const highlightedCells = new Map();
 const lastUpdateCells = new Map();
+
+function updateLastUpdateButton(){
+ lastUpdateButton.disabled=!lastUpdateCells.size;
+ lastUpdateButton.title=lastUpdateCells.size
+  ?`Replay highlight for the last update (${lastUpdateCells.size} changed cell${lastUpdateCells.size===1?"":"s"})`
+  :"No detected update to replay yet";
+}
+
+function saveLastUpdate(){
+ try{
+  localStorage.setItem(LAST_UPDATE_STORAGE_KEY,JSON.stringify([...lastUpdateCells]));
+ }catch(_){}
+}
+
+function restoreLastUpdate(){
+ try{
+  const saved=JSON.parse(localStorage.getItem(LAST_UPDATE_STORAGE_KEY));
+  if(!Array.isArray(saved))return;
+  for(const entry of saved){
+   if(!Array.isArray(entry)||entry.length!==2)continue;
+   const [key,info]=entry;
+   if(typeof key!=="string"||!info||typeof info!=="object")continue;
+   const previous=typeof info.previous==="string"?info.previous:String(info.previous??"");
+   const current=typeof info.current==="string"?info.current:String(info.current??"");
+   lastUpdateCells.set(key,{previous,current});
+  }
+ }catch(_){}
+ updateLastUpdateButton();
+}
 
 function displayedValue(cell){
  const input=cell.querySelector("input");
@@ -421,8 +451,7 @@ function applyActiveHighlights({restart=false}={}){
 
 function rememberLastUpdate(key,previous,current){
  lastUpdateCells.set(key,{previous,current});
- lastUpdateButton.disabled=false;
- lastUpdateButton.title=`Replay highlight for the last update (${lastUpdateCells.size} changed cell${lastUpdateCells.size===1?"":"s"})`;
+ updateLastUpdateButton();
 }
 
 function highlightUpdates(before){
@@ -457,8 +486,11 @@ function highlightUpdates(before){
  if(changedThisUpdate.length){
   lastUpdateCells.clear();
   for(const [key,{previous,current}] of changedThisUpdate)rememberLastUpdate(key,previous,current);
+  saveLastUpdate();
  }
 }
+
+restoreLastUpdate();
 
 lastUpdateButton.addEventListener("click",()=>{
  if(!lastUpdateCells.size)return;
