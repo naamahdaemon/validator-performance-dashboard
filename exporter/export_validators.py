@@ -33,7 +33,12 @@ def json_value(value: Any) -> Any:
 
 
 def normalize_row(row: dict[str, Any]) -> dict[str, Any]:
-    return {key: json_value(value) for key, value in row.items()}
+    result = {key: json_value(value) for key, value in row.items()}
+    if result.get("total_blocks_all_epochs") == 0:
+        for key in result:
+            if key.endswith("blocks_all_epochs") or key.startswith("# "):
+                result[key] = 0
+    return result
 
 
 def load_previous(path: Path) -> dict[str, Any] | None:
@@ -139,7 +144,7 @@ def pct_change(new: Decimal, old: Decimal) -> float | None:
     return float(((new - old) / old) * Decimal("100"))
 
 
-def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
+def load_consensus_ledgers():
     staking_accounts = export_ledger("staking-epoch-ledger")
     # N+1 can be unavailable during transition-frontier recovery. Never reuse
     # an old ledger: it could belong to a different epoch.
@@ -149,6 +154,17 @@ def enrich_with_consensus_ledgers(rows: list[dict[str, Any]]) -> dict[str, Any]:
         print(f"WARNING: N+1 ledger unavailable; publishing other metrics. {exc}", file=sys.stderr)
         next_accounts = None
 
+    return staking_accounts, next_accounts
+
+
+def eligible_ledger_wallets(ledgers):
+    """Apply the external-delegator threshold separately to each epoch ledger."""
+    return sorted({wallet for ledger in ledgers for wallet, count in
+                   aggregate_ledger(ledger or [])[1].items() if count >= 3})
+
+
+def enrich_with_consensus_ledgers(rows: list[dict[str, Any]], ledgers=None) -> dict[str, Any]:
+    staking_accounts, next_accounts = ledgers if ledgers is not None else load_consensus_ledgers()
     stake_n, delegators_n = aggregate_ledger(staking_accounts)
     stake_n1, delegators_n1 = aggregate_ledger(next_accounts or [])
 
@@ -240,6 +256,8 @@ def main() -> int:
         print("ERROR: PGPASSWORD is not set.", file=sys.stderr)
         return 2
 
+    ledgers = load_consensus_ledgers()
+    ledger_wallets = eligible_ledger_wallets(ledgers)
     with psycopg2.connect(**db) as conn:
         with conn.cursor() as cur:
             cur.execute(
@@ -247,10 +265,11 @@ def main() -> int:
                 (os.environ.get("PGSTATEMENT_TIMEOUT", "8min"),),
             )
         with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-            cur.execute(sql)
+            cur.execute(sql, {"ledger_wallets": ledger_wallets})
             rows = [normalize_row(dict(row)) for row in cur.fetchall()]
 
-    ledger_meta = enrich_with_consensus_ledgers(rows)
+    ledger_meta = enrich_with_consensus_ledgers(rows, ledgers)
+    ledger_meta["inclusion_definition"] = "Any archived block, or at least 3 external positive-balance delegators in N, N+1 or live"
 
     rows.sort(
         key=lambda r: (

@@ -24,7 +24,7 @@ button,input,select{font:inherit}.page{width:100%;margin:0;padding:24px clamp(8p
 .filters>label input,.filters>label select{padding:6px 4px}
 .filters>label input[type="date"]{font-size:11px}
 @media(min-width:1101px){.filters{grid-template-columns:minmax(120px,1.6fr) repeat(2,minmax(55px,.65fr)) repeat(2,minmax(112px,1.1fr)) repeat(6,minmax(65px,1fr))}.filters>label.wide{grid-column:span 1}}
-.filter-actions{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;gap:10px;align-items:end}
+.filter-actions{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr 1.2fr .8fr 1fr;gap:10px;align-items:end}
 .favorite-heading,.favorite-cell{width:36px;text-align:center}
 .favorite-heading{cursor:default}
 .favorite-toggle{padding:0;width:28px;min-height:28px;border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}

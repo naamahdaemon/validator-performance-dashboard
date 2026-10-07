@@ -61,6 +61,7 @@ if(pageSizeLabel)pageSizeLabel.after(lastUpdateButton);
 else $("pageSize").after(lastUpdateButton);
 const f={search:$("search"),era:$("era"),epoch:$("epoch"),dateAfter:$("dateAfter"),dateBefore:$("dateBefore"),stakeMin:$("stakeMin"),stakeMax:$("stakeMax"),delegatorsMin:$("delegatorsMin"),delegatorsMax:$("delegatorsMax"),blocksSinceMin:$("blocksSinceMin"),blocksSinceMax:$("blocksSinceMax")};
 f.hideAnonymous=$("hideAnonymous");
+f.hideNeverProduced=$("hideNeverProduced");
 f.favoritesOnly=$("favoritesOnly");
 f.simulationStake=$("simulationStake");
 const COMMISSION_STORAGE_KEY="validator-commissions-v1";
@@ -172,6 +173,7 @@ function apply({resetPage=true}={}){
  const smin=nullable(f.stakeMin.value),smax=nullable(f.stakeMax.value),dmin=nullable(f.delegatorsMin.value),dmax=nullable(f.delegatorsMax.value),bmin=nullable(f.blocksSinceMin.value),bmax=nullable(f.blocksSinceMax.value);
  state.filtered=state.all.filter(v=>{
   if(f.hideAnonymous.checked&&!String(v.validator_name??"").trim())return false;
+  if(f.hideNeverProduced.checked&&!(num(v.total_blocks_all_epochs)>0))return false;
   if(f.favoritesOnly.checked&&!favorites.has(v.wallet_address))return false;
   if(q&&!`${v.validator_name??""} ${v.wallet_address??""}`.toLowerCase().includes(q))return false;
   if(f.era.value&&v.last_block_era!==f.era.value)return false;
@@ -179,7 +181,7 @@ function apply({resetPage=true}={}){
   const d=parseDate(v.last_block_date);if(after&&(!d||d<after))return false;if(before&&(!d||d>before))return false;
   const s=num(v.stake_live_estimate);if(smin!=null&&s<smin)return false;if(smax!=null&&s>smax)return false;
   const dg=num(v.delegator_count);if(dmin!=null&&dg<dmin)return false;if(dmax!=null&&dg>dmax)return false;
-  const bs=num(v.blocks_since_last_produced);if(bmin!=null&&bs<bmin)return false;if(bmax!=null&&bs>bmax)return false;
+  const bs=nullable(v.blocks_since_last_produced);if((bmin!=null||bmax!=null)&&bs==null)return false;if(bmin!=null&&bs<bmin)return false;if(bmax!=null&&bs>bmax)return false;
   return true;
  });
  sortRows();if(resetPage)state.page=1;render();
@@ -311,7 +313,7 @@ function render(){
    tr.append(productionCell(v,true,true));
    for(const key of ["expected_blocks_epoch","expected_coinbase_epoch"])tr.append(cell(v[key]==null?"—":fmt(v[key],2),"num"));
    tr.append(blockDelta(v.blocks_epoch_delta));
-   const stale=cell(fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
+   const stale=cell(v.blocks_since_last_produced==null?"—":fmt(v.blocks_since_last_produced),"num"),gap=num(v.blocks_since_last_produced);if(gap>=10000)stale.classList.add("stale-high");else if(gap>=1000)stale.classList.add("stale-mid");tr.append(stale);
    tr.append(cell(v.last_block_date||"—","numeric-text"));
    const ec=document.createElement("td"),badge=document.createElement("span");badge.className=`badge ${v.last_block_era||""}`;badge.textContent=v.last_block_era||"—";ec.append(badge);tr.append(ec,cell(v.last_block_epoch??"—","num"));rows.append(tr);
   }

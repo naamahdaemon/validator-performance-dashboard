@@ -2,6 +2,23 @@
 
 Static Mina validator-performance website backed by a periodic snapshot from a Mina archive PostgreSQL database.
 
+The dashboard includes every address with an archived block (any status), plus
+recipients with at least three distinct external positive-balance MINA delegators
+in the current ledger, next ledger, or latest archive account states. The threshold
+is evaluated separately for each source; self-delegation does not count. If the
+next ledger is unavailable, only current and live eligibility can be evaluated.
+The exporter passes eligible ledger addresses to `query.sql` as the
+`ledger_wallets` parameter, including addresses not yet known to the archive.
+The standalone dashboard query has this expanded scope; the separate Grafana
+query retains its existing producer-only scope.
+
+`Hide validators with no blocks` is a locally persisted filter, disabled by
+default and cleared by Reset filters. It uses all archived block statuses, not
+only canonical counts. Accounts with no production have zero block counts and
+no last-block date or blocks-since-last value. Named-validator and other filters
+still apply. Deploying this change requires a new server export; no database
+migration is needed.
+
 ## Architecture
 
 ```text

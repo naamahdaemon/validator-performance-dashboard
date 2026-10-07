@@ -18,6 +18,27 @@ def account(wallet, balance, token=None):
 
 
 class StakeMetricsTests(unittest.TestCase):
+    def test_new_validator_eligibility(self):
+        def delegation(pk, target, balance=10, token=None):
+            return {**account(pk, balance, token), "delegate": target}
+        current = [account("A", 100), delegation("a1", "A"), delegation("a2", "A"),
+                   delegation("zero", "A", 0), delegation("token", "A", 100, "OTHER")]
+        upcoming = [delegation("b1", "B"), delegation("b2", "B"), delegation("b3", "B"),
+                    delegation("a3", "A")]
+        self.assertEqual(exporter.eligible_ledger_wallets((current, upcoming)), ["B"])
+        self.assertEqual(exporter.eligible_ledger_wallets((current, None)), [])
+        current.append(delegation("a3", "A"))
+        self.assertEqual(exporter.eligible_ledger_wallets((current, None)), ["A"])
+
+    def test_no_history_counts_and_dates(self):
+        row = exporter.normalize_row({"total_blocks_all_epochs": 0,
+              "canonical_blocks_all_epochs": None, "# Empty": None,
+              "last_block_date": None, "blocks_since_last_produced": None})
+        self.assertEqual(row["canonical_blocks_all_epochs"], 0)
+        self.assertEqual(row["# Empty"], 0)
+        self.assertIsNone(row["last_block_date"])
+        self.assertIsNone(row["blocks_since_last_produced"])
+
     def test_previous_stake_rollover_and_epoch_matching(self):
         rows = [{"wallet_address": "A", "previous_epoch_label": "mesa:3"}]
         previous = {"validators": [{"wallet_address": "A", "network_epoch_label": "mesa:3", "stake_current_epoch": 123}]}

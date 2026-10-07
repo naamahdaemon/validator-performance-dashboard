@@ -274,10 +274,10 @@ producer_history AS MATERIALIZED (
         bc.last_block_global_slot
 ),
 
-/* Only addresses that have actually produced at least one block. */
+/* Producers plus recipients with three external delegators in any snapshot. */
 target_producers AS MATERIALIZED (
     SELECT
-        ph.public_key_id,
+        pk.id AS public_key_id,
         ai.id AS account_identifier_id,
         pk.value AS wallet_address,
         ph.total_blocks_all_epochs,
@@ -294,15 +294,27 @@ target_producers AS MATERIALIZED (
         ph.last_block_global_slot,
         ph.last_block_height,
         ph.last_block_date
-    FROM producer_history ph
-    JOIN public_keys pk
+    FROM (
+        SELECT id, value FROM public_keys
+        UNION ALL
+        SELECT NULL::int, wallet
+        FROM unnest(%(ledger_wallets)s::text[]) AS wallets(wallet)
+        WHERE NOT EXISTS (SELECT 1 FROM public_keys WHERE value = wallet)
+    ) pk
+    LEFT JOIN producer_history ph
       ON pk.id = ph.public_key_id
     LEFT JOIN account_identifiers ai
-      ON ai.public_key_id = ph.public_key_id
+      ON ai.public_key_id = pk.id
      AND ai.token_id = 1
     CROSS JOIN params p
-    WHERE p.producer_wallet_filter IS NULL
-       OR pk.value = p.producer_wallet_filter
+    WHERE (p.producer_wallet_filter IS NULL OR pk.value = p.producer_wallet_filter)
+      AND (ph.public_key_id IS NOT NULL
+           OR pk.value = ANY(%(ledger_wallets)s::text[])
+           OR pk.id IN (
+               SELECT delegate_id FROM latest_account_states
+               WHERE delegate_id <> public_key_id AND balance > 0
+               GROUP BY delegate_id HAVING COUNT(DISTINCT public_key_id) >= 3
+           ))
 ),
 
 /* Latest MINA account state across the whole archive. */
@@ -395,10 +407,10 @@ SELECT
         ELSE NULL
     END AS balance,
 
-    tp.total_blocks_all_epochs,
-    tp.canonical_blocks_all_epochs,
-    tp.orphaned_blocks_all_epochs,
-    tp.pending_blocks_all_epochs,
+    COALESCE(tp.total_blocks_all_epochs, 0) AS total_blocks_all_epochs,
+    COALESCE(tp.canonical_blocks_all_epochs, 0) AS canonical_blocks_all_epochs,
+    COALESCE(tp.orphaned_blocks_all_epochs, 0) AS orphaned_blocks_all_epochs,
+    COALESCE(tp.pending_blocks_all_epochs, 0) AS pending_blocks_all_epochs,
     tp.empty_blocks_all_epochs AS "# Empty",
 
     tp.empty_orphan_blocks_all_epochs AS "# Empty Orphan",
@@ -417,6 +429,7 @@ SELECT
     ) AS last_block_date,
 
     CASE
+        WHEN tp.last_block_global_slot IS NULL THEN NULL
         WHEN tp.last_block_global_slot >= p.mesa_epoch0_global_slot
         THEN 'mesa'
         ELSE 'pre'
