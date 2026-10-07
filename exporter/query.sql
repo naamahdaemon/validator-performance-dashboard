@@ -312,7 +312,7 @@ target_producers AS MATERIALIZED (
            OR pk.value = ANY(%(ledger_wallets)s::text[])
            OR pk.id IN (
                SELECT delegate_id FROM latest_account_states
-               WHERE delegate_id <> public_key_id AND balance > 0
+               WHERE delegate_id <> public_key_id AND balance::numeric > 0
                GROUP BY delegate_id HAVING COUNT(DISTINCT public_key_id) >= 3
            ))
 ),
