@@ -187,6 +187,29 @@ function apply({resetPage=true}={}){
  sortRows();if(resetPage)state.page=1;render();
 }
 function cell(t,c=""){const x=document.createElement("td");x.textContent=t;if(c)x.className=c;return x}
+function explorerLink(wallet,text,className){
+ const link=document.createElement("a");link.className=className;
+ link.href=MINASCAN+encodeURIComponent(wallet);link.target="_blank";link.rel="noopener noreferrer";
+ link.textContent=text;link.title=wallet;return link;
+}
+function walletCell(wallet){
+ const c=cell("","wallet-cell");
+ if(!wallet){c.textContent="—";return c;}
+ const group=document.createElement("span");group.className="wallet-controls";
+ group.append(explorerLink(wallet,`${wallet.slice(0,7)}...${wallet.slice(-7)}`,"wallet"));
+ const copy=document.createElement("button");copy.type="button";copy.className="copy-wallet";
+ copy.title="Copy full wallet address";copy.setAttribute("aria-label",`Copy wallet address ${wallet}`);
+ copy.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg>';
+ const feedback=document.createElement("span");feedback.className="copy-feedback";feedback.setAttribute("role","status");
+ copy.addEventListener("click",async()=>{
+  try{
+   await navigator.clipboard.writeText(wallet);
+   feedback.textContent="Address copied";copy.title="Address copied";copy.classList.add("copied");
+  }catch(_){feedback.textContent="Copy failed. Select and copy the full address from the explorer.";copy.title=feedback.textContent;}
+  setTimeout(()=>{feedback.textContent="";copy.title="Copy full wallet address";copy.classList.remove("copied");},2500);
+ });
+ group.append(copy,feedback);c.append(group);return c;
+}
 function favoriteCell(v){
  const c=cell("","favorite-cell"),button=document.createElement("button");
  const selected=favorites.has(v.wallet_address);
@@ -302,8 +325,9 @@ function render(){
   const simulationMax=Object.fromEntries(["simulation_gross","simulation_net","simulation_current_gross","simulation_current_net"].map(key=>[key,Math.max(0,...state.filtered.map(v=>num(v[key])))]));
   const maxN=Math.max(...state.filtered.map(v=>num(v.stake_current_epoch)),0),maxN1=Math.max(...state.filtered.map(v=>num(v.stake_next_epoch)),0),maxLive=Math.max(...state.filtered.map(v=>num(v.stake_live_estimate)),0),maxD=Math.max(...state.filtered.map(v=>num(v.delegator_count)),0),maxB=Math.max(...state.filtered.map(v=>num(v.canonical_blocks_all_epochs)),0);
   for(const v of slice){
-   const tr=document.createElement("tr"),vc=cell(v.validator_name||"—","validator");tr.dataset.wallet=v.wallet_address;vc.title=v.validator_name||"";tr.append(favoriteCell(v),vc);
-   const wc=document.createElement("td"),a=document.createElement("a");a.className="wallet";a.href=MINASCAN+encodeURIComponent(v.wallet_address||"");a.target="_blank";a.rel="noopener noreferrer";a.textContent=v.wallet_address||"—";a.title=v.wallet_address||"";wc.append(a);tr.append(wc);
+   const tr=document.createElement("tr"),vc=cell("","validator");tr.dataset.wallet=v.wallet_address;vc.title=v.validator_name||"";
+   if(v.wallet_address)vc.append(explorerLink(v.wallet_address,v.validator_name||"—","validator-link"));else vc.textContent=v.validator_name||"—";
+   tr.append(favoriteCell(v),vc,walletCell(v.wallet_address));
    tr.append(bar(v.stake_current_epoch,maxN,2),percentCell(v.stake_current_pct),percentCell(v.stake_active_pct),bar(v.stake_next_epoch,maxN1,2),bar(v.stake_live_estimate,maxLive,2));
    tr.append(delta(v.stake_next_delta_pct,v.stake_next_delta),delta(v.stake_live_delta_pct,v.stake_live_delta));
    tr.append(delta(v.stake_current_live_delta_pct,v.stake_current_live_delta),commissionCell(v),simulationCell(v,"simulation_gross",simulationMax.simulation_gross),simulationCell(v,"simulation_net",simulationMax.simulation_net));

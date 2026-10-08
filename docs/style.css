@@ -116,6 +116,15 @@ th,td{padding-inline:clamp(4px,.3vw,10px)}
 th:not(:first-child),td:not(:first-child){border-left:2px solid var(--border)}
 th{white-space:normal;max-width:140px}
 .wallet{max-width:clamp(130px,8vw,260px)}
+.wallet-controls{display:inline-flex;align-items:center;gap:5px;font-family:ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+.wallet-controls .wallet{max-width:none;overflow:visible;text-overflow:clip;white-space:nowrap}
+.validator-link{color:inherit;text-decoration:none}
+.validator-link:hover{text-decoration:underline;color:var(--link)}
+.copy-wallet{display:inline-flex;align-items:center;justify-content:center;min-height:26px;width:26px;padding:4px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.copy-wallet svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+.copy-wallet:hover{background:var(--accentSoft);color:var(--link)}
+.copy-wallet.copied{color:var(--good)}
+.copy-feedback{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .validator{max-width:clamp(140px,9vw,280px)}
 .column-picker{position:relative;align-self:end}
 .column-picker summary{cursor:pointer;padding:8px 10px;min-height:36px;border:1px solid var(--border);border-radius:5px;background:var(--input)}
