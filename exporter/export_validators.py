@@ -268,6 +268,26 @@ def main() -> int:
             cur.execute(sql, {"ledger_wallets": ledger_wallets})
             rows = [normalize_row(dict(row)) for row in cur.fetchall()]
 
+        # Research history is independent of the live dashboard and must not
+        # prevent publication if historical collection temporarily fails.
+        from epoch_history import capture_ledger, complete_production
+        try:
+            labels = {row.get("network_epoch_label") for row in rows}
+            if len(labels) != 1:
+                raise ValueError("Ambiguous archive epoch for ledger history")
+            epoch_label = labels.pop()
+            if epoch_label and epoch_label.startswith("mesa:"):
+                history_dir = output_path.parent / "history"
+                capture_ledger(history_dir, epoch_label, ledgers[0], aggregate_ledger, {
+                    "command": "mina ledger export staking-epoch-ledger",
+                    "epoch_association": "archive network epoch; daemon epoch not independently verified",
+                    "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                })
+                complete_production(history_dir, conn)
+        except Exception as exc:
+            print(f"WARNING: epoch history update failed; continuing dashboard export: {exc}", file=sys.stderr)
+            conn.rollback()
+
     ledger_meta = enrich_with_consensus_ledgers(rows, ledgers)
     ledger_meta["inclusion_definition"] = "Any archived block, or at least 3 external positive-balance delegators in N, N+1 or live"
 

@@ -25,6 +25,9 @@ git pull --rebase --autostash
   --output "$OUTPUT"
 
 git add docs/data/validators.json
+if [[ -d docs/data/history ]]; then
+  git add docs/data/history
+fi
 
 if git diff --cached --quiet; then
   echo "No data change; nothing to publish."

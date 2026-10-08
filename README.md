@@ -21,6 +21,49 @@ migration is needed.
 
 ## Architecture
 
+### Epoch research history (no dashboard changes)
+
+`docs/data/history/mesa-N.json` stores independent research inputs. The dashboard
+does not load these files and its estimates and simulations are unchanged.
+
+- `ledger.recipients` maps delegation recipients to decimal-string MINA stake
+  and external delegator counts. Full daemon captures include every recipient
+  with positive stake, without production or three-delegator eligibility filters.
+- `ledger.total_stake_mina` is the full ledger total, not the sum of displayed
+  validators. `coverage = snapshot_rows_only` explicitly marks partial Git
+  recovery; absent addresses must not be interpreted as zero stake.
+- `production.canonical_blocks` contains per-producer canonical counts; zero
+  producers are omitted from this map but retained in a complete ledger map.
+  A null production section means not yet collected, not zero blocks.
+- Recovery from previous-epoch snapshot counters is marked
+  `recovered_needs_archive_validation`. Missing historical ledgers remain null.
+- The exporter captures the current staking ledger and recounts unfinished
+  historical production from PostgreSQL when a canonical block exists at or
+  beyond the epoch's exclusive end slot. `closed_archive` means closed according
+  to this archive; it does not certify that the archive is complete.
+- Epoch labels currently come from the archive, as in the live exporter. The
+  daemon epoch is not independently verified; that limitation is recorded in
+  ledger provenance. An archive lagging across an epoch boundary requires
+  verification before these data are used to calibrate a model.
+- Full captures and closed counts are kept unchanged on later runs. To correct
+  a known bad ledger or recount after archive repair, back up the file and set
+  its corresponding `ledger` or `production` section to null before rerunning.
+  Epochs entirely missed while the exporter is offline are not invented.
+
+Recovery command (repeat `--ref` for other verified snapshots):
+
+```bash
+python exporter/recover_epoch_history.py --ref 0b67823 --ref HEAD
+```
+
+The included initial recovery covers stakes for Mesa 3 and Mesa 4 (partial table
+coverage), plus previous-epoch production counters for Mesa 2 and Mesa 3. The
+first server run upgrades the current epoch to a full ledger capture and validates
+closed production against the archive. No database migration or new environment
+variables are required. The existing publisher stages the history directory even
+when the live snapshot has not changed. History errors are logged without blocking
+the live dashboard export. Historical commission rates are not collected yet.
+
 ```text
 Mina Archive PostgreSQL
         |

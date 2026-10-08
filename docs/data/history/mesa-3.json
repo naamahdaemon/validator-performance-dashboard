@@ -1,0 +1,4882 @@
+{
+  "schema_version": 1,
+  "epoch": "mesa:3",
+  "start_slot": 979860,
+  "end_slot_exclusive": 987000,
+  "slots_per_epoch": 7140,
+  "ledger": {
+    "coverage": "snapshot_rows_only",
+    "source": {
+      "git_commit": "0b67823c3e2b44de628a093970f49568ce758c31",
+      "snapshot_at": "2026-10-03T11:59:08+00:00"
+    },
+    "total_stake_mina": "1303624138.8400393",
+    "recipients": {
+      "B62qiTQrb7ERbEsBoTuxUWzmwzuJX3g87igxTXck7hZoh4XC4gJu5TZ": {
+        "stake_mina": "26.432645385",
+        "external_delegators": 1
+      },
+      "B62qiU5Mc96FNQJQwv8JrE9LB8RkvummZ5MKnWTPCiY2E6KHnVppujV": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qiUmvUcp9aSdJbBNNEuej1mYQ1W58G6ACThaSkdVNvABw4QfXoNV": {
+        "stake_mina": "1.025447526",
+        "external_delegators": 1
+      },
+      "B62qiVE2eN1DDzY6rRmEqArQD8cqc68CSQ3yjSAjmj5ymCArbQcmY8e": {
+        "stake_mina": "1.152267725",
+        "external_delegators": 1
+      },
+      "B62qiVTbfGPNGYtoBNr6EEE7PDjuya2M1WugBpC4mquhJ5u2HpLJLNf": {
+        "stake_mina": "29.563298048",
+        "external_delegators": 0
+      },
+      "B62qiVvU15Y2vVg4x7w6fKoXagaUQSVADDnbMWScxPZZo9Wn54CXhp8": {
+        "stake_mina": "2.870000001",
+        "external_delegators": 1
+      },
+      "B62qiWEuA8cxujQ1KyB4ZMEYtcTZF9qCX2vUtNDc5vbb8p4AfoXtGnW": {
+        "stake_mina": "13.333639709",
+        "external_delegators": 3
+      },
+      "B62qiWcbScnq9W9bhk4oLi53fyH5TL8WxzDG5cqMhbz4SUhz66v7izL": {
+        "stake_mina": "1.136996704",
+        "external_delegators": 2
+      },
+      "B62qiWir45GBE9PWWoySrVnB8ERdL7QiykkfwjyzytuDSQTbibigSuw": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qiXYDaSiSUJqvunkW4MrVWL8pURAuT4BPRMr4G4Ko4Z7PGY5x7Tv": {
+        "stake_mina": "4.0",
+        "external_delegators": 0
+      },
+      "B62qiY9ccGnZH86ZZYgz4bD6xqm4j796hqznCVSwmnFCgyDTxoSavxg": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qiYicQcKtuSqdDZwFkaMzMCtkPmmFuaPFy6ufp8MtpG3UsHfe2tH": {
+        "stake_mina": "2547.491431196",
+        "external_delegators": 2
+      },
+      "B62qiZ2XRtHeJ6wE41dZeBiC48H5APAXYagLtUQktTowqjdTT1svDCm": {
+        "stake_mina": "2.39266158",
+        "external_delegators": 0
+      },
+      "B62qiZi62RK552P54BGEb7saNF5mSVRCFcxULPvGVi64KudP1s7TSm6": {
+        "stake_mina": "66206.413920304",
+        "external_delegators": 9
+      },
+      "B62qiZn3dDGNFgqnXemGk1Bxfk6wwiSu4drTerDTUyJWZXdD5E1HMeT": {
+        "stake_mina": "4.639400367",
+        "external_delegators": 1
+      },
+      "B62qiZoXwxUrLQkncb4BkNkcU7JMDzvg552pbPMTagUCyXgvqGqouhp": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qiZwdQ8Wdk8PuGtdCNzWrK49zmxLFWmogt2xXNS3y9eKS7o5qwxr": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qicWGrsejY7YiXXoCJ9DovSS7oAQC14hPLtp9QHMzCAX5aQUVHS8": {
+        "stake_mina": "2.780000001",
+        "external_delegators": 1
+      },
+      "B62qicXxuEer88smMkN4gPx7WdsUf4dNGh3QjfprXtB1dPs9ZARY1ba": {
+        "stake_mina": "114168.846523353",
+        "external_delegators": 4
+      },
+      "B62qid146JcZD6eSrDt2p9iqrQC6eTxRxYB5HUyg5XpTezsqP73WWRR": {
+        "stake_mina": "135047.171271394",
+        "external_delegators": 7
+      },
+      "B62qidCRqG5jggjc6pFbAWYK9kw6AXwCgQ74WVyZ1zmsZeUmYDaYK88": {
+        "stake_mina": "1.007693268",
+        "external_delegators": 2
+      },
+      "B62qidNb5PHR1wrM1p7vXZiXvuBvuTxy2ML5piBEG8KqHaQoJaTEKbq": {
+        "stake_mina": "0.002695561",
+        "external_delegators": 0
+      },
+      "B62qidz67vVjRUWi4QWBhE6i6JAs5i55YP1CuRsSNB8CjM4nttrRS4q": {
+        "stake_mina": "1.156154089",
+        "external_delegators": 2
+      },
+      "B62qieF1JqvUzNj7pGQgNesGrGo4zJJBtqyTppcc1BwD6NV4Hn5jgFk": {
+        "stake_mina": "56725.135594407",
+        "external_delegators": 88
+      },
+      "B62qif7HxYzQCb8v2FN3KgZkS8oevDG2zqYqzkdjSV1Smf6jbEcPVEc": {
+        "stake_mina": "29174.732334837",
+        "external_delegators": 74
+      },
+      "B62qifNt6Q8Zt8gVmBLhX5LyGyfwvjMvCnH8VLGrhdH4mjYTkt7A7kw": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qifREEiYeag7TD8B1JvNaQF2ZNDrHxpME2diecJeQ6anfYrABnhJ": {
+        "stake_mina": "40620.766052192",
+        "external_delegators": 1
+      },
+      "B62qig4yUF3SFjmeDTYefkWAkYZFD2bwkpD9ocpGXgAyfzJaeT4cDrq": {
+        "stake_mina": "5996.466967448",
+        "external_delegators": 2
+      },
+      "B62qig6JycmgWRUNyVwegr3PnwQrqPoJinj1DFN9eFLmF5iR7LD7DCi": {
+        "stake_mina": "102.795038802",
+        "external_delegators": 1
+      },
+      "B62qiiMAkvgGgvBfFea8YFbDFpLLJ18XW7YniTsxsuSXSmXfGFAVcbN": {
+        "stake_mina": "3.38525571",
+        "external_delegators": 1
+      },
+      "B62qijDC2gCTtcqYGnUAc9YgH2Uw4fzr8xEKKL4faZmWyAypgEe3oWC": {
+        "stake_mina": "73320.583834851",
+        "external_delegators": 86
+      },
+      "B62qik2auL1VbkX6fijdzwT6fGgjpi8caKUH6vbov573DbdT2UbQkDp": {
+        "stake_mina": "241311.845939481",
+        "external_delegators": 165
+      },
+      "B62qikNCQ2kmAfwxM3BqtMP2r7HR4XL8ERN37xgkeJNqMbL1pBabh8e": {
+        "stake_mina": "0.009404433",
+        "external_delegators": 0
+      },
+      "B62qim7EVe62u3wDsGzAZEMGMaEuwSXYWTCH1WsNvWFgfvz7ysggDxf": {
+        "stake_mina": "651146.440046164",
+        "external_delegators": 4
+      },
+      "B62qimtKwrTLT83TPZb7Sza4AXfa2KHhYkzruC94kfZ4AFmh7GoNuYN": {
+        "stake_mina": "2.198444228",
+        "external_delegators": 1
+      },
+      "B62qimujmKZsLq3WkFLSrMcoQZxhysMRVmTMiizWo7fBB8suzAFEz2B": {
+        "stake_mina": "30.429648293",
+        "external_delegators": 0
+      },
+      "B62qioRybbb3PfbMGfzhSDDRFQrRwKJaKNzWUHiQ5PMaKEJykcjpMPL": {
+        "stake_mina": "1.372300647",
+        "external_delegators": 1
+      },
+      "B62qip4Tq2DecrnK6mobywUzrfd2ZYfbtXUMuXbHzto6jWGnktmkoVp": {
+        "stake_mina": "1.7",
+        "external_delegators": 0
+      },
+      "B62qipA4mZXjXaKHv6GSakqhjpoAa9wZnAKV5X4HyFyy6vz6aqCNYeD": {
+        "stake_mina": "79663.60489452",
+        "external_delegators": 4
+      },
+      "B62qipnm2igSVxVw6mqSdhU55kwwXDdE7mbh6FSiDj2zQFKhQ8iezwe": {
+        "stake_mina": "0.004956121",
+        "external_delegators": 0
+      },
+      "B62qiqUqeVw73vCyjP4zJtQvrRecYiete7uDkHEMTpzTr9A3cRpRu6X": {
+        "stake_mina": "451.61536531",
+        "external_delegators": 2
+      },
+      "B62qiqjSnNCruUzMHv2EFshoeKRUbebbFe6rxjBtcrPR86r9ProWr1Q": {
+        "stake_mina": "4.52723305",
+        "external_delegators": 2
+      },
+      "B62qirQtE92kBZvN27W7MneVxd6Te96ZtExZneAK2pJx6rT79H2GTun": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qirVpV47KnCL1AXFPMYyC5rnAAU3V7jiHoLFMF3SwNmtfj43Denk": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qirtWdQYyj4uH2mqsNTjkURCcNjWgmrjxMVM6axc2G6LrKvbTLLR": {
+        "stake_mina": "35428.232243943",
+        "external_delegators": 3
+      },
+      "B62qis94RFQQwiqeswnxfWG2dek3van9h2wX3LQSXtcdgtezaLLbSFH": {
+        "stake_mina": "2.17",
+        "external_delegators": 0
+      },
+      "B62qiswHLK1qXoTtFWfoWXQsQzZ4P3NN8cFtm7H2qW9JR9uTatxJgJY": {
+        "stake_mina": "0.002084586",
+        "external_delegators": 0
+      },
+      "B62qiuxoNYYquLcuDiDU6yqg4qguFGWP9xjS45gUvMwhuWfe1RtEqTt": {
+        "stake_mina": "1.9",
+        "external_delegators": 0
+      },
+      "B62qiw2Du6wBjoC8sGX3koe1vT8H8mhqvQ9i8Q2g5RxZ1m95jLYcqsC": {
+        "stake_mina": "0.002320323",
+        "external_delegators": 0
+      },
+      "B62qiwFFgX11ZGT23u7NPqsNASbWT3hPbEcYoZ8MZiYBmpnA296Ux1U": {
+        "stake_mina": "0.144800569",
+        "external_delegators": 0
+      },
+      "B62qiwgNcH1uw76xgqJMb4V1nuD91qbxrQGWay96u9TBkgPb4HxRJeX": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qiwgraki8ANL9Nmq3ahjSLJbPqg2DHRnEpmheC7DgTV8dR6Qg3HE": {
+        "stake_mina": "1.8",
+        "external_delegators": 0
+      },
+      "B62qiwnGbP5z9CzQng5vKTSRBNCUbBofipyCUUXVR8WudPmCWs3DvxN": {
+        "stake_mina": "3.481400046",
+        "external_delegators": 1
+      },
+      "B62qix9vooX5NqJYo8nT6xWqCeQu5AJoS1ng6FRnUpVAra6PAZZ1CU4": {
+        "stake_mina": "31736.609965323",
+        "external_delegators": 30
+      },
+      "B62qixRqMd673z2oTN8pLrjsCJEsL999jG85JjHZ11qZbn7rwmrVuDB": {
+        "stake_mina": "3.400000001",
+        "external_delegators": 1
+      },
+      "B62qixi4dP7DcKdTNcK8jobtv9qKFjxf7ZgZVoQcJXVXkeAULe3hT5E": {
+        "stake_mina": "0.9",
+        "external_delegators": 1
+      },
+      "B62qiy32p8kAKnny8ZFwoMhYpBppM1DWVCqAPBYNcXnsAHhnfAAuXgg": {
+        "stake_mina": "1e-06",
+        "external_delegators": 0
+      },
+      "B62qiyJEjUeNKaFtkvnkqM7NZaFk9oqHLN2iBuQ2KFy1bFwezb8mDH5": {
+        "stake_mina": "110.246343377",
+        "external_delegators": 1
+      },
+      "B62qizdUTPz2GLKR3wYaV8brLWmeuktJWetouo3Lr1HqtXDStphj4fW": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qj14jK51aA2GQBxWU8434tjDq6Up2iU3umuuq35WGpWh7dDCjjQG": {
+        "stake_mina": "3.5",
+        "external_delegators": 0
+      },
+      "B62qj1B9sNZf8cm44qk8v7LRAYyUVVPeqrMF5ETmdQ5grZ8NM9ingCx": {
+        "stake_mina": "0.16129167",
+        "external_delegators": 0
+      },
+      "B62qj1EFvWbmmoUw2FH1AvUtRSP6av8MFYTiqsB7SQbHPtqNT2SWFEg": {
+        "stake_mina": "0.19429166",
+        "external_delegators": 0
+      },
+      "B62qj1bsZXrQ76TkAz2dXBMzJgC9bmXLc3oK1ttBXNre1BwaeSfaiCK": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qj1zHauhL5hgfGvpGhif73jjrzV3j4NjVvQsnyKLQ6GgFYybcygh": {
+        "stake_mina": "3.968386869",
+        "external_delegators": 1
+      },
+      "B62qj287L1bwP9XguURbxW5cneTRD8Kde4vx3fbeZCNxNxyMzXdsYLP": {
+        "stake_mina": "1331986.704881688",
+        "external_delegators": 5
+      },
+      "B62qj28AitWwLTU3HAhtoW34nJ6LkyHU7XKm5wC84q1RtF4ho1yEgGn": {
+        "stake_mina": "335339.529430593",
+        "external_delegators": 5
+      },
+      "B62qj2HJ1EMQ5uxBS6BktCLC1Wytdj59vGn2B5XnnJz4vRK21NgG5dJ": {
+        "stake_mina": "0.00695499",
+        "external_delegators": 0
+      },
+      "B62qj2K89VFcWCeBxjcdpi5U15ReypCDcUqotEuATQxce5vdqHxXoxU": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qj2bSvrtaot83VniN8hffLcfLLQTiLoTH5PiCmkwaADRF9hqmUfe": {
+        "stake_mina": "10140.486030026",
+        "external_delegators": 1
+      },
+      "B62qj2tZS6SxPMfzFAvVxR6ZMfryVotdhMUwPx1C3EAhgqFEJAAqUXX": {
+        "stake_mina": "4116.041741568",
+        "external_delegators": 1
+      },
+      "B62qj31SZEp9f5XATWs4RdxVCZRmj6E9mrpUWef15hNqFtkStNfBfqo": {
+        "stake_mina": "3.996",
+        "external_delegators": 0
+      },
+      "B62qj3Gzxgb4G4M8CwZRXZPtmVwGJtGfVXVbpMrACNDSqQLoXzSQ9HW": {
+        "stake_mina": "70938.413258026",
+        "external_delegators": 7
+      },
+      "B62qj3fTBMfpJvoHTXPiKymxQcHH674jynkqsRjUw1bR12t2VCrW8ch": {
+        "stake_mina": "2.712050531",
+        "external_delegators": 0
+      },
+      "B62qj3tjfzAhoLX9ymWvPsTZTK3Pm125SLSSGGfPrvhc3zbPr1D1A2y": {
+        "stake_mina": "1.209",
+        "external_delegators": 0
+      },
+      "B62qj4U1L3ZhuHJsrpocFfCKj7RU4dHejgucvMxoiXEBFdmsDJX8Aec": {
+        "stake_mina": "1.9",
+        "external_delegators": 0
+      },
+      "B62qj4b3yw7bqZd2AKqYFedyL6sx4fF6GgCkzG7QWz394nPMN4EKLv1": {
+        "stake_mina": "1.786257513",
+        "external_delegators": 2
+      },
+      "B62qj5Mv8tyQ7BSmAEeoHcTR1dwYpwxVy2GXSoajgSfyM3uUDUAiR6R": {
+        "stake_mina": "0.174839742",
+        "external_delegators": 0
+      },
+      "B62qj5W8VBtyVC9j5cgGC3NTXGnQzZt5VYBCc7kMC3jDYciuiXYAngW": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qj6ZRxXvoyjF78hxViBTyC8RqGeDSmAfZZ2Yndyu5bzRb9RPdHaw": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qj74mCpk5sbvHWobuq3Q2ybZYvyNtfPcSiEMKds8HAbwtT3UhiG2": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qj7F5ZbGn5Q2hLYEkJDwN93giJKTXG4T3j8ALzBkrcygY2rDSVku": {
+        "stake_mina": "2.0469",
+        "external_delegators": 0
+      },
+      "B62qj7Qsn24K561DXitASXLKRombezT8YqNk2grUfCcs8sZNHyxcmtw": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qj7ckiHkb7pAQkG3zi3WaU1V3AXUkzgdfk9yTx8wN4g6aWwvFDm6": {
+        "stake_mina": "3.617025569",
+        "external_delegators": 0
+      },
+      "B62qj7tJG5rxdy1hxo2tPo8xJGN3qDHwQdPqq7UMH6xGfhyfUikyKV8": {
+        "stake_mina": "17563.32759",
+        "external_delegators": 0
+      },
+      "B62qj8KB2fk59NkV4VuoTkVXHjw8VJzC3ybKrWo7zuDC9xTiWXPygEe": {
+        "stake_mina": "134.000792625",
+        "external_delegators": 14
+      },
+      "B62qj8qNQqR2XDdee4KEqKDMpwHPQdk4XP5xotjLg5fwMNMEpD5i2bD": {
+        "stake_mina": "14056.413863614",
+        "external_delegators": 3
+      },
+      "B62qj9SeVBtbZCeGUVznWUqECvFrFU8DoHLQxFtHXX1Dk1BB7dfW4AP": {
+        "stake_mina": "5038550.326189843",
+        "external_delegators": 1
+      },
+      "B62qj9WWnfzrEWBpXAq5nRNmEzAsrWww468nEBpfgxvoESNRuBQHJNh": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qjAAPEV5hE41EgunTNeADAViDWW8Cktzxe36A5z5yoXyFPDnziak": {
+        "stake_mina": "33167.088468998",
+        "external_delegators": 0
+      },
+      "B62qjAhfDkzhdPbwqCsBTknsr7AtRvsySYz6V3frg1gAgkCQoJyKBwX": {
+        "stake_mina": "6.485639065",
+        "external_delegators": 0
+      },
+      "B62qjAqLkgGHNWPv8MyaEBqAivtC6RRbCxfKWY8iLrT1KCX9t9TG9Zs": {
+        "stake_mina": "6.0",
+        "external_delegators": 0
+      },
+      "B62qjBiFjeuXzA7h8zu6CE5aWQXiDDUrVtkLJZJNvdVA6dTgv9FgvsR": {
+        "stake_mina": "4.962951151",
+        "external_delegators": 0
+      },
+      "B62qjBpH4zeWgy4d4p59qUXDA3DtYeCyBrRM286sdXZFw4A8SiswfBh": {
+        "stake_mina": "1.760740748",
+        "external_delegators": 3
+      },
+      "B62qjBsp2zWgyrbaSqVMcduz7A5s1sT63epFUVGFRjCfjCzy3zwSVaq": {
+        "stake_mina": "0.659045424",
+        "external_delegators": 0
+      },
+      "B62qjBxeuwxjcC2XRqw6YQnC5BHt8v7H6LS25iW6D4CKFwGYvCVqTXq": {
+        "stake_mina": "717.32413522",
+        "external_delegators": 0
+      },
+      "B62qjC8B9wxanL843FmFn5yaDp8vrWiQWPp65E6pDYBU7sJtDThDoiR": {
+        "stake_mina": "0.211715488",
+        "external_delegators": 0
+      },
+      "B62qjCuPisQjLW7YkB22BR9KieSmUZTyApftqxsAuB3U21r3vj1YnaG": {
+        "stake_mina": "603106.778839829",
+        "external_delegators": 589
+      },
+      "B62qjDTSoy6eTfGj7sCG2nYE8DAbRvvjXquB29cLvyhfKGSGJGkgLXi": {
+        "stake_mina": "2.121399902",
+        "external_delegators": 1
+      },
+      "B62qjDjt8phcvbQquWWLjEap4UBd57erdwEJDL2tcrkKxbqMvGvG65a": {
+        "stake_mina": "3.5",
+        "external_delegators": 0
+      },
+      "B62qjDuxBhPtjhxCAmd1NU2g3rU4ASe3mpvcREq4KBkMYcNFn5wciCx": {
+        "stake_mina": "1.47875",
+        "external_delegators": 0
+      },
+      "B62qjFfENgQq2nRqBy5Maok6DAL4J499x3FUn2uJAVn1ngy2pCAj5sz": {
+        "stake_mina": "0.9799",
+        "external_delegators": 1
+      },
+      "B62qjGnff6joYQz6exYgPQqXJUzP9hgoiwfMnWbKafw5oNLmWhzkYkf": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qjHDrVRMrvdVkeRtQaKNho1LrrDVM7Uq6dZrnZEUW59GCXPqej4F": {
+        "stake_mina": "1.2",
+        "external_delegators": 0
+      },
+      "B62qjJ2eGwj1mmB6XThCV2m9JxUqJGXLqwyirxTbzBanzs2ThazD1Gy": {
+        "stake_mina": "0.992",
+        "external_delegators": 1
+      },
+      "B62qjJAwwbXg6kXPYHzMTKBA2bG4RtiYggvYdCJVQTCB1ArMerwtzzh": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjJPwZ81Z39Sg2WJ5tNPcCFBqwSeYZd68w8579eggnSyhFgGscuY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjJgffmuM61QdYG1HLPPMAd6PvWT14SVBkudc9c8rNfGuvx9j7CA": {
+        "stake_mina": "1.1",
+        "external_delegators": 0
+      },
+      "B62qjJnSEiCwZest7cwzmktzM3d2Uh7gbPS6unPDGf57ATrYGp5WAVK": {
+        "stake_mina": "2.808253305",
+        "external_delegators": 1
+      },
+      "B62qjJxNu3Jm1YdqHTGaKLYiANSxtr2Nnic1oqakWv1qQp53EHkCGz7": {
+        "stake_mina": "2.198",
+        "external_delegators": 0
+      },
+      "B62qjKu8sK88YcFyLJYzNBv195cik6ejQgax9SeM9a8VC5maAB4YzNt": {
+        "stake_mina": "0.996",
+        "external_delegators": 0
+      },
+      "B62qjLD6RH74t4diNqWVKXzVJMLUFnoFETdhkCTCjPAiQ7zsiHiqQMS": {
+        "stake_mina": "2.475",
+        "external_delegators": 0
+      },
+      "B62qjM7iQRG1VZBLebs8u5igwx3rCzvFYKs215LuJtEsSASUxdtz9Z2": {
+        "stake_mina": "0.6969",
+        "external_delegators": 0
+      },
+      "B62qjMJ6c8Y1ZtEkHt8EF8v2t3f7d1oSVuT5sV1oFtuF3wbffzTgvQt": {
+        "stake_mina": "0.8",
+        "external_delegators": 0
+      },
+      "B62qjMTVAVfKWUyBgukWb24VwivmqPFdj89RvDc4FtLm2dDBYWFvU21": {
+        "stake_mina": "0.045917293",
+        "external_delegators": 0
+      },
+      "B62qjMj4gKMd111FkiAwZTSwykDM7UCxvjbtGRb6Uhgs9MMNwa1xeif": {
+        "stake_mina": "2.201399503",
+        "external_delegators": 1
+      },
+      "B62qjNFYokAFmRSYuPeUKwRWNeEgafRYVvLtnpB5Ybu9mXG4sYS7LFt": {
+        "stake_mina": "0.0089",
+        "external_delegators": 0
+      },
+      "B62qjNtyQnA712yXhmnHA2jcNSAPVACoHR97mTC4z748YyEfAsXNTP9": {
+        "stake_mina": "0.9978",
+        "external_delegators": 0
+      },
+      "B62qjPDyavWQPQEPE4V1kZo34gvffu1wU76XLrVuUSRMyDvrHxEPMf4": {
+        "stake_mina": "0.001",
+        "external_delegators": 0
+      },
+      "B62qjQ3k78nzaePyXhg298UEVnwbCeqQUcNwZRSR4VK1gVJ6mer6M8V": {
+        "stake_mina": "9279.622927058",
+        "external_delegators": 13
+      },
+      "B62qjQZDj95NEFpzQMHusH4jRLqLW5tDmUZCnvNfUPZzAHivKrM6MWW": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjQnsvRggxMUNoJVos8mBKjxyWbutcsdizc9qtDPkys8XfZwfYkK": {
+        "stake_mina": "2.040076685",
+        "external_delegators": 1
+      },
+      "B62qjQw67ntSBvyAN6R4RES38pNSEL29Uzb6hVcfUcf2mDNwHKvRSso": {
+        "stake_mina": "2.895537974",
+        "external_delegators": 0
+      },
+      "B62qjREKDBtm5KBteU8RibX6P6JLnoQifWYL3KGvaRLJjUTb2WM9hjf": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjSBB2kvM3bkkKnBB5vxEvRfLuRkTYA9bMQ3wtBxuojCGwHsg2tJ": {
+        "stake_mina": "0.288206225",
+        "external_delegators": 0
+      },
+      "B62qjSytpSK7aEauBprjXDSZwc9ai4YMv9tpmXLQK14Vy941YV36rMz": {
+        "stake_mina": "937687.164455278",
+        "external_delegators": 2021
+      },
+      "B62qjUaGVZqZ8iri5r6rSQya6a1jWqyYAQt7JSicLf1sQs9BRCKdskT": {
+        "stake_mina": "3.207714349",
+        "external_delegators": 4
+      },
+      "B62qjW32BimvMpMrJKcmKVkHyCzRZCu21ZeHT1DZsgsP2pyy9CTcbDu": {
+        "stake_mina": "0.339710779",
+        "external_delegators": 0
+      },
+      "B62qjW5VunJhN4WxWynYUCy44DTwLhLJvaVqyHFHBzwha4GBZu4uc69": {
+        "stake_mina": "641.249101597",
+        "external_delegators": 2
+      },
+      "B62qjWchpjVwmbEazciy3VSBZhJNVF28RcDQirLFpH2rvfmDrtXL382": {
+        "stake_mina": "1716.479196976",
+        "external_delegators": 12
+      },
+      "B62qjWmFMiYUiWGvisVof9mbiKi2sB1FhZdwiDyXi8nMCoLDJuFaRYY": {
+        "stake_mina": "5092.948649758",
+        "external_delegators": 9
+      },
+      "B62qjWrUQMud5mWVPSeMs9t41mrXdWFPfPA23a3nsEbGWBTEiapipqH": {
+        "stake_mina": "1.108675683",
+        "external_delegators": 0
+      },
+      "B62qjWwDxk5nGMXN32ffuMpMSp3wPa7BLB3AXHH5EYiczcRxDTF9uP4": {
+        "stake_mina": "32992.671895896",
+        "external_delegators": 1
+      },
+      "B62qjX94sjCPCCVuPzxxTmBwaAN24ASWrjd8Egzp4iKUHF6TXpy1i8F": {
+        "stake_mina": "4.100376316",
+        "external_delegators": 4
+      },
+      "B62qjXTW7dMAWwRTnJD4U8HwN4ii5t17UnGANbhtzenJTBWSDESbQEw": {
+        "stake_mina": "136365.903338034",
+        "external_delegators": 4
+      },
+      "B62qjYFuUkb1D8xgwdADbiZ6UUr6KA6x61BzzE1K9sgemawDbytmjTb": {
+        "stake_mina": "6712.122211097",
+        "external_delegators": 2
+      },
+      "B62qjZYuKmmfCPkiHx5dk64rAMKU3P7ipypXPwASnH1H9QfvRi7HVFi": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjZbRVnE4AzbZu9eC5NaxXuczynXSeRerzYC7am1kvRjgqqNSQ9n": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qjZtzisfTEkeHuLCF4tMXmDwdSSsrNSQT9c319Trnbod3RxTyL7n": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjaE41RVyhm1mcLNUwdpBJPSSYAr6MvfnWKCrmEfPz5BPRDj4GSQ": {
+        "stake_mina": "97839.205588886",
+        "external_delegators": 5
+      },
+      "B62qjaY1sr1H8Rab8D65sBMs2F9cdXvvvHsairKEH8qoB2WWNfxuQXP": {
+        "stake_mina": "1.7",
+        "external_delegators": 0
+      },
+      "B62qjabP3kpDXeHbXBMgiToavhckKzcghWpVfzEVXGeLQ12wznoimYC": {
+        "stake_mina": "0.346627735",
+        "external_delegators": 0
+      },
+      "B62qjbYta9qgMSuXendeYzBiaz9z83wu1B3Pv5NEMGoiYjQGNQvxeSG": {
+        "stake_mina": "5.950553137",
+        "external_delegators": 1
+      },
+      "B62qjcAEavf6kvNDquvSy17bbXZYKtkUJ1eKem92wjXf7v2Mq6C43yw": {
+        "stake_mina": "4.257271801",
+        "external_delegators": 0
+      },
+      "B62qjcLH8XcEackkrGhVC42xY1Tkqu25zWjxWraNUoB6xGnbtrMCV9s": {
+        "stake_mina": "0.153814048",
+        "external_delegators": 0
+      },
+      "B62qjcPuh2BcHqKMFEsUAshFRVvDn2V9xVrrRpn9Szarx63NBmehJPP": {
+        "stake_mina": "2.230784379",
+        "external_delegators": 1
+      },
+      "B62qjcutE7aRFSxZrZ9x8ksurFZgbkYmeBrqdRjKyoy9TyS8ecsJ8oA": {
+        "stake_mina": "4.570000001",
+        "external_delegators": 1
+      },
+      "B62qjd92F7SH34QN89c2a27G7H9UM7EdFxWMtnmCVKh7jSW9WBq1fLV": {
+        "stake_mina": "89220.8213515",
+        "external_delegators": 1
+      },
+      "B62qjdGVy73TwV4aax7j1JHgWzTeJ2MzJnaSoBN9RHaTe12WTfHGKaa": {
+        "stake_mina": "4.181399612",
+        "external_delegators": 1
+      },
+      "B62qjeR6fS4Z9dyaNt1UWPh8bHWm4euq5ksKnctfQdwucSzRGh9cFZV": {
+        "stake_mina": "74728.913027251",
+        "external_delegators": 1
+      },
+      "B62qjgEkztaA6LkaPiEZwLLVAK5rt1Kf6LuLfpvWS94H6ATv7jPbt2D": {
+        "stake_mina": "2.443904685",
+        "external_delegators": 1
+      },
+      "B62qjgMVvo1JTaG6u1pBFNzvPGivGTUeq6TtbauypeVybojD5JdWjvW": {
+        "stake_mina": "0.172725908",
+        "external_delegators": 3
+      },
+      "B62qjgUymwXwVhnxjvs8WDJBbvjzLGyb8JgmBHgY9W9s363c7VXPx9R": {
+        "stake_mina": "8.994",
+        "external_delegators": 0
+      },
+      "B62qjgWDMS887DUhZRyXdWSKtvmA95D9WWKV29EVSjMKh7Pb3mTLtmX": {
+        "stake_mina": "0.998",
+        "external_delegators": 0
+      },
+      "B62qjgXSsr5V8Tn6Ednzeg7rzQc7FakAbDHaeMpAH9GDzTwmMkQo9JG": {
+        "stake_mina": "1.809717944",
+        "external_delegators": 1
+      },
+      "B62qjhR9w2SRb8iVePeEXd8s7ZwNT4taeCU5EjMCFsXVqAPfE1ZqgHS": {
+        "stake_mina": "8.509527179",
+        "external_delegators": 0
+      },
+      "B62qjhiEXP45KEk8Fch4FnYJQ7UMMfiR3hq9ZeMUZ8ia3MbfEteSYDg": {
+        "stake_mina": "593192.851437513",
+        "external_delegators": 57
+      },
+      "B62qji8m9VLx6nomDdE8aiMokRfe7U4CM2wnbsVQjnuVKzjE4rscboL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qji9UPYf8w1FR5s2Zk4cSvrnujbfUNxjbmeJgTbRYH73CHMkjMWH": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjiCtT7GScP4xZrHoLC6dxPmHG1D7AoeWJBaTPkrUcWvfzMG4cet": {
+        "stake_mina": "1.001396394",
+        "external_delegators": 1
+      },
+      "B62qjiSiF5M7ohYUiMBhVuAma65Y8bARMrKG8GPHAKwHq8DsNUm1kXo": {
+        "stake_mina": "96904.385990422",
+        "external_delegators": 2
+      },
+      "B62qjj1M1JdKHyrbTj6Fk2BhG1SpLnBbaKfiQMTRPR5FSxhNT1LLUCK": {
+        "stake_mina": "151750.679356596",
+        "external_delegators": 3
+      },
+      "B62qjjnQHqXRhYp6mDSJU8Ec5A83mxfBR9iY28UKkgSs5cGtrwWJ6RK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjkU5VcvfddqVeE223E6nj3dBJgKyQwuD17JyBAeiHdRqAHnieS8": {
+        "stake_mina": "0.044851504",
+        "external_delegators": 0
+      },
+      "B62qjkrGhhVhY7WEVY6oxqHJgK476KKN2fRpmZkW3mBT7CyRY9tPMK8": {
+        "stake_mina": "0.040784267",
+        "external_delegators": 0
+      },
+      "B62qjkyRpwaRoKZnr3b9yAu2SNkETsjj54LFZFoqwAG54ubL49GkAf5": {
+        "stake_mina": "0.933288796",
+        "external_delegators": 0
+      },
+      "B62qjmDe2pzUHzeMPKiz3T32io4kTVJitSYXQ9LHaGgzF9y3bf9dZ9W": {
+        "stake_mina": "0.207",
+        "external_delegators": 0
+      },
+      "B62qjmReWEeTVAM9btVNBvzs4XPod6SkCAw73t1pJnLddrUg1cP6FaP": {
+        "stake_mina": "1296.402118323",
+        "external_delegators": 21
+      },
+      "B62qjmUyv9D4GQ35RFSDrXjMqgFYW4VtDkuv1q8TnxosPqxSJcbdvzG": {
+        "stake_mina": "4157.817522216",
+        "external_delegators": 26
+      },
+      "B62qjnqbeUNPpPoRk8WCbg468U8rBcX3F6WmxxPqq3Kfs9T1iDnMSaU": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qjodMvEfFUfs2ciXUekPF3f4ePhH3uRfwoRssh5hWF1Mr8xHjeEF": {
+        "stake_mina": "1982.167658575",
+        "external_delegators": 1
+      },
+      "B62qjok2BD2jB6TArVM1oGDSo16xk1SYGzTwZSjx63WbtZy4BuzPBDj": {
+        "stake_mina": "6429.621332271",
+        "external_delegators": 30
+      },
+      "B62qjorsXfdvrVVY2tSMESfCq85KQV9PbAifNsa4XsU7Jpvk2GWKgZU": {
+        "stake_mina": "47.083496022",
+        "external_delegators": 1
+      },
+      "B62qjp6bK1jLdWVUXvnrhKmfuAuvLSMtCyysKEKVxewrL315BSPeMP7": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjpRkFY6tPL7eR17wE76ftrkvRWkNA938yg8Fmvew9aE5WARJxdf": {
+        "stake_mina": "8.036828047",
+        "external_delegators": 0
+      },
+      "B62qjpVdxNvaNkad33TRCLWcKhFYxkoMBfpNgGBEDuwb1jpLfx4zdq1": {
+        "stake_mina": "1434.938481091",
+        "external_delegators": 2
+      },
+      "B62qjpYT3Nwrkc1crRJsqYQ6aj59MXe7N5WFFh41TfhVdffUMbuM3AP": {
+        "stake_mina": "1e-09",
+        "external_delegators": 0
+      },
+      "B62qjpZqru5mpnkTq6g5WkshSF6eXGmimDaBDcLfqaSRySBFsutPdgA": {
+        "stake_mina": "5.455735024",
+        "external_delegators": 0
+      },
+      "B62qjpckkbS16KMZ3yMCMdKFjf2PXqbCVCU4bLjVchHppN4fgxn4Qwa": {
+        "stake_mina": "8.019201563",
+        "external_delegators": 0
+      },
+      "B62qjpwCiKPTdnQzZF4z2X2jSmrWYwbamKnCEuvmFRrtAabtn8ScJMZ": {
+        "stake_mina": "811.549966664",
+        "external_delegators": 2
+      },
+      "B62qjqYBrf5erL4LHSapiuvcX9TMLCVqCuyzYYGC2sGZfKxt8tQ67Vz": {
+        "stake_mina": "25232.117178428",
+        "external_delegators": 1
+      },
+      "B62qjqZLXtU75LSJmkGar19Uvwt4GAotPpxkohkvgtrbRb3oUuCR6HN": {
+        "stake_mina": "132.045662843",
+        "external_delegators": 0
+      },
+      "B62qjqfdD52ypqxsvwhqNVaRLrmvYbanL89dqjNK1kgCqD9KpthQZSP": {
+        "stake_mina": "0.79",
+        "external_delegators": 0
+      },
+      "B62qjqtLRExnb2fyMiBpv6nC1ckGuBrCY9mXtTTcf5x7GD3CG6sU3Ad": {
+        "stake_mina": "2426.810929448",
+        "external_delegators": 6
+      },
+      "B62qjr7VBY7so5k9HRLsZTmQ58fZphcRGBGqYCuejzEXBqiSrSPnUwV": {
+        "stake_mina": "1.389038562",
+        "external_delegators": 1
+      },
+      "B62qjrwcG6cbvartJ63wJQQxYx1aY9N1gh8fhYkG8AwDmwQY42XfG6Y": {
+        "stake_mina": "0.000430397",
+        "external_delegators": 0
+      },
+      "B62qjt4wFa4uFuoRD97XXxkVuyzEoYF5tPw2g9TwzwYGGaKGHnLJt1W": {
+        "stake_mina": "11.14811167",
+        "external_delegators": 0
+      },
+      "B62qjtBbXnmuhFsGtSnpmJC6EqQ4DmKUpvAw5Sst5nRAmsFBbGak6qp": {
+        "stake_mina": "100.0",
+        "external_delegators": 0
+      },
+      "B62qjvb3o5GxtQ6ydyoZJr8F7DzKYtzbpNnb8opd1r5ZZY6YpsCqBTC": {
+        "stake_mina": "1.9",
+        "external_delegators": 0
+      },
+      "B62qjvuuYwmUTioaQ6BT7h86zxSbHDZaANDqWWXTUaVxPT8hs18VfVv": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjvx1gE8xJ3H9Wx5JTx4GcCEanEjUK3MFWZjaGu7hLUr18UUXbWL": {
+        "stake_mina": "68229.473835237",
+        "external_delegators": 3
+      },
+      "B62qjw2PdqLJYNTr6cNDXEmnc9FLNoaqVMHMqiTX7sqLYJRpd3mshFA": {
+        "stake_mina": "1.919200598",
+        "external_delegators": 1
+      },
+      "B62qjw8HBV8mb1qsvZSA3x4JwyJp5SG2P3cdmNXSUmUhLkzmXi8H2yL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjwAoLA1iT82EQQidZDDovQND5PeJtmcZXq7USbNDGEqgYnBbKam": {
+        "stake_mina": "9324.530094003",
+        "external_delegators": 19
+      },
+      "B62qjwkotonAhcHsdGh7TsshXjdLXZQdJkTY69E5rtG8vCEVePraF82": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qjx7ZP4EZ6yfYHK96eXMwux7UiuEuDGieUtiQFLC9fsdVPoRvzma": {
+        "stake_mina": "1.6",
+        "external_delegators": 0
+      },
+      "B62qjxeM8bXo9oc883gt26n8Kdw341yue2Vb4U28kyoBvQvsvKeRpdQ": {
+        "stake_mina": "1976.293612052",
+        "external_delegators": 2
+      },
+      "B62qjxrtRFzsyE5xmJo7VmaQiRmS7tdRLDu2YspLarMhoYZGui2U2h8": {
+        "stake_mina": "1.3",
+        "external_delegators": 0
+      },
+      "B62qjyaV1qV1WSqPcvAkFhydLWgmNb4mDqC6DTAwAACRNha7tsMpuEQ": {
+        "stake_mina": "0.119109849",
+        "external_delegators": 2
+      },
+      "B62qjzt8mVc5rWvE3WeQmJJq9ksR8BkAZi4ycf6zQNkYihVrV3rcLb3": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qjzxp6eVbn4YWBrNfhodex1RzKi29tXyqttBuBCGbf6mhT9MMg3o": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qk1qWKFYR6WYh7GcRTqXv3jurNWvpdKztFiSzddTxqhDbdFfpWwJ": {
+        "stake_mina": "3.8426539",
+        "external_delegators": 0
+      },
+      "B62qk2qmsBc9iepGxrSW1NQk2RYN8SZXArqhpP9kZ1EV4Ym8u8asz5R": {
+        "stake_mina": "7.0",
+        "external_delegators": 2
+      },
+      "B62qk2ujo9BoBxCs9BFQUsv3efaJDzbJeLs4YJdZMJzJoVj69ShVdKs": {
+        "stake_mina": "217703.660194908",
+        "external_delegators": 2
+      },
+      "B62qk4S6hJ9CrDWiyD5oMZJV9JuMH6pf4HyBjTNGec9qp1Kt3xKodHn": {
+        "stake_mina": "0.007574864",
+        "external_delegators": 0
+      },
+      "B62qk4VDCUCnX1TV7RrmBnSmEM2L415ucaAhyLBJu5xYNZX4Jx3Ksdh": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qk4dHENc4co5Fy6BUR3P2pAMuLYKVWVEpgy1XfzLpGSWDJgvY4DK": {
+        "stake_mina": "0.849824349",
+        "external_delegators": 0
+      },
+      "B62qk5RNZP2c4xbrefavDjRM9wLP63kFCVdd4TRKfmtKLXEimdDrKNX": {
+        "stake_mina": "7.168758276",
+        "external_delegators": 1
+      },
+      "B62qk6ifhRb7fyT5qn2d32Fvir8Z9nucqKCDSuT7wHQf4vzZPYBwsHL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qk7nQKvzwJzDgGvhnFrfvJUcKFufSnGq2Fdmqtg35ikqtxPuLReG": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qk7nUB7DFReStpCTxHsW9Qm6go42vvLK6shgQcUrAAz6K66HsNtc": {
+        "stake_mina": "12603.642168532",
+        "external_delegators": 1
+      },
+      "B62qk8GBXDdQ98BDJW2WSUZGWdSSzFmAWKNPb5PZSuLZY2h9ShNf9Eb": {
+        "stake_mina": "1.77694598",
+        "external_delegators": 1
+      },
+      "B62qk8bcoWGkmLvgSekJfKnTZh618eUCAzJFu77bhUAq9Vci4nvgb4z": {
+        "stake_mina": "13325.88117482",
+        "external_delegators": 3
+      },
+      "B62qk91Pt4GQ89DEiQVpVuY3fRNC7cTYetdxzrXcq5QF3QMByin2yWZ": {
+        "stake_mina": "1.011569348",
+        "external_delegators": 1
+      },
+      "B62qk9C86Qj3YrggtezUqqNYvuQm2cHtLmXYpm8aMPbU8P27UXdfgg8": {
+        "stake_mina": "6.771523215",
+        "external_delegators": 1
+      },
+      "B62qk9H4HFS67tmxJYyeGAqTF74JNXsv3LCCWyEggN6YJaSGWohDTXA": {
+        "stake_mina": "0.41",
+        "external_delegators": 0
+      },
+      "B62qk9PM2iFnDwWqbtB85tnRQ95hecBcjvSpDBqaWFRrH95Lfet6Kyo": {
+        "stake_mina": "23194.941784311",
+        "external_delegators": 1
+      },
+      "B62qkAGzCXFWP7iZybWmXKNRL8EuMybXsWCaVsPAPer29c3cVsAetUS": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qkAjdrnm7ifJ2BLZRkNzkoYLR1XvKQcY4cWgRMiYg1ehpyuAdGww": {
+        "stake_mina": "178221.580362985",
+        "external_delegators": 6
+      },
+      "B62qkAvFQ1Jut3wF26TQdny12eeCMu9XyidzYMcKi75B7FKBiSiWbrh": {
+        "stake_mina": "2.030432991",
+        "external_delegators": 1
+      },
+      "B62qkBdmqhrRex361gvqABt6L9ircH7rPCMVvKQmj8GWodPhXeJW1L6": {
+        "stake_mina": "1.1",
+        "external_delegators": 0
+      },
+      "B62qkBqSkXgkirtU3n8HJ9YgwHh3vUD6kGJ5ZRkQYGNPeL5xYL2tL1L": {
+        "stake_mina": "523620.326878214",
+        "external_delegators": 141
+      },
+      "B62qkCBzfCu5ma93fapuvEP1kB8io2i88zijQftn5YrBzSqWHJjtiX4": {
+        "stake_mina": "30899.630442869",
+        "external_delegators": 22
+      },
+      "B62qkCYrpQgyhRCvro66hufzJaMziyaVYnXbGT9RfmWVHrqjjdWKdGm": {
+        "stake_mina": "1.46",
+        "external_delegators": 0
+      },
+      "B62qkCpAjQK4JjjK391v7895TARhXJJkbTnGDp6iHkQR73yaSEqvhhU": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkD1fte3kDhhgFCDtKRLnEaUZUY9y269Tm52pXcrkS3xpKdx2p9W": {
+        "stake_mina": "3.981397593",
+        "external_delegators": 1
+      },
+      "B62qkD82rDaaBaSZuVFjZPYBdn8BEmxji6kUr8Lo4HDt7kKshHENGWc": {
+        "stake_mina": "2.780000001",
+        "external_delegators": 1
+      },
+      "B62qkDasSD8WYtSB5CKyqyqVUW7oMRfHLZNVANC5G1BCbTqZN2vjRAL": {
+        "stake_mina": "2.481451546",
+        "external_delegators": 1
+      },
+      "B62qkDkpWabpwmJnn1Nx6tLrzusdYp1eAT89JzfYJfq95h9vzSdL9CK": {
+        "stake_mina": "9431.344334513",
+        "external_delegators": 3
+      },
+      "B62qkDxbJZ1g7iER3Pv4Gid19m63wp5DKs7Jz7ELxVerWqWeBwrr2dT": {
+        "stake_mina": "2677.365848256",
+        "external_delegators": 8
+      },
+      "B62qkE36gg6NsvtC9EYBHDKqay1rvvPrcHq5yzRTxJUj9TJiKFcJhx2": {
+        "stake_mina": "2.757977639",
+        "external_delegators": 3
+      },
+      "B62qkEHwUWrwMiToMX7fnRVtaET75RiFHvkFhd9up9bJhneipecEBx1": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkEp37KwrTDrhAbNEW7xu7nCwnaTznTc1KaqVYGzARJogfkpqiVq": {
+        "stake_mina": "0.878399627",
+        "external_delegators": 0
+      },
+      "B62qkF2Z8HurwpXcASYtvqrufQrcVzjUK6U3YvDEg2iwdTWT9yRWjVX": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qkF5q2efc6oNbScgMPU8GEya9qvwD8xZC5RXZ6rXzf6aiaTGtSdr": {
+        "stake_mina": "0.887658753",
+        "external_delegators": 0
+      },
+      "B62qkFC7mMp4eMD65r9tTFQeXZJtFyyXm18J84ZRzhodwuweu578kt7": {
+        "stake_mina": "1036243.257676809",
+        "external_delegators": 4
+      },
+      "B62qkG8Z6EVvYEZCPcvtNTTguKLnYk8fSduR5q4sTvasCB5k9bqpDW1": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkHHxGnWYjPzXFEkdwojfc8gaRzmj1jqma1x5HCkKeVRtejmpYdN": {
+        "stake_mina": "6.461210522",
+        "external_delegators": 2
+      },
+      "B62qkHM9NT3nDefqUvSMe8qnfEfeXipqkzZrvoBXpfaC9m2BdYjWVJA": {
+        "stake_mina": "124650.560379286",
+        "external_delegators": 3
+      },
+      "B62qkHSAjmBUWhjqZ84GNX5rnWFyVfdtBtfeeKm2D6ANtdUvfFNWQac": {
+        "stake_mina": "1.001400118",
+        "external_delegators": 1
+      },
+      "B62qkHcQk99tWkNShgU1JsXwUvRGuMQA3QwBcaLgFgjWhk8qwDLAKGr": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qkHeapM1x16fsiyJep5XKrKD7PC6WAxwJVjBLMdCStCAxerj5G5K": {
+        "stake_mina": "198.928816798",
+        "external_delegators": 0
+      },
+      "B62qkHtgC3sBw1zB3ghGsdPKxifXjYy2zn1SFN3W3eNbTbc7rajKRvZ": {
+        "stake_mina": "0.000978877",
+        "external_delegators": 0
+      },
+      "B62qkJTKarPxadzhbsogWojYo4GcanfEaYMN1vJvvB45sKTwp9JWvbK": {
+        "stake_mina": "2.037",
+        "external_delegators": 0
+      },
+      "B62qkJZfppNwtGYeXYroLZ9LFxqCAcsKABQCYCSMf754hwS2FzUKLJC": {
+        "stake_mina": "1.920303745",
+        "external_delegators": 1
+      },
+      "B62qkJcqHM7pd2x5PpikEi8EXgthe2EZEbNJouMX9SgGAB5oJqdc6QB": {
+        "stake_mina": "1.810875921",
+        "external_delegators": 3
+      },
+      "B62qkJxR1JXCNa9g9ZzapLgTzVk4pefXE51PZftb9QHHoYjR6fqBmSu": {
+        "stake_mina": "721.59546483",
+        "external_delegators": 2
+      },
+      "B62qkKecntugWPMLfArv8cQqQsTGU9NG7gUakJzAR1cFTfG19QTfzbD": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkL3ENYSZLc4gnyXjXosk2nxdkn1ee1YJoud6Efoin21bo26LpLe": {
+        "stake_mina": "845.350403862",
+        "external_delegators": 5
+      },
+      "B62qkLTKaFnhf9L7s6TSupA1C2fAEBmDn4RzANbePgNR6xzyDbLGf28": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qkLiDU7BLXPWf5k88DKu2bcLvZzYR7zNUCwdXBAcFyYJzx4t3RxR": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkLiKNqHKsAidpe7nWM5k6wAJvygpE1n7efbM3U9dPYhi2v17nL3": {
+        "stake_mina": "1.59",
+        "external_delegators": 0
+      },
+      "B62qkLn4YDsHjoiRus1G2HmUKUutGbQGTVEtRT6NKaB1RRMYCN2d6JM": {
+        "stake_mina": "0.514293768",
+        "external_delegators": 1
+      },
+      "B62qkPPCtdKdSWXoH9eagdVy1fUGK6iqMwdn6FEHVn8KtHTaSpbsKJJ": {
+        "stake_mina": "14.863373468",
+        "external_delegators": 1
+      },
+      "B62qkPstBzvcHuTdrGFSGcHNHyW8iUuWfuT3r5eTmAgWxyKJsWpnVWi": {
+        "stake_mina": "25.113136344",
+        "external_delegators": 0
+      },
+      "B62qkQCXhzstenWTCwbGqRgdvivBQEE2WDNRWLRo4gAXcnkQKZ1FAta": {
+        "stake_mina": "25981.333143206",
+        "external_delegators": 1
+      },
+      "B62qkRruxfK5JkQ8Sxk5tA3UrtzxVQfmqv4Azx5twzDgLFoakv8QxCd": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qkS5GuY9fmjQ1thjHryP9hyDALToe1UyL1j4y9bGVTGZLkftLUKE": {
+        "stake_mina": "1.064843581",
+        "external_delegators": 1
+      },
+      "B62qkSdod3hpRxyE8bContq7NJRbcgECNgiWv3UMZdRFoZrzdyhjyKT": {
+        "stake_mina": "0.193303827",
+        "external_delegators": 0
+      },
+      "B62qkTUpe7mh9bcHVScqxYCYyHqAzJc5XAj1h3nCcA3Y2Y2VFmF6vcK": {
+        "stake_mina": "2.993",
+        "external_delegators": 0
+      },
+      "B62qkTX2Vrp28ELLgXYyhMEjKF3nmRZzHDypLKpuJi4MEGFho3VotA7": {
+        "stake_mina": "0.58",
+        "external_delegators": 0
+      },
+      "B62qkUX3MhwnhVw2C16qeBKMtKKFPgLzPAk1cnpJpbFaymG5tLWdeNa": {
+        "stake_mina": "8.0",
+        "external_delegators": 0
+      },
+      "B62qkUbSbxkaNQGWnMFkAr7L7aeb8xU7HMs6STddjTAjjMcGJWorkqk": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qkUxWBvK2paPjzCpHUKMFivLVL6MfdmgBDLoD34id3UL9d6YcaGi": {
+        "stake_mina": "6.4911e-05",
+        "external_delegators": 0
+      },
+      "B62qkVjzzRRXe7FA2P6Dv5rJkxYT5u8QWYAfuU2U7b6yZpoRfgQhCSy": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkW5vgtwQzCd6c8iAafY8k9pMZTrKNTdZz482WJDSm5QXvkd41QU": {
+        "stake_mina": "1.002",
+        "external_delegators": 0
+      },
+      "B62qkWmMcdmitpbvSfGXXzHs5LhrHBdPkQ9VWcf3RtfLK8XMCsFoy2g": {
+        "stake_mina": "3.33",
+        "external_delegators": 1
+      },
+      "B62qkXQoFvTuTH7ARfihY8XmsUi5AfCpZgjmeQnf7bj81oTdT4GCsh9": {
+        "stake_mina": "2.44972",
+        "external_delegators": 0
+      },
+      "B62qkXU9mZxcbqocqygDYBFeGFekUVGvJckucWGZgHnfB6znAY6z3MJ": {
+        "stake_mina": "0.0201",
+        "external_delegators": 0
+      },
+      "B62qkXeeeerxc4YMtV8qBki2bTQc5KBZ5CCZk85xsjTBh2iEQ2PJmce": {
+        "stake_mina": "5.7258592",
+        "external_delegators": 2
+      },
+      "B62qkYdFy8bJQYJ5JPhpFYuQGPwEzH6zKcpFyKTwQaTHPMk8Tmu7J67": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkZtBx2jHnSdogaGm86Vai1VJT9VV9XiHLZ6VzywSVmgCp3fytnW": {
+        "stake_mina": "4.308085346",
+        "external_delegators": 0
+      },
+      "B62qkZuTU66fez9p4qwx2E68zggQ26etV6WDcnSx1vizfaLt3Xu4ST3": {
+        "stake_mina": "1.40366834",
+        "external_delegators": 0
+      },
+      "B62qkZvKLfMpXY8RarnoSrQGERau8a7yfih8G4vGv39Ee6CnsQAEy9x": {
+        "stake_mina": "3.434389674",
+        "external_delegators": 2
+      },
+      "B62qka6ddyjf1eVv2oKTBJFcAiYahAm4xKv27yeNp7U1ipfG7ds2WU6": {
+        "stake_mina": "1.4",
+        "external_delegators": 0
+      },
+      "B62qkaPi5Kvz1g3xsyeXeoqucj5yKWy9ekoLFQyuU6La3Sn8C3KhRgW": {
+        "stake_mina": "1514.716277115",
+        "external_delegators": 1
+      },
+      "B62qkbNu6GyDJ7uxXkfYQiVZHfomjtqN71sRcmt16Dg5VdjWBcuvJRK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkbuWx3Hb4QUVHLSFKGyPBEeupFMTsMEYsEpNvAo9t4ZzrjLuTKS": {
+        "stake_mina": "0.001722924",
+        "external_delegators": 0
+      },
+      "B62qkcLVp2gLoViTmH3LmbfXzzwd3aNecape9aw79Qr42vS2cMzJx7j": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qkcS9TLWosivqxfNBh5ssLMGPQQK7jZWsx6dbeCUfEgCmqMR7RSf": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qkd4tZQGe9mo5tK3wQi5PUoMdtUGtLWps6Se9o1qWdwNwuUtdWdr": {
+        "stake_mina": "242156.836358761",
+        "external_delegators": 43
+      },
+      "B62qkd9DEVB4G5AxN2siEXVCgs6VFigNCecmU4gTizTber4hHexwid1": {
+        "stake_mina": "538.281534648",
+        "external_delegators": 2
+      },
+      "B62qkdifEbN7jkW2QpSn7WY3oNyXPob65R1kfmnLiCPJD8gRkeSAcB5": {
+        "stake_mina": "1.869497009",
+        "external_delegators": 1
+      },
+      "B62qkeF5hy5YM2KwnYi6w4ZZ4GvtvfQSHSVh3QrXEX9GYWShuq4iTta": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkf8bdX6AhgD7jR3Cs1YdWFkQpAaLAjWxqGijXG2memeU9o8i7Z8": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkfbG38SMsrVyMpFb5KkDiSLsgPiYsodKZ9UuAkmNfBe8Gus4Hsw": {
+        "stake_mina": "1.380529274",
+        "external_delegators": 0
+      },
+      "B62qkfboZZUyavKivMLFgdpLaCrxEhKYXLrZx5Bt5SJyiLQmD1ytK5g": {
+        "stake_mina": "1.556047334",
+        "external_delegators": 1
+      },
+      "B62qkfis9ADewoBbMAsdGaswbNUhAbbjJw91jxjH38aUriQv2dKL4xy": {
+        "stake_mina": "2883.373462009",
+        "external_delegators": 0
+      },
+      "B62qkg2TwaGgdcvXZBzSngmmnMkkij7gv2RCeUq7F2ds2fsbrbXRNat": {
+        "stake_mina": "16.246858066",
+        "external_delegators": 0
+      },
+      "B62qkgy1rQQmSL91aFeFvrYi9ptqavvgVkUiPZHmy5tZacSupTTCGi6": {
+        "stake_mina": "6879.231268031",
+        "external_delegators": 2
+      },
+      "B62qkh4VoVSJDQwj7LHubZFZLtJCnphjjLM1ZvzZdyGozfkMwF6n5s8": {
+        "stake_mina": "3.341525194",
+        "external_delegators": 0
+      },
+      "B62qkh6HVYHiMrm7HJwicBkCmCgZFYnV1mxqNvMRM7uQV3mb6wes84Y": {
+        "stake_mina": "99.68082857",
+        "external_delegators": 3
+      },
+      "B62qkhfgERAi7TUjujZ8gdwSbA9TnJxvErjwfZTeftKmpdjJxWxGHGT": {
+        "stake_mina": "2.3680987",
+        "external_delegators": 1
+      },
+      "B62qkhsokrrs8AvXxm1sQ8deH27TMqNtMVx538rd1kaZq4bVJcGeeL5": {
+        "stake_mina": "1.048980389",
+        "external_delegators": 1
+      },
+      "B62qkiR2UWAvfcFhEzNJC6skFFbXGHXNHqxBJ2hzgsSo87BsahzFekW": {
+        "stake_mina": "0.009680635",
+        "external_delegators": 0
+      },
+      "B62qkiRCEnBcrCQVSg4RD9vqeCkh8N82JknjsgurSVBiA57UCDsB9Rh": {
+        "stake_mina": "3.509685552",
+        "external_delegators": 2
+      },
+      "B62qkiZ7Gii5juJsDmXSmrGhWNr2vyadD1c3H6t61EUpLvVbXqDLdWg": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkj3CCj2V3pBPPufCuWSkoP2RwjAZkgPZfLKFUae3hPoBEhRtmyo": {
+        "stake_mina": "1431.353881982",
+        "external_delegators": 13
+      },
+      "B62qkk9NzfTkhpoDQLr3kLdvJTQ2WhhZCmwG19xnUBpc8ysQoZyvi6u": {
+        "stake_mina": "6.597438227",
+        "external_delegators": 2
+      },
+      "B62qkkAapgA9T5CqRDNM5X5xPuceWsZNdVYDKc3MgMyBvdjivTLDmvy": {
+        "stake_mina": "35462.298189808",
+        "external_delegators": 2
+      },
+      "B62qkkjmwsCMeX42PjL9DNPssKAupBojQT6Wd2ZZYeBq1EF7PTwKV6x": {
+        "stake_mina": "72724.06338399",
+        "external_delegators": 3
+      },
+      "B62qkm1GrcgFK3rpb1y5cmbjCrVyoC6tdABYewaPq6q8CoxgruNfkH3": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qkm89NogChHpapSvQkDonJy57SkaCYV81rE1C6U1dpGmH34UDJgt": {
+        "stake_mina": "1.658386677",
+        "external_delegators": 0
+      },
+      "B62qkmV7FquSExWQikW61F5FY5hF2kwkdMqx1x6er1zdjQ7VQKHBPpb": {
+        "stake_mina": "723.957903429",
+        "external_delegators": 3
+      },
+      "B62qkmrLj9odLjkpWGw67iypLPqX7yZpXmfitA5T7Fy7BYR5pA8eVyQ": {
+        "stake_mina": "646.734863772",
+        "external_delegators": 4
+      },
+      "B62qkmyxf2s94f6KzgnH6NbnECV8RjCKYSKXqpxcTXi7rcopSAutS1h": {
+        "stake_mina": "5503.941365878",
+        "external_delegators": 0
+      },
+      "B62qknBg1mTvb9uXy9exbBsxs16BXgMQiJ5N73eEFXmWBLaRetqMvMb": {
+        "stake_mina": "3.375553886",
+        "external_delegators": 7
+      },
+      "B62qkoBrvHfZkP6nSFDsPxgaefv3N9gmstzdqcvhNMn6HEueiMacH1x": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkoCsD8drVyoGsd7y31zBPnckxNjhDdiFMh3vHSm9kww82ohpp9s": {
+        "stake_mina": "0.144",
+        "external_delegators": 0
+      },
+      "B62qkoSio33qzxjsAuY4KVYmjw784KuyDSxbRL4d8UJaLXmdgVqb4N4": {
+        "stake_mina": "7.359976654",
+        "external_delegators": 3
+      },
+      "B62qkoYgGueTSsJ71AtWfGW423zvmnbehTkhrLkthy8SLRZHELcETG3": {
+        "stake_mina": "1.141550688",
+        "external_delegators": 1
+      },
+      "B62qkobDWDUQftKuWPVyAe5AajdNF3mSwYYFaFANn69t8rTrGAjUo36": {
+        "stake_mina": "0.43",
+        "external_delegators": 0
+      },
+      "B62qkoe8LtiRw7JEusUSA5P1tFZNfBu6mMWT87h4F3NswcMP5BfS6Vo": {
+        "stake_mina": "4245.28974389",
+        "external_delegators": 0
+      },
+      "B62qkoey9KVcsfNP1uVjmpaHiFkSHJYpK8eF6z6UCuXyFocjjfVBJWZ": {
+        "stake_mina": "459.339053214",
+        "external_delegators": 2
+      },
+      "B62qkpDyPDoGMWFdnvH9QADDnw5ixb8LUu57CDMXQNsDaUdq88Pu47A": {
+        "stake_mina": "0.747258176",
+        "external_delegators": 0
+      },
+      "B62qkpNJjZzcVu1LaNUjBdQ6ymh2tTkT1JkGbe1BZMWpPHS5DHxYVEQ": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkpma8whukuHBYjqJy4qNq2KoADVoyxccrkHDcw7332ifwGSVL56": {
+        "stake_mina": "0.395405956",
+        "external_delegators": 0
+      },
+      "B62qkqA5ztLfBiiJctVDxhd1ScUVjxgvxtQxG61uWQnz2HuDtiaVHkY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkqN9V4TQZWBCzPW7QiYh87CTUJBtVxUHze2cWxAUviZtwkWvZg6": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qkr5MnuJcczAYVgEXzjURbLXaERSgGcoLkz81DtS9K1aqBVKHKDi": {
+        "stake_mina": "3.7416",
+        "external_delegators": 1
+      },
+      "B62qkr7ThcgibRwBiv6u556iBi134e2CTnSvQC2xNMLFNTqJWL3Dmob": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qksN97EtNvQGzH2RAgnDR8zLAawhPNE1QzWCgPRcknyL6NJ3CCgJ": {
+        "stake_mina": "260875.792758651",
+        "external_delegators": 31
+      },
+      "B62qktPtDFWG8ciSsd6eEPr7S7HuiGaouqDhfPT7H84DPp9mCgTHjwE": {
+        "stake_mina": "2002.179541169",
+        "external_delegators": 4
+      },
+      "B62qktmhyar5294GEBpPfgYrSEBxkAcn52273bdR4CiGELoVpLtaC6c": {
+        "stake_mina": "1.250345818",
+        "external_delegators": 0
+      },
+      "B62qkueeFHtVMTKbwr13eWEMZmW5gYgeKZiGoAJM1qTs6oxAZKiNJTT": {
+        "stake_mina": "0.0031001",
+        "external_delegators": 0
+      },
+      "B62qkuf1AVtFi6955KncntHYMp6HhyiZm4js6Tc6KUcLxXfWYB6qPBF": {
+        "stake_mina": "592.620619468",
+        "external_delegators": 1
+      },
+      "B62qkun7NFUhD9HVGb44QuXRjLKAnwR8orSSo45CitJtW7R52NAaM3T": {
+        "stake_mina": "0.99462129",
+        "external_delegators": 0
+      },
+      "B62qkvB6euSvF1iwU6cgH2ThQtKuYiEAaTxEhWnLrLkqYfAqX9Qdn8A": {
+        "stake_mina": "2.198600732",
+        "external_delegators": 0
+      },
+      "B62qkvDUW93P5rBz9MFKg2Wha45QaasBeHbkU5yreZmdzXoSsX29UPW": {
+        "stake_mina": "1.005510586",
+        "external_delegators": 1
+      },
+      "B62qkvFL4yjpENRM5WvBPR7J3jcG8pZuBDBXrMs1cnkMX8xTKyfp7Lj": {
+        "stake_mina": "6.368088516",
+        "external_delegators": 0
+      },
+      "B62qkwAe3pdax7fPsLjLSc5FwB5ixXfFQ8meoX4CmTUKpB1po2dQdQs": {
+        "stake_mina": "107.794080973",
+        "external_delegators": 1
+      },
+      "B62qkxMXa9JorkHdS1iinLn5WwMV4dgn3HT63osBoFgQHYoah1MdzKw": {
+        "stake_mina": "164282.75734778",
+        "external_delegators": 6
+      },
+      "B62qkxZba8d9MWL9nXRvMaGJXESxHbkLhfogtqsCXKs8ueSZkhJNboQ": {
+        "stake_mina": "0.035",
+        "external_delegators": 0
+      },
+      "B62qkxh2x6Tr9aDQSC8cqTGtny9Q5UDFWbkvEWuZV2zB4XB8QtKrcnZ": {
+        "stake_mina": "1.005144774",
+        "external_delegators": 1
+      },
+      "B62qkxnyshV4p23c3bNw2wt8gboVyjrM3thnHurLqkE3ragqKgafCgn": {
+        "stake_mina": "2.363034",
+        "external_delegators": 0
+      },
+      "B62qkxoU8xd2rP7G4gJWvnSGqNaXfrnvaeMqDV3yHwrRsdEF8ubnPuK": {
+        "stake_mina": "56.486460132",
+        "external_delegators": 2
+      },
+      "B62qky6vG4mQdU8Tv8sJ32dqCVNqC5LHabygLAo3xxDGr4YGY962EmH": {
+        "stake_mina": "0.175",
+        "external_delegators": 0
+      },
+      "B62qkyC6VRgh6RNVFdVu84X2GFaYCfQHBjaZ13HGK9YffxMzXBZ2oqn": {
+        "stake_mina": "7.035269337",
+        "external_delegators": 1
+      },
+      "B62qkyt8Eno7cDBxDa9L5uZjib6JhgP2ZBCk92ALM6usWa8ujUn5ytJ": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qkzWf3iTU2jARw7nBZeHMZfTc5jMMPSykiQpXEqzdfAbkBCqpLzh": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qm1YoE9g6cqwiJa4A5SswoE1xBJN4vpuCFBZoq8C4ah8rQ2TyX4x": {
+        "stake_mina": "0.248377594",
+        "external_delegators": 0
+      },
+      "B62qm2CWN8FxmEWxoK79GpFGdyotpW71bqZ2XCvBAZLtCaaCVZEcyuY": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qm2eYCip2jy5FFvUuygSCpiPg79ZhWT5S2mr6bCBfGZ4kXtBYUxd": {
+        "stake_mina": "92107.985310262",
+        "external_delegators": 4
+      },
+      "B62qm4C3DDfZr4EFKsWgMYkLAsXytAhnVzBUjJojNm9nyv9ApdJmcsc": {
+        "stake_mina": "1.954294451",
+        "external_delegators": 2
+      },
+      "B62qm4QbSnmQWM3x7SUiQeWAjb6iiooWNd8iaxtDvsne7YP4nC8Nh7f": {
+        "stake_mina": "25.389908445",
+        "external_delegators": 4
+      },
+      "B62qm4VTUCetczucx6QxxV7x2PZQHxsZ1oK2Up8dqKpjU6SjtFFVZH6": {
+        "stake_mina": "0.014533333",
+        "external_delegators": 0
+      },
+      "B62qm4nAwEmxnmoQjT5j97DEqSTM4nY28jtgiBvvCS3Y2Y9noPFApB4": {
+        "stake_mina": "0.019501297",
+        "external_delegators": 0
+      },
+      "B62qm4nD6EUkyYgFLLs9kjJ4HGbJNdN69hYkRxrLKX1FYVKQBGLxSX3": {
+        "stake_mina": "2.027354889",
+        "external_delegators": 1
+      },
+      "B62qm4ueLWLDXXfKCuKXL72rwXtiLsWRAKGJXH7jEGPjjbzR41RqVun": {
+        "stake_mina": "1.831899853",
+        "external_delegators": 0
+      },
+      "B62qm5ESJuFWe5JypXPQMyuw2BzkVXGHFgNBgeuvBnfiLKRaqYRW6rX": {
+        "stake_mina": "97.660364297",
+        "external_delegators": 11
+      },
+      "B62qm5RkQREwrKcUHgvWvM2MZXrBuftXpZ81iNdweuCD3otuigGiyi1": {
+        "stake_mina": "27.593051217",
+        "external_delegators": 0
+      },
+      "B62qm6G3Gy8Vc3Ce8nQvg2P1dxHwYaZ2SEm2L3GoEnDvM1UCf8srdVS": {
+        "stake_mina": "7.068659922",
+        "external_delegators": 0
+      },
+      "B62qm6LvKxET3xCAW5JdNWAekCjyJJFxJdYYNcpGNwvhe15yyddYife": {
+        "stake_mina": "1.62634413",
+        "external_delegators": 2
+      },
+      "B62qm6RJ9vWU64Sa6H7t7M83A4gBw2TPgNbSJBeVSePZrcdbwK3PoJu": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qm6TJXeF475BJxFnChCQyx2AGhXr21HBRJ4a4sHmJAGP1FbM4Qtw": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qm6d5p4CkZVKyR9gQkD2bMucE99Sur2JzKPuxv9WGBESmH8DF79x": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qm8Qivwgag3cExARPVJNb7EggHFfJrg2tfEosPMbEmXeTrrinyY7": {
+        "stake_mina": "7.417082499",
+        "external_delegators": 1
+      },
+      "B62qm8e4FKYPCQXxsRqe9kSKuYGJCjNpAG4zLAWbgtquYBmbycZC9Qg": {
+        "stake_mina": "0.01",
+        "external_delegators": 0
+      },
+      "B62qm8gXiEozEg8LggpTedU7qpreyZoMaciiqLGVXECnuWsDfoF3UDg": {
+        "stake_mina": "1.9",
+        "external_delegators": 1
+      },
+      "B62qm9pSNhhKpnjfizgBDqxPQ17wJ7aoVDpJsoVdXzsDoLDbBAxb7Hs": {
+        "stake_mina": "1.997",
+        "external_delegators": 0
+      },
+      "B62qmAee3fpLXUX2sy42qwXopbSJL1cXPiprkEymKRbRUebaePGks5w": {
+        "stake_mina": "1.981399555",
+        "external_delegators": 1
+      },
+      "B62qmAok3N8kahogApB18ftPKLjezt3ydrHUj7qjxDVCEQ3YMvei4my": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmBArXh34ZoJEXutPgSw8N5z3YgDm3vX2Vwfo5k1x4uZvqbQ8TYS": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmBBEPcCpWqvMhParohskEjDttye1A7iSxwmMncXXgKkgjQ9PA7y": {
+        "stake_mina": "285324.006506116",
+        "external_delegators": 8
+      },
+      "B62qmBNz8jAeKVm3Avkdqs9V796r7cXSLQ37RMi4ECswgqERwn5P7Uo": {
+        "stake_mina": "1134.307516599",
+        "external_delegators": 8
+      },
+      "B62qmC9ypxkPz9pgwxvrUPL65b6yNQTUWpUgAkqN5R7UurwuSaUV2r3": {
+        "stake_mina": "69824.030038502",
+        "external_delegators": 1
+      },
+      "B62qmDRVGNhNHwnHL3vRRH4Hgv3bjhmvtn9D7DU4awHrcJszL2T1o6k": {
+        "stake_mina": "1.935996905",
+        "external_delegators": 0
+      },
+      "B62qmDdMwKoMNLHZYqf3c6SJ34FmtP5HpTtFGtbDQGJrDb7cc1HtuYT": {
+        "stake_mina": "1.001400169",
+        "external_delegators": 1
+      },
+      "B62qmE6Y9kHHYyyFSumCYy9K5aQ9Qagx1zznY8SLGzkWRqi987XWYPs": {
+        "stake_mina": "227.49765216",
+        "external_delegators": 1
+      },
+      "B62qmEVpA8nYQVibhNjhZWqGoq5gHXoFCcA8geh1uxjY2WCWs5d7EAT": {
+        "stake_mina": "1.969457871",
+        "external_delegators": 2
+      },
+      "B62qmEgXFbK4YS4aAwkNPLgTQMh8HgTMfoMnyXteqfJwRTJk39H4ucz": {
+        "stake_mina": "0.862",
+        "external_delegators": 1
+      },
+      "B62qmFKu4zt1qpRoyDUCYywuoGMadWQfsLVBABWNqJW4bpi4bTKzPCx": {
+        "stake_mina": "3.00647881",
+        "external_delegators": 0
+      },
+      "B62qmFSaKnDQgZCzauV9zDTBv8FF1EDoLT5L4hSzEskoFzEdC6X41Fh": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qmFf6UZn2sg3j8bYLGmMinzS2FHX6hDM71nFxAfMhvh4hnGBtkBD": {
+        "stake_mina": "2568676.696721752",
+        "external_delegators": 363
+      },
+      "B62qmG9FPKEZJbm6vE7nMNj8pvTzN8Rra1L9rRNhnwV3VJceHzg4SVA": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmGAdwYeJVvJ9yu74WcXawX1WRtUc9Tqw6SWQsS3Jyb53q2K64vt": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qmGFLioozQEkDRzi9tc1d5q2aZA7TEyP4z3r9MFHi6S7jHcfmMhy": {
+        "stake_mina": "0.166068531",
+        "external_delegators": 0
+      },
+      "B62qmHTypp7EXGMJnZXYRpHEmRGyZCTpDgjSmkpmQa66GQqR6eaGode": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmHktvgpH1Kbkato9MCWmH4TPKtHWc8DC4FhQCJ5TpuZ8CXazczB": {
+        "stake_mina": "1.957091094",
+        "external_delegators": 2
+      },
+      "B62qmJ9xkQTANN7g1MENQtWFb5GHisESewUGLP17P6gPc1aentpPknd": {
+        "stake_mina": "0.451422605",
+        "external_delegators": 0
+      },
+      "B62qmJsVpHY4ggBQ6zrc3npc3BbHRFadcZ9reYJXmG6dJ6nqysHdsL2": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmLRLxC5Fx3cRmHDwKGq6psCbmXAYE1UsS4Z1foqrXCTtJuvTbbL": {
+        "stake_mina": "27462.063932249",
+        "external_delegators": 58
+      },
+      "B62qmM3q3Lzur1LyRy9zaw5C2KWQGqpv5epRHFz4t9C9ZNJGZEhAY6D": {
+        "stake_mina": "75361.06217826",
+        "external_delegators": 1
+      },
+      "B62qmM9KDeqvu3TVpQStGJARgg7KppxE8UF3xMdtKV9TDc33kSUGug5": {
+        "stake_mina": "355301.798290082",
+        "external_delegators": 129
+      },
+      "B62qmMGz5dWhmrx7JgKtnmb4mqu87tqXsMr6wcRmnGzHrd3Y43iwhG9": {
+        "stake_mina": "0.6222001",
+        "external_delegators": 1
+      },
+      "B62qmMkbajiY3bdVRjv5bx3yxjp5sBHHQuu8M11sDdjtBy5VdgWdgTr": {
+        "stake_mina": "438.699188527",
+        "external_delegators": 11
+      },
+      "B62qmMxgyQcr1VkpkGKfMR2tXxKUo9F8Kq6J3hCXqikTqzYmFhxmoBU": {
+        "stake_mina": "0.196917424",
+        "external_delegators": 0
+      },
+      "B62qmNDFfY7iy3Vrhg13MZgQAHxQDvTMHVMdWvfXa74hTvU6qi9QCxi": {
+        "stake_mina": "36.246084908",
+        "external_delegators": 2
+      },
+      "B62qmNP1Ki9cRqL9MivqFbmKi9XDASsQMEs2teiy8RwrJiDANB9w2UA": {
+        "stake_mina": "10655.195779169",
+        "external_delegators": 4
+      },
+      "B62qmNPqex9mR17H1fpTN9gVtxXwQ2uu6XFuiqQwSWVBR7ibNd4XJSj": {
+        "stake_mina": "152.693695708",
+        "external_delegators": 8
+      },
+      "B62qmPATxsWneeArMm7h2JU5og1vJafP9Qt5VFmMunnGZVR2DTC6ztM": {
+        "stake_mina": "0.0008",
+        "external_delegators": 0
+      },
+      "B62qmPb2YVWP7vKXzpxgSNZRrRU8mrouzcLUG6v7EDNAVBbw7AiHodq": {
+        "stake_mina": "0.4596",
+        "external_delegators": 1
+      },
+      "B62qmPfsVAZ1bFqNM6KAKZ4LmMmyxoN6FhHyMdwSusZV891yvQachZu": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmPxwf3FTtb62toALY6k6q4HiCWJCUGP8xyxpDFsgwhFCnHBEQvp": {
+        "stake_mina": "0.009",
+        "external_delegators": 0
+      },
+      "B62qmQ19D9vPVDzhtF7gGQkKZd2FAUF6qpsXeBeFKSuFf2rybCT7dDR": {
+        "stake_mina": "1.981403087",
+        "external_delegators": 1
+      },
+      "B62qmQ4pFXU4tyNwdzMY7uCdrALptYp8SnthWJMqPPA3FgmxebY3H2P": {
+        "stake_mina": "1e-06",
+        "external_delegators": 0
+      },
+      "B62qmQ5ufDZUTz8tm1GVQvmNrn4Don4hXPJ5GFMJpP8VEXkHJCZ9ySW": {
+        "stake_mina": "75555.305608641",
+        "external_delegators": 3
+      },
+      "B62qmR3H5gpjXLBuzEP55m2rKNvZh4ngXyfi4jabQBD2SB7WRe345Gu": {
+        "stake_mina": "1.386127706",
+        "external_delegators": 0
+      },
+      "B62qmRG3THXszPjfJXDCk2MjDZqWLXMoVzyEWMPStEdfqhMe7GJaGxE": {
+        "stake_mina": "0.285440885",
+        "external_delegators": 0
+      },
+      "B62qmRdqkCQV8YmaTBhS1gWZt2hcmnPJtGcx2SjmJejNj2hC4F8PvrH": {
+        "stake_mina": "16.9308",
+        "external_delegators": 1
+      },
+      "B62qmS6tqCjr6wQBrC4u9TyWykuhLApKdqD9xBUJ2DLFvXrmcug6PwL": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qmTSi7ZMLJLGTNADvhg2NSL7roR2AxPW3JgrkY81nFB56AJGTcN8": {
+        "stake_mina": "0.14",
+        "external_delegators": 0
+      },
+      "B62qmTYWQUM5V1r9HT5wVPVYgWpotezECEgciGAXJFFGJKzNZpzH3Fz": {
+        "stake_mina": "147943.490456557",
+        "external_delegators": 2
+      },
+      "B62qmTqurQYVDTar9eSjXRaimA4azQq6icAWvhy7UN1YnneMfP3z4L5": {
+        "stake_mina": "2.5",
+        "external_delegators": 0
+      },
+      "B62qmV4G8CtiYb7iSbErDCgXzqt6vnyfDMZKDziBDWzwDnVJBV5QJQz": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qmWRjFyBVnunMYgPsigGuNJCkazo9Yimtg67Jtho5CEyTM5t6kZc": {
+        "stake_mina": "0.09999062",
+        "external_delegators": 0
+      },
+      "B62qmWbgvGV1MwxS6rJEG3BSbT2T8b5DP2Theb2CaBduBXGJz6qfCqb": {
+        "stake_mina": "382.375438742",
+        "external_delegators": 7
+      },
+      "B62qmXMMTUuKDEwY4THkgX6fvDtujGNP3FMdiaWwSHkMsMM9NzwPXZ1": {
+        "stake_mina": "115609.07190686",
+        "external_delegators": 1
+      },
+      "B62qmXi6YMzGmKhw7CK1M8VAybRyErq7VytkXULkjTjiB1FjTdoYxX1": {
+        "stake_mina": "5.8295",
+        "external_delegators": 2
+      },
+      "B62qmZHQy85GnL2EuZ2HeuZJ87xkd8HwLHAVUjXqdBtRMdsa3zBMPDd": {
+        "stake_mina": "0.002024992",
+        "external_delegators": 0
+      },
+      "B62qmZYAZHojxeu7vVMTJ2zgHt4VD3UsLz45gfVat81ZXZMHEiouphp": {
+        "stake_mina": "0.001117909",
+        "external_delegators": 0
+      },
+      "B62qmZp13Kb641KJZaxm8vA3oigbqTvsLAKdADEckhzBgAric5ocarH": {
+        "stake_mina": "16.166431486",
+        "external_delegators": 0
+      },
+      "B62qma7dfNr41ackToPPtbqLGxCWnqyD33f7pvE6ZJ7wNkJ53DqTmuS": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qmax52Wd2AdXKEatbX1cFYecQYsgpXwzzejAiJUw79x4wAGucDyY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmb2m663DAuPQEAfuoSzqLz8e9naugAs3bzgtW4h8ubySbzAZ6yR": {
+        "stake_mina": "1.9",
+        "external_delegators": 1
+      },
+      "B62qmcHk9kuo6tCEKGkrVXwgGU4SGTp3qdqLcChGjXSGzcPcB1HFNy1": {
+        "stake_mina": "1652.257849535",
+        "external_delegators": 2
+      },
+      "B62qmcoErjsDd1XNsxpjPC7GUDYug7ersa9f2Si4jdD9Yom9N8z6578": {
+        "stake_mina": "2.9479",
+        "external_delegators": 3
+      },
+      "B62qmcuVwrf9CVBf9AfEatVG7PHr4YRYV7LvQt1GDu1ZAf5wUxvG6aB": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmd1EZEgVpDi1xSuHbPnqZroPVG1fbD1GMpsBF7bA6Y3TcT9BTWA": {
+        "stake_mina": "34870.166588788",
+        "external_delegators": 1
+      },
+      "B62qmdj7L2GVz8AHa69iwHNctkZWToSazrM7V3WnAryY8x3vAjZ6gSp": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qmdsqUB7b3GYTWmCTGSioxMKeSesj4JrcRQRmmPRqwTtTo6xdYDz": {
+        "stake_mina": "111255.241289743",
+        "external_delegators": 2
+      },
+      "B62qme4noauMmhnYcvfcSSKN7rKAHSMr6izjy223W38DKYmN2Ri8BE6": {
+        "stake_mina": "1.98143715",
+        "external_delegators": 1
+      },
+      "B62qmeVRDf21EkWTy1oahYzn3LXxaGRwPVcY6gTPzMvpHp5ZEtYkArM": {
+        "stake_mina": "5790.851619456",
+        "external_delegators": 1
+      },
+      "B62qmezLr3cxutd5HShHHa8S81pJxBu6uAnFEqDbCDuMkwbgNt1HyGn": {
+        "stake_mina": "721.216092515",
+        "external_delegators": 1
+      },
+      "B62qmf4xKkMvEA2jqAEGe2QSs34KZzSdNHXuRmduMNy8ix1MWYWacme": {
+        "stake_mina": "6533.326747522",
+        "external_delegators": 1
+      },
+      "B62qmfzH2Lge1pFfot7qr2E6WGaA8qCYVeQxC9U8GeBSvzqwi1tBpa2": {
+        "stake_mina": "0.748470606",
+        "external_delegators": 0
+      },
+      "B62qmgmWNyKRJz6m1h5EnEPSZqiUf4HNHWaPsH8XEUVs9whBo4okwyQ": {
+        "stake_mina": "0.0031001",
+        "external_delegators": 0
+      },
+      "B62qmhWsLASA4x715y2FizsvzjggcsdDkTcqxHu1WkPuoHD2EnFHZiR": {
+        "stake_mina": "5.418151515",
+        "external_delegators": 1
+      },
+      "B62qmi4wLP9FFYmQFp2RQwUjcieGHPnk5nD91hJ6r5XUJ7dZA4XDc3t": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qmiJsasogL3iTj2HhSE5AyhN3y5x2GYuvccCBdT1xYB2bpuSHL2P": {
+        "stake_mina": "35632.603417325",
+        "external_delegators": 1
+      },
+      "B62qmkGkjvFwmkqv6erSmTGMx9ABhuxJqpCi4gyUtxFDwif97j2X5zp": {
+        "stake_mina": "4892219.497956288",
+        "external_delegators": 3
+      },
+      "B62qmmfwYfsQ9YdwYfTK6uFBiBWNKecCynfKWTD1UB77C71AaFpJ6zT": {
+        "stake_mina": "482.26534238",
+        "external_delegators": 1
+      },
+      "B62qmnHaaiZZsaqfduP3jRbk49Pm79oJGx7fjdBgKG9XbbNmJ6jYrK9": {
+        "stake_mina": "1.981396374",
+        "external_delegators": 1
+      },
+      "B62qmnLei73pha36Xfvzn14Hhj3fPEYBi3QdZi6vwrbgdtaRTc2T4Eb": {
+        "stake_mina": "1.3",
+        "external_delegators": 0
+      },
+      "B62qmnouVrbSqDevkjai8WsetJZSC1kR52vmz94WDRj724KyqYJ7MBJ": {
+        "stake_mina": "1448.97877791",
+        "external_delegators": 2
+      },
+      "B62qmo7V7vxx2UdVgnmznQDCkqAnxNQ2kkxfuRgqvRrCEMBgJT1jB1G": {
+        "stake_mina": "15.7899",
+        "external_delegators": 1
+      },
+      "B62qmoHfddyJttXZ3sBMLSREjL1LK55KkwAeENZCFKbyZMkrCwZfZVm": {
+        "stake_mina": "2.833272857",
+        "external_delegators": 0
+      },
+      "B62qmpHMDeuGL1KAkneV1RTKMez2ZNcDUJKNAEZgweJna62xuJQ6Mqm": {
+        "stake_mina": "3.21742577",
+        "external_delegators": 0
+      },
+      "B62qmpSNd5voNiVnyM4c1bcbRC53wdkEANwYZaA2iA5rgCv68XezSuG": {
+        "stake_mina": "646972.966473582",
+        "external_delegators": 2
+      },
+      "B62qmq89pjESe3YChrmcHxEZdbBGpo1hpSEMu1MgdMhSoNb4Ssne9WT": {
+        "stake_mina": "41053.389514272",
+        "external_delegators": 12
+      },
+      "B62qmq9NKWT5uaCPo2hW9YfVyV3zugWpV1jgxpqALc2DNRKPdkMCxnB": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmqUZKjbxhNDAGRpymU7KJBP55xP7QjmqcjHr2XjcrTzLJo7bUCp": {
+        "stake_mina": "3.298641587",
+        "external_delegators": 1
+      },
+      "B62qmqcoJwnS9J6TLyEzohER3KF8WzSMLJaLd7jAUrmb7PLs2KfzZWg": {
+        "stake_mina": "37.170336241",
+        "external_delegators": 2
+      },
+      "B62qmqprUwxHxG6uGDQe48Xys9diJhunEqQNRuFC5a1KBUNsDaNADgj": {
+        "stake_mina": "290240.034872282",
+        "external_delegators": 36
+      },
+      "B62qmr8s9eqdAdNrHkwmsdMiqFN9gNx6onARxwwNAj69SqMyNdS6KGh": {
+        "stake_mina": "3.567290015",
+        "external_delegators": 2
+      },
+      "B62qmr9wnqsmhgThnSHvNKM6JtpWdJM2iQ4GPtUJk6ZjySeNiEyJmvk": {
+        "stake_mina": "3.813769693",
+        "external_delegators": 0
+      },
+      "B62qmrEQ1j2TamZ3nxxcnNQw2TJhgzLjiPumT4UbWT3cZCRvYicdc5b": {
+        "stake_mina": "0.651379172",
+        "external_delegators": 0
+      },
+      "B62qmrZrHVDnFpT3ZwyYEqYksUMjWug25mZzpPbQUpD2gBUcPdMf9L6": {
+        "stake_mina": "3.913292651",
+        "external_delegators": 1
+      },
+      "B62qmrqwgqn99cC7cPMqoYGYmHhBanJSWAcDgmc1dY5n74xbTEfLp8i": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qmrsFZNeW2ReoHpTafy9hy1oNw12UuR1UdGJEUqTuFZ3LPVccDTA": {
+        "stake_mina": "0.000101263",
+        "external_delegators": 4
+      },
+      "B62qms9A2AeV57fs8AqxtW6DqckTYwwx2LFvkQK6YZ51sMSWkandvP2": {
+        "stake_mina": "28.605147602",
+        "external_delegators": 0
+      },
+      "B62qmsNRd7ocmpPwpb1enJYWAxTP2pibnyMZGjUiaixV2p9irH4V6Y8": {
+        "stake_mina": "44.102742411",
+        "external_delegators": 2
+      },
+      "B62qmsRtrbBwZWQ14fUZwKjV1coazVkAd1VkSTdZXZENmmAnPQhNXav": {
+        "stake_mina": "4.0",
+        "external_delegators": 0
+      },
+      "B62qmsuUhLFK67o4eJujGkaq1Gp5VnW8B2fZbGpZmAom1z1uxDRVz2H": {
+        "stake_mina": "0.000190363",
+        "external_delegators": 0
+      },
+      "B62qmtmWHKLu3NaV9EfygMmkvVedCUiRF6xcSMemmkbEcFok13WVe7C": {
+        "stake_mina": "2.4741",
+        "external_delegators": 2
+      },
+      "B62qmugn48khvyxZ6Kpdz2ighdbvL5xxDu7RFfnC65aK1idioiuvPup": {
+        "stake_mina": "0.8444028",
+        "external_delegators": 0
+      },
+      "B62qmvFsNdKFEtrWCxw7KecayrcwvgQPhvGBd26Sd2GxFXyL3Q8c1T3": {
+        "stake_mina": "5.695383294",
+        "external_delegators": 3
+      },
+      "B62qmvedr7jwL91qSuJJLnhij572tCP5AQ8VtKkfj7SxfpTzR3cWfHD": {
+        "stake_mina": "5.081850065",
+        "external_delegators": 0
+      },
+      "B62qmvkmpWKv9Dpspqn8s3u34BiupP1jb8rpKw52cXHW9cT1szzCqmg": {
+        "stake_mina": "13.912959174",
+        "external_delegators": 0
+      },
+      "B62qmvuzJ1q3FcPSvYMYMeBhYt9H9FLZCW5Kyioi7jiSzy2z39SSyC2": {
+        "stake_mina": "4.592414579",
+        "external_delegators": 2
+      },
+      "B62qmwAHJDm8QYPXPtSWxHReT3537wgRUzcob1NboQKbvXjEzT4DJm7": {
+        "stake_mina": "0.095781129",
+        "external_delegators": 0
+      },
+      "B62qmwpPKe5w3JL9m54Z6iCpWZjtxfBUgKGKVTGmpq5xRRQkMdCQ7xX": {
+        "stake_mina": "1.996",
+        "external_delegators": 0
+      },
+      "B62qmwqDQ3s44vRvHKkY52bmkLVjt419M5MkmfPyH8XSq1sQMPyY46z": {
+        "stake_mina": "50.851434022",
+        "external_delegators": 2
+      },
+      "B62qmwvcwk2vFwAA4DUtRE5QtPDnhJgNQUwxiZmidiqm6QK63v82vKP": {
+        "stake_mina": "3023.7586026",
+        "external_delegators": 1
+      },
+      "B62qmxHeEYE5fYVUVeLKHV2MfLcRpJMhtpsUaTeXmuGaw6UjTUwpQ5i": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmy49zq7w2xefTGzg8KPPYPumeaSesnvmWiiGwoLG3C916rXqQaY": {
+        "stake_mina": "1515.845184947",
+        "external_delegators": 1
+      },
+      "B62qmy9tB4Nf9vVgg4ZJsiS8psBvxoSKZrWPmXRFX9tSQMyWRq39Kyw": {
+        "stake_mina": "73201.51966874",
+        "external_delegators": 0
+      },
+      "B62qmyUzkXNXNC6sZdv1BR9N9J33YLs1EaGsBhLrJVi3nwg9rR9rR2c": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qmzE56FQpRLCsPX7uz1QHVAsErSg68v32k6gkPN5ENy3wkxnPp5G": {
+        "stake_mina": "304.481643442",
+        "external_delegators": 2
+      },
+      "B62qmzaPsEf79D6oBr3hxAK4zYMcCRA2soTFchoPmH3TV825Dd3Dvmd": {
+        "stake_mina": "0.267101487",
+        "external_delegators": 0
+      },
+      "B62qmzdWYtCv3mjY3TajXiKDzySVV1NwMerEG4zH3P5HN9aysnrntYE": {
+        "stake_mina": "2.777114517",
+        "external_delegators": 0
+      },
+      "B62qn1QgqkzTVXYqE1XVy24znjMuNgixJyBWQiFzEjPpRYHaJMsQK7b": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn1jcWzM2h1f2HjLku6hjS5dAJ4pgjRaV3PzEHBbPTNtqKafsdhR": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn2545en8u3Q1UhBpSABFn1Pq3W7psprDHGxuAxw7tUeM6Veoz8A": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn29e7fuPjcTXbJysLhwzigur4hrmoNF7K9mhn3RTAfjdEhf23W2": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qn2Ne2JGRdbHXdfD8wkA6PTWuBjaxUDQ6QuPAmggrcYjTP3HwWkF": {
+        "stake_mina": "69595.560376541",
+        "external_delegators": 125
+      },
+      "B62qn2h93KXRgP89hxUgpZjK1nx6gREs5aCk8F12529C7VVZQpShMXA": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn2oe853DeCVmKaZkHUQcx1QZpeJH63XsnFsWZB4vqktXvNvJT2Z": {
+        "stake_mina": "9667.71832462",
+        "external_delegators": 2
+      },
+      "B62qn3aPKv9vuoU1oJdT785bYLbbU1TTrNAXyEfycA17Kx7Miao4whM": {
+        "stake_mina": "14080.031218587",
+        "external_delegators": 6
+      },
+      "B62qn4nXHWYnotGpCxTzbPPfR4tEvtP4j7Wb3cXpmFnA4XSJXrEs4iY": {
+        "stake_mina": "2.001399594",
+        "external_delegators": 1
+      },
+      "B62qn569NJtagCJ4RStcAbKp77egobmH8YC39k1KSXXsQBfoMdeP6H2": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn58rSaJ2ZABn9PCavimfsoGU673DQFNb7bwfhvHRpZR7sAj2XDs": {
+        "stake_mina": "0.727840954",
+        "external_delegators": 1
+      },
+      "B62qn5CDkekpixRuqMaxSTXeXyAAPvbfKQw3XWseMujYNZ53FuYm8rN": {
+        "stake_mina": "1054.561424738",
+        "external_delegators": 1
+      },
+      "B62qn5eK8hgYRpkHAQcmfxbbvCsXk7tYAmGiqXBHK5dzRN9k7uL55Kv": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn5mEUAFvtJzKVcabpoRk8HwmX3FNThxpx1muCu6bctUxyZus1AG": {
+        "stake_mina": "951.219566171",
+        "external_delegators": 3
+      },
+      "B62qn5qKmPTPeavziAj7RvNPL4na3DKMdoySywXvM5FDYzKgMsW3835": {
+        "stake_mina": "0.008678886",
+        "external_delegators": 0
+      },
+      "B62qn6GLpJgMc1smy6DjLgCr3ohb4n1dSEnskgxPNDAcZiaNSmxzNC1": {
+        "stake_mina": "109.8779",
+        "external_delegators": 0
+      },
+      "B62qn6RFRY4whvu4kReqj2rEYxpm5d5o42v4YcVkBf3ib1qHXfdC9kb": {
+        "stake_mina": "8771.665302161",
+        "external_delegators": 1
+      },
+      "B62qn6T1uyPbcrMEBqDweQUBHA9mSHk1ZsawYewoVAd9WHZe14P5PEx": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qn6aM6zLQj1BP1WNjpGEEBnJ9qiQGSQZ2X71vzJtye7Hw4QFxrCo": {
+        "stake_mina": "1001.946324123",
+        "external_delegators": 1
+      },
+      "B62qn6uRqVWLuDpvFnQQm7p3GCuVyNBWkJLu48VpdwzFwJkTjzh6KKb": {
+        "stake_mina": "1.800246461",
+        "external_delegators": 1
+      },
+      "B62qn7HrKKt5ia1dvGYHuvuFGLdwNSXUSAERQgvS2yZbZvVaK5biQef": {
+        "stake_mina": "8682.831357706",
+        "external_delegators": 6
+      },
+      "B62qn7KLcjFRqNhnUngn2iky62Lq4E8G2t66KdFKTdeJUzwoEkPsSmJ": {
+        "stake_mina": "204763.555414935",
+        "external_delegators": 392
+      },
+      "B62qn7dN3hhEyqEYLG9Le1KwJpJfcJQXfiBoKiB7sZVrwYvT1NyRfDr": {
+        "stake_mina": "0.002102",
+        "external_delegators": 2
+      },
+      "B62qn7vC1SuJgCqSMPAdoYZzniwKhLDSGF8TxvbBucAqxd4SxGhne6s": {
+        "stake_mina": "0.49",
+        "external_delegators": 0
+      },
+      "B62qn8JN3sLVja6GLETxWdnma3hXuUP2WfUARkcLfs8jWqW4FbuGuCU": {
+        "stake_mina": "14057.945307293",
+        "external_delegators": 5
+      },
+      "B62qn8P2vPiHNFUN5Tzb6iQbBV2DiKt6ifcFPyXsVoCwfK8xTzKBsJh": {
+        "stake_mina": "2.461399872",
+        "external_delegators": 1
+      },
+      "B62qn8oFV64TbW94RFyZ3ktowpvo3jkjr8MgWYur2TVEXTnXfZ8eqP4": {
+        "stake_mina": "1.802104137",
+        "external_delegators": 1
+      },
+      "B62qn9Av22qKuvvksYE2jyMeaUNZtMwd8aodPhwCurJoiz5n1daioQ5": {
+        "stake_mina": "0.723160478",
+        "external_delegators": 1
+      },
+      "B62qn9Xw7796dqjdmPRxzj9BHKjUwtGwovYpWXZ4EsSADVJrBee2pxd": {
+        "stake_mina": "39309.749650464",
+        "external_delegators": 3
+      },
+      "B62qn9aR9hkH43oXtW7mMcvDqvCBwVguCf5QyN89sHmBVuDEkuEg6yE": {
+        "stake_mina": "0.8339",
+        "external_delegators": 0
+      },
+      "B62qn9qnWVHV27xFnBqp5Mj5f3EctADmZXTxTnPXzkvYUyhg5FkjCVW": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qn9u44q21mN4MpT6GcqbzK76yAo7Gc3tvYBd3c578nMeuTjKd5k5": {
+        "stake_mina": "1.07",
+        "external_delegators": 0
+      },
+      "B62qn9vwCUbefEmPsj6g29df18TmAQ2bSthrRFGvWG1jKDEbi2wJT15": {
+        "stake_mina": "267.219084443",
+        "external_delegators": 4
+      },
+      "B62qnAZCj1kbyDHpxo6Lm9yM2FqMj4ffJTQzJeiPhgkzpEw1S33caCZ": {
+        "stake_mina": "5545.981801745",
+        "external_delegators": 5
+      },
+      "B62qnAyuWpFyRqpDA94SMbkUmhKoMLuoykj5DYWf8eeskprLKS6nLdC": {
+        "stake_mina": "21388.0130246",
+        "external_delegators": 2
+      },
+      "B62qnBBzu9XAjSmkKCAYDtiY37b2rWFB1Fjf67WoYf64Ko7C2dFa7ku": {
+        "stake_mina": "1.802100385",
+        "external_delegators": 1
+      },
+      "B62qnBu7i7ME441FoitmSxoT38Gne99TmpLgBhYqR5h76w2qq3GB3pN": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qnE1JLRhrYRoqvuwkCdNui1LpcRj5H29FptwbUQvau7xNMEAcaf5": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnEJqti4BL8JfDpLSbu5tcVNFsR4dCNLYKouft3tonrkZ3XuZyRp": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnEUehzqGriamsaBC5zSA4ZNqdkTtwCgtgPjfLyhSdLDWG2EP4uT": {
+        "stake_mina": "6.985",
+        "external_delegators": 0
+      },
+      "B62qnEeb4KAp9WxdMxddHVtJ8gwfyJURG5BZZ6e4LsRjQKHNWqmgSWt": {
+        "stake_mina": "108482.5991222",
+        "external_delegators": 4
+      },
+      "B62qnEetHDy25PTrgDdEJq4veBvaEnSweB3L2EyXLTNKVWbP3eMfKwH": {
+        "stake_mina": "371.706284685",
+        "external_delegators": 0
+      },
+      "B62qnFMHFVndnkaUmftSwmG8cXmsJBUrBinyoBMS38nXJEiGQtaiDge": {
+        "stake_mina": "2.0285",
+        "external_delegators": 0
+      },
+      "B62qnFYf8Vxt1H6uvRWJFNg5WFprMq7pooZ9bxSXvMka5L7MTqcHXN2": {
+        "stake_mina": "130558.39454161",
+        "external_delegators": 4
+      },
+      "B62qnFs1Hb4TQdDFMrm3LaS6e6dxfXPTXH3WpjyiQQxuRvVtBiZ2fx8": {
+        "stake_mina": "0.005",
+        "external_delegators": 0
+      },
+      "B62qnGLiPNy2WEC2QRxJq4neyPKScUnQNEV4pRaMgYkgf8PcCKb55y7": {
+        "stake_mina": "1.43885177",
+        "external_delegators": 2
+      },
+      "B62qnGNZRE5X6ZhnnDV4NeESEWyM2HbYbmULcyeJrZmVeKGqMtF22Fi": {
+        "stake_mina": "3.07586289",
+        "external_delegators": 1
+      },
+      "B62qnGcWy1DR4XRnXHvunzWxfWy4VbM3NSjcYmCAMwYCRxd79G8ykcc": {
+        "stake_mina": "0.29",
+        "external_delegators": 0
+      },
+      "B62qnGfRHkjXCF25AguH3EUJZzDNXv4xrFM9Z1Kd9a85FovbR25js1y": {
+        "stake_mina": "130.181048195",
+        "external_delegators": 2
+      },
+      "B62qnGyBRFMuzQwiuGjLAusffeRvqcRrxirrxQrAZpTHDm9PRv94gfY": {
+        "stake_mina": "2282.176324273",
+        "external_delegators": 18
+      },
+      "B62qnHPRxu55LMftVkc8ei4nZcPntDRXAybPSBh4z91NFuj5u7aihVH": {
+        "stake_mina": "171.869168731",
+        "external_delegators": 1
+      },
+      "B62qnJ6gLytERFTXgY2tsW8cP3xDPhpJxuQFeFRMq6vz1JbrDz968Qt": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnJgdeJUjeRePKTVXcvrmT5s5TpbbMUkdtFYKe4uFecyaH5DpzjY": {
+        "stake_mina": "2000.008502673",
+        "external_delegators": 0
+      },
+      "B62qnK1QW26UkBQvgQAL89zs33ZWYvoqbx5Cq2Zv57eF4b2Krjm7Cfm": {
+        "stake_mina": "4.0",
+        "external_delegators": 0
+      },
+      "B62qnKNRdPPs4ynbGe2TqJnuScp3YuXmPjsfJTJEJPggRcCFfPirxVh": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qnKuQoQfBmFD9rY7ytsALXHQH3qbS4C7M21yDTbUX1H3nVFX7zK4": {
+        "stake_mina": "1.89",
+        "external_delegators": 0
+      },
+      "B62qnLDRynfpb6SUKCQkK3eWyf8QqTLvUMuoj2z7LeDdPCJYG4FVxP2": {
+        "stake_mina": "0.0020793",
+        "external_delegators": 0
+      },
+      "B62qnMTo6ii49AJa83i3i2WeG3bJN6WHDYh9K7BvKb42aQHC3Pibvxp": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnMmqkKptkyQPvYmCAAEnbNxjjRkpFZJSJLBgAuDL2bURwZgXe55": {
+        "stake_mina": "0.006056922",
+        "external_delegators": 1
+      },
+      "B62qnNA5gEVwoJAv1RvFf8ya3HBokPsS7aAGtWdrWa6oxumpNyvZvLD": {
+        "stake_mina": "1.46",
+        "external_delegators": 0
+      },
+      "B62qnNn1kDSRX178ngNHG2n46S5P7Cj5ZUHbUSU635ZvEcZ6Jxqpkn1": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qnPoSjarRJWNAMR7SoF7wTQbGjeXUstnSeEKQ1pyPDGA8wRoQcWe": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnQ6yFrRD5mtAJLomeSsPfsU2tvEHyKXQqt8g4ra6UdQwi5QkfXh": {
+        "stake_mina": "3.38",
+        "external_delegators": 1
+      },
+      "B62qnQYmsM4r9iQh1LN89UYtz1QR83ccH2kkbDDQ4nuXDyhyULQvsUp": {
+        "stake_mina": "720.00442729",
+        "external_delegators": 0
+      },
+      "B62qnR2AHmcnyb7v3cVvuZWriEnArx7yMkXBcnzpFQXCmGxAAv4nJSV": {
+        "stake_mina": "6246.41561646",
+        "external_delegators": 9
+      },
+      "B62qnR6HKx34NCyDkSeRcJ44KATjUCs4xmQYDbwTXPJPQ4J6ebfeQe4": {
+        "stake_mina": "630016.323058433",
+        "external_delegators": 170
+      },
+      "B62qnRPZzfJyaR71cFmDBFVVMHXKHyNtPvMTQ2syFVcTRj4xmZ5L21H": {
+        "stake_mina": "1.486",
+        "external_delegators": 0
+      },
+      "B62qnRdDtoqcZPYGk6kgNNtVrzXxqdyzHaBaDpCDUyJw6JPGMHSonEa": {
+        "stake_mina": "4.279352248",
+        "external_delegators": 0
+      },
+      "B62qnSUbgFfPTsZGPhFU9hEy4PerBLCHVcTCYthU7BUN75nHiZQPg6r": {
+        "stake_mina": "15.623568",
+        "external_delegators": 2
+      },
+      "B62qnSjFGjZ39C8iDGMErbFSX5NvKVyvjvHxvf7U1oDmyeU6ynxXZZF": {
+        "stake_mina": "3148814.986525402",
+        "external_delegators": 639
+      },
+      "B62qnSsMM6yAACMehhCWzobc6okjRtcZ61XLDLW2LukUUq3zQWaYkXm": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qnTahyoiqVSW9qbqiTBczA7n1wim9d7PYwGxWZP2s6mgwMn9AoGg": {
+        "stake_mina": "0.0051001",
+        "external_delegators": 0
+      },
+      "B62qnTdTtkepo2yfBXCeMp9afk77oo3EKWDNWuvLzEHSZz2gkgr5JHj": {
+        "stake_mina": "0.028288769",
+        "external_delegators": 1
+      },
+      "B62qnULFgdJ6sTEzioK7cCZW4cV7SuDFy8kSHWkngqmFR1aTuuHix15": {
+        "stake_mina": "2.006428398",
+        "external_delegators": 1
+      },
+      "B62qnUsEXoU5YR8iBJnpwtUugaiRD9tPcoXhaos4DVM71yKKXA35M3M": {
+        "stake_mina": "4138.660003881",
+        "external_delegators": 1
+      },
+      "B62qnUwCFGxywYr6rxq9Zgktbm3Jc5hdTChnwbjM2goJ4XLctZXWwp9": {
+        "stake_mina": "0.002",
+        "external_delegators": 0
+      },
+      "B62qnV4M4HKnDGn4g5RxN5DgC2jCRemZy94C59Mo8yqPfkxq4Tnao7J": {
+        "stake_mina": "5.991260815",
+        "external_delegators": 3
+      },
+      "B62qnVF7u5xmQBAN8fndhwQDkKFffD4Q6ENXZ7drEdQQ5FmfWnghqsh": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnVMHrtGPVRN3SrwyDzjbgBQhaFSgv16SAAFe5ddm2369KKzRn6d": {
+        "stake_mina": "279162.297485625",
+        "external_delegators": 7
+      },
+      "B62qnVk7fnKMEFWr95MRmZT1vxCTzUATrs5GV5h5f7wBDYvPTXpYLBb": {
+        "stake_mina": "0.004939588",
+        "external_delegators": 1
+      },
+      "B62qnWPnneWPobbir3JncBDVnj9dGvT1RA713xYVxJ9sBYgYHiu68Xh": {
+        "stake_mina": "2.803217141",
+        "external_delegators": 2
+      },
+      "B62qnWpi4Uj4ndNDnsDePTuCXoW1vGqvRahrVdCaVwL3MUJo9MfyMzs": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qnX9HpSVszwXje2jR6Dw68DYA1FxuqM4Ggz1v1PQJaFjY3EPtYsf": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qnXQjTkdsRjZLfmjhyEV71exsUR3FgYK8h6ie64wkUdxKoiKktXW": {
+        "stake_mina": "0.015261296",
+        "external_delegators": 0
+      },
+      "B62qnXfA3ZfrfVbk2oVbRjnHoLAtnQApRADonL6XRMNyeHxgJJZgbyV": {
+        "stake_mina": "3.517549736",
+        "external_delegators": 3
+      },
+      "B62qnXy1f75qq8c6HS2Am88Gk6UyvTHK3iSYh4Hb3nD6DS2eS6wZ4or": {
+        "stake_mina": "3.75026",
+        "external_delegators": 3
+      },
+      "B62qnYBehkVZzgJBCC5yhFyF2L7mMRPsVnKW2xpcWFVuQYRVgoqwDCS": {
+        "stake_mina": "995.110725094",
+        "external_delegators": 22
+      },
+      "B62qnYCh3kJhQcU4Fo9ghXJmKXKwygxvw87dxaTEqibACDiSNnog3xL": {
+        "stake_mina": "48.087396315",
+        "external_delegators": 0
+      },
+      "B62qnYMW9tRMJuWz3DxKdgh5Vdjmtf8BAA792QikywkpFL42HLepiXq": {
+        "stake_mina": "3.522709076",
+        "external_delegators": 1
+      },
+      "B62qnYi4QPVE9JctE6e5UJPYzrFRAJt5fF1zMsWixRgVase5619qLxD": {
+        "stake_mina": "1.089",
+        "external_delegators": 0
+      },
+      "B62qnYtwpjZNkVztcFbeT2W7fw3mVuejMmwT3Qq78Na1oeDtSYGATmg": {
+        "stake_mina": "2.071398572",
+        "external_delegators": 1
+      },
+      "B62qnZQqg7NVu8h5rmmffKkZxCFLda1VLbZq8pj6sver2LkawWzVrdM": {
+        "stake_mina": "0.435921357",
+        "external_delegators": 0
+      },
+      "B62qnZmcLDWromFy4dAE71XNRqcqEzMBWqE4kpdzYvsi5JfKb1qJh46": {
+        "stake_mina": "1.1",
+        "external_delegators": 0
+      },
+      "B62qnZz9WWq4d8LA2hsT9PZBAsc8zLXPq2ejA5q6zUMpweMVaMxspdL": {
+        "stake_mina": "0.000210854",
+        "external_delegators": 0
+      },
+      "B62qnaKqreP9LkE5T4TatP3NRWQMqgEmAkjU1ySYEZYk6KyFereuyNY": {
+        "stake_mina": "5.247681293",
+        "external_delegators": 2
+      },
+      "B62qnbGHGMZrndmBiVgjxRa5771GGhKfufhQeF1B51yAXFxEmgaqfVU": {
+        "stake_mina": "1.4",
+        "external_delegators": 0
+      },
+      "B62qnbehH2RBTrJmRApx1rGrJGkrjTRYqJiCRgtwp8S6J7D9VqNP9Po": {
+        "stake_mina": "578183.573060569",
+        "external_delegators": 11
+      },
+      "B62qnbx3HVFsNCd6v7TJT16nxB1UEekBKektHy5WZ8GRotwTEqAtJsX": {
+        "stake_mina": "26.66454381",
+        "external_delegators": 3
+      },
+      "B62qnbxMEFUcZ2CGVb5tA3UpujW5m2k4da6isBGKuK4Sq8YevZ8USTx": {
+        "stake_mina": "25.133383185",
+        "external_delegators": 1
+      },
+      "B62qncdYh3owYJhwFzY6j7sdQgC6zpLUpraRXHM151QtBsqpKABLTCf": {
+        "stake_mina": "6.527490134",
+        "external_delegators": 2
+      },
+      "B62qnd1rPUp4aBpjVjCJ3XLXk64WxuM9ff3UkfZoRCkBF8vcyFnXNTs": {
+        "stake_mina": "2.051206131",
+        "external_delegators": 1
+      },
+      "B62qndKKWw8NwfxbiQBu9u2hrDr2bRZtULC9zNs9R7SC9k47yGZQZ2d": {
+        "stake_mina": "46014.94212185",
+        "external_delegators": 1
+      },
+      "B62qne38nSn1gwHkAn9vPN5SZntgXg3cM5pfuad1zQxFRuvAQmKkGTi": {
+        "stake_mina": "0.00058571",
+        "external_delegators": 0
+      },
+      "B62qnegYZoSkGDu3X1WberEL1jYy7EqNZEX8aCVmo1Dh1i4CUwezHr4": {
+        "stake_mina": "2.47",
+        "external_delegators": 0
+      },
+      "B62qnfNBWuw64hr1Js2aUppey2RSGpmDZC8GF16xLRAYgMJT59JnMUn": {
+        "stake_mina": "67.849983424",
+        "external_delegators": 1
+      },
+      "B62qnfwbPsswrdPHZpTk3d2q7XpofGYfYz1iohaZ3RBYdi8fYFxPY9F": {
+        "stake_mina": "0.29",
+        "external_delegators": 0
+      },
+      "B62qngGSkaZCutEntH6Qu7V2g7waodEDfjars9VRf591oAxvpUW9Mzd": {
+        "stake_mina": "111794.527687133",
+        "external_delegators": 1
+      },
+      "B62qngUfP4zcJmR7RsRb2t78ibVm5bjzrcLLzfLW2bxgwi4fTaBjwPY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qngnfmiwKuaH2qRCCQ9wmYHXRZnrGuVwSmgVcFNCdC1FN8UwfoBm": {
+        "stake_mina": "0.0029",
+        "external_delegators": 0
+      },
+      "B62qnhEQ1pxdf7pu38tbvsfWA7DzDE7hpEMUv7nmEr8KCGHBwJYHdrP": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qni2bXsMfr4HnT1RSYob5x6Cz2rP1zUr3sKuMSqrqt9jtJR3se4y": {
+        "stake_mina": "23.182821384",
+        "external_delegators": 0
+      },
+      "B62qniy6hb6KhCAhHAJNToBJEVpFbh4tWroMUtmm1s3xSdr1egbwFF1": {
+        "stake_mina": "24.0",
+        "external_delegators": 0
+      },
+      "B62qnjpQq2uPKSsRJU4ivYYvECnY2RbkSDVsoKJn9nFkq2YPu7XazHg": {
+        "stake_mina": "44.071115446",
+        "external_delegators": 5
+      },
+      "B62qnjtKoVf9S3xR4TRXjYjpPzsB5EKFX5p5z9UdzqfZeC9V5ufSZXK": {
+        "stake_mina": "1.00140032",
+        "external_delegators": 1
+      },
+      "B62qnkHhMz7rBQDN4rHybvE24jP9i6GKR4F3Sb2vvo5cLz5nRELqnMg": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnm1iGNFwsyUkwaPQr5d9DGfAzgEnd7JFoesJeVjJr71HAM8aJRT": {
+        "stake_mina": "5.0",
+        "external_delegators": 0
+      },
+      "B62qnm7oYHeMe43Hc4DnwREQMgEo9J4QoBpMr5r37erFeYaxsj8wYLz": {
+        "stake_mina": "0.153000033",
+        "external_delegators": 0
+      },
+      "B62qnmX9cAc1Rxz3y65a4fbqFk3pZFs24YVHjrYhYHajyRjy4tuu6i1": {
+        "stake_mina": "3.730000001",
+        "external_delegators": 1
+      },
+      "B62qnn8ticGVJDFR8kGPLpCRNrFBSoTZZnHwQaoyYV7b869bu2LECNV": {
+        "stake_mina": "1.994",
+        "external_delegators": 0
+      },
+      "B62qnnGM7zqvypEMgNrJD7xxZiGH3TxQswnCadYjwaYSLmtecAFAX1r": {
+        "stake_mina": "4.5",
+        "external_delegators": 0
+      },
+      "B62qnnd36aL8srry5XJXz6SHihF3ggLpC7rSaJiMHqQ1Q6RLAWjYwxb": {
+        "stake_mina": "11.540119653",
+        "external_delegators": 3
+      },
+      "B62qno46y6XVMCANMW6YtHdqAzLapeSxwX6jGoKUx5htpnrXkcz1EYR": {
+        "stake_mina": "1.980000334",
+        "external_delegators": 1
+      },
+      "B62qnoBs64r3xkTbHb7R5g2gXYjCt7sgs971UgD5C2jNZhRNRgwiVbC": {
+        "stake_mina": "0.058406721",
+        "external_delegators": 0
+      },
+      "B62qnoD79sP5w3KXQYPn4tfjm4gaGJrvhMza23JEHkQ1J9gsR3tzbrZ": {
+        "stake_mina": "687004.152228475",
+        "external_delegators": 14
+      },
+      "B62qnoExUHJrbecWWDBaUXUaqq56CCbzta6H81U7bRZqd1GqXEyxNZP": {
+        "stake_mina": "0.629237779",
+        "external_delegators": 0
+      },
+      "B62qnoGuFSKYnWH4d7ZNW8a9NkFcAZQgjP1shfnDaLf4KNPu7eh3nZc": {
+        "stake_mina": "0.992",
+        "external_delegators": 0
+      },
+      "B62qnoHX5yYn9pipQ6hbWBYFSfeBn5Ay9sCEYruX7xFbSE4rHP1U79A": {
+        "stake_mina": "1.001400443",
+        "external_delegators": 1
+      },
+      "B62qnoQLkdjimCnRMsFZMA1GSgLA8HZGzBKxLsVWjRoHdtipcqmH9Bw": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnpPdwJVRbyvvLkPAWYGUbkA7NUZTVdiqa1B5oEd8ABSf6YDhVXa": {
+        "stake_mina": "0.910453944",
+        "external_delegators": 0
+      },
+      "B62qnpPu5SjhbraYmfNmSn4AWS9QCeXpkEZrag5tvpq29b6HqtKpwdP": {
+        "stake_mina": "3.655006501",
+        "external_delegators": 1
+      },
+      "B62qnqFF8UF53ZgoLne6j5ixe2kQM1Zht3DjhzG6BHGXpTQcxSfAD68": {
+        "stake_mina": "19.30414076",
+        "external_delegators": 0
+      },
+      "B62qnqmUgthaGUKpGvmQSNa7VWTJtbwAtSwVYsKteb3gP4m4foDSuaH": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qnquQ4GS3Bpg1qbzyLMYyL1gGHCPF5QZjhZSJHfpYNeDHW1JCBKv": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qnr2iUdADcgeYKUVjjvXaPy4qXXz8gmYUYu2WbHA8ZaieWMo2r9s": {
+        "stake_mina": "576.520968922",
+        "external_delegators": 6
+      },
+      "B62qnr5wwBn5dTuYTRgKobVujZYWLNBYA9marvg3y1e3yfukRmwqZv2": {
+        "stake_mina": "0.0248",
+        "external_delegators": 1
+      },
+      "B62qnrXTVJcJvSFLhC1iMgZjKLRqAMTa27edgR5yQKjDNR2L467GZwh": {
+        "stake_mina": "376.028177005",
+        "external_delegators": 0
+      },
+      "B62qnru6LcKRL237ESweeRMvBi2Gt8mfU4nFwPKYvsftfzgvyTeVHNJ": {
+        "stake_mina": "0.040756588",
+        "external_delegators": 0
+      },
+      "B62qns9cPvDwckhJXHpWZZ8b8T8oUgoF4Enpax5zNVBYYMtQwHf4Cmp": {
+        "stake_mina": "5762.632856009",
+        "external_delegators": 58
+      },
+      "B62qnsWWJEU7U7XFNLtqH4bKZAMcPK9mr5CeohEuufkV1fT3wgNSV1T": {
+        "stake_mina": "0.004",
+        "external_delegators": 0
+      },
+      "B62qntnTeji65MebvmE8byj71irGPWy4jjzb3G6odTaEBcgwMyQwXVe": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnuBQ6bRXeoQdBC39STXYPqLhL6DP2Wt7ngNMmHEo3PSauUBREjS": {
+        "stake_mina": "26.223970691",
+        "external_delegators": 1
+      },
+      "B62qnucUMHz7Dw2ReNgWhmR5XCvPeQjJWPReuQ8GwPyY4qj1otGBiKr": {
+        "stake_mina": "0.01674",
+        "external_delegators": 0
+      },
+      "B62qnvKLdq3j46nuQML7govR1gNqfBjHtv86FzmfrAU9NPGd9BSzooh": {
+        "stake_mina": "2288.295160477",
+        "external_delegators": 14
+      },
+      "B62qnvzUAvwnAiK3eMVQooshDA5AmEF9jKRrUTt5cwbCvVFiF47vdqp": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnw5cxZk7iNC2VJN42aXw9eDGwLYucjX3N1eFnSH5uEYnmsLTf1o": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qnwB98XVAV7FzsC2ghQZZSz3PCUjciiK5qB2b8LmxMnuLMZ9hUGd": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qnwHmGFXG5tN9zU75th5CdaAq6mJ6wSjxE7npiLKH67TFB3um3zs": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qnwWiVgFTCEvyo6buKUnexc4LQX1Sbuw87iwvanNmkPyP5zm43h5": {
+        "stake_mina": "0.51",
+        "external_delegators": 0
+      },
+      "B62qnwXVLWXsqXLzknC4paupdYqYM9wT4H4xiTDwr9Ui4gMAoPtvRJx": {
+        "stake_mina": "2.94347217",
+        "external_delegators": 0
+      },
+      "B62qnwax8jSVYbJv4RvsKnXgAMNFs27FW5rF8Y4d9uH7jGZ6ogYddyH": {
+        "stake_mina": "0.000757548",
+        "external_delegators": 0
+      },
+      "B62qnwfauXg2i7e1CYGdJjztyfdJ8CiESr37hzm5X5HJnYwp22rBpSD": {
+        "stake_mina": "0.078499999",
+        "external_delegators": 0
+      },
+      "B62qnxHx2ZXjZut1BnpCRiLinjQxH6yLgwGgB5VyuQYWdeum9p3kE3b": {
+        "stake_mina": "40870.194629211",
+        "external_delegators": 2
+      },
+      "B62qnxnSVp9riN2Mi1pvbY7A7ptHJTYesSKFeRW9MFBKLnFqCtKHwrY": {
+        "stake_mina": "40.772106122",
+        "external_delegators": 0
+      },
+      "B62qnxvo6UyYwgMfi1LUhqhJ7gdkm2eZNfKcHwTHo12ysdEbv8quwXE": {
+        "stake_mina": "0.416913954",
+        "external_delegators": 1
+      },
+      "B62qny4snW5cBovDvVFLSipUMaDiu7xwYMrfbTscDLDne7enKJyGkbh": {
+        "stake_mina": "8.60753464",
+        "external_delegators": 4
+      },
+      "B62qnycr2FsAGESX25zactHXdAuNDK3ZvqBsyd3sLsUdQChrnhKE7Vo": {
+        "stake_mina": "0.994",
+        "external_delegators": 0
+      },
+      "B62qnzKViAwiNCeDLhWvBCV5YhBk4bTYJx6P4JXiNK51z7HbTQKssR2": {
+        "stake_mina": "3.8921829",
+        "external_delegators": 0
+      },
+      "B62qnzLZyeTiesV9EvUxUU2AHqyWfd7kAWEWL8QqJm5Uaadpmwafrj2": {
+        "stake_mina": "7.404445638",
+        "external_delegators": 0
+      },
+      "B62qnzqVdK3DNY8GN4aEDUx5U7mqpcYiKuu31iaoPrM5CPhDjR5JRTy": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qo1aSCBpoA5ZsbW3LQX7gt1TtQ1V8wSdgbbKcpc3JBKF4PXvm3Sh": {
+        "stake_mina": "0.052485256",
+        "external_delegators": 0
+      },
+      "B62qo23z1xZBR34du7GUtN6yGvSV9sXXWp2VHUNaCQVuasSwx5mnnXU": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qo2QUjRLz7aisG1VWKynmJWJnMFCbBU15i5JDtwCA1r8QPX9HcY7": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qo3iHrCUfCtxQU9hcHT5kehJsQB32fE6JwMAadSMML8Cg4eTPBpe": {
+        "stake_mina": "0.062759301",
+        "external_delegators": 0
+      },
+      "B62qo4L5vynXCEcybzcwh3fDsAWteiUYQZ2rMwC5rusGo9KRXikisNg": {
+        "stake_mina": "2.986399578",
+        "external_delegators": 1
+      },
+      "B62qo5tnoVeYMWW7EwNHCeUVvBU6ffxog6zJa9CZemj3XBL3adbrQTp": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qo6LrMk9gEsf8gXuoLhxHay13bqyov28C7McaTjHbmU6edc1QpLD": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qo6yW7sjtDLC5bH8p57cC4w7yEfkwvEHokCXRK8ekja5RpneHAzA": {
+        "stake_mina": "172.264221848",
+        "external_delegators": 1
+      },
+      "B62qo74q1yCcNhJ17iYrNEpTWEJwBPdDzs72hFDDwm4PDWVihC5jFbG": {
+        "stake_mina": "0.677",
+        "external_delegators": 0
+      },
+      "B62qo7NFdpzFbTyiUj5Uhks5TB9fapKc6jNDNFnFYtqCyyBNiFMhsET": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qo7smfFDFLdrZAQYTV4spfJk1hpZ8f5anWwjRtcYcWCgV1ot1M3f": {
+        "stake_mina": "0.514986302",
+        "external_delegators": 0
+      },
+      "B62qo8xSdc8FyyGXmiTWVNPh1qodvVvhQStREwgrqP27JqDhDFoqQCP": {
+        "stake_mina": "2.88",
+        "external_delegators": 1
+      },
+      "B62qo9RPW9hzMwFBHSgYsUdBZtSnY71zRUXK93ZnKr596cp46wkf9M1": {
+        "stake_mina": "20921966.742015462",
+        "external_delegators": 8
+      },
+      "B62qo9obZH9tNn7AtTXc8cB72AwvjdjboMm9XSN8DaPLfwsso3NRtY3": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qo9qWsiHpnR8dj92Q7Fk3NHPJ268rvfraPqNe4YmZD5UN6u95hQJ": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qoA5XwfEVnXbcrzphGH1TVuqxeJ5bhX7vTS3hcxpQFHnStG3MQk9": {
+        "stake_mina": "2895.526861085",
+        "external_delegators": 59
+      },
+      "B62qoA8zWuP3qK1ibaeCcETtvG2R79tv2Ea71Djc2fHrCJpw2pSQSJh": {
+        "stake_mina": "23.79398056",
+        "external_delegators": 2
+      },
+      "B62qoAwfj8FoKjHqFWbMEpDovQYbo5zJqg422LiajUtn8Gu9Mz5bUBh": {
+        "stake_mina": "2.035046749",
+        "external_delegators": 1
+      },
+      "B62qoB94nRGJFTf9qzXVUDnLC88zt7fBcxdfTsr2FmByJqKNHFy6GH5": {
+        "stake_mina": "8047.692480069",
+        "external_delegators": 10
+      },
+      "B62qoC1w1LjBknP1kDnvpV9gjm9my9CXroPZFLXUFLZJ5yLErPB3DTr": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoCWgQaNPaAB1U3KUUqPaZVLoLwAZrzz8sYoFy6yN6z4qKhAXwf3": {
+        "stake_mina": "1.719347782",
+        "external_delegators": 0
+      },
+      "B62qoDCpSv1cmWiXgYvDud8L4dk5oTwC9JkyXyz9b13j5uFKiEFjv9D": {
+        "stake_mina": "0.32703783",
+        "external_delegators": 0
+      },
+      "B62qoDujNBCTtwTPkpTnkAZjNGMuMsaeG7ZpUYTqcBL6LoMkYKu6Pi9": {
+        "stake_mina": "198.756283501",
+        "external_delegators": 1
+      },
+      "B62qoE82MAq51N9L59tNeoxftM6SLx43YRTeMSYYw8JxDWBQ7FSUF6x": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qoE8WpBEB3wyrRsY4EpcFpVNZ5zkjNWd2h7Ng3fCKNFJRa4P6Z6i": {
+        "stake_mina": "0.189094091",
+        "external_delegators": 0
+      },
+      "B62qoEAhsEqJLrLUNapSiS4hKXR6N9onXceLy3ma7JBkFznzXWpyPJL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoERu6rA6UUxk6yNYN9CfrvXwNB7tBF94TQucZNRkabQNiDJoMiR": {
+        "stake_mina": "0.937189199",
+        "external_delegators": 0
+      },
+      "B62qoETJ38fDgW7tz9iYQcKH9zLm3m6BU8WCYRZEgREtAsg47CaKGYS": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoFXGigQNZ2gmx3HKXyWDSP9pQm9uopiUbmBoPFuDpvZuU5pVkez": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qoG7mge74phWmvLdgMTrewb3Znpkvt3LYbtiKgvhN3v4kjVx1RPc": {
+        "stake_mina": "0.154207016",
+        "external_delegators": 1
+      },
+      "B62qoGSrJYCBtEwosyuegofAWbUfNUoyjoNwVTVpKyAJUm4WStPcVd6": {
+        "stake_mina": "1.06279999",
+        "external_delegators": 1
+      },
+      "B62qoGjftvrZxkppWHjtcJuKUXKC7oZkiANuUHhE4YF9AZx2h9ucBJJ": {
+        "stake_mina": "1.010051563",
+        "external_delegators": 1
+      },
+      "B62qoGo4Gie7t5nCN9pAjshesVsvp6hVfxVTL5UqBtcvgwyEa2mWGYs": {
+        "stake_mina": "1.3",
+        "external_delegators": 0
+      },
+      "B62qoH7rNL5vycXsFjAKr3ssxK9vvfB9Kz3uRXFhBECNxugykP6Fank": {
+        "stake_mina": "107013.202332273",
+        "external_delegators": 4
+      },
+      "B62qoHXLV7QT6ezrPai2fLiS2k7eA4dDecW6hkDjXeuKdgjsTDATdNi": {
+        "stake_mina": "40324.598186894",
+        "external_delegators": 0
+      },
+      "B62qoJr45JLWp8j9MxWkPXW5Tp2Wb8w4mC9t7nHbhMqW78Mzm7mMqY2": {
+        "stake_mina": "0.009389391",
+        "external_delegators": 0
+      },
+      "B62qoJuE6P14ATevgjdm7FWYqVwiV7xQp4wmcchMCMEDmKSteoLzbEe": {
+        "stake_mina": "3.44025",
+        "external_delegators": 0
+      },
+      "B62qoJuLTSJt6fqkk2N2yntcPKSEb45C8HWKr24Wi7atzCzgeXjg5oN": {
+        "stake_mina": "1.742294548",
+        "external_delegators": 2
+      },
+      "B62qoKZLSQT9jJs3kAt7bXtS3tRwZVFkPkdBnvqs6jr9mVismyD7Eey": {
+        "stake_mina": "5.593078673",
+        "external_delegators": 0
+      },
+      "B62qoKueAUixdjxSokbUN6LeKRZoXMHEhU6nD1zpZ5EDh7zNTaDQeNK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoL21bdm23aFWauttZbb5SLuxkmy3j6FGK7AKXLZH6vkk1To1iWe": {
+        "stake_mina": "0.9899",
+        "external_delegators": 0
+      },
+      "B62qoNBu1CV2UFJTvT7gfG5r7c4C5pAuLCw8yf5CSKs3qkswSQa6JFn": {
+        "stake_mina": "6.231252079",
+        "external_delegators": 1
+      },
+      "B62qoNevikmPwqsmRek1yUJhB21n1fpKW7zaE4iWNFZs2aKL8uy2dH7": {
+        "stake_mina": "0.656751008",
+        "external_delegators": 0
+      },
+      "B62qoP2cygbEmFQjjGQK9x4Cn8wzcpv4Szo2KhBUdXmtijYqpNMe3kG": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qoQNBi96DumFnb5TtZjkXPvVwUen8RAQ1oTSUfVxxTZg3xgFJRAT": {
+        "stake_mina": "10.380486901",
+        "external_delegators": 0
+      },
+      "B62qoQSDyCDsosnQfgHg4U2ppieTe7MnsXH1Y6qv4HcSKojuPbAk3Co": {
+        "stake_mina": "1.22",
+        "external_delegators": 0
+      },
+      "B62qoQhn49TK2GJQwyqR8WDRaVoagpE5JtzRQt89JnW7nJqGzvgst3H": {
+        "stake_mina": "1.653051469",
+        "external_delegators": 1
+      },
+      "B62qoQjPL289fYLgcPzDmZ1Dv5kqNYANsicix6v6epSHXUW6H3XUTL9": {
+        "stake_mina": "0.0555",
+        "external_delegators": 0
+      },
+      "B62qoQjc9zF7TrVeLP4vUvYXfDoWGFPn5Q1jFjLDWwB6ocA1VXYyTPs": {
+        "stake_mina": "100404.159932228",
+        "external_delegators": 1
+      },
+      "B62qoRsqqfdfDb3s4nTgTVUQGLep77ZcoKjjWoyxspTn4CEbtBknDek": {
+        "stake_mina": "873.9831205",
+        "external_delegators": 0
+      },
+      "B62qoRwuKz4JzoJwZGfSnmmvebuppheQQoTqP7TaCQRG8RVYSwXX8bP": {
+        "stake_mina": "12.762620008",
+        "external_delegators": 3
+      },
+      "B62qoS5CBJJmVCN5hDK8SFgECHkefcBKyPxYpx47MrcDXzycRVh8yJe": {
+        "stake_mina": "10.095405457",
+        "external_delegators": 0
+      },
+      "B62qoSTXoK57i8UQ8RecMv592EkTjNQcSWpyVvJ6Ck6xgpBzvUFc6CG": {
+        "stake_mina": "0.00093534",
+        "external_delegators": 2
+      },
+      "B62qoT8LLAjRMZQUugKjiaHbkVx3Gmf2VkDMqHtFMihhdq5VPjDDUBx": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoTASPAqsxJb1kmDZtYhxRAuuegWG1WhzkxqmZVD3BmKLenPa3hx": {
+        "stake_mina": "277266.344637619",
+        "external_delegators": 6
+      },
+      "B62qoUAmL3GGVRS849jbtuwhpv7jX8u6b86JmXu3WcNfyb9QPDTFQs3": {
+        "stake_mina": "43.025493236",
+        "external_delegators": 1
+      },
+      "B62qoUrTryuKy7fbYwEbmZjR1sqg6V9ywjD35xUXnippbt8EUT2GtRz": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qoVhXxES2q4XQSYFyZZPRgC2P7HEaLFnGbZHDXi71M6FcQFJEHAx": {
+        "stake_mina": "14.556269251",
+        "external_delegators": 0
+      },
+      "B62qoVjT55WQnUebb4Bo2J18Hn4hewdBawUtQHGDWWdHVsmJMJscnLF": {
+        "stake_mina": "0.035401693",
+        "external_delegators": 0
+      },
+      "B62qoVopcNoQPFydweGWUBnJJbrokkebVDiWGmAzYoaLysrFfzNCbya": {
+        "stake_mina": "138255.424760137",
+        "external_delegators": 30
+      },
+      "B62qoW74MFVtA5dybVi6ncUtc777psprZwcAj5LzpVnaTd4HadpDuuk": {
+        "stake_mina": "1.7",
+        "external_delegators": 0
+      },
+      "B62qoWWs3NfAPtVKRnZF96gEF3MWbptg9bzC254AQNswpk9WwTFkjS4": {
+        "stake_mina": "72.2321",
+        "external_delegators": 1
+      },
+      "B62qoWcd3dUzbjMHTdpjf5Us88x1otEoJmhSVRX7FXf1Dx1zT5Hp3ZC": {
+        "stake_mina": "12.600245877",
+        "external_delegators": 4
+      },
+      "B62qoWzouroXrwjqeV8RxHHRULUaxxeN1fh247EFz2R7uGJerAF4TSn": {
+        "stake_mina": "2.191330345",
+        "external_delegators": 1
+      },
+      "B62qoX6N32wxawuSXQVAdjxgQizNSLb3dVb565DL3V7Z4Ce6TdwmdDb": {
+        "stake_mina": "1.934085615",
+        "external_delegators": 1
+      },
+      "B62qoXFJFGvXMrFJBmR5YGRUZpcaccob1fvBEkFBQDwAnASMgVPeuEV": {
+        "stake_mina": "1.4",
+        "external_delegators": 0
+      },
+      "B62qoXQhp63oNsLSN9Dy7wcF3PzLmdBnnin2rTnNWLbpgF7diABciU6": {
+        "stake_mina": "45.4175",
+        "external_delegators": 4
+      },
+      "B62qoY2s1xFL4Czd7hS9MWNTHDEr66HBd5UzPPQRuPy9aZiyYf7FqEG": {
+        "stake_mina": "8.182634552",
+        "external_delegators": 1
+      },
+      "B62qoYEmT49GcVuhEpLiU8KBVE2fPENG7qdNRZkDjjBfYoD6XMDwAUa": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoYP6B4TzfxTiC4LPJ3yWDjZKDHKdKZcRZrbE8kAGP8LeDhkXe9C": {
+        "stake_mina": "0.976396737",
+        "external_delegators": 0
+      },
+      "B62qoYVPQ9p73UtnUcoNDFoYiZysZrkpUX44ZjHjiubZz6Qwn8pkRki": {
+        "stake_mina": "0.261702171",
+        "external_delegators": 0
+      },
+      "B62qoYc5BdLdojJ9c4GweM1YUAz9sFK7yABKL4aMeEFcrizPypD7p19": {
+        "stake_mina": "2.186888199",
+        "external_delegators": 0
+      },
+      "B62qoYiS89z4zroNv2HCwWrGVGF2TwL72KW4QJ3jyLm8fBFT9Dorn1B": {
+        "stake_mina": "3.235749991",
+        "external_delegators": 0
+      },
+      "B62qoYkcHDiffssfWuDpjLzyEbV5M4sqBqg6yZ3kKLY74WLbhPqUgYV": {
+        "stake_mina": "2.510000001",
+        "external_delegators": 1
+      },
+      "B62qoYvipcLr64NupkXeBi9ujHRw3uycov3H3ooP2e4udCATBoCz1n6": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoZ2J2WZKrNDUvLqKszzHSTYa1G49HE33JYf1Ux3U54LaLLNThhX": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoZGM2udCuxkcoGijEP8wXLEcBpj5c4DJP7DDmrPeJqoATqSPFYG": {
+        "stake_mina": "1001.9899",
+        "external_delegators": 1
+      },
+      "B62qoZHCPoNTozrDqDtj6vjY7MmD9ZEakVMxTR7btNnqjoKzUqp4EKx": {
+        "stake_mina": "47.378082362",
+        "external_delegators": 0
+      },
+      "B62qoa1oVv1uEUUPyPHDc4NHxSb3Lw3XEV7GPcwwuYd3vVSmVV9Jo9P": {
+        "stake_mina": "1.54",
+        "external_delegators": 1
+      },
+      "B62qoahjAyUBNcXBn8HTb7Rk48sBzfZnjDa592MqjCnMXeWpFkGS6zJ": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoajmajoEqNJHyn1VTqpAqkUBxYGzPFr5ocTWjaSthFAvS9t4VmV": {
+        "stake_mina": "2.381396875",
+        "external_delegators": 1
+      },
+      "B62qoazqR1ag2hDwjkSSm6qV3eJtkiPvVPKhfVyeea7TehBAWu4dWJ5": {
+        "stake_mina": "206405.84368006",
+        "external_delegators": 89
+      },
+      "B62qob1tGxx1BhychEzzah7yvdbRH3E7SNSTrEtkuSZzR2UBezMChg2": {
+        "stake_mina": "4.2181",
+        "external_delegators": 0
+      },
+      "B62qobNjpcPy94cMCbNMndLZTpHZwPUW46XXfAJbQCuzDdBhvoYnrhK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qobvkvofH1P6fmu9pjb91tx6dJ6YR5nFtgitxhkpFYsF6WZJn4yi": {
+        "stake_mina": "12381.858876957",
+        "external_delegators": 4
+      },
+      "B62qocN7WxNyAnWoNTuKZkFCYetthSUPX65Y41hgnkdZUmmSeJ1dZcc": {
+        "stake_mina": "359.572919709",
+        "external_delegators": 0
+      },
+      "B62qocQ7jHRt4e2mcj9fGS4rNdn2pujX5ZZe3ZLZ7cF2j59DCiEdxjG": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qocWXdgZV7hC7bDVbLvM2fAKZTFjVoqVP3ppJhpgeUV37Qem4PSs": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qod2HAiPPwPr2hQCNuY8E1M3W7GFGTVmCiHMZR8VPKDcbhoJF14o": {
+        "stake_mina": "229.889304337",
+        "external_delegators": 6
+      },
+      "B62qod9edjDt1QWiyqc4EEay32DAQQhboqYNUYHc53XJ8SyWQBbJtqn": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qodv84BQsxG7j7GNdmhGod9NxWC528rxmB7wFWRef7nB8huFmNGX": {
+        "stake_mina": "1.9899",
+        "external_delegators": 0
+      },
+      "B62qoe4HqQ2t1ovy35xXKozSm37ocjUBczxQPfqjKqCbgUKxbTGRhX2": {
+        "stake_mina": "2.994",
+        "external_delegators": 0
+      },
+      "B62qoeKm4p9J6Q3hYWzb82Yo5uP163MqooBX4ZWjp8FpX3N6Y81QgFc": {
+        "stake_mina": "1.998868613",
+        "external_delegators": 5
+      },
+      "B62qoev8sKidbnw2RmSAJ5w4SFdPvn88UtqvZt8GxHHd3d2P7x2Etgv": {
+        "stake_mina": "28651.214181449",
+        "external_delegators": 1
+      },
+      "B62qofuCX3tvb3h4TCQtRpVkm48QagKxPduDqGeTerYrfnrqPVHJnvH": {
+        "stake_mina": "2.999349491",
+        "external_delegators": 0
+      },
+      "B62qog2iBLa1toYbche5Sdu5N8fFxt5WSEhg6q4osTrWvm9hsmQsauC": {
+        "stake_mina": "0.021114148",
+        "external_delegators": 0
+      },
+      "B62qogfTBYu9xSbweoUywdPWxEy3wZGhmrv5fGydAyFTXTPnGY6vQPG": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoh5ZGuDKfL6w7NVaqn1F3PXiNWXCAk4ULUYafpwExeh93NsNn7R": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qohmPTLbSAfRcwFZNYgxGtWaywfdMdRkvQsqCFjGGU36XqGpSgVn": {
+        "stake_mina": "4.700667602",
+        "external_delegators": 1
+      },
+      "B62qoi7wVz5NDCYa37usdATKcvMVcbtXYLjn3KiELXSEsG7XcbifC3q": {
+        "stake_mina": "95350.774176389",
+        "external_delegators": 2
+      },
+      "B62qoi83m1JmDpkdKT696gN1uHKtr5xqMqvtLMLye8xQzq6qd72PDju": {
+        "stake_mina": "1.504308187",
+        "external_delegators": 1
+      },
+      "B62qoiEyq2QHR8m3sw9eLdJxZzA5ttZ8C4EYfRs8uyE4Gc7Bi5rY1iA": {
+        "stake_mina": "0.566198468",
+        "external_delegators": 0
+      },
+      "B62qoiM41U5gBnjujQRgeewfkK9VmgVT8ifrRRwAsqBUM6pdxi9ywk2": {
+        "stake_mina": "127322164.35632114",
+        "external_delegators": 33
+      },
+      "B62qojCVaJ3dKYgBUieccF3A3qzVEotn4Qd5k4tNU8QPNgVhZTpLwit": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qojCfvn1yF7RxdHAqx1rZf1MD1qVA8AgYz1gR8SGGZByVsn7dJ4X": {
+        "stake_mina": "0.60872",
+        "external_delegators": 0
+      },
+      "B62qojJ6AAMFMVqJKd92XhqTTqAzHguu8vTbRSrRsCyK1AXCvnPZF12": {
+        "stake_mina": "0.998",
+        "external_delegators": 0
+      },
+      "B62qojbGyQY7zXAwezuZWw5HUAEdsF5JnMeCYZEB33uvUzpenuTQCSe": {
+        "stake_mina": "1.515782228",
+        "external_delegators": 1
+      },
+      "B62qojtbHJ5GGqAGrT5LzfUg4YUTGi4CKSatj4bhoUzQobP2MsLTQqZ": {
+        "stake_mina": "3.9025",
+        "external_delegators": 0
+      },
+      "B62qok23DphudtuwLHFU8sqQnhDnAJVrx2gaATmjKFdRLR2PH4ohmrF": {
+        "stake_mina": "6.07920801",
+        "external_delegators": 0
+      },
+      "B62qok7UHBeVtso5g78vhdSkEhN2XvYfRwLhQ1irBkFHJeJ18tXvShr": {
+        "stake_mina": "1.059927335",
+        "external_delegators": 1
+      },
+      "B62qomc3rMqmPPLNdchASqqTsuoYBxyr5F5Ap61om5JaVSnCxv4TV4W": {
+        "stake_mina": "100.0",
+        "external_delegators": 0
+      },
+      "B62qonBHcZ8bzNxnVbu5AcjPn2tmSduiV8KJLk2PsxN5tAfgvCdaDa1": {
+        "stake_mina": "1.6",
+        "external_delegators": 0
+      },
+      "B62qonbKr642YQLtQgWZE7r2TcPS87Bx3tsDXL75YDYTiRFQWe4cPhJ": {
+        "stake_mina": "205.1528149",
+        "external_delegators": 0
+      },
+      "B62qonpNiy6q7bkVRC4crMCNqZWwxvkiJNhnjruEcHd6vJRdmxo7wq7": {
+        "stake_mina": "149613.473280498",
+        "external_delegators": 6
+      },
+      "B62qoo7juS8X4i59TJ2iV4p7ogHqBwwuMC9VfsQFSNjZgZpNmGw58dJ": {
+        "stake_mina": "5002.971160744",
+        "external_delegators": 4
+      },
+      "B62qooEhT36doda1bkWFkjJiFy8pwkHKJRAazYitsJatrJ3QgxZVXjn": {
+        "stake_mina": "4.1537313",
+        "external_delegators": 0
+      },
+      "B62qooQD2NzgGaiHHmbdo4C1c8YcQi5uf3ns75p9xfKp2L9FagTiFcP": {
+        "stake_mina": "171823.734301454",
+        "external_delegators": 9
+      },
+      "B62qooTeMvVnDWWMQW7wdDmpEm9ZRpre4fTYwr5JZE1yN7sBLERbMyY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qooos8xGyqtJGpT7eaoyGrABCf4vcAnzCtxPLNrf26M7FwAxHg1i": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qoovQuE9dWCb4qpHHH97z6yzcRexm4Az1GYU8dqPDEUauv1QYexH": {
+        "stake_mina": "2.498",
+        "external_delegators": 0
+      },
+      "B62qopE6unCuyENJR7qzj5NuJ8nMfj3dD214AVUpUeYbLyarawUvq8N": {
+        "stake_mina": "67439.02252167",
+        "external_delegators": 2
+      },
+      "B62qopHVr6nGCsQgrvsBsoxDm1E5CEdMkDSN3jneRnxKpR5iiXnTbas": {
+        "stake_mina": "10091492.508435283",
+        "external_delegators": 44
+      },
+      "B62qopzjbycAJDzvhc1tEuYSmJYfRQQbfS9nvkKtUzBS1fmLCyTz4dJ": {
+        "stake_mina": "350000.67431",
+        "external_delegators": 1
+      },
+      "B62qoq5Eis3tAaGRta5SZ7M7CYD1nNdkNWh9CJa3QuZ1An8Dxeue2dP": {
+        "stake_mina": "37989.771064099",
+        "external_delegators": 2
+      },
+      "B62qor1gmAWxCqmuP8XB7sZfgeZqk1kghPEV7anxG3jjB9RepMmk95V": {
+        "stake_mina": "0.000151698",
+        "external_delegators": 0
+      },
+      "B62qor6gE6T6etWevDDz74iE4JhfmMARmcdbMmCD8AmkjJyPMZav1XV": {
+        "stake_mina": "2.521303897",
+        "external_delegators": 0
+      },
+      "B62qorQ5VVzWUMcn29wdKRLpcGbuUM6CqyUw8DytK7EpfW6HZmGHwkK": {
+        "stake_mina": "1.405459493",
+        "external_delegators": 1
+      },
+      "B62qorXXHv971Kvnq91TkvWsRAvMCB8yszCX6yUhpyZseKcibSZSDSF": {
+        "stake_mina": "58145.890702022",
+        "external_delegators": 10
+      },
+      "B62qosiDbqSyh5WPfc9QNxk8VT8LshjMmTcaNGsxTnCjXuTx5FPM3oA": {
+        "stake_mina": "0.9596",
+        "external_delegators": 0
+      },
+      "B62qosn6sdw1ciXP427we89YifxucNMCHQ2b4ftCN5pEJM3yRVEmqdc": {
+        "stake_mina": "1.0019",
+        "external_delegators": 0
+      },
+      "B62qotDoc9cSkDyu1GYFVrhgo9p2c62gV9xTgye2DrgvgUFWTwhjUm5": {
+        "stake_mina": "1.348794764",
+        "external_delegators": 1
+      },
+      "B62qotPF3i34VMSyp3A44ziyME2R7MRN2vH4W2Yen352MW3JW4G6hq9": {
+        "stake_mina": "66000.00448357",
+        "external_delegators": 1
+      },
+      "B62qouAu3xNHRgKmteQgGKKwGNKyQbcN9Nv8f9ozwJYE5Fv3YFjPR15": {
+        "stake_mina": "0.026281775",
+        "external_delegators": 0
+      },
+      "B62qouGngmvcRpU4pYE1aV5qhUbFP21hEY5eveWS2VUaqqMFfcqNqvo": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qouhUQqiqaydcNsRPxWhhCz3yTEoGkJssheeC15HhFwDiZnJMhky": {
+        "stake_mina": "0.068464048",
+        "external_delegators": 0
+      },
+      "B62qoun4ZDnHitjqUZGAv8UudYq3FWiBB6bCYjKvJdMUfEjjCsXxn5s": {
+        "stake_mina": "1.170395904",
+        "external_delegators": 1
+      },
+      "B62qouoFyhrUqHkXrMsdwsmPi3Z2JWPFrEJNhFrBJARESvSnqpCZhiZ": {
+        "stake_mina": "191019.267649358",
+        "external_delegators": 2
+      },
+      "B62qov9yv8TayLteD6SDXvxyYtmn3KkUoozAbs47fVo9JZSpcynbzTz": {
+        "stake_mina": "6237.008994136",
+        "external_delegators": 9
+      },
+      "B62qovfgk7tNLf44YRjPwRxQBT4nc6nJ5g51TUBADMhSHeacntp7m1y": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qowREyBtVMpp8RVkbmfvZgxryNUzcJnRnH9LRs5xgAXkHhLyBEyz": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qowS5AAzfbBC17hCjT4nAQFRoSmVt5qSNDP7zoX61jZrmcDWKePw": {
+        "stake_mina": "0.46873192",
+        "external_delegators": 0
+      },
+      "B62qowd5gyzKczAsp7YAvDHmgUua3eoRqWYL2Vece4caKAGbvZd5FrS": {
+        "stake_mina": "6.2408e-05",
+        "external_delegators": 0
+      },
+      "B62qowibyAFYD9gfsDZQuaL7sSLUMhH48iQecoKa7ooWLFT1QiGBz39": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qowm5zNjGsDzC67eTc4zvjXwdkPRUKHFzeSDRjm6FBojzqmNfNhH": {
+        "stake_mina": "2.141315666",
+        "external_delegators": 1
+      },
+      "B62qoxq5tcpdLvrMt8sJE3A2edCWTPJ3L2hshJtmSRj4cbL3tLU8s9b": {
+        "stake_mina": "0.3401",
+        "external_delegators": 0
+      },
+      "B62qoySzFYHZ96RZFFc4CRYeh2gp5xF53XxLXJ3XFmnzBxXsd4KRikA": {
+        "stake_mina": "1.06118605",
+        "external_delegators": 0
+      },
+      "B62qozyeUmdsCUP3kCJXNMDwCENUA6SA7ZtnGWiZbSWaB5yeuMVVJF2": {
+        "stake_mina": "1000.721141435",
+        "external_delegators": 1
+      },
+      "B62qp17siioFbT7ugFCJwtfcSn9SHFsBNAkUAxKjaFtorKqQ2Z46L1G": {
+        "stake_mina": "81494.022907098",
+        "external_delegators": 6
+      },
+      "B62qp1DZg5GJcyjTZ19mSADLqsDGGR95AdZS92WCaERDe32D1449kHg": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qp1UsnE4RgdtnsvhVbDXbPkHnf8LSBoR9whM2zDZej9XAQeX278y": {
+        "stake_mina": "6.5",
+        "external_delegators": 0
+      },
+      "B62qp2gg2aP1dxg7FPXVemWcgP5zaPBJoeeZAC3EgHtR4sTibD3Eaoy": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qp3M6dgon4rn8fs2AWAAc5SykMVuwibxXyihg6CsAkwuzZj1Y6R6": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qp4GEje3FfYzHNsEJKBU7wcQJEPXDHqG977gZsG4umRWRfNYYgVQ": {
+        "stake_mina": "2.014366948",
+        "external_delegators": 0
+      },
+      "B62qp4Gwy1ZxVA6EhqFPJ7oZphYKhuJYgVdYNkBUQEmwhY2J7d311Ys": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qp4NDHszuB9evzNrJpHuYqVqi7PhZVSHK8ui8GHHRwAz9GFPAFFg": {
+        "stake_mina": "1.707872659",
+        "external_delegators": 0
+      },
+      "B62qp4Xg1zuAkTc1cyG8N2xQrujJaZ9uesm26Jy9sr2w65XUnNaGEEQ": {
+        "stake_mina": "12846.357600963",
+        "external_delegators": 13
+      },
+      "B62qp4jr1PgwK42Ah4HG2qNHigTw5riKFr6RprguAX6ms8ArDcdGv7a": {
+        "stake_mina": "33178.564117344",
+        "external_delegators": 11
+      },
+      "B62qp5dgv9tGSdD2DJDgJC8m5K3ah3mazxVagMm6pM5pJzX5QuPp8H6": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qp64BrC6Yo7nfxsS6hjDEG4cwyi9AqQxhGTsGtY5MJ3UGczR9vVV": {
+        "stake_mina": "2.261806846",
+        "external_delegators": 1
+      },
+      "B62qp69bsgUNySCY2wEYDCrRN3gdMB6cDSZGBucTzc9vUUH4jUoDSED": {
+        "stake_mina": "3.232941",
+        "external_delegators": 1
+      },
+      "B62qp6HmxzW5XXwCMiyZiJREoJ4b7omkNuCJiThVLNM1P3u1s1a3qzp": {
+        "stake_mina": "245.624622446",
+        "external_delegators": 1
+      },
+      "B62qp6qMf3Do4q4aKqEsLxVpVuXJaRCijtyhsjZBvDSEFUBGXg8Z9cs": {
+        "stake_mina": "242680.25391774",
+        "external_delegators": 6
+      },
+      "B62qp7GuB9MTgjSRbY8jgqGKachnzCAUV3RNTxn1hheGRcPq6gdPbmc": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qp7J9DJWb4y9BsXiixdRQLGvouFmrpyiv1fmF2vPSV1tXhWuTiyD": {
+        "stake_mina": "5.403954886",
+        "external_delegators": 4
+      },
+      "B62qp8PCgNSzawdhooGXPQhULtZ4yhNzMb4UVSd3sTLz5tR8Btdtqn5": {
+        "stake_mina": "1.61728254",
+        "external_delegators": 0
+      },
+      "B62qp8Vq6n4VHq1LUm9Wd5QKjpKb7umoZ2oU9gpJYuHNUc7t2HGhGUA": {
+        "stake_mina": "77793.86147195",
+        "external_delegators": 18
+      },
+      "B62qp8Za4JEBe1dvEQEWJRKNQeGh1xHbGgbPsZpG3ChPwDHtrNeyS6k": {
+        "stake_mina": "0.166422258",
+        "external_delegators": 0
+      },
+      "B62qp9bXA4c7nTrnL8AGxW1zqBnKr7dtmPZvhDN69kc4PFT458fP71a": {
+        "stake_mina": "0.003",
+        "external_delegators": 0
+      },
+      "B62qp9wCKomBfaq56hdZZDUifSgZv4TdhK8DAYK6ksdtFwjDF8FZrB6": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpASnwcDBBhozMw6iTgqwjTMhuZX46gHAt21Y4sERPaWaRdnz3E6": {
+        "stake_mina": "3.99",
+        "external_delegators": 0
+      },
+      "B62qpAmXkj3fPExD9ASLbARWBos7taNoviawGnAeQWgCvNNnvj9Bn4D": {
+        "stake_mina": "3.256999993",
+        "external_delegators": 0
+      },
+      "B62qpBGfLWyBN24kRB81tZHQ1n8PLgdvABemUDGJU2Axp6WMY2zBYUQ": {
+        "stake_mina": "1.015497308",
+        "external_delegators": 0
+      },
+      "B62qpCWa1zjN7hAYcqAwJF8gqEhMf1GQvLrB4JVa2La7C85weqW9Tzr": {
+        "stake_mina": "0.76164",
+        "external_delegators": 0
+      },
+      "B62qpEKoYGUZy9nqVv25tyk3yQUfv4JUwN3hsssFG1gwYnMkdFuXioW": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qpEMj7NwUbeWyyPrPUHtJDqJb1RkPxJtm6JxHrXUKDFMgJYp1zzT": {
+        "stake_mina": "0.999",
+        "external_delegators": 0
+      },
+      "B62qpEZguodYkanqc3gVksDpeaESWkU5uDZrJc9hmePtLZQkMDchEQT": {
+        "stake_mina": "0.000279588",
+        "external_delegators": 0
+      },
+      "B62qpEuM7vVCXbihNaT25X5b7RwJ9dpoCAmv1An5FN6q48t2G4gJJYq": {
+        "stake_mina": "9.73541",
+        "external_delegators": 0
+      },
+      "B62qpFC5GjfqFq7a7MGZLFbXfEj1gMC2FRCnmEKagiUhPLAQwEYBhgZ": {
+        "stake_mina": "0.010773",
+        "external_delegators": 1
+      },
+      "B62qpFJeY8uiLwzhrmwFGthQS7yjZonyUACq32G4ULkZcRB9W3WVFgE": {
+        "stake_mina": "265.137469781",
+        "external_delegators": 4
+      },
+      "B62qpFW3CEiqiVi4bRpDKf7ZNq3qNUKbHKhxQ68EUQ8QeeK5pksZVsE": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpFa5nxRyKr9cLdbxDEtutj47K5SYpqMTwq3tsP2RfE8fBWaPK2R": {
+        "stake_mina": "0.39",
+        "external_delegators": 0
+      },
+      "B62qpFfyos7t4ogvNWWBUfurLGpwtaNDqUcQkdbLEzEX62hCWugeW3d": {
+        "stake_mina": "3.0",
+        "external_delegators": 0
+      },
+      "B62qpG2jj3CLrcWPUaMLoBfZeAjuVxXfaPBj4vmt9cv7kfztwHZWG56": {
+        "stake_mina": "40.389900045",
+        "external_delegators": 1
+      },
+      "B62qpGnZs3EZ8eYuxn8ANNwcexMhYqjjSLKBer8KhsviXGdEDwi63St": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpH9udXinXbRpyvGLeTFcSeJdrwTrbRQcMYU6ufPKUepRrHddgms": {
+        "stake_mina": "14063.103362874",
+        "external_delegators": 5
+      },
+      "B62qpHjkA5BV3M72T2YmCZnVvGiyUnhUoN9txZyX3Ge9QaeDf9R9ebe": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpJavug1VGCBSttepmXr6nh8fvXY5SigbN44ttYDia65vwbTEcq2": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpKVa5i6KsFjzaACo3bYcQrQSMrPSEdcgjG1LPNehM9wQcqNJU2t": {
+        "stake_mina": "0.9979",
+        "external_delegators": 0
+      },
+      "B62qpKyT3YHnWvQ2MXbUuZZyYVCBe6kWohFtM52QTLJ6torYXJhQajE": {
+        "stake_mina": "0.54194674",
+        "external_delegators": 0
+      },
+      "B62qpL4ZdJw8dmaD3DJQvKG4Ewt82va36rYK7BkkKs2SnkxzVZR5oBk": {
+        "stake_mina": "1e-09",
+        "external_delegators": 0
+      },
+      "B62qpLST3UC1rpVT6SHfB7wqW2iQgiopFAGfrcovPgLjgfpDUN2LLeg": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpLamNs1k3FmW4g6jQLAA39EGVo5uqjJQw3oU5T5F7iPvkaerFwP": {
+        "stake_mina": "31.227052482",
+        "external_delegators": 0
+      },
+      "B62qpLeuZDL7PxNsCqsJwWFPAmnixi5ay8Kz9NcNGBQU8jK19VpJQaY": {
+        "stake_mina": "117856.152924324",
+        "external_delegators": 1
+      },
+      "B62qpMcYjgezccPk8NfaSto4jyV3uGU8R24D9uSShMoqr8JdpAv4RKo": {
+        "stake_mina": "1.012207381",
+        "external_delegators": 2
+      },
+      "B62qpMwRT371gRgC5XvrgqgP8XEhVnf75p7RdYFQAZr7HRu2Bs3Tz37": {
+        "stake_mina": "1.996",
+        "external_delegators": 0
+      },
+      "B62qpN2atcDDfXQB8YttP8hSE1T7bKGuUECEAPMprsaGP1te5XRSiFS": {
+        "stake_mina": "6.263203878",
+        "external_delegators": 2
+      },
+      "B62qpNLG53NfZ1HUJUtNxTCJonDJmj9Q89wFWorsuNszQarxRqdcfMS": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpPqw2hzqjtcqpEwvckfsAENgXUxgJGu8y3Z6Fzus7pRH6UaLLp7": {
+        "stake_mina": "68515.113241471",
+        "external_delegators": 2
+      },
+      "B62qpPsUkaaWC2VPzY9MBnQtUxYRFCCKHf9uXTZri4duUXGb3F3tmX6": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpSWkEBQaFHxwte6DghXZsJeTxkscLRdvVe8WLgK3B4g5XZ2xcFX": {
+        "stake_mina": "2.32140022",
+        "external_delegators": 1
+      },
+      "B62qpSmYgeUbL5SvrNDUfeRGCxkqzNr9Bxo8MudvLSfHbNRtRRF9h5c": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qpT62jspFKgFqqEcdhi2hKUKW6SATwkNXuNg8bctX9QjToofbGZw": {
+        "stake_mina": "49921.924782961",
+        "external_delegators": 1
+      },
+      "B62qpTgbgdFBw2qcUfUt9jVF7bz7MGcXr86jw6RWR2MKee5RcVdz95i": {
+        "stake_mina": "3.4",
+        "external_delegators": 1
+      },
+      "B62qpThcvvsnxZ3oLCvBKooqd7TMmrp3QhrhQ1R7ktnzhnzKV4uJmEr": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qpTz1b6DcYzangjQvBZ8mFDm2SZPQaSEozxM5E5Ayc5fwnV1B1BM": {
+        "stake_mina": "3.5",
+        "external_delegators": 0
+      },
+      "B62qpU8VQuEygQZfiZHDhBG1SjaMZT6zgQtutaryqxU2DkQFxfxt1SY": {
+        "stake_mina": "1.498",
+        "external_delegators": 0
+      },
+      "B62qpUQNU7RJP8s2m9SdWP5WFXn43tDorYCRKG5EZfKQouL9dwLzR8Z": {
+        "stake_mina": "0.45",
+        "external_delegators": 0
+      },
+      "B62qpUXHbTVzyvZT8cs6fS3h8g74PNa4nFHTC7rhK29geJECWZnj1EY": {
+        "stake_mina": "0.3899",
+        "external_delegators": 1
+      },
+      "B62qpUXyywHB2yRbgwEfmoUSh3KwN66W8a8QoXqpoTiHJkoQMcgJXbu": {
+        "stake_mina": "0.87",
+        "external_delegators": 0
+      },
+      "B62qpVUF5PXf7vh4eH8cZ3om3mp23bQJPDqwE2iB8BaE5ZUhaCJdU8L": {
+        "stake_mina": "1052733.453785063",
+        "external_delegators": 5
+      },
+      "B62qpW3ndQTvtcCkRj5jyPTbDFzM1wu5TiPNcSiya9htTzrZwuhExJL": {
+        "stake_mina": "1.668987041",
+        "external_delegators": 0
+      },
+      "B62qpXhnGiBuxneJ7o6MjJKxLjYYNRXqE2HUwuLkxx4Sg8zrDeVH6qg": {
+        "stake_mina": "0.928128",
+        "external_delegators": 0
+      },
+      "B62qpXnk49N31jbCzSixvE8pCvKqxhzMzNLxMWcADav9mtxhzR4hEUs": {
+        "stake_mina": "2.481400135",
+        "external_delegators": 1
+      },
+      "B62qpXqPzauUXLnsAQFnYHMCiV9pRqG2wqbJ4pL936SVANHa66zkkQj": {
+        "stake_mina": "423752.175802933",
+        "external_delegators": 184
+      },
+      "B62qpYHDLhFg8hSGnGNK4RrtFXde5j4PdR3sqznDTozoGEFxfWv48tX": {
+        "stake_mina": "3.480957306",
+        "external_delegators": 2
+      },
+      "B62qpYmDbDJAyADVkJzydoz7QeZy1ZTiWeH1LSuyMxXezvu5mAQi53U": {
+        "stake_mina": "751172.807202941",
+        "external_delegators": 759
+      },
+      "B62qpZ9PB9RxMeLQGoHp5L9HQ3GyViK674EeQruxYacd4U6QEnn22ko": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qpZQ7xcNpv6zcY75D2y1V4K1DHXVpkbCJAYpPNHgutXAb6o5QSZE": {
+        "stake_mina": "2.91107915",
+        "external_delegators": 1
+      },
+      "B62qpZTtpZL7QobzPX97h1f2CNFchXoXc4NJUZL1xdvNqTdwR5NCbkZ": {
+        "stake_mina": "1635.853660617",
+        "external_delegators": 22
+      },
+      "B62qpZhspsgsVStYSLku3EHgTkDVfWdqfRoYWxsfKNuRWDPMqGcryQx": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpaLqEwBi7hZ2TMztGRgYujcAUFULwXKgNeCX6smB46ek1YYZtYe": {
+        "stake_mina": "0.230629027",
+        "external_delegators": 0
+      },
+      "B62qpanxZjnQLtZHQfY8VGgCYyE29aDcG7BL2KwkQJbDzaSxwwZqT7i": {
+        "stake_mina": "14446.355201465",
+        "external_delegators": 9
+      },
+      "B62qpaqLZv6tca6KytUsgkBoQxCRc7cMRVkVYCWjyUFGegS9cwD676v": {
+        "stake_mina": "1456.309292199",
+        "external_delegators": 0
+      },
+      "B62qpbpoWmfjZ12jA8TYrS8QktRDYGYjz2cj41tuUe1f2UP2wfpKvXs": {
+        "stake_mina": "35555079.431296825",
+        "external_delegators": 2
+      },
+      "B62qpc1rQaEmbsw8pPHo1XZeG9fKEj5i9vofRHAG62UenRewwtyAdL7": {
+        "stake_mina": "6.08007022",
+        "external_delegators": 0
+      },
+      "B62qpc6JFovnLFZAa8JEAs9QQMxh12H2Xj4NFFjpyE2NZpoCQXRQxwZ": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpcD9n8oEoF5E1kzzhXQPAq4z8UgMXGK6h1uDqLGHYstsDQFKU7k": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpcDHYgC9Pme85EUnPV9Ne4zezjQ79pTWWT67VAFGWYsvfRYRfgh": {
+        "stake_mina": "0.48024107",
+        "external_delegators": 0
+      },
+      "B62qpcLJn39HotBBAWHwNdiwjWgKEYLGx8dVtNTpdage23qEdBsXSGk": {
+        "stake_mina": "0.2",
+        "external_delegators": 0
+      },
+      "B62qpdKVxef96UTWaEPEbGQ7FruwCSbEckDHDGtpAQqxUfDmHR725AV": {
+        "stake_mina": "45.520608196",
+        "external_delegators": 5
+      },
+      "B62qpdNkJnsh9MAYPNFF6sM83M7WYgJCVkM419kxAxzrYFq4DzoV5DC": {
+        "stake_mina": "0.177425928",
+        "external_delegators": 0
+      },
+      "B62qpdrj2fRRNbTJfiex9PJ1wqM3fFnS13KuhtBchHhCNVXFLfB5qxv": {
+        "stake_mina": "0.25",
+        "external_delegators": 0
+      },
+      "B62qpe129AcY7gPkiNdStKxNtwQC9Y2ZyZCMKGKn6taZGCdTdBtuBYR": {
+        "stake_mina": "1.9242",
+        "external_delegators": 0
+      },
+      "B62qpfkgSREBeVAa83iYsv13SN76b2QeN9HryTGiuZWfy4skv4P9N8B": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpfwHyejtpn5bXsmaqULj86bJYeR7PzvTcrPRjhNc1auMNCzQJHQ": {
+        "stake_mina": "1.802600001",
+        "external_delegators": 2
+      },
+      "B62qpg4AKYsRWsVhXBjG6PpChkCqPcURTNP3M4B2tPpManWXv3PQQKz": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpge4uMq4Vv5Rvc8Gw9qSquUYd6xoW1pz7HQkMSHm6h1o7pvLPAN": {
+        "stake_mina": "53149196.877791196",
+        "external_delegators": 8175
+      },
+      "B62qph6pqxpLjF1BC9AfkSDNYkKD4r3AV3wF86DLyUsY7WkyryBcRVc": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qphjuHHaPY37THFRMYRQsVCf1JgEE6k512cV3S4RmkmdutMhzZmr": {
+        "stake_mina": "74279.80883213",
+        "external_delegators": 5
+      },
+      "B62qphoexaUZNeim7a4vw9k37m8db5jsv7ngaHjLR6e64ATRoAzcQ49": {
+        "stake_mina": "0.803838918",
+        "external_delegators": 0
+      },
+      "B62qphpEdBwSycpN67XFjcXSEY9j18chmttFTXYerhTPMX4JkXubWkd": {
+        "stake_mina": "165224.791124564",
+        "external_delegators": 38
+      },
+      "B62qpiKxMKrcTia6s5DUsncibmoiWScAcDTDTT6dSzKq1pCkM17qNiJ": {
+        "stake_mina": "1029.385337304",
+        "external_delegators": 7
+      },
+      "B62qpjSGm4pgj7572mshj5fEKE5DKaqmY9PeRGxAFLd2ksefGCLabYU": {
+        "stake_mina": "32.504651866",
+        "external_delegators": 1
+      },
+      "B62qpjSrZXv3Xmaga9xAnrUt3nRhzFfHKAs5vstnALQwKRPv6EJDc3K": {
+        "stake_mina": "2168.180097067",
+        "external_delegators": 2
+      },
+      "B62qpjvJHzUnghTDAZSfgbyz8YwpZYrDvK62qHC9RJZAVh6nsJriwpD": {
+        "stake_mina": "2.394374973",
+        "external_delegators": 0
+      },
+      "B62qpkF1Yrd1uQNLpun7d8k12ggHEXjXHknLCKh6Hom7Q3Ba3oZg3nb": {
+        "stake_mina": "19.659560298",
+        "external_delegators": 2
+      },
+      "B62qpkZ4fGZMN3wi6xpZtf2rRRzz9rMLVKH4KWHrHwpoAsWKgBjNSZm": {
+        "stake_mina": "33.762026283",
+        "external_delegators": 2
+      },
+      "B62qpm6K881ECeMrkr9YatyWvR54aAg4SxYYBirebrbrV1WpqJpzH6e": {
+        "stake_mina": "0.488232128",
+        "external_delegators": 0
+      },
+      "B62qpmDB4wFnxYHH6YBsEWf2b13DVXiDGRv3FL293Zh7zXNBRn4f7gR": {
+        "stake_mina": "0.005187346",
+        "external_delegators": 0
+      },
+      "B62qpmcJPMGBsdHbzzErZTF1i7ifHP6e6SGbDPfsMtFkZsUMmsHGcMU": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpnRWfM1SYB3z4tXbobpjQC2Gk8Kr33xQmk1vRpeMsfkcK4ButNb": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpo4joPPt1VLPGHr6KUtMujG9DLokb5x5V9uz85QKy8nM8YsfZXS": {
+        "stake_mina": "3.151877483",
+        "external_delegators": 1
+      },
+      "B62qpo5DRofyMMexij8EtaLtxKS2yzGsyGuedXNxCTdshGLwgLGjRXM": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpoiUSB7FaqZQ2tHTveQ5rCS1phjByQZkTVeZzzRZXcRC8cvB468": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qposwSo1iUCStbk3fVHD3UEznHMghqUK5tN1ejwK6zQ6GxZigNZw": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qpqY6UMUR48k4Xh2gPdQ9Wp3feTufoqh94KfFJ8jnc1qbya1QTA4": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpsMTL1mTaQUQUTQzVM1qvyGTCLVAhr8whJc7tUfmnPEuZnanzUe": {
+        "stake_mina": "1.0240001",
+        "external_delegators": 0
+      },
+      "B62qpsikYYhTaAXw8XdgGhQtLsnecHF89LZdW2bGTa4aj4mePWPHxPe": {
+        "stake_mina": "7524572.529144578",
+        "external_delegators": 95
+      },
+      "B62qpsvKWYguw3aWYZgMGLJhyiHjRQwsr6Wvba6NCh5B1LpbEnyCv9N": {
+        "stake_mina": "18.245527544",
+        "external_delegators": 0
+      },
+      "B62qpsyB3gCndt8sNz4GRwusBtg9U72TNiL4mxmcQfWKZ5noa9fFnWr": {
+        "stake_mina": "2625925.95294405",
+        "external_delegators": 102
+      },
+      "B62qpt32w8Pce9apcjVimTdAnCsUbd7qEmoAqNfLv7kwhsnnfM95wP7": {
+        "stake_mina": "13.953713613",
+        "external_delegators": 0
+      },
+      "B62qptf4MGw8h6tJyd7b1Bbqysfk3UVyRBEukCZEHuNSJEretDBDWYs": {
+        "stake_mina": "37346.065911755",
+        "external_delegators": 8
+      },
+      "B62qptxgjmuegvWsWgtjsWGyADwm3xx4sSydnV3iVNJHqtoYnWfr429": {
+        "stake_mina": "952.391343514",
+        "external_delegators": 13
+      },
+      "B62qpuNrv6pWhSyvkh3mCQQw2WcjEVRFnyGJGcw8QBZ7BexRCmgR8vw": {
+        "stake_mina": "38634.710877052",
+        "external_delegators": 2
+      },
+      "B62qpv5LPnY1HhATVmPAn9UYKnZj47Qe4YkcvA7x6dPH78oY3eaSMDW": {
+        "stake_mina": "0.98",
+        "external_delegators": 0
+      },
+      "B62qpvPWsUFrTJ7ArTDYyXJuQzcw6zw5Qd6sVsBKwcLg72KfiH9BugK": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qpvmmU1XpdnqHehAy4APMjvyuJ53CZUjbRociBVpFR8B6L8D7KLM": {
+        "stake_mina": "1.001399886",
+        "external_delegators": 1
+      },
+      "B62qpwL8o631wgNmzFsP7GUKfjEUxHZo8UPxwzhfP6yZA3CVMkmBG2g": {
+        "stake_mina": "2.0",
+        "external_delegators": 0
+      },
+      "B62qpwXadr3bwPsV5M7NSTZUGRaED3FPy4Ju517PqTZWWfjS8h2dy9K": {
+        "stake_mina": "5452.866284809",
+        "external_delegators": 8
+      },
+      "B62qpxcst8GZ3SRpNRC9keJhJRTghTne8fCjyQdQTVF5EDvpuLz7h41": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpy6sXLwATHek6wjWKqmDukA7m62rtF1ChoTt1ZMT2po3a4hTW3R": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qpzWppkJex4Hx7Y6rSq8yH9JMaGc8R1b3nkSjH3mk3aYKNyX6DKW": {
+        "stake_mina": "442.80059137",
+        "external_delegators": 7
+      },
+      "B62qpzZcESnPApJZDRhwTCxsSwnBmhPorRff13vsX7UAzCHUc3MUhop": {
+        "stake_mina": "2.543472524",
+        "external_delegators": 0
+      },
+      "B62qpzciXjUdvgsKcstj1jKLnyPCtWFFuvtwr54xakf7tRucz3CgHB7": {
+        "stake_mina": "1260.373753555",
+        "external_delegators": 1
+      },
+      "B62qpzdFqR3Gu5L8DftmA6Ljm9BxADNKPG4MDfCZu3xVM1YYaGKBRUU": {
+        "stake_mina": "2.5",
+        "external_delegators": 0
+      },
+      "B62qpzkYbBuwRf6SKxZ8NT2jeFJrR6vc6ZnK8acjHWoTHWZuzHAARPe": {
+        "stake_mina": "1.2",
+        "external_delegators": 0
+      },
+      "B62qq1xGN57tke8jJ3EuJMgFmgWQRoip6kKoBsTuLxsGXVqQXMN5oVj": {
+        "stake_mina": "2.691975681",
+        "external_delegators": 1
+      },
+      "B62qq1z3QSu7BES56P8Aap4jGJQ8TVN6YN8FQ65g4vLmDSomMKBFuFb": {
+        "stake_mina": "0.01",
+        "external_delegators": 0
+      },
+      "B62qq2PGvsoNC4u3uxthhs2ztXzuXRzqoWX9pWUDo5xdC3vdG7DQkjU": {
+        "stake_mina": "6.1287",
+        "external_delegators": 2
+      },
+      "B62qq2sKJdHUfjB9XEUKHazcedkc6iR2WFB7SLRVDviKG4qBdkQ9KFn": {
+        "stake_mina": "4.0951",
+        "external_delegators": 0
+      },
+      "B62qq3Lg31BG99W3DfpUNUr78UYhxUEEQdjSURViWhopsNHPUZy5CqA": {
+        "stake_mina": "68007.17212517",
+        "external_delegators": 2
+      },
+      "B62qq3TQ8AP7MFYPVtMx5tZGF3kWLJukfwG1A1RGvaBW1jfTPTkDBW6": {
+        "stake_mina": "58240662.229722455",
+        "external_delegators": 23736
+      },
+      "B62qq3WS7BeAMu8PtfJjrPYNNz9cJpa6EJTfTkn7pQS1pPddapn2yDV": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qq3Wrrjd9jviU9wxDCz78yC41XYrPv5EzExQgYC8Cbja9VBxCaG5": {
+        "stake_mina": "0.627937445",
+        "external_delegators": 0
+      },
+      "B62qq3tmk4LTDpFC49qgC45V1rCvEBNog2ZAcTZPca5EeFjw6N9tpo8": {
+        "stake_mina": "3.39468011",
+        "external_delegators": 0
+      },
+      "B62qq3tqfdj19hqaVCozJFM2q9gT2WezQMaJMKD6wxyvK3fMpHiP9va": {
+        "stake_mina": "24312.456200248",
+        "external_delegators": 12
+      },
+      "B62qq3vHD5rUB4ZKY98h3uibwxubHqtfSwprDLhyn5DEv3BKRMJ7NwJ": {
+        "stake_mina": "9154.517159135",
+        "external_delegators": 1
+      },
+      "B62qq4BBruwCbhAmSHMerCoDkvC12x5aLwyc5eaX6ByNFKKqynHK4YK": {
+        "stake_mina": "3.996",
+        "external_delegators": 0
+      },
+      "B62qq4UyVZqWdoHNWvAcd1fZzniTbpy4TmZmfdgR63UU4Qcz7UsWxBc": {
+        "stake_mina": "47.993333917",
+        "external_delegators": 0
+      },
+      "B62qq4o1buJm8srF6FWeH2MKaiV9uddkvV7f2BvVauEuev59YaYWEjq": {
+        "stake_mina": "0.17565",
+        "external_delegators": 0
+      },
+      "B62qq4uvyDhAtsrbNVkwHjbEqHkpnpZhvntgoiM6MkyJwA8Wb5avYPy": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qq5F7VB8sSDPDs1PHhmbmL37dtR427EWPmthtt7YpPPdy4fXN8e9": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qq5Th7nkY3DCdBRyg6Y1PTQ9surNHAqHrJB5hskahd9HhdKXXRCJ": {
+        "stake_mina": "8.553423931",
+        "external_delegators": 1
+      },
+      "B62qq5V9u5JFuReeRzJxgzMQ7EGTEdxbuhfD9ardKiCdr36dS1HCrMn": {
+        "stake_mina": "2.759700001",
+        "external_delegators": 1
+      },
+      "B62qq5YxMfnoC9trqNzXDrM46zheg4Jq7qv9WBUtrqMYedgtCP67XCz": {
+        "stake_mina": "0.2000329",
+        "external_delegators": 1
+      },
+      "B62qq5eXABbQtGAmnPoMHQ37vtVhCe7d7F51rZzbBuvkbEjesssoEmS": {
+        "stake_mina": "1.998",
+        "external_delegators": 0
+      },
+      "B62qq6FzjoX7GCqDY9aUP7eFm9QdqHpFJ8Aa5xB1YLj9GuPtsvG6Mp8": {
+        "stake_mina": "0.007569542",
+        "external_delegators": 0
+      },
+      "B62qq6ZYPG5JsjZnGJ3pADmRn6hU6qy13EhraTSymjSgyEDwoDR9Gd6": {
+        "stake_mina": "17450590.86558975",
+        "external_delegators": 2333
+      },
+      "B62qq6ceNHCu9mSBvczmHS5JzHC4zw5U9KLALuwZPemeksx82AEfQSr": {
+        "stake_mina": "15948.729620683",
+        "external_delegators": 19
+      },
+      "B62qq8itrQ9vYFGoC9orJWspS5TQ1BT2xtQCp5tmradoHYX3G277FYm": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qq8y597MPtHeVQr34A4FLBiF9eQVfpVP4QJkEAjghQxMZkcBU7B7": {
+        "stake_mina": "2.93140046",
+        "external_delegators": 1
+      },
+      "B62qq91fFf9L4nFANg8mSDUn2aYYKJZaGKm3M8kfxGzKwuN9voCkQRk": {
+        "stake_mina": "91.781723278",
+        "external_delegators": 1
+      },
+      "B62qq9CY1jVwTNjxbqUxNT4qhAy24woM1uzYA2HUo4QEGpkyUDXt3YF": {
+        "stake_mina": "0.0909",
+        "external_delegators": 0
+      },
+      "B62qq9Ro9V8CCmEtPCjMLxZxUo5CteU6dKNDcXDgJ3iJgHJFY3bSWQR": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qq9tTALi5rb84f7pAcCu885dG1Lub7UTmGxz1Xfbf7sbVLvvC1pF": {
+        "stake_mina": "1.3",
+        "external_delegators": 0
+      },
+      "B62qq9yXRrwmepANvxPybL7v4X7vDtVmNwK1SYpLagE3XuR43hXYHRZ": {
+        "stake_mina": "10.667236515",
+        "external_delegators": 2
+      },
+      "B62qqAUCcdxhMqxCEUbuPy6kTQf1LNHknZE9twxUWRc9cbX2ABoBCEX": {
+        "stake_mina": "10.436500321",
+        "external_delegators": 2
+      },
+      "B62qqAfcL1M2MTGrRaRnnWJBBBvGVcJx8xvuhS52XaZnWLQ66SbwwYL": {
+        "stake_mina": "0.68493269",
+        "external_delegators": 1
+      },
+      "B62qqBJsb5otKSjd54ikQzhnHLWVspQzpYD6Rg4gnLeHpxsyFdUedMh": {
+        "stake_mina": "0.157883454",
+        "external_delegators": 0
+      },
+      "B62qqBdM9mcTk1otWiRPfBBF3uJ51BRGH67GG23HakzfhcmDNjwUYVw": {
+        "stake_mina": "1.324958751",
+        "external_delegators": 2
+      },
+      "B62qqCAX4aukHTerCMExfPWwYYxUQLFygeMC8usFja9KEo6yzKQUpx6": {
+        "stake_mina": "1.993",
+        "external_delegators": 0
+      },
+      "B62qqCPVQv7BE5yraM1o9A5JmccMoQSmGKo5bb83C3X3vbLbTda7kcx": {
+        "stake_mina": "0.242479206",
+        "external_delegators": 0
+      },
+      "B62qqCpQDbSY8PrgEhQTmx5toQvSY1bESHH49fAmEjhHfhzAkazp7r7": {
+        "stake_mina": "1.981400444",
+        "external_delegators": 1
+      },
+      "B62qqCrMtm5TPZrKdtocNhyZ713oDALGg92CzSC1wFaEvbpAvFs5CgR": {
+        "stake_mina": "0.19",
+        "external_delegators": 0
+      },
+      "B62qqD9f8CGy5QeFj1h3nsit3Zp2GDBntjEoVCdfj4SPQuubRW1CYXp": {
+        "stake_mina": "1031510.594487687",
+        "external_delegators": 322
+      },
+      "B62qqDDZYhfU7mNcQKJfWHDJ3JjVTi6dG32oWiWY3KrrX4mSMLdEuUj": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqDM6xz6hjmUoGXZRutmdR4QkBqTEsv1L35jjZPCGxk6RxT731wr": {
+        "stake_mina": "0.1586444",
+        "external_delegators": 0
+      },
+      "B62qqE1vP2tgYCu2hyFLDWWrboMwPhAoZZjvvUffmUPbbqPZVqLJaLx": {
+        "stake_mina": "0.2",
+        "external_delegators": 0
+      },
+      "B62qqE5R5pJDUjPrKZMtTkPKUPL27kwNZ1sHkZaowxSLosZvLudt3kW": {
+        "stake_mina": "29.251152068",
+        "external_delegators": 2
+      },
+      "B62qqEbM64qqDsLzefbkavB3RJWy3oZUbZ9HikqCKRBTvqbsbR53ogD": {
+        "stake_mina": "1.268179393",
+        "external_delegators": 2
+      },
+      "B62qqEzquiJcyFrn4NhsSufRW2cr6oKqLLnPFFdAaZqaSqLYEw1nwA7": {
+        "stake_mina": "0.29",
+        "external_delegators": 0
+      },
+      "B62qqF2kUvSDw9r4XdukwST3qtqXE1S5oVfMidV4JBr3BFHpGQ3Pd4d": {
+        "stake_mina": "1450.96598122",
+        "external_delegators": 4
+      },
+      "B62qqFK1eJt6nMgrwmksH6vWJSicSFL5qzQAfrEyTff3CznL9oncf2R": {
+        "stake_mina": "3.971400366",
+        "external_delegators": 1
+      },
+      "B62qqJ9zVibqkZob87KoGUuXtHjbJav87soLvUWmDbGpRsfYdToqYgP": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqJS73eybXKRibG7KD7fudjpRdH1gLT2KKYr5A2iisEFgf6BBsQ8": {
+        "stake_mina": "0.01624717",
+        "external_delegators": 0
+      },
+      "B62qqJXzVcb63kE6zFEXJn2GsQ4DTjygTE3ymjYSsyHRt61qVoUBZyr": {
+        "stake_mina": "205950.481593533",
+        "external_delegators": 3
+      },
+      "B62qqJwQJuDAUEcB6gjj7cDDhG12G1xwQcNeM8fi4wFG3GgSrz2WyL7": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqK6M9q1eE8MNnmeGytCUhgY3nq83hMxstjtcyqiEGuNMTvjNDHW": {
+        "stake_mina": "67000.50740196",
+        "external_delegators": 2
+      },
+      "B62qqKCmTdo7JJS6hP2YsiMoXvkpo7rcK6EsxBns3etbQytnoY8b49C": {
+        "stake_mina": "0.027482962",
+        "external_delegators": 0
+      },
+      "B62qqKoxyhPfHY9kw283dafk5jztbbKdH78eDXpNCyj69cmckC8KZqs": {
+        "stake_mina": "1.007649935",
+        "external_delegators": 1
+      },
+      "B62qqKvhGqh8bCL6Z3mDiE27paMtpCC4VqwPiGZap3SHChgFoBWAyr5": {
+        "stake_mina": "147134.891842865",
+        "external_delegators": 2
+      },
+      "B62qqLSdwfD82TSM1jc7FdX4uSos9VMn7yUWRngimjtpqhrSRQgKhPq": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqLTtRtfYjivYCTwNwZ4Xd27xm8Qgn4i7PehkHEvtjtUuUWKwnsV": {
+        "stake_mina": "0.0025583",
+        "external_delegators": 0
+      },
+      "B62qqMU2Es9QPPYj7Vn54aJbbW5gibDZYu38LhGLGSjccSxJRQ5NkuK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqNnnibyEQjsBgtwbgTKzhrbEFwd4UfE6jPt25TxGvE8iJk55w2L": {
+        "stake_mina": "1.4",
+        "external_delegators": 0
+      },
+      "B62qqNtW4FhhPwXbuMLAXBwT5SwTA8CtFrt2Lp7APjmxo1JNhXaiJtb": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqPJmQCXeRmjSj7jJPXvgshHVBfbeXmNW2uRBf7pwVsB7pzbcqFH": {
+        "stake_mina": "0.919679536",
+        "external_delegators": 0
+      },
+      "B62qqPakmudzU9xcg1VmJHnwgKhu6zjuLCQ8Cz8ZzXKB67oRktbF9UX": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqRAVZEg8aMzoLuLjZyW5a4dmYipaqChfM7GQYiyqSK7Y9qR44uc": {
+        "stake_mina": "0.001595632",
+        "external_delegators": 0
+      },
+      "B62qqSBUwbUxVdhKvVNtkWT1rkMFkjmd8cGaNGTrgN4mRgUqN73HjBr": {
+        "stake_mina": "1.888519017",
+        "external_delegators": 1
+      },
+      "B62qqSDsgPh4c6E4DQw1Rbo1dCtZJMivQtXTDJcL58m95pydVupDDRE": {
+        "stake_mina": "27108.322630579",
+        "external_delegators": 55
+      },
+      "B62qqSoYxdBCcRdz33du65frxQbFn1tPCPq5kgTvqjzPAS85pwo1WFy": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqSvXBa1cdTsARTVZrnJreCDdEy162q7axsf3QfjWzZCKfrU6JoM": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqTGc21K1mJo9adVuKwRddiUD5cQxocu2BxaahQGfrQzvWBc7UYv": {
+        "stake_mina": "62649.900280145",
+        "external_delegators": 2
+      },
+      "B62qqUD5wTz7iVVrT2axj7tVY3kybSPZBJBDXRgZTPgJJHm5eD5aR1b": {
+        "stake_mina": "2.614226373",
+        "external_delegators": 1
+      },
+      "B62qqV16g8s744GHM6Dph1uhW4fggYwyvtDnVSoRUyYqNvTir3Rqqzx": {
+        "stake_mina": "2279478.487665029",
+        "external_delegators": 635
+      },
+      "B62qqV5YWUyhyYhPVBbJ79LUc1QC9xvwZtWMnvYvjUZHGUBpSTz8mXY": {
+        "stake_mina": "0.548117842",
+        "external_delegators": 0
+      },
+      "B62qqV9P4mqMGeRR9QCJpSrxnFdeRfdNLW3on4eFBeEWgdF6xgnSm22": {
+        "stake_mina": "0.44",
+        "external_delegators": 0
+      },
+      "B62qqVBAmXHUJg8BxKM9J1XghP9yGRAfq6JCES6eDGCiHFWtK259m2q": {
+        "stake_mina": "1.803959509",
+        "external_delegators": 1
+      },
+      "B62qqVPxjBaytFxRZt5yQ4Y2FMNcFNRipzF3JZZLoVnpG8DVCvz7tM4": {
+        "stake_mina": "0.007896845",
+        "external_delegators": 1
+      },
+      "B62qqVRmNAZEahRMX1T3EsC1RhhoVWWx9hqPP9ZcKYpGL1mhb3srP6S": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqVS8XYr5dg8wN38SAu1eisRagbGRAYFmLynzHZrN7XQbb3FTHE3": {
+        "stake_mina": "100.098533631",
+        "external_delegators": 1
+      },
+      "B62qqW9SPWBjQ9uha7h9veMJA1FL7FJqwCz9ytyxhHqcEEX8db1xExi": {
+        "stake_mina": "0.282605045",
+        "external_delegators": 1
+      },
+      "B62qqWCLSLbh7175fcrdBwtzTjNK6ftxNu2SdthXbvdSbUNZnik4Aho": {
+        "stake_mina": "10.126646126",
+        "external_delegators": 0
+      },
+      "B62qqWzWHjUmJSSB9db6BDpGjFJkRNjjtZorwJdpeASzSPHpRe4CoJS": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqY74TxcGyHFZvRK6wmZu69PzPQSrxfhBgzCDyiEvWYkhMsX6wXq": {
+        "stake_mina": "102.278485548",
+        "external_delegators": 3
+      },
+      "B62qqYTE6Rs6rpypXRk2FRADkNYbJnjKJBejJfxiLaaGjDqT6CxhtCB": {
+        "stake_mina": "2.434344391",
+        "external_delegators": 0
+      },
+      "B62qqYgjPA3VwKEnmWy7Cwp9fVPsZskTXQTKQdmw8qqKgznzarSEfXM": {
+        "stake_mina": "137660.126886623",
+        "external_delegators": 4
+      },
+      "B62qqYv3jnSjWGihWqqiX482rkPJ4MyXDtGF8Uz2zh4UewKapdHod1P": {
+        "stake_mina": "102735.82291525",
+        "external_delegators": 1
+      },
+      "B62qqaEv7FUEet3dQFFCA9woh4vQXURBVYYbm5LPg4j1XFdkyiYeRC2": {
+        "stake_mina": "11.190280037",
+        "external_delegators": 0
+      },
+      "B62qqaGu2Hz6122My8Ddxj5WPgQd1tVLmXXJioxa7Wm5m5VJPzoZdhc": {
+        "stake_mina": "11.866039561",
+        "external_delegators": 0
+      },
+      "B62qqaxwszaMGfRRgKU21LM4VVoHraHJ8mNPf3YcYGycjd51Amo1cY4": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqb1SeF4wc4bMYYJsMg3wqHMcG3ffyBcaHb7a1K9HZtc2sZWJUbi": {
+        "stake_mina": "0.99",
+        "external_delegators": 0
+      },
+      "B62qqc3eKfNYpdRByoN4V3BTjoPRgacLrqtx4WkBQgnVcQ1MHSWTyWL": {
+        "stake_mina": "101.100704698",
+        "external_delegators": 2
+      },
+      "B62qqch9XkiTS8BLUDSM1sayfXNAtnYnQFChktYG1bfCJkDMUqs98Xr": {
+        "stake_mina": "177413.235653469",
+        "external_delegators": 29
+      },
+      "B62qqcpCkB1yxoFw1DsxoWW9NUE4prA3c2zNXAXJw9oHL9Fqf3mQADm": {
+        "stake_mina": "2181.448934861",
+        "external_delegators": 0
+      },
+      "B62qqdUyibxt88yZAbMgeFvYSC1ybsAZKm9Nyb4g3axFBPBFqJWgdwg": {
+        "stake_mina": "0.2989",
+        "external_delegators": 1
+      },
+      "B62qqe4vXu5XrF3jUKcBpD7rGo1TsuybeXQfHMK8QuejfqmFB7K3Y93": {
+        "stake_mina": "210531.357642521",
+        "external_delegators": 9
+      },
+      "B62qqfQ1J8Qta7AV2vDGxsniHri1QdMtDD3TqrVZd2oucXCpC79pVLb": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqfnR1yWvyFYDDkysmqG4YcjLr5dnSoPzTiHJUbu7m8YZnjHpjoi": {
+        "stake_mina": "0.23",
+        "external_delegators": 0
+      },
+      "B62qqfwuQQpKCQs7xh13PWVgvWxXJwVS3jeWuiNhasJKaY5EVmgJNzh": {
+        "stake_mina": "1.42",
+        "external_delegators": 0
+      },
+      "B62qqgGAQfpFhX8G1iF253C37CMsj6ypn77C9fr3Y17iU6B5Ft4XjPo": {
+        "stake_mina": "31.90276",
+        "external_delegators": 2
+      },
+      "B62qqgLQoPgy9YzsVKwB1KBuyB62TiQJYawDubnhf5gewKJo9qrKdnG": {
+        "stake_mina": "0.836309366",
+        "external_delegators": 2
+      },
+      "B62qqgRSn3yaBgu4uc1bLXPs4qCzygqkciEo7VcxE7fbBPGG2eqdHrT": {
+        "stake_mina": "696.405365642",
+        "external_delegators": 2
+      },
+      "B62qqhHs5hGXumEBYSAbKvC5edPKT6aUzf6XFRsANWq1XHwpJguYosx": {
+        "stake_mina": "2897.842183444",
+        "external_delegators": 0
+      },
+      "B62qqhURJQo3CvWC3WFo9LhUhtcaJWLBcJsaA3DXaU2GH5KgXujZiwB": {
+        "stake_mina": "257005.619467073",
+        "external_delegators": 222
+      },
+      "B62qqhZioGPLYePnwCFUqQd7WoHu3TTmZVAvwoh61xnC6VcWNqLMsCp": {
+        "stake_mina": "30236.58362531",
+        "external_delegators": 1
+      },
+      "B62qqhqGNC4aGJ8MAeLpqUGZPCPBYCS4j3HXEx5ouYE9KEiZjCMJVfo": {
+        "stake_mina": "0.463242008",
+        "external_delegators": 0
+      },
+      "B62qqi1FTyewJfHMcktECeDBjaAQcNUpNfGuEb7Xr2Wmq9cxtyzbLWf": {
+        "stake_mina": "3.1",
+        "external_delegators": 0
+      },
+      "B62qqi6XbkDLTS4qEskMnwgigELE1dvQui4SdohMyDbCGtTbyvqpMet": {
+        "stake_mina": "0.75638016",
+        "external_delegators": 1
+      },
+      "B62qqiDaENiWn3LHqVwZATboQjZsMMGce7CtYsqGcXwzbUkksX5mpvx": {
+        "stake_mina": "94.737882165",
+        "external_delegators": 2
+      },
+      "B62qqinq63ZwUiEE6Y698hjzR8xU5Ltk5SMoY6SeKAGZnfwTG3m1n5S": {
+        "stake_mina": "1.89",
+        "external_delegators": 0
+      },
+      "B62qqj1YzdmiHE43B3CYXbi6vU7o4x5ZiwVWnR2WQiUxfx1CNDHnzg4": {
+        "stake_mina": "0.2899",
+        "external_delegators": 0
+      },
+      "B62qqj3tznrFjJZ446kJjjpfamNeeJKAe7jxo2ZvZVADtdJf36UReSb": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qqjvE7v6Qrf1h7xtn4U57eMq8m7CPpkgwS3aCY8w9jQgnzAoPoUp": {
+        "stake_mina": "35.436215799",
+        "external_delegators": 3
+      },
+      "B62qqk1fqB1mo6cquS7RBU29oowjBRuJ36X5yxodpqj72BvyNXu5ZRQ": {
+        "stake_mina": "66.581784271",
+        "external_delegators": 1
+      },
+      "B62qqkTmZGQS181PCESpoAi3W3QF4wmW7FG6f3To9rpv5Q1CyXGsnDz": {
+        "stake_mina": "3.559401448",
+        "external_delegators": 0
+      },
+      "B62qqkYByzLjUgCRmcVxAccuoAKmF18rumVavJuyXnwJDmu9xgVB3Gg": {
+        "stake_mina": "100.0206861",
+        "external_delegators": 0
+      },
+      "B62qqkoUis9PTQ5Pv43ymbCg9UCv8D5nLZx3XpWq8iFZurdpxbRQ3RU": {
+        "stake_mina": "0.415545862",
+        "external_delegators": 0
+      },
+      "B62qqmjSecyohvmyk9vQYkNdGCxWbbbWXjC9WcXeFTkSpFEyGh71N3g": {
+        "stake_mina": "1000.0899",
+        "external_delegators": 0
+      },
+      "B62qqnEa9A53QNryx9KJRQ5sPp5z58UCBDuBmT5TxjzEfDXLojbXJSY": {
+        "stake_mina": "0.315430504",
+        "external_delegators": 0
+      },
+      "B62qqnGyRwo82Hv6hr1KydpUQzTmYyBAQDVrxc6TxbdJxrtSYGr8QXa": {
+        "stake_mina": "6030079.735631586",
+        "external_delegators": 7
+      },
+      "B62qqneFCrrHKdvQg6tdKGjgpJa28Lk3basrGPkyZfBJtjgocd2eabi": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqoBaTeqq6K5kpPEBh22HHq2BJ3ukegb4csDDoyoaFzdpgKLidYS": {
+        "stake_mina": "3217.850924845",
+        "external_delegators": 7
+      },
+      "B62qqpJCDYAFpFMgm1FSCwvY1E4r4EPmoH7bBJkuGsGJ3hm3cpFLGSE": {
+        "stake_mina": "82564.197486762",
+        "external_delegators": 0
+      },
+      "B62qqpujuZ5W9uGtEwJv9R9yP8475hjFd93D4fVXoVPi9tmAMsQZBhn": {
+        "stake_mina": "124.238810426",
+        "external_delegators": 4
+      },
+      "B62qqqxSi2A1XWZ1qmZWjidraTSH5wDNWcDG7THCZbKfQgm4zsvn75N": {
+        "stake_mina": "4.3544414",
+        "external_delegators": 0
+      },
+      "B62qqr6XsuYiqauPRVDu2RSGqwV8F5D4tikq6G2rwnr1xRRALTKheF4": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qqrpLJVfRoPySURcqyC9EnpchM4cCnC88uytJQLB97xCJwFqR59k": {
+        "stake_mina": "9.797102512",
+        "external_delegators": 1
+      },
+      "B62qqsn2TtRRjfbn1ARcCpfvKZkKTZk2oUtihjxzq59gDynpoPSheF5": {
+        "stake_mina": "1.568e-06",
+        "external_delegators": 1
+      },
+      "B62qqtQYGGKHnZusidNWULjyoyLEv3zG9r8eYQsf4fzNZCosFnnUSQ1": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qqu7KbdrtYdGr5f66RvNRG983iKvVXgUUfsRc18ZCPLVw9naVLe4": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qquRToou2tQZTgomxbyRdACfeLXwDCeueAxEXApX9j4UhVfmQd1A": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qquqDwYV7eBxEPH3tsnwS9G7YjYTX17bVcjGyyd1YjfwjnHgdY6s": {
+        "stake_mina": "5.236663496",
+        "external_delegators": 2
+      },
+      "B62qqur7vFH2Yk8ozux6Bt4N9teFpqF5oBvt5gAC4naUWJZZnAx9uZV": {
+        "stake_mina": "6539.806352042",
+        "external_delegators": 9
+      },
+      "B62qqv6FQbS41XjaPLEKF7fM7YoVUmYk2SqS9YRJpSy3zttCWD6JFtv": {
+        "stake_mina": "0.009499097",
+        "external_delegators": 1
+      },
+      "B62qqv8p3QdZVTVjYsyc6sJfxBAGmhQ8PZfeup3CYgFTeNMgMHdDpYv": {
+        "stake_mina": "4.314e-06",
+        "external_delegators": 1
+      },
+      "B62qqvDf19E357mwCfM6fHRhuBTaNcwnKCJbaNE3waGnQ8uNZZPU66g": {
+        "stake_mina": "143.902016968",
+        "external_delegators": 8
+      },
+      "B62qqvN7pFGTSzQgmwgxVV3nCAjQSE1mTpwHfQabpM3kZvKhYbhTRbC": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqvZh85mfqj7mFhKfDnC1n6aCxw8Ey876Vw2z4E4tnCkRpcHTJ7b": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqviubZYVLfxPAzHVX8DAKdodLXerxKZ4VKvWv38xhG3FybHjtfH": {
+        "stake_mina": "1.199",
+        "external_delegators": 0
+      },
+      "B62qqw9iDUUVa1wt8KeyB4Wr46DZiZZa4zDm2yRbeyZWSYA35RVe1KY": {
+        "stake_mina": "0.088272167",
+        "external_delegators": 0
+      },
+      "B62qqx9cufbZEn5hDgfftjURCX3sTZYMuRLXVQYCPWL9P9hwXbrju1f": {
+        "stake_mina": "99.0",
+        "external_delegators": 0
+      },
+      "B62qqxA53FsxXjQhrNrz6iDR7Hxnruh631vPmX4wWnidkVVhYTq8arN": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qqxXbwPYis6ofCkLAmJw6gmFQQoPSq8oWCkviUZATdh5ii59YrH9": {
+        "stake_mina": "0.664518687",
+        "external_delegators": 0
+      },
+      "B62qqy7DHHzo4ryzUYdycH9jNaPYGj1vMUPZxQ2VwSq134EjHKeYiGt": {
+        "stake_mina": "159702.442075065",
+        "external_delegators": 1
+      },
+      "B62qqz9rLVxZZ68wuqYVHp178sPqSSjivTCuQVYpU1bxGxYHyspCP3f": {
+        "stake_mina": "8.870200101",
+        "external_delegators": 5
+      },
+      "B62qqzZV2SBb4hiwShC3ZyfonyHphb9RyBySjjo4Jb8yRYxVJd99djf": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qqzq7hnj6Bm3pG5PG7ugGrTKaNCa3XBuU6yDV1XmqBffpyb8s64i": {
+        "stake_mina": "98418.610165193",
+        "external_delegators": 2
+      },
+      "B62qr1xsi7oxdoags7Kuoj7uMyV7m8rrbX73ihbdkEpP1xEcbqASaLm": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qr2DnC893Edg2SwKqrofQzJs3hNEYMMyd8fGuzRE2otgzNmKNfdQ": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qr2QLJsjFqXNVJiwvXQ33kzCgFFLZtkDFzWdtizzMJNpPUfV4mgQ": {
+        "stake_mina": "1.368611943",
+        "external_delegators": 1
+      },
+      "B62qr2mdhKQAJb3nSwHJsvubaexz6S41PHTtuDbvqCgp7d6Wx9C4A5z": {
+        "stake_mina": "0.302",
+        "external_delegators": 1
+      },
+      "B62qr33YrdZWpUw6eeLji4nKB97VgADHekHjyCmb9oGDrashXMPawWG": {
+        "stake_mina": "103455.95443699",
+        "external_delegators": 1
+      },
+      "B62qr3qCQ5XeTCrhy1FCU8FgHnuNDdfvJhq9aaSVA5KBSns2Vb9xsZf": {
+        "stake_mina": "1800.864609131",
+        "external_delegators": 1
+      },
+      "B62qr41Mf7gCaRXN2dn8yBCe5D5bedQ82gyG2ELtkx5Vcd3HNcnVhxE": {
+        "stake_mina": "10.280000001",
+        "external_delegators": 2
+      },
+      "B62qr4GHzxs5a8oD9png3476HLbV6FbX1eLCCiJDzZjVEfn9mgFnhUJ": {
+        "stake_mina": "63.036578404",
+        "external_delegators": 1
+      },
+      "B62qr4ZUkBRA5Jr7o5oVAyqM4GqjPU1HPkNLSMhHb5EfZRz4d9hM7RB": {
+        "stake_mina": "1.005755334",
+        "external_delegators": 2
+      },
+      "B62qr5zHCZ8E52aUT6xMLPhvaqvaRXhG8p61rvpS6VPUFYdUFXUYnY7": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qr61ij8ZPW5BX6GMs4UNW1Ry29Cjbn2Z2LVyLkGJH3JgXJwx2jiC": {
+        "stake_mina": "0.09",
+        "external_delegators": 1
+      },
+      "B62qr6GpqXaQmQEEMm3HMaoFPxkdJST3mQxAmWvsChTmfGFFM6ja1Ht": {
+        "stake_mina": "0.000136525",
+        "external_delegators": 0
+      },
+      "B62qr6Rfm5wHqou4FmamDzA7tFHKHkoawbZPco1LCq1RjDqhGm1iCpN": {
+        "stake_mina": "9.20738677",
+        "external_delegators": 0
+      },
+      "B62qr6c6KdPCbiZngosibz21agBwG9ivg9b4JKPj4wvfEFitpXzYk1U": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qr6owPPGkPVLVFcXnQHvijQxH4TAVqXhJAcMuKWvLXnHCtLZyxPZ": {
+        "stake_mina": "1.800725839",
+        "external_delegators": 1
+      },
+      "B62qr782E2zRQnupob7Cq4rLBzMEwjiysmSKvZbjke8s7jbcrFSsn4z": {
+        "stake_mina": "796.621705648",
+        "external_delegators": 0
+      },
+      "B62qr7o47ANtvCpSzdVXXoweGkaZkwWnq2mZ6Heg7KQTCuShF4KeKFS": {
+        "stake_mina": "0.012074778",
+        "external_delegators": 0
+      },
+      "B62qr7qA3irfQQ4piuDqXtJqXxEuAJUo3RxW8Wxu4so48m1fXyLLHxo": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qr8cHD8hf7NVEa67a5Hrun164DBZqDCzfQTcpFx8iZk8e3n5122m": {
+        "stake_mina": "0.994",
+        "external_delegators": 0
+      },
+      "B62qr8sQzeJNF9gRpCT8PvJx9RwAsDSvXCXFHEdSBrMcszh7EzvADpV": {
+        "stake_mina": "2.300823369",
+        "external_delegators": 1
+      },
+      "B62qr9jmNyuKG9Zhi1jENgPuswFRRDrkin3tP6D76qx8HNpjke5aUMs": {
+        "stake_mina": "5536.584379725",
+        "external_delegators": 9
+      },
+      "B62qr9ovvknagfPkPfiCKxVkwCyCzoevkrd7im7VVmZHFK1aUzBryjS": {
+        "stake_mina": "110.630969292",
+        "external_delegators": 1
+      },
+      "B62qr9sS6SBP2vmWpNYxmMvfsH3ZhiS5QC2M8Vc7f6v2d1nPU48Meao": {
+        "stake_mina": "0.011080246",
+        "external_delegators": 1
+      },
+      "B62qrA15UM1JCQxUd3cnLZ7uW4p7CjxKnroQTibF1MG8ym4B1Qe9CRg": {
+        "stake_mina": "24.577335893",
+        "external_delegators": 1
+      },
+      "B62qrASGGbtuVb676neJvNySJdPUaupZJxHBNUjBAcDd6bvptyjcXpf": {
+        "stake_mina": "1.9",
+        "external_delegators": 1
+      },
+      "B62qrAWZFqvgJbfU95t1owLAMKtsDTAGgSZzsBJYUzeQZ7dQNMmG5vw": {
+        "stake_mina": "341.546861444",
+        "external_delegators": 10
+      },
+      "B62qrB4hLHkwUz3UXwx6jLx6XrvbRae4d8t6pMVaGhjt2c1XoqJZTUb": {
+        "stake_mina": "75384.279822215",
+        "external_delegators": 3
+      },
+      "B62qrBN6rRz2VxCdvVCwDqZQc2BVFbUE4YznkKL2rxH3d8Xciqxpgf8": {
+        "stake_mina": "90.069107168",
+        "external_delegators": 1
+      },
+      "B62qrBRnUXvdMr8eGLBsmdpvFnndinDZMowqoMUYRJnmGKpdJv7TMRj": {
+        "stake_mina": "0.1",
+        "external_delegators": 0
+      },
+      "B62qrBtQsNtPp7M5mhyUapQ5S4J3Pq8SzHK1GzNcYZBmxyQLMYNj87u": {
+        "stake_mina": "0.965900006",
+        "external_delegators": 0
+      },
+      "B62qrC2jDFLsnuUhRdpTcg8ofAxbAGTskyz3KeSLtBrBt1acErVS5xD": {
+        "stake_mina": "99.0",
+        "external_delegators": 0
+      },
+      "B62qrCq29LkfYeaVN7p6yHzt3DZqg1AzkMtBgJeReqhYqGzz5u19sTF": {
+        "stake_mina": "1.981401392",
+        "external_delegators": 1
+      },
+      "B62qrCsLRjBPcr7pN8wRaSsw18PvZrzc3W2JAFrpt7K3YuJtAfMe62U": {
+        "stake_mina": "1.786487258",
+        "external_delegators": 3
+      },
+      "B62qrCz3ehCqi8Pn8y3vWC9zYEB9RKsidauv15DeZxhzkxL3bKeba5h": {
+        "stake_mina": "136453.532148037",
+        "external_delegators": 2
+      },
+      "B62qrDWJg1XDw686vnELYZT6UedTVSHFkgh1WRyGc5Bk8dCwsvzY4LN": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qrE1TgV5jegA2rn32gi7FkHbFSvo2xRxKwhYykAiAsLy7ib7Uwnc": {
+        "stake_mina": "29236.981326029",
+        "external_delegators": 16
+      },
+      "B62qrF464XvEDcs5yYa6FnZsz1RhW79HQCyvfQLME7w9NDuqrdAgfuD": {
+        "stake_mina": "1056.194712622",
+        "external_delegators": 1
+      },
+      "B62qrFZgGQziFSbJdx77CtUcmE31aN755CuZfzj3XEy5gif9mkQ4HsR": {
+        "stake_mina": "4.994",
+        "external_delegators": 0
+      },
+      "B62qrGHFEj4vF9SNg7w6BdKvfGmXJ3Cgv1b8rmxDUFNrbKq8ysseAoN": {
+        "stake_mina": "1.9625",
+        "external_delegators": 0
+      },
+      "B62qrGVKcjAQySz6JYJJaSxpxkQzbmKxnJgW7e6JXebRuptAukfEZXQ": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrGX6VyP6BmGAMYzrvhyq12JDuCQHpuumme2St5K5nWgPiFKhwMS": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrGxW2hCdojBrMtaQGX1AQr4hHmWJ53ct6GegP7xLA49ucSxbVVt": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrHXrAyPaXxgRKHg4zfnFa6zxWRo9kPRseenPZH27T5oA9mQwKWQ": {
+        "stake_mina": "9239.467434801",
+        "external_delegators": 1
+      },
+      "B62qrHzjcZbYSsrcXVgGko7go1DzSEBfdQGPon5X4LEGExtNJZA4ECj": {
+        "stake_mina": "261185.491921852",
+        "external_delegators": 130
+      },
+      "B62qrJ6V72vUoqTnJUsXwBFbCU2cCk42To4mmRRY19NiGMZqJuYLLJP": {
+        "stake_mina": "96583.090851247",
+        "external_delegators": 5
+      },
+      "B62qrJowiiRAYWQUrhyieAdFuDJgQ2MoyCqTzotP2ECRVptb63f7bG3": {
+        "stake_mina": "37730.841757101",
+        "external_delegators": 3
+      },
+      "B62qrJuKZPnqPS8AowHMW4xFbUDri7aS1DVtSrCtFgBLEWGdMk8LALL": {
+        "stake_mina": "1.009399845",
+        "external_delegators": 2
+      },
+      "B62qrJvAxbmZzSEJVoFPcu6hDLnq632YxSgKcfeHhnCrj7tfBx7LBKQ": {
+        "stake_mina": "1.895689663",
+        "external_delegators": 1
+      },
+      "B62qrKMhbC7xqJZ5rdinoYKNT6xHG2hp1NcecF9SGxw1BfLdKLZLCS9": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrKSbjz5XSQ615FF89xz5jBLLS9qhcbHbV94dnqmqKs1f5zNhFa3": {
+        "stake_mina": "1.61",
+        "external_delegators": 0
+      },
+      "B62qrLFnh5BWLjHmsnrX9ABW9QVRDe237VKXQ3EobeXDqsLyY2iQD9g": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrLewpuQqr1CTZP6SWuhvp9Me433b9q9u9Bz9jwZZ7ApsBGvSEU6": {
+        "stake_mina": "29342.900011968",
+        "external_delegators": 3
+      },
+      "B62qrLt9obuWhsVgUsrFyC7AzQXfrsPzYtDrDZi9TJ8cvv2oDPVUZsn": {
+        "stake_mina": "0.46648181",
+        "external_delegators": 3
+      },
+      "B62qrMcfi5YFw9y5CjiVPPUcyWAfaWmc5ASez4G9CUe4NDanQ9CNuuZ": {
+        "stake_mina": "0.95017558",
+        "external_delegators": 0
+      },
+      "B62qrMsjVDJV86QUed75EGMqSbGyKDYWXp1GBLiPCxCFe3Lsumqc8qQ": {
+        "stake_mina": "0.5",
+        "external_delegators": 0
+      },
+      "B62qrMu1QgSkkgRMahCDXzVMgokpBuWLCRwUUWmuuhS8BwaACR1buux": {
+        "stake_mina": "1358122.062239227",
+        "external_delegators": 1
+      },
+      "B62qrN8kv3Jm1XrQJh9ZhnMqA8pzEiRjM8KC448fjidMdKWfYHAqAjw": {
+        "stake_mina": "0.675416567",
+        "external_delegators": 0
+      },
+      "B62qrPLQL66L4BKeCFeypQHcAmKCcjtEr765o78xUJE335puxC9NViD": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrPbHUhxVqe17VwkzTyUmEsFwVry8geJEb7zfBVa8kocYAs2j4nn": {
+        "stake_mina": "2.96476071",
+        "external_delegators": 0
+      },
+      "B62qrQ8ugi2B1P7BzvoVUWkTtqwdCNJ9mKqvcZugkPycb9njqTRFsra": {
+        "stake_mina": "2.9",
+        "external_delegators": 1
+      },
+      "B62qrQBarKiVK11xP943pMQxnmNrfYpT7hskHLWdFXbx2K1E9wR1Vdy": {
+        "stake_mina": "0.130040187",
+        "external_delegators": 0
+      },
+      "B62qrQiw9JhUumq457sMxicgQ94Z1WD9JChzJu19kBE8Szb5T8tcUAC": {
+        "stake_mina": "13089633.143595658",
+        "external_delegators": 4972
+      },
+      "B62qrRVMpryecmWaStfobX2dxRLuWxsbd54jfjZm9DAdBycDic8Ef3h": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrSvB7hdcMk2AB4SmyCjG9WUeaqFBjSrQ1Tw5MoyL5h6ZJzETj9X": {
+        "stake_mina": "0.651",
+        "external_delegators": 0
+      },
+      "B62qrURDTkpoeatoorZEusc8U8CD2ug773DDLoz2YKwewenVKkQq8bx": {
+        "stake_mina": "16.617711543",
+        "external_delegators": 0
+      },
+      "B62qrUXUnrc1tR1XN44eVaYVyw64MYD7p841LHsxzuMy6yERkbkzS87": {
+        "stake_mina": "1.139",
+        "external_delegators": 1
+      },
+      "B62qrV2oyYf84jZbQHdqH2TyUndafsL134WMpf5yDafmQ6ZGMxUiTmF": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrVGh6mx3DQBmXobnWidM265mxSD3aisVjR7c9KMyZV5FfXqywST": {
+        "stake_mina": "7283.629028563",
+        "external_delegators": 3
+      },
+      "B62qrW1cezZ24Dn7DMdb7WPVVpCcE4s9BhYDDz49rWyVeMinHb18bg8": {
+        "stake_mina": "3118.6983907",
+        "external_delegators": 0
+      },
+      "B62qrX5RshM6SdRv494PFPkexrYa8HoWkJThKPj4jMuq1cPfBCpvpvS": {
+        "stake_mina": "1.505152266",
+        "external_delegators": 1
+      },
+      "B62qrXHRtZk15fN3f5rZuaqxgZUMNAxhv7EaNbnsWoGGSgG6Sj4CRvG": {
+        "stake_mina": "1.00137959",
+        "external_delegators": 1
+      },
+      "B62qrXmWJCcHazXBuH7KKZq4SnEAtCF7962iNiQ4kJ77NtSoZDN6kUu": {
+        "stake_mina": "0.05",
+        "external_delegators": 0
+      },
+      "B62qrYD5oqNfvrFP84wcgEx31bSDCib2yyx4S7oy1ZQfB7YuhpPeykL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrYKXN1GuMy3Loyf7WgjjUPimw8BJeSTip9h1hjfyTvWq1AA25DY": {
+        "stake_mina": "1.5",
+        "external_delegators": 0
+      },
+      "B62qrYipbTfEx5GoJf99uU2iAcW2jgAvnoy1Wrj4WeMEnnZutTiKhDe": {
+        "stake_mina": "7200.594556226",
+        "external_delegators": 0
+      },
+      "B62qrYveCMCW2tr5J8gu9T1rh817zsq7j8cjc9mHEecQS2tRMnoNTsy": {
+        "stake_mina": "3.411855882",
+        "external_delegators": 5
+      },
+      "B62qrZwFrd9tMGYnK3FJTz93Z9BM7zo1868RALxjwMtx9JWhpJaadQY": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qraDPh5jcwxqnAEi5S1xN6Lkc7MgZQtx5ZftkKpS5EzQoiKkESPV": {
+        "stake_mina": "0.200011",
+        "external_delegators": 0
+      },
+      "B62qrae3PEBj66KV2obWnzVxMjDCMuFWnyzxEzvLkQutaKPmWtfUPm3": {
+        "stake_mina": "910398.688766021",
+        "external_delegators": 333
+      },
+      "B62qrafvvcSTkGMpFiprxzDN8JXqoiyHSUQwUsKbRqrvTK1khb1HJyC": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrawWiZbmyrJaB94CVpi8Fmd3Lxw5m3tbXo97hKJkZPkn4dHe6G8": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrc6GMrEVvLEP2hUREPbsfE8XrQnEg1XHYejbHPPDKnVhbsVLWnU": {
+        "stake_mina": "1.222",
+        "external_delegators": 0
+      },
+      "B62qrcFgyk8u1NPaTvw9zZE1RVYGAeURojHds8WMjEpzHakU7BefkMf": {
+        "stake_mina": "3648.98285641",
+        "external_delegators": 2
+      },
+      "B62qrcQDeAfg2qSnZhdF8wQ78G9QmKNDqpESVt2SL43F97kF3Cyv32a": {
+        "stake_mina": "1e-09",
+        "external_delegators": 1
+      },
+      "B62qrccBaQJjQFHxwrHJVFHtkjsCps6JfZyXh5uA9XPovwroXJg2882": {
+        "stake_mina": "0.603341854",
+        "external_delegators": 1
+      },
+      "B62qrcpCwQNeFJvUru1fdVBWCfTWae6n7WcAacgxKE7W5gKAXyTV8yv": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrd9rWJtyr1gVCtVcdn8eTmPs9RvGVBJYid1SsPzjVE2UhPDNUx1": {
+        "stake_mina": "50.107091758",
+        "external_delegators": 7
+      },
+      "B62qrdSRyCUA35dyQsDE4At5QMjVnwcM7dYohvpCKpMwQmxoHnzaiKR": {
+        "stake_mina": "0.00187019",
+        "external_delegators": 0
+      },
+      "B62qrdXhSnquSdanvimFNDJqCK9HuN8hsHdapqPWaGqa2a9C3oG5XJq": {
+        "stake_mina": "0.046227645",
+        "external_delegators": 0
+      },
+      "B62qrdtL5JMA8bnwcdViPZCSKGztCCkpox6x5Dgeu3J7iLvgnFwigZm": {
+        "stake_mina": "12600.9899",
+        "external_delegators": 0
+      },
+      "B62qre3erTHfzQckNuibViWQGyyKwZseztqrjPZBv6SQF384Rg6ESAy": {
+        "stake_mina": "9932.875477021",
+        "external_delegators": 40
+      },
+      "B62qreHXktSKAXvzG68ddrcjveLdfn9PjUtYNCNNGV21aKv7cveMSVX": {
+        "stake_mina": "26.322479872",
+        "external_delegators": 0
+      },
+      "B62qreMF531wEZ9xmBAPJpGS7TVUkFhgRaUSGweaxKXCJJfPwNqXRjX": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrecVjpoZ4Re3a5arN6gXZ6orhmj1enUtA887XdG5mtZfdUbBUh4": {
+        "stake_mina": "2445088.008632467",
+        "external_delegators": 13
+      },
+      "B62qrettQjYG9syQH9HgSCKkncN4SXihexLPPLdJ5M9obK5mww1dJCf": {
+        "stake_mina": "0.19",
+        "external_delegators": 0
+      },
+      "B62qrexVgJhu7Bn9JPfffu6Na6AYUUrphtZVd723VY6o9HED1b952aH": {
+        "stake_mina": "2677.951413381",
+        "external_delegators": 4
+      },
+      "B62qrfJbp2y2P2KwqvphHirorHkNW8eguTRkavt2erR3ByZ76dXhALp": {
+        "stake_mina": "2.88868125",
+        "external_delegators": 0
+      },
+      "B62qrfRjSn7Wz1JAyM66rd46Zcf37sWa9tobyXh9wfZubHEfozW3SAf": {
+        "stake_mina": "3401.500402682",
+        "external_delegators": 5
+      },
+      "B62qrgm18MXb1SrUEtX749F7otngnQthQuz9pCcvHA2ZfgNcYTQBxqF": {
+        "stake_mina": "15.82542311",
+        "external_delegators": 2
+      },
+      "B62qrgnUUduZy2z7zT8qCV8ngTJfSS1rK3Wh22SHUmrse3Tfqvrhx8q": {
+        "stake_mina": "147857.404013696",
+        "external_delegators": 1
+      },
+      "B62qrhogjpZy7ufKrG19G8EDMmn2f2RFgN7EfMKb8yKCpCPXjBKVBGs": {
+        "stake_mina": "0.684344707",
+        "external_delegators": 1
+      },
+      "B62qrhubPYQRVPXBidkZgwmiZ6xbhdmymEk3Dbbq8QoLxMKVqowqwRZ": {
+        "stake_mina": "3601.94953376",
+        "external_delegators": 0
+      },
+      "B62qriA1rqpkBS338FEgr3Gd8jL1tqxj6d1Vgtr5WH9n4YRBLrstE9D": {
+        "stake_mina": "77.929914968",
+        "external_delegators": 2
+      },
+      "B62qriV8kQ9FzSRuFPXAjtZx8JcBhY5gmYkFd8VUxPVVSBpSb92V7T9": {
+        "stake_mina": "1e-06",
+        "external_delegators": 0
+      },
+      "B62qrjicPFb8kvGyvbivmBQuuAKsA6YkKwxmsg2X7ELcDqkkGys2grx": {
+        "stake_mina": "4.0",
+        "external_delegators": 0
+      },
+      "B62qrkPTrY79TGSUV3E69gMTpfPjztPzTC6TZxwEy9P5d4nU5EVgxQs": {
+        "stake_mina": "62859.537045383",
+        "external_delegators": 4
+      },
+      "B62qrm3q6F7vXt1g73ZF3ZzHzT8NiW7yNodfqUdhjHC1bUM7WJu2zV7": {
+        "stake_mina": "2.928405976",
+        "external_delegators": 0
+      },
+      "B62qrmSbngHstC337BVXVzL3qjTkRhqWW715nU1cVuzR1ALeyEZoZNB": {
+        "stake_mina": "0.098183486",
+        "external_delegators": 0
+      },
+      "B62qrmXH3pVwUferF9kCTzJFw1DNt7BT8cXcoFLZSBZZ9jHSXTLg4Wf": {
+        "stake_mina": "273.401836852",
+        "external_delegators": 2
+      },
+      "B62qrnPdz8HpsDJfGHirDLpVrN2VeyeitdaTKBaccWtHpeVW9Hgwi75": {
+        "stake_mina": "474355.853167583",
+        "external_delegators": 78
+      },
+      "B62qrnZJTf6JR4S966nxSEP8GUpjhMKkKyx3uJU1FzJQkkneWWoetLs": {
+        "stake_mina": "0.8128305",
+        "external_delegators": 0
+      },
+      "B62qrop8ZLmVpu8AD3a7Hsqi9Yp1D29RJ7tfqWF4rVpAt7bUEZCsWpx": {
+        "stake_mina": "0.0001",
+        "external_delegators": 1
+      },
+      "B62qrpfFZXt9biht2Jv1boNa1Rh4SLMm8Kn1PAHnmp3dmvgYU4nHpDr": {
+        "stake_mina": "12.282190622",
+        "external_delegators": 0
+      },
+      "B62qrqT2HeEMi7hpoQqyVdcKii14nE2i66AXZM1FBU4RkTQS7nCXmCT": {
+        "stake_mina": "1.165",
+        "external_delegators": 0
+      },
+      "B62qrqVYXRsroeuX7oTLSXEsXg6DziGL1LmJJ4TER4X9rSQHsYBobMn": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrqsKJUSLcDMN2XknmXXX3fGufSa3c8mAskCUxAxoYe9ApyXn6NG": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrr1gkgYvVfRb9JjstCcjDTKYYXFM61dD7oqFaEjc5VkFvL8zWgr": {
+        "stake_mina": "2.323587972",
+        "external_delegators": 0
+      },
+      "B62qrr4HsyQDc8BHf875XHizovkMqfXYKFxqxdcLPNahHnz1GZqCmXL": {
+        "stake_mina": "77274.804499904",
+        "external_delegators": 9
+      },
+      "B62qrs3CgAyHBeF2dKEhMBu8B5Nws497qiKbTfM6Dq2KxV86qsKAGhF": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrs3b7u1SPguNusoVaL32iDEMwGG6CK28eRLQu9P6e2Pbf8H9rmS": {
+        "stake_mina": "53.285068",
+        "external_delegators": 1
+      },
+      "B62qrsyjMJv7SUMHqsBymAQ9VJTMgLVcE8r8ou3BaUTjJUohMHCCUHd": {
+        "stake_mina": "823.840940349",
+        "external_delegators": 10
+      },
+      "B62qrtD3NtYbPVinD35iCyS86SnfJwYyHYouEtMxVYai5y5bh1BTJFe": {
+        "stake_mina": "9.15325274",
+        "external_delegators": 0
+      },
+      "B62qrtHxvwdhcjSNWaQ7zkLsb4hcMFcRiSrj3qg45oAqD4c2iCq4Mt7": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrtKLFtbrpq9Q3g8n5oqahgPWcEYJQJxUURSsgsmAUggcubh4XzA": {
+        "stake_mina": "2.780000001",
+        "external_delegators": 1
+      },
+      "B62qrtQmy2qTByezcv5hzvvXjfkDQnhLvyBv6koq3865j9pBXTBbkVQ": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qrtS9txV79bRXAypwNf2fcg6tfsH6C6bW8nJimVgyGH4cC2n7m63": {
+        "stake_mina": "0.541819664",
+        "external_delegators": 0
+      },
+      "B62qrui6wB5ZUxBQwkWMG8cmtpMuK6sPRn1hLstKLi25CecdfcistdE": {
+        "stake_mina": "55798.496658765",
+        "external_delegators": 54
+      },
+      "B62qrvETVZ7hobVY1Pym6hwiWc57Ccz22iv264j6NK7EL3FvGHQBhND": {
+        "stake_mina": "5784.180444673",
+        "external_delegators": 6
+      },
+      "B62qrwAmz1ANoLXybpP4QAewnuWd4taweuZD9frFNABq6vSj8r2jv7w": {
+        "stake_mina": "0.0810213",
+        "external_delegators": 0
+      },
+      "B62qrwBEB3tjGvjZNNr4h8N2iHGvcgRa6bb3V7Qs7Z15EZVWnyJBpXR": {
+        "stake_mina": "0.110558317",
+        "external_delegators": 0
+      },
+      "B62qrwBxK1FAf48jybRhLLZBB9v3cqNZafBdwQ8iAvqSgXceNJEgZhr": {
+        "stake_mina": "0.563368154",
+        "external_delegators": 0
+      },
+      "B62qrwHJNvq7TF2tdWSjJWo81c4Q43JxCQ9turMbU6Qw87ifwJ7LcYW": {
+        "stake_mina": "0.037491841",
+        "external_delegators": 1
+      },
+      "B62qrwriCceuC9YB7w5nbVMuKfDYi5T325aGtxyBp7LqVehPAJtEuj6": {
+        "stake_mina": "11460.789998532",
+        "external_delegators": 2
+      },
+      "B62qrx22PmRx6jXfvrS4amPCGR22KX6SB7NXvFLTuw9eDZYgVtymid2": {
+        "stake_mina": "14.01142163",
+        "external_delegators": 3
+      },
+      "B62qrxNgwAdhGYZv1BXQRt2HgopUceFyrtXZMikwsuaHu5FigRJjhwY": {
+        "stake_mina": "12290.158222202",
+        "external_delegators": 88
+      },
+      "B62qrxbPSkLTHcQu3UYEBNsraeaynzFcZGkKiz4Uu8sjQdSaNaJRFFQ": {
+        "stake_mina": "329.609692564",
+        "external_delegators": 2
+      },
+      "B62qry8iJF3X2icdxsCzFz2qEXPUiu9HkR1wBde93bqgjvFzcRcFnti": {
+        "stake_mina": "2.8921",
+        "external_delegators": 2
+      },
+      "B62qryDkRZFK5r6DtWFiNhQhXDMWK5158MvoRhH8HSZuBLP2HLSqWZG": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qryECVj6FCsXbc4Hi4yUCx5G7TJGACR4f6Rs6eMCgZJRFkVqqWPC": {
+        "stake_mina": "2.995",
+        "external_delegators": 0
+      },
+      "B62qryPifwFPwZhQguJdbmq57puUPTo9UELfGmXekWMD6LRvgZaGAXK": {
+        "stake_mina": "1.0",
+        "external_delegators": 0
+      },
+      "B62qryXKvkjL1C5qhR4HfLEMfMK4fZ7Tjma9tM1sMyU4Qh3nrnEa4Zz": {
+        "stake_mina": "175.918957372",
+        "external_delegators": 2
+      },
+      "B62qrzoBfFuUxJg2YvcBkBnziVtAPziP5uAPcCPpQZgtjE4LTxXvVSJ": {
+        "stake_mina": "2.316726234",
+        "external_delegators": 2
+      },
+      "B62qs12XTUTSiWuhyF1R3MfXB3p4QaGxv6JFZYoMUuG4DGCEhzn39LL": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qs15dFX37JvKbJ6QAwnDhUEJ7sFp9YKZyECX2Ke8bu3S764txEzw": {
+        "stake_mina": "83.700278406",
+        "external_delegators": 1
+      },
+      "B62qs1coRFL6933qEgwzYfyDGfNvezye6m1RCjKUW8CifSYqrh6MVJB": {
+        "stake_mina": "0.009577639",
+        "external_delegators": 0
+      },
+      "B62qs1pxzzvkEFtaJqDDEBwkcwm9Ush2s3Z4eBssBvoV1Xhh13PQwaK": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qs24kU2yV7Q4rFmAf8jga1kFCHU8zmMd58cfZsbYe6YSeSmHoP8q": {
+        "stake_mina": "6.12345181",
+        "external_delegators": 2
+      },
+      "B62qs2JDc3nv4LPr4sW5oW3eAicxp4T6EQbGesAoJrcaoeEiynubHoU": {
+        "stake_mina": "124539.929963373",
+        "external_delegators": 1
+      },
+      "B62qs2Lw5WZNSjd8eHBUZXFYyRjV8oKtrZMFDn1S1Ye62G71xCQJMYM": {
+        "stake_mina": "431311.242976243",
+        "external_delegators": 276
+      },
+      "B62qs2P91UjdhngetBJ57C56HQ8t5V7ECAYWBvpkaC45ovXNgnzqfG6": {
+        "stake_mina": "1899172.086388829",
+        "external_delegators": 798
+      },
+      "B62qs2PG6BjRE5AZL36qzf3KhYEEXijLXhXx9ayeEdGxT9sw5vDek62": {
+        "stake_mina": "1.357",
+        "external_delegators": 0
+      },
+      "B62qs2T7zi1fWLKEaZCwsVHvDC5aiZ2oKrmqPvAqRxdGVxzeNZfGZ4N": {
+        "stake_mina": "2.498",
+        "external_delegators": 0
+      },
+      "B62qs2ZdSa4a3HjNgbAAMs6VtEBia6LARrFTF9dmEYE9q6ergp17xHs": {
+        "stake_mina": "0.0",
+        "external_delegators": 0
+      },
+      "B62qs2jJxuGPDESb8VN5MMekyfoU97sSwGfxfurkqCnRCyXNxAsPNLF": {
+        "stake_mina": "886.075282947",
+        "external_delegators": 1
+      }
+    }
+  },
+  "production": {
+    "status": "recovered_needs_archive_validation",
+    "source": {
+      "git_commit": "7400cfa30c388d36fff5729361899a4a62577a37",
+      "snapshot_at": "2026-10-08T09:15:23+00:00"
+    },
+    "canonical_blocks": {
+      "B62qid146JcZD6eSrDt2p9iqrQC6eTxRxYB5HUyg5XpTezsqP73WWRR": 2,
+      "B62qik2auL1VbkX6fijdzwT6fGgjpi8caKUH6vbov573DbdT2UbQkDp": 2,
+      "B62qj9SeVBtbZCeGUVznWUqECvFrFU8DoHLQxFtHXX1Dk1BB7dfW4AP": 31,
+      "B62qjAAPEV5hE41EgunTNeADAViDWW8Cktzxe36A5z5yoXyFPDnziak": 1,
+      "B62qjhiEXP45KEk8Fch4FnYJQ7UMMfiR3hq9ZeMUZ8ia3MbfEteSYDg": 7,
+      "B62qkBqSkXgkirtU3n8HJ9YgwHh3vUD6kGJ5ZRkQYGNPeL5xYL2tL1L": 3,
+      "B62qkFC7mMp4eMD65r9tTFQeXZJtFyyXm18J84ZRzhodwuweu578kt7": 8,
+      "B62qkd4tZQGe9mo5tK3wQi5PUoMdtUGtLWps6Se9o1qWdwNwuUtdWdr": 4,
+      "B62qksN97EtNvQGzH2RAgnDR8zLAawhPNE1QzWCgPRcknyL6NJ3CCgJ": 2,
+      "B62qkxMXa9JorkHdS1iinLn5WwMV4dgn3HT63osBoFgQHYoah1MdzKw": 1,
+      "B62qmM9KDeqvu3TVpQStGJARgg7KppxE8UF3xMdtKV9TDc33kSUGug5": 1,
+      "B62qmkGkjvFwmkqv6erSmTGMx9ABhuxJqpCi4gyUtxFDwif97j2X5zp": 25,
+      "B62qmpSNd5voNiVnyM4c1bcbRC53wdkEANwYZaA2iA5rgCv68XezSuG": 6,
+      "B62qmqprUwxHxG6uGDQe48Xys9diJhunEqQNRuFC5a1KBUNsDaNADgj": 2,
+      "B62qn7KLcjFRqNhnUngn2iky62Lq4E8G2t66KdFKTdeJUzwoEkPsSmJ": 1,
+      "B62qnR6HKx34NCyDkSeRcJ44KATjUCs4xmQYDbwTXPJPQ4J6ebfeQe4": 2,
+      "B62qnSjFGjZ39C8iDGMErbFSX5NvKVyvjvHxvf7U1oDmyeU6ynxXZZF": 20,
+      "B62qnVMHrtGPVRN3SrwyDzjbgBQhaFSgv16SAAFe5ddm2369KKzRn6d": 1,
+      "B62qnbehH2RBTrJmRApx1rGrJGkrjTRYqJiCRgtwp8S6J7D9VqNP9Po": 3,
+      "B62qngGSkaZCutEntH6Qu7V2g7waodEDfjars9VRf591oAxvpUW9Mzd": 1,
+      "B62qnoD79sP5w3KXQYPn4tfjm4gaGJrvhMza23JEHkQ1J9gsR3tzbrZ": 6,
+      "B62qo9RPW9hzMwFBHSgYsUdBZtSnY71zRUXK93ZnKr596cp46wkf9M1": 132,
+      "B62qoVopcNoQPFydweGWUBnJJbrokkebVDiWGmAzYoaLysrFfzNCbya": 2,
+      "B62qobvkvofH1P6fmu9pjb91tx6dJ6YR5nFtgitxhkpFYsF6WZJn4yi": 1,
+      "B62qoiM41U5gBnjujQRgeewfkK9VmgVT8ifrRRwAsqBUM6pdxi9ywk2": 814,
+      "B62qopHVr6nGCsQgrvsBsoxDm1E5CEdMkDSN3jneRnxKpR5iiXnTbas": 62,
+      "B62qopzjbycAJDzvhc1tEuYSmJYfRQQbfS9nvkKtUzBS1fmLCyTz4dJ": 3,
+      "B62qp6qMf3Do4q4aKqEsLxVpVuXJaRCijtyhsjZBvDSEFUBGXg8Z9cs": 2,
+      "B62qpVUF5PXf7vh4eH8cZ3om3mp23bQJPDqwE2iB8BaE5ZUhaCJdU8L": 7,
+      "B62qpbpoWmfjZ12jA8TYrS8QktRDYGYjz2cj41tuUe1f2UP2wfpKvXs": 202,
+      "B62qpge4uMq4Vv5Rvc8Gw9qSquUYd6xoW1pz7HQkMSHm6h1o7pvLPAN": 348,
+      "B62qphpEdBwSycpN67XFjcXSEY9j18chmttFTXYerhTPMX4JkXubWkd": 1,
+      "B62qpsikYYhTaAXw8XdgGhQtLsnecHF89LZdW2bGTa4aj4mePWPHxPe": 51,
+      "B62qpsyB3gCndt8sNz4GRwusBtg9U72TNiL4mxmcQfWKZ5noa9fFnWr": 18,
+      "B62qptf4MGw8h6tJyd7b1Bbqysfk3UVyRBEukCZEHuNSJEretDBDWYs": 3,
+      "B62qq3TQ8AP7MFYPVtMx5tZGF3kWLJukfwG1A1RGvaBW1jfTPTkDBW6": 354,
+      "B62qq6ZYPG5JsjZnGJ3pADmRn6hU6qy13EhraTSymjSgyEDwoDR9Gd6": 101,
+      "B62qqKvhGqh8bCL6Z3mDiE27paMtpCC4VqwPiGZap3SHChgFoBWAyr5": 3,
+      "B62qqV16g8s744GHM6Dph1uhW4fggYwyvtDnVSoRUyYqNvTir3Rqqzx": 18,
+      "B62qqYgjPA3VwKEnmWy7Cwp9fVPsZskTXQTKQdmw8qqKgznzarSEfXM": 1,
+      "B62qqch9XkiTS8BLUDSM1sayfXNAtnYnQFChktYG1bfCJkDMUqs98Xr": 1,
+      "B62qqnGyRwo82Hv6hr1KydpUQzTmYyBAQDVrxc6TxbdJxrtSYGr8QXa": 35,
+      "B62qqy7DHHzo4ryzUYdycH9jNaPYGj1vMUPZxQ2VwSq134EjHKeYiGt": 2,
+      "B62qrQiw9JhUumq457sMxicgQ94Z1WD9JChzJu19kBE8Szb5T8tcUAC": 78,
+      "B62qrnPdz8HpsDJfGHirDLpVrN2VeyeitdaTKBaccWtHpeVW9Hgwi75": 3,
+      "B62qrr4HsyQDc8BHf875XHizovkMqfXYKFxqxdcLPNahHnz1GZqCmXL": 1,
+      "B62qs2P91UjdhngetBJ57C56HQ8t5V7ECAYWBvpkaC45ovXNgnzqfG6": 9
+    },
+    "total_canonical_blocks": 2381
+  }
+}
