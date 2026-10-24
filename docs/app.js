@@ -1,5 +1,5 @@
 const MINASCAN="https://minascan.io/mainnet/account/";
-const PAGE_SIZES=[20,30,50,100,200,500];
+const PAGE_SIZES=[10,20,30,50,100,200,500];
 let savedPageSize=20;
 try { const value=Number(localStorage.getItem("validator-page-size")); if(PAGE_SIZES.includes(value))savedPageSize=value; } catch (_) {}
 const state={all:[],filtered:[],page:1,pageSize:savedPageSize,sortKey:"stake_live_estimate",sortDir:"desc"};
