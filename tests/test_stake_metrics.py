@@ -2,6 +2,7 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import subprocess
 from unittest.mock import patch
 
 
@@ -18,6 +19,26 @@ def account(wallet, balance, token=None):
 
 
 class StakeMetricsTests(unittest.TestCase):
+    def test_binary_ledger_output_and_optional_next_recovery(self):
+        valid = subprocess.CompletedProcess([], 0, b'[]', b'warning: \xff')
+        invalid = subprocess.CompletedProcess([], 0, b'[\xff]', b'')
+        with patch.object(exporter.subprocess, "run", return_value=valid) as run:
+            self.assertEqual(exporter.export_ledger("staking-epoch-ledger"), [])
+            self.assertFalse(run.call_args.kwargs.get("text", False))
+        with patch.object(exporter.subprocess, "run", side_effect=[valid, invalid]):
+            with patch("sys.stderr") as stderr:
+                self.assertEqual(exporter.load_consensus_ledgers(), ([], None))
+                self.assertIn("invalid UTF-8 on stdout at byte 1", str(stderr.write.call_args_list))
+        with patch.object(exporter.subprocess, "run", return_value=invalid):
+            with self.assertRaisesRegex(RuntimeError, "invalid UTF-8"):
+                exporter.load_consensus_ledgers()
+
+    def test_binary_failure_diagnostic_does_not_mask_exit_error(self):
+        error = subprocess.CalledProcessError(1, [], stderr=b'failure: \xff')
+        with patch.object(exporter.subprocess, "run", side_effect=error):
+            with self.assertRaisesRegex(RuntimeError, "export failed \\(exit 1\\): failure:"):
+                exporter.export_ledger("next-epoch-ledger")
+
     def test_new_validator_eligibility(self):
         def delegation(pk, target, balance=10, token=None):
             return {**account(pk, balance, token), "delegate": target}

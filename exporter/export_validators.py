@@ -85,19 +85,24 @@ def export_ledger(kind: str) -> list[dict[str, Any]]:
             check=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,
             timeout=int(os.environ.get("MINA_LEDGER_EXPORT_TIMEOUT", "120")),
         )
     except subprocess.TimeoutExpired as exc:
         raise RuntimeError(f"{kind} export timed out") from exc
     except subprocess.CalledProcessError as exc:
+        diagnostic = exc.stderr or exc.stdout or b"no diagnostic output"
+        diagnostic = diagnostic[:2000].decode("utf-8", errors="replace").strip()
         raise RuntimeError(
             f"{kind} export failed (exit {exc.returncode}): "
-            f"{(exc.stderr or exc.stdout or 'no diagnostic output').strip()[:2000]}"
+            f"{diagnostic}"
         ) from exc
 
     try:
-        payload = json.loads(result.stdout)
+        payload = json.loads(result.stdout.decode("utf-8"))
+    except UnicodeDecodeError as exc:
+        raise RuntimeError(
+            f"{kind} returned invalid UTF-8 on stdout at byte {exc.start}"
+        ) from exc
     except json.JSONDecodeError as exc:
         raise RuntimeError(f"{kind} returned invalid JSON") from exc
 
