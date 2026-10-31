@@ -98,16 +98,44 @@ def export_ledger(kind: str) -> list[dict[str, Any]]:
         ) from exc
 
     try:
-        payload = json.loads(result.stdout.decode("utf-8"))
-    except UnicodeDecodeError as exc:
-        raise RuntimeError(
-            f"{kind} returned invalid UTF-8 on stdout at byte {exc.start}"
-        ) from exc
+        # Preserve invalid bytes so they can only be tolerated in token_symbol.
+        payload = json.loads(result.stdout.decode("utf-8", errors="surrogateescape"))
     except json.JSONDecodeError as exc:
         raise RuntimeError(f"{kind} returned invalid JSON") from exc
 
     if not isinstance(payload, list):
         raise RuntimeError(f"{kind} returned {type(payload).__name__}, expected list")
+
+    def validate_unicode(value):
+        if isinstance(value, str):
+            value.encode("utf-8")
+        elif isinstance(value, dict):
+            for key, item in value.items():
+                validate_unicode(key)
+                validate_unicode(item)
+        elif isinstance(value, list):
+            for item in value:
+                validate_unicode(item)
+
+    ignored_symbols = 0
+    for account in payload:
+        if not isinstance(account, dict):
+            raise RuntimeError(f"{kind} returned a non-object account")
+        symbol = account.get("token_symbol")
+        if isinstance(symbol, str):
+            try:
+                symbol.encode("utf-8")
+            except UnicodeEncodeError:
+                # This metadata is not used for token identity or stake amounts.
+                del account["token_symbol"]
+                ignored_symbols += 1
+        try:
+            validate_unicode(account)
+        except UnicodeEncodeError as exc:
+            raise RuntimeError(f"{kind} returned invalid Unicode outside token_symbol") from exc
+    if ignored_symbols:
+        print(f"WARNING: {kind}: ignored {ignored_symbols} invalid token_symbol field(s); "
+              "account balances retained.", file=sys.stderr)
 
     return payload
 

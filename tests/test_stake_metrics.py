@@ -3,6 +3,7 @@ import importlib.util
 from pathlib import Path
 import unittest
 import subprocess
+import json
 from unittest.mock import patch
 
 
@@ -28,10 +29,30 @@ class StakeMetricsTests(unittest.TestCase):
         with patch.object(exporter.subprocess, "run", side_effect=[valid, invalid]):
             with patch("sys.stderr") as stderr:
                 self.assertEqual(exporter.load_consensus_ledgers(), ([], None))
-                self.assertIn("invalid UTF-8 on stdout at byte 1", str(stderr.write.call_args_list))
+                self.assertIn("invalid JSON", str(stderr.write.call_args_list))
         with patch.object(exporter.subprocess, "run", return_value=invalid):
-            with self.assertRaisesRegex(RuntimeError, "invalid UTF-8"):
+            with self.assertRaisesRegex(RuntimeError, "invalid JSON"):
                 exporter.load_consensus_ledgers()
+
+    def test_invalid_symbol_retains_native_token_balance(self):
+        row = {**account("A", "16.925245442"), "token_symbol": "BAD_SYMBOL"}
+        raw = json.dumps([row]).encode().replace(b'BAD_SYMBOL', b'\xff')
+        result = subprocess.CompletedProcess([], 0, raw, b'')
+        with patch.object(exporter.subprocess, "run", return_value=result):
+            with patch("sys.stderr"):
+                ledger = exporter.export_ledger("next-epoch-ledger")
+        self.assertNotIn("token_symbol", ledger[0])
+        self.assertEqual(ledger[0]["balance"], "16.925245442")
+        self.assertEqual(exporter.aggregate_ledger(ledger)[0]["A"], exporter.Decimal("16.925245442"))
+
+    def test_invalid_unicode_outside_symbol_is_rejected(self):
+        for raw in (b'[{"balance":"1\xff"}]', b'[{"pk":"bad\\udcff"}]',
+                    b'[{"nested":{"token_symbol":"\xff"}}]', b'[{"bad\xff":1}]'):
+            with self.subTest(raw=raw):
+                result = subprocess.CompletedProcess([], 0, raw, b'')
+                with patch.object(exporter.subprocess, "run", return_value=result):
+                    with self.assertRaisesRegex(RuntimeError, "outside token_symbol"):
+                        exporter.export_ledger("next-epoch-ledger")
 
     def test_binary_failure_diagnostic_does_not_mask_exit_error(self):
         error = subprocess.CalledProcessError(1, [], stderr=b'failure: \xff')
