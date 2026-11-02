@@ -8,7 +8,7 @@
   <script src="./theme.js"></script>
   <title>Mina Validator Performance</title>
   <meta name="description" content="Live Mina validator stake and block-production snapshot from a Mina archive node.">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=freeze-columns-2">
 </head>
 <body>
 <main class="page">
@@ -56,7 +56,7 @@
     <div class="table-toolbar">
       <div><strong id="filteredCount">0</strong> matching validators <span class="muted">· Totals cover all matching validators, across all pages</span></div>
       <div class="display-settings" role="group" aria-label="Display settings">
-      <label class="freeze-columns-option"><input id="freezeColumns" type="checkbox"> Freeze Favorites &amp; Validator</label>
+      <label class="freeze-columns-option"><input id="freezeColumns" type="checkbox"><span>Freeze Favorites &amp; Validator</span></label>
     <details class="column-picker" id="columnPicker">
       <summary>Columns <span id="columnCount"></span></summary>
       <div class="column-menu">
@@ -151,6 +151,6 @@
 <script src="./totals.js"></script>
 <script src="./estimates.js"></script>
 <script src="./simulation.js"></script>
-<script src="./app.js"></script>
+<script src="./app.js?v=freeze-columns-2"></script>
 </body>
 </html>
