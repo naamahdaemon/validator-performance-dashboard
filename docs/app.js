@@ -110,6 +110,30 @@ function restoreView(){
  } catch (_) {}
 }
 restoreView();
+const freezeColumns=$("freezeColumns");
+const validatorTable=document.querySelector(".table-wrap table");
+const frozenHeaders=[...validatorTable.tHead.rows[0].cells].slice(0,2);
+try{freezeColumns.checked=localStorage.getItem("validator-freeze-columns")==="true";}catch(_){}
+function updateFrozenColumns(){
+ validatorTable.classList.toggle("freeze-columns",freezeColumns.checked);
+ let left=0;
+ for(const header of frozenHeaders){
+  const index=header.cellIndex;
+  for(const row of validatorTable.rows){
+   const cell=row.cells[index];
+   if(!cell||cell.colSpan!==1)continue;
+   cell.classList.add("frozen-column");
+   cell.style.setProperty("--frozen-left",`${left}px`);
+  }
+  if(!header.hidden)left+=header.getBoundingClientRect().width;
+ }
+}
+freezeColumns.addEventListener("change",()=>{
+ try{localStorage.setItem("validator-freeze-columns",String(freezeColumns.checked));}catch(_){}
+ updateFrozenColumns();
+});
+const frozenColumnObserver=new ResizeObserver(updateFrozenColumns);
+frozenHeaders.forEach(header=>frozenColumnObserver.observe(header));
 function updateColumnVisibility(){
  const count=COLUMN_COUNT-hiddenColumns.size;
  COLUMN_HEADERS.forEach((th,i)=>{
@@ -124,6 +148,7 @@ function updateColumnVisibility(){
   input.checked=!hiddenColumns.has(input.value);
   input.disabled=count===1&&input.checked;
  }
+ updateFrozenColumns();
 }
 for(const th of COLUMN_HEADERS){
  const label=document.createElement("label"),input=document.createElement("input"),text=document.createElement("span");
