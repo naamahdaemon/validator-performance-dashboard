@@ -237,17 +237,21 @@ function walletCell(wallet){
 }
 function favoriteCell(v){
  const c=cell("","favorite-cell"),button=document.createElement("button");
- const selected=favorites.has(v.wallet_address);
- button.type="button";button.className="favorite-toggle";button.textContent=selected?"★":"☆";
- button.setAttribute("aria-pressed",String(selected));
+ button.type="button";button.className="favorite-toggle";
+ function updateButton(){
+  const selected=favorites.has(v.wallet_address);
+  button.textContent=selected?"★":"☆";
+  button.setAttribute("aria-pressed",String(selected));
+  button.title=selected?"Remove from favorites":"Add to favorites";
+ }
+ updateButton();
  button.setAttribute("aria-label",`Favorite: ${v.validator_name||v.wallet_address}`);
- button.title=selected?"Remove from favorites":"Add to favorites";
  button.disabled=!v.wallet_address;
  button.addEventListener("click",()=>{
   if(favorites.has(v.wallet_address))favorites.delete(v.wallet_address);else favorites.add(v.wallet_address);
   try{localStorage.setItem("validator-favorites-v1",JSON.stringify([...favorites]));}catch(_){}
   if(f.favoritesOnly.checked)apply({resetPage:false});
-  else c.replaceWith(favoriteCell(v));
+  else updateButton();
  });
  c.append(button);return c;
 }
